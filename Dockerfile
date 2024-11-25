@@ -1,4 +1,4 @@
-FROM ruby:3.2.2-alpine3.18
+FROM ruby:3.3.6-alpine3.19
 
 RUN apk update && apk add --no-cache build-base yarn libxml2 libxslt gcompat git
 
