@@ -40,6 +40,10 @@ gem "citizens_advice_components",
     tag: "v6.2.0",
     glob: "engine/*.gemspec"
 
+gem "citizens_advice_form_builder",
+    github: "citizensadvice/rails-form-builder",
+    tag: "v0.2.0"
+
 gem "view_component", "~> 3.20"
 
 gem "ddtrace"

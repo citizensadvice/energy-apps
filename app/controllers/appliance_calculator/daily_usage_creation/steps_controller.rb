@@ -7,12 +7,9 @@ module ApplianceCalculator
       self.wizard_class = ::DailyUsageCreation::Wizard
 
       layout "appliance_calculator"
+      default_form_builder ::CitizensAdviceFormBuilder::FormBuilder
 
       after_action :set_headers
-
-      def index
-        @appliances = Appliance.fetch_all
-      end
 
       private
 
@@ -26,10 +23,6 @@ module ApplianceCalculator
 
       def wizard_store_key
         :daily_usage_creation
-      end
-
-      def on_complete(daily_usage)
-        Rails.logger.debug daily_usage.inspect
       end
     end
   end
