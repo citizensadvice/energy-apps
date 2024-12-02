@@ -2,7 +2,7 @@ try {
     window.parent.postMessage(
     {
       id: "#appliance_calculator",
-      height: document.body.scrollHeight + 10,
+      height: document.body.scrollHeight,
     },
     "*"
   );

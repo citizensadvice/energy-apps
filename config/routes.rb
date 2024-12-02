@@ -45,7 +45,13 @@ Rails.application.routes.draw do
 
     get "/status", to: "status#index"
 
-    get "/appliance-calculator", to: "appliance_calculator#index", as: "appliance_calculator"
+    namespace :appliance_calculator, path: "appliance-calculator" do
+      get "/", to: redirect("/appliance-calculator/daily_usage_creation/steps/appliance")
+
+      namespace :daily_usage_creation do
+        resources :steps, only: %i[show update]
+      end
+    end
 
     constraints ->(req) { req.format == :html } do
       # Custom error handler pages, these work because

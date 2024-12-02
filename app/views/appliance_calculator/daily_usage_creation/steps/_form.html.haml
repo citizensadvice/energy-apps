@@ -1,0 +1,10 @@
+= form_for current_step, url: step_path, method: "PATCH" do |f|
+  = render current_step.key, current_step: current_step, f: f
+
+  - if wizard.can_proceed?
+    = render CitizensAdviceComponents::Button.new(type: :submit).with_content("Next")
+
+
+- if wizard.previous_key
+  = form_with model: current_step, url: step_path(wizard.previous_key), method: :get do
+    = render CitizensAdviceComponents::Button.new(type: :submit, variant: :secondary).with_content("Back")
