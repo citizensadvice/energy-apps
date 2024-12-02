@@ -49,7 +49,11 @@ Rails.application.routes.draw do
       get "/", to: redirect("/appliance-calculator/daily_usage_creation/steps/appliance")
 
       namespace :daily_usage_creation do
-        resources :steps, only: %i[show update]
+        resources :steps, only: %i[show update] do
+          collection do
+            get :completed
+          end
+        end
       end
     end
 

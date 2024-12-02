@@ -1,5 +1,6 @@
-= form_for current_step, url: step_path, method: "PATCH" do |f|
-  = render current_step.key, current_step: current_step, f: f
+= form_with model: current_step, url: step_path, method: :patch, class: "cads-prose-direct-descendants" do |form|
+
+  = render(current_step.key, form: form)
 
   - if wizard.can_proceed?
     = render CitizensAdviceComponents::Button.new(type: :submit).with_content("Next")
