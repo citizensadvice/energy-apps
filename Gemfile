@@ -89,3 +89,5 @@ group :test do
   gem "selenium-webdriver"
   gem "webdrivers"
 end
+
+gem "wizard_steps", "~> 0.1.4"

@@ -479,6 +479,7 @@ GEM
       websocket-extensions (>= 0.1.0)
     websocket-extensions (0.1.5)
     with_env (1.1.0)
+    wizard_steps (0.1.4)
     xml-simple (1.1.9)
       rexml
     xpath (3.2.0)
@@ -537,6 +538,7 @@ DEPENDENCIES
   web-console
   webdrivers
   webmock
+  wizard_steps (~> 0.1.4)
 
 RUBY VERSION
    ruby 3.3.6p108
