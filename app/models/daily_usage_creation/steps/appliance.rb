@@ -13,6 +13,19 @@ module DailyUsageCreation
       def appliances
         ::Appliance.fetch_all
       end
+
+      def select_options
+        grouped_apps = appliances.group_by(&:category)
+        options = grouped_apps.map { |group, apps| [group, apps.map { |app| [app.name, app.id] }] }
+        empty_option = ["", [["", nil]]]
+        options.insert(0, empty_option)
+      end
+
+      def select_error_message
+        return if errors.blank?
+
+        errors[:appliance_id].first
+      end
     end
   end
 end
