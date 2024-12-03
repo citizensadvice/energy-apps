@@ -27,3 +27,10 @@ Lint/UnusedBlockArgument:
 RSpec/NestedGroups:
   # Set the max to a more reasonable limit of 4
   Max: 4
+
+
+Rails/I18nLocaleTexts:
+  Exclude:
+    # We aren't translating the error messages into another language
+    # so it's simpler to have the error msgs next to the validation rules
+    - "app/models/daily_usage_creation/steps/*.rb"
