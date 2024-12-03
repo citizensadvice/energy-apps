@@ -1,1 +1,2 @@
-= form.cads_text_field :appliance_id, label: "Select an appliance", required: true
+= form.cads_collection_select :appliance_id, label: "Select an appliance", collection: current_step.appliances, text_method: :name, value_method: :id, required: true
+= form.cads_text_field :quantity, label: "How many of these appliances do you use?", width: :two_chars
