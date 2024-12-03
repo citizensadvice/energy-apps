@@ -1,3 +1,3 @@
-= render GroupedSelectComponent.new(label: "Select an appliance", name: "daily_usage_creation_steps_appliance[appliance_id]", select_options: current_step.select_options, options: { error_message: current_step.select_error_message }, id: "daily_usage_creation_steps_appliance_appliance_id" )
+= render GroupedSelectComponent.new(**current_step.select_params)
 
 = form.cads_text_field :quantity, label: "How many of these appliances do you use?", width: :two_chars

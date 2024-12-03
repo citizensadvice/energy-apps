@@ -14,6 +14,19 @@ module DailyUsageCreation
         ::Appliance.fetch_all
       end
 
+      def select_params
+        {
+          id: "daily_usage_creation_steps_appliance_appliance_id",
+          label: "Select an appliance",
+          name: "daily_usage_creation_steps_appliance[appliance_id]",
+          select_options: select_options,
+          options: {
+            value: appliance_id,
+            error_message: select_error_message
+          }
+        }
+      end
+
       def select_options
         grouped_apps = appliances.group_by(&:category)
         options = grouped_apps.map { |group, apps| [group, apps.map { |app| [app.name, app.id] }] }
@@ -25,6 +38,18 @@ module DailyUsageCreation
         return if errors.blank?
 
         errors[:appliance_id].first
+      end
+
+      def selected_appliance
+        appliances.find { |app| app.id == appliance_id }
+      end
+
+      def save!
+        return unless valid?
+
+        @store[:added_appliance] = selected_appliance
+        @store[:cyclical?] = selected_appliance.cyclical?
+        super
       end
     end
   end

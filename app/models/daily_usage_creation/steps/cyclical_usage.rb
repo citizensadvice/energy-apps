@@ -5,6 +5,10 @@ module DailyUsageCreation
     class CyclicalUsage < WizardSteps::Step
       attribute :cycle_quantity
       attribute :kilowatts
+
+      def skipped?
+        !@store[:cyclical?]
+      end
     end
   end
 end
