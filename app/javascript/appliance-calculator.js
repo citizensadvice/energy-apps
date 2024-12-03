@@ -1,4 +1,7 @@
+import initErrorSummary from '@citizensadvice/design-system/lib/error-summary';
+
 try {
+    initErrorSummary();
     window.parent.postMessage(
     {
       id: "#appliance_calculator",
@@ -10,3 +13,6 @@ try {
   document.querySelector("html").classList.add("no-js");
   throw error;
 }
+
+
+
