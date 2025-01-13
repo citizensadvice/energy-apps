@@ -7,7 +7,7 @@ readme = "README.md"
 
 [tool.poetry.dependencies]
 python = ">=3.12, <3.13"
-pytest = "8.3.3"
+pytest = "8.3.4"
 ca-cdk-constructs = {git = "https://github.com/citizensadvice/ca-cdk-constructs", rev = "v0.9.0"}
 
 [tool.poetry.group.dev.dependencies]
