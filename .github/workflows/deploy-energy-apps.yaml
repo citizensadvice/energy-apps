@@ -38,7 +38,7 @@ jobs:
       fail-fast: true
       max-parallel: 1
       matrix:
-        stage: ["dev"]
+        stage: ["dev", "prod"]
     environment:
       name: ${{ matrix.stage }}
     steps:
