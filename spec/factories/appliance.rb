@@ -19,6 +19,20 @@ FactoryBot.define do
     trait :with_additional_usage do
       additional_usage { 10 }
     end
+
+    trait :with_variants do
+      variantQuestion { "What type of tumble dryer?" }
+      variantOptions  do
+        {
+          tableData:
+          [
+            ["Option", "Wattage"],
+            ["Type 1", "1000"],
+            ["Type 2", "500"]
+          ]
+        }
+      end
+    end
   end
 
   factory :appliance, class: "Appliance" do
@@ -30,6 +44,10 @@ FactoryBot.define do
 
     trait(:with_additional_usage) do
       data factory: %i[appliance_data with_additional_usage]
+    end
+
+    trait(:with_variants) do
+      data factory: %i[appliance_data with_variants]
     end
   end
 end
