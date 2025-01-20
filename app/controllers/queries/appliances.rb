@@ -14,6 +14,8 @@ module Queries
         wattage
         usageType
         additionalUsage
+        variantQuestion
+        variantOptions
         sys {
           id
         }
