@@ -22,4 +22,25 @@ class Appliance
   def cyclical?
     usage_type == "Cycles"
   end
+
+  def variants?
+    data["variantOptions"].present?
+  end
+
+  def variant_question
+    return unless variants?
+
+    data["variantQuestion"]
+  end
+
+  def variant_options
+    return unless variants?
+
+    options = data.dig("variantOptions", "tableData")
+    # the first item in the array is the column headers in Contentful (eg ["option", "wattage"])
+    # so we can drop it
+    options.drop(1).map do |variant|
+      FormOption.new(text: variant[0], value: variant[1])
+    end
+  end
 end
