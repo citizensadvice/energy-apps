@@ -62,4 +62,17 @@ RSpec.describe(Appliance) do
     its(:usage_type) { is_expected.to eq "Cycles" }
     it { is_expected.to be_cyclical }
   end
+
+  describe "an appliance with variants" do
+    subject(:appliance) { build(:appliance, :with_variants) }
+
+    its(:variants?) { is_expected.to be true }
+    its(:variant_question) { is_expected.to be "What type of tumble dryer?" }
+    its(:variant_options) { is_expected.to be_present }
+
+    it "creates the correct list of options" do
+      options = appliance.variant_options.map { |a| [a.text, a.value] }
+      expect(options).to eq [["Type 1", "1000"], ["Type 2", "500"]]
+    end
+  end
 end
