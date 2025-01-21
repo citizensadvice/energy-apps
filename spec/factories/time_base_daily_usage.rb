@@ -21,6 +21,8 @@ FactoryBot.define do
       appliance_quantity { 2 }
     end
 
-    initialize_with { new(appliance: { name: appliance_name, quantity: appliance_quantity, wattage: }, hours_used:, minutes_used:, additional_usage:) }
+    initialize_with do
+      new(appliance: { name: appliance_name, quantity: appliance_quantity, wattage: }, hours_used:, minutes_used:, additional_usage:)
+    end
   end
 end
