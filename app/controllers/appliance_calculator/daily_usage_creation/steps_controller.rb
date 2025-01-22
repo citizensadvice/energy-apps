@@ -24,6 +24,10 @@ module ApplianceCalculator
       def wizard_store_key
         :daily_usage_creation
       end
+
+      def on_complete(usage)
+        Rails.logger.info usage.inspect
+      end
     end
   end
 end
