@@ -9,9 +9,11 @@ module DailyUsageCreation
       end
 
       def build
-        raise NotImplementedError unless cyclical?
-
-        build_cyclical_usage
+        if cyclical?
+          build_cyclical_usage
+        else
+          build_time_based_usage
+        end
       end
 
       private
@@ -24,8 +26,17 @@ module DailyUsageCreation
         CyclicalDailyUsage.new(
           label: label,
           details: cyclical_details,
-          wattage: @store["wattage"],
+          wattage: cyclical_wattage,
           cycle_quantity: cycle_quantity
+        )
+      end
+
+      def build_time_based_usage
+        TimeBasedDailyUsage.new(
+          label: label,
+          details: time_based_details,
+          wattage: @appliance.data["wattage"],
+          hours_used: hours_per_day
         )
       end
 
@@ -60,12 +71,42 @@ module DailyUsageCreation
         ].compact
       end
 
+      def cyclical_wattage
+        @appliance.variants? ? @store["wattage"] : @appliance.data["wattage"]
+      end
+
+      def time_based_details
+        [
+          "Quantity: #{@store['quantity']}",
+          "Duration: #{@store['hours']} hrs #{@store['minutes']} minutes"
+        ]
+      end
+
       def cycle_quantity
         case @store["frequency"]
         when "daily"
           @store["cycles"]
         else
           @store["cycles"].to_f / 7
+        end
+      end
+
+      def hours_per_day
+        total_hours = @store["hours"].to_f
+
+        total_hours += (@store["minutes"].to_f / 60) if @store["minutes"].present?
+
+        total_hours += (@appliance.data["additionalUsage"].to_f / 60) if @appliance.data["additionalUsage"].present?
+
+        daily_hours(total_hours)
+      end
+
+      def daily_hours(hours)
+        case @store["frequency"]
+        when "daily"
+          hours
+        else
+          hours / 7
         end
       end
     end
