@@ -2,27 +2,17 @@
 
 FactoryBot.define do
   factory :time_based_daily_usage, class: "TimeBasedDailyUsage" do
-    appliance_name { "A test appliance (time based)" }
-    appliance_quantity { 1 }
+    label { "A test appliance (time based)" }
+    details { ["Quantity: 1", "Duration: 1 hr 30 minutes"] }
     wattage { 10_000 }
-    hours_used { 1 }
-    minutes_used { 30 }
-    additional_usage { nil }
+    hours_used { 1.5 }
 
     trait :with_additional_usage do
-      additional_usage { 10 }
-    end
-
-    trait :with_fractional_time do
-      hours_used { 1.4286 } # 10 hours per week
-    end
-
-    trait :with_multiple_appliances do
-      appliance_quantity { 2 }
+      hours_used { 1.5 + (10.0 / 60.0) }
     end
 
     initialize_with do
-      new(appliance: { name: appliance_name, quantity: appliance_quantity, wattage: }, hours_used:, minutes_used:, additional_usage:)
+      new(label:, details:, wattage:, hours_used:)
     end
   end
 end
