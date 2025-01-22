@@ -34,3 +34,6 @@ Rails/I18nLocaleTexts:
     # We aren't translating the error messages into another language
     # so it's simpler to have the error msgs next to the validation rules
     - "app/models/daily_usage_creation/steps/*.rb"
+
+RSpec/ExampleLength:
+ CountAsOne: ['hash', 'array']
