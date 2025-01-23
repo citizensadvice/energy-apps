@@ -1,3 +1,4 @@
 = render GroupedSelectComponent.new(**current_step.select_params)
 
 = form.cads_text_field :quantity, label: "How many of these appliances do you use?", width: :two_chars
+= form.hidden_field :saved_unit_rate, value: saved_unit_rate

@@ -13,7 +13,11 @@ module DailyUsageCreation
 
     def do_complete
       Rails.logger.info @store.inspect
-      Builders::UsageBuilder.new(@store).build
+      # return the usage and the unit rate so they can both be persisted
+      {
+        usage: Builders::UsageBuilder.new(@store).build,
+        rate: @store["saved_unit_rate"] || @store["unit_rate"]
+      }
     end
   end
 end
