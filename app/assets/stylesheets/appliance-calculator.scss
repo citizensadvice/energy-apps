@@ -1,5 +1,11 @@
+$cads-breakpoints: (
+        sm: 0,
+        md: 550px,
+        lg: 1024px,
+);
+
 @import "@citizensadvice/design-system/scss/lib";
 @import "./appliance-calculator/reset";
 @import "./fonts";
-@import "./components/frequency-input";
-
+@import "appliance-calculator/frequency-input";
+@import "appliance-calculator/usages_table";
