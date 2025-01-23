@@ -73,13 +73,15 @@ RSpec.describe(DailyUsageCreation::Builders::UsageBuilder) do
   end
 
   context "when the appliance is not cyclical" do
+    let(:hours) { 10 }
+    let(:minutes) { 30 }
     let(:store) do
       WizardSteps::Store.new(
         {
           "cyclical?" => false,
           "added_appliance" => added_appliance,
-          "hours" => 10,
-          "minutes" => 30,
+          "hours" => hours,
+          "minutes" => minutes,
           "frequency" => "weekly",
           "quantity" => 3,
           "wattage" => "0"
@@ -116,11 +118,39 @@ RSpec.describe(DailyUsageCreation::Builders::UsageBuilder) do
     it "passes the correct label, details, wattage and hours" do
       expected_params = {
         label: "TEST - Light bulb",
-        details: ["Quantity: 3", "Duration: 10 hrs 30 minutes"],
+        details: ["Quantity: 3", "Duration: 10 hrs 30 mins"],
         wattage: "500", # wattage is taken from the appliance
         hours_used: 1.6071428571428572 # 10 hours + 30 minutes + 45 minutes additional usage = 11.25 hours / 7
       }
       expect(TimeBasedDailyUsage).to have_received(:new).with(expected_params)
+    end
+
+    context "when no minutes are provided" do
+      let(:minutes) { nil }
+
+      it "passes the correct label, details, wattage and hours" do
+        expected_params = {
+          label: "TEST - Light bulb",
+          details: ["Quantity: 3", "Duration: 10 hrs"],
+          wattage: "500", # wattage is taken from the appliance
+          hours_used: 1.5357142857142858 # 10 hours + 45 minutes additional usage / 7
+        }
+        expect(TimeBasedDailyUsage).to have_received(:new).with(expected_params)
+      end
+    end
+
+    context "when no hours are provided" do
+      let(:hours) { nil }
+
+      it "passes the correct label, details, wattage and hours" do
+        expected_params = {
+          label: "TEST - Light bulb",
+          details: ["Quantity: 3", "Duration: 30 mins"],
+          wattage: "500", # wattage is taken from the appliance
+          hours_used: 0.17857142857142858 # 30 minutes + 45 minutes additional usage / 7
+        }
+        expect(TimeBasedDailyUsage).to have_received(:new).with(expected_params)
+      end
     end
   end
 end
