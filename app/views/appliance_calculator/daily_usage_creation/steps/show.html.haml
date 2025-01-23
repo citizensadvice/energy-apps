@@ -3,4 +3,4 @@
   = form.cads_error_summary
 = render "form", current_step: current_step, wizard: wizard
 
-Table goes here
+= render ApplianceCalculator::UsagesTableComponent.new(usages: usages, unit_rate: saved_unit_rate)

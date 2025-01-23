@@ -2,4 +2,4 @@
   = render CitizensAdviceComponents::Button.new(type: :submit) do
     Add another appliance
 
-Table goes here
+= render ApplianceCalculator::UsagesTableComponent.new(usages: usages, unit_rate: saved_unit_rate)

@@ -1,0 +1,18 @@
+.usages-table td {
+  vertical-align: top;
+
+  p {
+    @extend %cads-paragraph;
+  }
+
+  p:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.usages-table td:first-child {
+  @include cads-media-breakpoint-up(md) {
+    width: 250px;
+  }
+
+}
