@@ -35,13 +35,13 @@ RSpec.describe DailyUsageCreation::Steps::UnitRate do
     subject(:skipped?) { described_class.new(Object.new, WizardSteps::Store.new(store), {}).skipped? }
 
     context "when there is already a unit rate in the store" do
-      let(:store) { { "unit_rate" => "1" } }
+      let(:store) { { "saved_unit_rate" => "1" } }
 
       it { is_expected.to be true }
     end
 
     context "when there is no unit rate in the store" do
-      let(:store) { { "unit_rate" => nil } }
+      let(:store) { { "saved_unit_rate" => nil } }
 
       it { is_expected.to be false }
     end

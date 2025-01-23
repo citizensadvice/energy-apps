@@ -17,6 +17,16 @@ class TimeBasedDailyUsage
     @hours_used = hours_used.to_f
   end
 
+  def to_h
+    {
+      label: label,
+      details: details,
+      kwh_per_day: kwh_per(:day),
+      kwh_per_week: kwh_per(:week),
+      kwh_per_month: kwh_per(:month)
+    }
+  end
+
   def kwh_per(timespan)
     case timespan
     when :day

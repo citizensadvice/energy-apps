@@ -11,6 +11,8 @@ module ApplianceCalculator
 
       after_action :set_headers
 
+      helper_method :saved_unit_rate, :usages
+
       private
 
       def set_headers
@@ -26,7 +28,6 @@ module ApplianceCalculator
       def saved_unit_rate
         session[:unit_rate]
       end
-      helper_method :saved_unit_rate
 
       def wizard_store_key
         :daily_usage_creation
@@ -37,9 +38,13 @@ module ApplianceCalculator
 
         session[:unit_rate] = rate
         session[:usages] ||= []
-        session[:usages] << usage
+        session[:usages] << usage.to_h
 
         redirect_to appliance_calculator_daily_usage_creation_step_path("completed")
+      end
+
+      def usages
+        session[:usages]
       end
     end
   end
