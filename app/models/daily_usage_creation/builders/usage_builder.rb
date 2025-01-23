@@ -78,7 +78,7 @@ module DailyUsageCreation
       def time_based_details
         [
           "Quantity: #{@store['quantity']}",
-          "Duration: #{@store['hours']} hrs #{@store['minutes']} minutes"
+          "Duration: #{duration}"
         ]
       end
 
@@ -108,6 +108,16 @@ module DailyUsageCreation
         else
           hours / 7
         end
+      end
+
+      def duration
+        hours = @store["hours"]
+        minutes = @store["minutes"]
+
+        [
+          ("#{hours} hrs" if hours.present? && hours.positive?),
+          ("#{minutes} mins" if minutes.present? && minutes.positive?)
+        ].compact.join(" ")
       end
     end
   end
