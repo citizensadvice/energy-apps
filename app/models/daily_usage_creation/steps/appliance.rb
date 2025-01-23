@@ -5,6 +5,7 @@ module DailyUsageCreation
     class Appliance < WizardSteps::Step
       attribute :appliance_id, :string
       attribute :quantity, :integer, default: 1
+      attribute :saved_unit_rate, :float
 
       validates :appliance_id, presence: { message: "Select an appliance from the list" }
       validates :quantity, presence: { message: "Enter a number of appliances greater than 0, for example 1" },
@@ -49,6 +50,11 @@ module DailyUsageCreation
 
         @store[:added_appliance] = selected_appliance
         @store[:cyclical?] = selected_appliance.cyclical?
+
+        # If a unit rate has been entered previously, it will be in the session object.
+        # We use `StepsController#saved_unit_rate` to access it here and add it into the
+        # wizard `store`
+        @store[:saved_unit_rate] = saved_unit_rate
         super
       end
     end

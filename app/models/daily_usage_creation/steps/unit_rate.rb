@@ -19,7 +19,9 @@ If you don't know your rate, we'll use the national average of #{DEFAULT_UNIT_RA
       end
 
       def skipped?
-        @store[:unit_rate].present?
+        # skip if a unit rate has been entered previously by the user and saved into the session
+        # and subsequently the `store` by the `appliance` step of the form
+        @store[:saved_unit_rate].present?
       end
     end
   end
