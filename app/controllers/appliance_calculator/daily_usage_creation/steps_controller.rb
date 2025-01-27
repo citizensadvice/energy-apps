@@ -45,7 +45,7 @@ module ApplianceCalculator
 
       def usages
         return if session[:usages].blank?
-        
+
         session[:usages].sort_by { |usage| usage["kwh_per_month"] }.reverse
       end
     end

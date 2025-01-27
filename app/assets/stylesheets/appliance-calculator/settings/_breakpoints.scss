@@ -1,0 +1,12 @@
+/*
+    The appliance calculator is displayed in an iframe in the middle of an advice collection page.
+    This means that the medium breakpoint is smaller than the default because it does not take up the
+    full width of the page.  Without this change the mobile styles are displayed when the app is
+    shown when the rest of the page is showing desktop styles.
+ */
+
+$cads-breakpoints: (
+  sm: 0,
+  md: 458px,
+  lg: 1024px,
+);
