@@ -41,6 +41,10 @@ module DailyUsageCreation
         classes << "cads-form-field--has-error" if error.present?
         classes
       end
+
+      def next_button_text
+        "Next"
+      end
     end
   end
 end

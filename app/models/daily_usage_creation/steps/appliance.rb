@@ -57,6 +57,10 @@ module DailyUsageCreation
         @store[:saved_unit_rate] = saved_unit_rate
         super
       end
+
+      def next_button_text
+        "Next"
+      end
     end
   end
 end
