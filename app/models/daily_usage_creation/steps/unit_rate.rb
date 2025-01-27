@@ -23,6 +23,10 @@ If you don't know your rate, we'll use the national average of #{DEFAULT_UNIT_RA
         # and subsequently the `store` by the `appliance` step of the form
         @store[:saved_unit_rate].present?
       end
+
+      def next_button_text
+        "Confirm rate and add appliance"
+      end
     end
   end
 end
