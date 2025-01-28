@@ -1,0 +1,23 @@
+# frozen_string_literal: true
+
+module ApplianceCalculator
+  class LastAddedApplianceComponent < ViewComponent::Base
+    attr_reader :message
+
+    def initialize(message)
+      @message = message
+    end
+
+    def render?
+      message.present?
+    end
+
+    def dismiss_button_attrs
+      {
+        type: "button",
+        class: %w[last-added-appliance__dismiss js-last-added-appliance-dismiss cads-button cads-modal__close-button cads-icon_close],
+        "aria-label": "Close last added appliance notice"
+      }
+    end
+  end
+end

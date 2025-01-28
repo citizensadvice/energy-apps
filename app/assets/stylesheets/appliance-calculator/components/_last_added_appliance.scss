@@ -1,0 +1,28 @@
+.last-added-appliance {
+  position: relative;
+}
+
+.last-added-appliance__dismiss {
+  background-color: transparent;
+  border: none;
+  box-shadow: none;
+  color: $cads-language__text-colour;
+  margin: 0;
+  height: 100%;
+
+
+  &:active,
+  &:hover {
+    background-color: transparent;
+    box-shadow: none;
+    color: $cads-language__text-colour;
+  }
+}
+
+.last-added-appliance__dismiss-wrapper {
+  position: absolute;
+  display: flow;
+  top: 0;
+  right: 0;
+  height: calc(100% - $cads-spacing-5);
+}

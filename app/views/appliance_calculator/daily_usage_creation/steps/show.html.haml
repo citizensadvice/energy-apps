@@ -1,3 +1,5 @@
+= render ApplianceCalculator::LastAddedApplianceComponent.new(flash.notice)
+
 %h2 Use the calculator
 = form_with model: current_step, url: step_path do |form|
   = form.cads_error_summary

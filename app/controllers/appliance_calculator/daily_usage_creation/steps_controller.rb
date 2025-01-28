@@ -39,6 +39,7 @@ module ApplianceCalculator
         session[:unit_rate] = rate
         session[:usages] ||= []
         session[:usages] << usage.to_h
+        flash.notice = "#{usage.label} added to list below"
 
         redirect_to appliance_calculator_daily_usage_creation_step_path("completed")
       end
