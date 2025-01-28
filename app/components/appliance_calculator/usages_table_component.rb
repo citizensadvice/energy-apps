@@ -48,5 +48,9 @@ module ApplianceCalculator
         tag.p(detail)
       end
     end
+
+    def formatted_unit_rate
+      @unit_rate.to_f.round(2)
+    end
   end
 end

@@ -1,2 +1,4 @@
 .usages-table
   = render CitizensAdviceComponents::Table.new(header: %w[Appliance Daily Weekly Monthly Details], rows: rows)
+
+%p Calculated using a rate of #{formatted_unit_rate} p/kWh.
