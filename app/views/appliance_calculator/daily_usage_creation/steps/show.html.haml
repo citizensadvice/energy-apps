@@ -1,6 +1,5 @@
-= render ApplianceCalculator::LastAddedApplianceComponent.new(flash.notice)
+%h2 How much your appliance might be costing you
 
-%h2 Use the calculator
 = form_with model: current_step, url: step_path do |form|
   = form.cads_error_summary
 = render "form", current_step: current_step, wizard: wizard
