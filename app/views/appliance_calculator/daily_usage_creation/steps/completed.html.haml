@@ -2,4 +2,5 @@
   = render CitizensAdviceComponents::Button.new(type: :submit) do
     Add another appliance
 
+= render ApplianceCalculator::MostExpensiveApplianceComponent.new(usages)
 = render ApplianceCalculator::UsagesTableComponent.new(usages: usages, unit_rate: saved_unit_rate)
