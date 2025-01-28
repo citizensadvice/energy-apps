@@ -7,7 +7,7 @@ module ApplianceCalculator
     end
 
     def render?
-      @usages.size > 1
+      @usages.present? && @usages.size > 1
     end
 
     def text
