@@ -26,7 +26,6 @@ RSpec.describe ApplianceCalculator::MostExpensiveApplianceComponent, type: :comp
           "kwh_per_week" => 7.0,
           "kwh_per_month" => 29.45
         }
-
       ]
     end
 
