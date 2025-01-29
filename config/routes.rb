@@ -47,6 +47,7 @@ Rails.application.routes.draw do
 
     namespace :appliance_calculator, path: "appliance-calculator" do
       get "/", to: redirect("/appliance-calculator/daily_usage_creation/steps/appliance")
+      get "/clear", to: "application#clear", as: "clear"
 
       namespace :daily_usage_creation do
         resources :steps, only: %i[show update] do

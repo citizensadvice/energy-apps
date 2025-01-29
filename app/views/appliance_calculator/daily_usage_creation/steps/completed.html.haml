@@ -13,6 +13,6 @@
     = render CitizensAdviceComponents::Button.new(type: :submit) do
       Add another appliance
 
-  %form{ action: appliance_calculator_path, method: "GET" }
+  %form{ action: appliance_calculator_clear_path, method: "GET" }
     = render CitizensAdviceComponents::Button.new(variant: :secondary, type: :submit) do
       Clear list
