@@ -14,8 +14,7 @@ module DailyUsageCreation
                             }
 
       def label
-        "The national average rate is #{DEFAULT_UNIT_RATE}p/kWh. You can change it to your rate if you know it.
-If you don't know your rate, we'll use the national average of #{DEFAULT_UNIT_RATE}p per kilowatt hour (kWh)"
+        "The national average rate is #{DEFAULT_UNIT_RATE}p/kWh."
       end
 
       def skipped?

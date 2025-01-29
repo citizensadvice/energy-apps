@@ -1,3 +1,5 @@
+%h2 How much do you use the appliance?
+
 %div{ class: current_step.form_field_classes }
   - if current_step.error.present?
     .cads-form-field__error-marker
@@ -5,6 +7,8 @@
     %fieldset.cads-form-group
       %legend.cads-form-field__label
         = current_step.label
+      %p.cads-form-field__hint
+        = current_step.hint_text
       - if current_step.error.present?
         %p.cads-form-field__error-message
           = current_step.error
@@ -15,3 +19,15 @@
           = form.cads_text_field :minutes, label: "Minutes", width: :two_chars, required: true, options: { additional_attributes: { "inputmode": "numeric" } }
         .frequency-inputs__item
           = form.cads_collection_select :frequency, label: "Frequency", required: true, collection: current_step.frequency_options, text_method: :text, value_method: :value
+
+%h2 If you pay more than one rate for your electricity
+
+%p
+  If you have a time-of-use tariff, you’ll pay more than one rate for your electricity. For example, the Economy 7 tariff has a more expensive peak rate during the day and a cheaper off-peak rate at night.
+
+%p
+  If you want to compare appliances on your off-peak rate, only tell us how much you use them when you pay the off-peak rate.
+
+- if saved_unit_rate.blank?
+  %p
+    You can tell us your rate on the next page. If you don’t tell us your rate, we’ll give you the results using the national average rate.

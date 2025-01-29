@@ -1,7 +1,5 @@
 = render ApplianceCalculator::LastAddedApplianceComponent.new(flash.notice)
 
-%h2 How much your appliance might be costing you
-
 = render ApplianceCalculator::MostExpensiveApplianceComponent.new(usages)
 = render ApplianceCalculator::UsagesTableComponent.new(usages: usages, unit_rate: saved_unit_rate)
 

@@ -1,3 +1,13 @@
+%h2 How to compare appliances
+%p You can compare as many appliances as you want.
+%p To build a list of appliances:
+%ul
+  %li select an appliance
+  %li tell us how much you use the appliance
+  %li tell us the rate you pay for electricity or use the national average rate
+  %li add another appliance or clear the list to start again
+
+
 = render GroupedSelectComponent.new(**current_step.select_params)
 
 = form.cads_text_field :quantity, label: "How many of these appliances do you use?", width: :two_chars
