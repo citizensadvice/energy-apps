@@ -14,8 +14,14 @@ module DailyUsageCreation
       validates_with Validators::TimeUsageValidator
 
       def label
-        "On average, how often do you use #{added_appliance_name}(s)?"
+        "How long do you use #{added_appliance_name}(s) for?"
       end
+
+      # rubocop:disable Layout/LineLength
+      def hint_text
+        "If you have more than one #{added_appliance_name}, tell us the total time they are used. For example, if you use one appliance for about 1 hour and a second for 30 minutes, add them together. The total time is 1 hour 30 minutes."
+      end
+      # rubocop:enable Layout/LineLength
 
       def frequency_options
         [
