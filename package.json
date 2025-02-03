@@ -8,7 +8,7 @@
     "sass": "^1.83.4"
   },
   "scripts": {
-    "build": "esbuild app/javascript/*.* --bundle --sourcemap --outdir=app/assets/builds --entry-names=[name]-[hash].digested",
+    "build": "esbuild app/javascript/*.* --bundle --sourcemap --outdir=app/assets/builds --entry-names=[name]-[hash].digested --minify",
     "build:css": "sass ./app/assets/stylesheets/energy-csr-table.scss:./app/assets/builds/energy-csr-table.css ./app/assets/stylesheets/appliance-calculator.scss:./app/assets/builds/appliance-calculator.css --no-source-map --load-path=node_modules",
     "lint": "yarn run lint:scss && yarn run lint:js",
     "lint:scss": "stylelint 'app/assets/stylesheets/**/*.scss'",
