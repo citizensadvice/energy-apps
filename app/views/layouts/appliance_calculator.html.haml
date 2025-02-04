@@ -13,4 +13,4 @@
   %body
     = yield
 
-    = javascript_include_tag "appliance-calculator", defer: true
+    = javascript_include_tag(digested_js_file_name("appliance-calculator.js"), defer: true)
