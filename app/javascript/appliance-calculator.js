@@ -1,5 +1,5 @@
 import initErrorSummary from '@citizensadvice/design-system/lib/error-summary';
-import initDismissNotice from "./last_added_appliance";
+import initDismissNotice from "./modules/last_added_appliance";
 
 try {
     initErrorSummary();
