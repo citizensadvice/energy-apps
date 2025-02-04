@@ -44,6 +44,16 @@ yarn build --watch
 
 This will watch for changes to `.js` files and transpile the applicaiton js automatically. Currently, there is no hot-reloading function.
 
+## Propshaft
+
+The app uses `propshaft` to digest front end files and assets during `rails assets:precompile`.
+
+For JS files, the `esbuild` process already adds a hash to the file name and ensures the `.js` and `.js.map` file share a common name (so we can use DataDog upload CI tool).  The assets are not digested again by `propshaft` because they have `-[hash].digested` in their filename (see https://github.com/rails/propshaft/tree/main?tab=readme-ov-file#bypassing-the-digest-step).
+
+This means that we need to know the built filename to pass into `javascript_include_tag` in the templates.  To acheive this, an initilizer (`JsBuildManifest`) creates a map of entry points to built filenames using the `js-build-meta.json` file created in by the `esbuild build` command.
+
+A `JsFileHelper` then uses this information to turn a given entrypoint name (eg `application.js`) into the built file name (eg `application-e467d1.js`), so `propshaft` can find it in its `public/assets/.manifest.json`.
+
 ## Running with `bin/dev`
 
 You can run the application along with asset compilation using the following dev script:
