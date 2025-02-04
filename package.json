@@ -3,6 +3,7 @@
   "private": "true",
   "dependencies": {
     "@citizensadvice/design-system": "^6.2.0",
+    "@datadog/browser-logs": "^6.1.0",
     "esbuild": "^0.24.2",
     "eslint-plugin-import": "^2.31.0",
     "sass": "^1.83.4"
