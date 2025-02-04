@@ -12,4 +12,4 @@
         .cads-grid-col-lg-12
           = yield
 
-    = javascript_include_tag "application", "data-turbo-track": "reload", defer: true
+    = javascript_include_tag digested_js_file_name("application.js"), "data-turbo-track": "reload", defer: true
