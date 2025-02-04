@@ -16,4 +16,3 @@ Rails.application.config.assets.version = "1.0"
 Rails.application.config.assets.paths << Rails.root.join("node_modules/@citizensadvice/design-system/assets/")
 Rails.application.config.assets.prefix = "/energy-apps-assets"
 Rails.application.config.assets.excluded_paths = [Rails.root.join("app/assets/stylesheets")]
-
