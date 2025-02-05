@@ -12,7 +12,7 @@ jobs:
     env:
       DATADOG_API_KEY: ${{ secrets.DATADOG_API_KEY }}
       DATADOG_SITE: datadoghq.eu
-    steps:g
+    steps:
       - name: "Checkout"
         uses: actions/checkout@v4
 
