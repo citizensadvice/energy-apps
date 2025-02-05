@@ -10,7 +10,8 @@ image:
   tag: "main"
 
 # plain env vars. Take precedence over any secrets with the same name!
-envVars: {}
+envVars:
+  APP_VERSION: ${{ github.sha }}
 
 # values to store in a secret. Only intended to be set with helm --set at e.g. deployment time!!
 secrets:
