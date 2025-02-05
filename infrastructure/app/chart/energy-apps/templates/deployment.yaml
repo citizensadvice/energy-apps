@@ -51,6 +51,8 @@ spec:
           image: "{{ .Values.image.repository }}:{{ .Values.image.tag | default .Chart.AppVersion }}"
           imagePullPolicy: {{ .Values.image.pullPolicy }}
           env:
+            - name: APP_VERSION
+              value: {{  .Values.image.tag }}
           {{- if .Values.envVars }}
           {{- range $name, $val := .Values.envVars }}
             - name: {{ $name }}
