@@ -8,10 +8,11 @@ on:
 
 jobs:
   dd-js-upload:
+    if: ${{ github.event.workflow_run.conclusion == 'success' }}
     env:
       DATADOG_API_KEY: ${{ secrets.DATADOG_API_KEY }}
       DATADOG_SITE: datadoghq.eu
-    steps:
+    steps:g
       - name: "Checkout"
         uses: actions/checkout@v4
 
