@@ -1,0 +1,42 @@
+name: Upload JS and sourcemaps to DataDog
+on:
+  workflow_dispatch:
+  workflow_run:
+    workflows: ["Deploy Energy Apps"]
+    types:
+      - completed
+
+jobs:
+  dd-js-upload:
+    env:
+      DATADOG_API_KEY: ${{ secrets.DATADOG_API_KEY }}
+      DATADOG_SITE: datadoghq.eu
+    steps:
+      - name: "Checkout"
+        uses: actions/checkout@v4
+
+      - name: "Setup ruby"
+        uses: ruby/setup-ruby@v1
+        with:
+          bundler-cache: true
+
+      - name: "Setup node"
+        uses: actions/setup-node@v4
+        with:
+          node-version-file: .nvmrc
+
+      - name: "Install npm packages"
+        uses: bahmutov/npm-install@v1
+
+      - name: "Install datadog-ci upload tools"
+        run: npm install -g @datadog/datadog-ci
+
+      - name: "Precompile assets"
+        run: bundle exec rails assets:precompile
+
+      - name: "Upload js assets"
+        run: | 
+          datadog-ci sourcemaps upload ./public/energy-apps-assets \
+          --service=energy-apps \
+          --release-version=${{ github.sha }} \
+          --minified-path-prefix=/energy-apps-assets/
