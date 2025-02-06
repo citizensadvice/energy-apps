@@ -65,6 +65,9 @@ Rails.application.configure do
     merge_into[:script_src, "'sha256-MtkotRM6KOAOo1saTZwgZ8kKWigT1Za4LlZ205dKQFo='"]
 
     merge_into[:frame_ancestors, "localhost:*"] if Rails.env.development?
+
+    # DataDog JS error logging
+    merge_into[:connect_src, "https://browser-intake-datadoghq.eu"]
   end
   # rubocop:enable Metrics/BlockLength
 
