@@ -18,5 +18,3 @@ try {
   document.querySelector("html").classList.add("no-js");
   throw error;
 }
-
-throw new Error("This is a deliberate error from the energy apps javascript")
