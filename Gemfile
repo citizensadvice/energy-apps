@@ -50,6 +50,7 @@ gem "factory_bot_rails"
 gem "faraday"
 gem "faraday-net_http_persistent"
 gem "graphql-client"
+gem "preserve"
 gem "rails_semantic_logger"
 gem "rich_text_renderer"
 

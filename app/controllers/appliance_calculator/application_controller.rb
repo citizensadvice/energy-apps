@@ -3,6 +3,7 @@
 module ApplianceCalculator
   class ApplicationController < ApplicationController
     layout :choose_layout
+    preserve :"no-js"
 
     def clear
       session[:unit_rate] = nil
