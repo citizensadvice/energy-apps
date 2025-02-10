@@ -14,4 +14,6 @@ body {
   flex: 1 0 auto;
 }
 
-
+.no-js body {
+  padding-left: 0;
+}
