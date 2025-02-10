@@ -6,7 +6,6 @@ module ApplianceCalculator
       include WizardSteps
       self.wizard_class = ::DailyUsageCreation::Wizard
 
-      layout "appliance_calculator"
       default_form_builder ::CitizensAdviceFormBuilder::FormBuilder
 
       after_action :set_headers
