@@ -4,6 +4,10 @@
 class BreadcrumbsComponent < ViewComponent::Base
   delegate :scotland?, to: :helpers
 
+  def initialize(current_page_title:)
+    @current_page_title = current_page_title
+  end
+
   def call
     render CitizensAdviceComponents::Breadcrumbs.new(type: :no_collapse, links:)
   end
@@ -31,7 +35,7 @@ class BreadcrumbsComponent < ViewComponent::Base
     [
       { url: "https://www.citizensadvice.org.uk/consumer/", title: "Consumer" },
       { url: "https://www.citizensadvice.org.uk/consumer/energy/energy-supply/", title: "Your energy supply" },
-      { title: "Compare energy suppliers' customer service" }
+      { title: @current_page_title }
     ]
   end
 
@@ -39,7 +43,7 @@ class BreadcrumbsComponent < ViewComponent::Base
     [
       { url: "https://www.citizensadvice.org.uk/scotland/consumer/", title: "Consumer" },
       { url: "https://www.citizensadvice.org.uk/scotland/consumer/energy/energy-supply/", title: "Your energy supply" },
-      { title: "Compare energy suppliers' customer service" }
+      { title: @current_page_title }
     ]
   end
 end
