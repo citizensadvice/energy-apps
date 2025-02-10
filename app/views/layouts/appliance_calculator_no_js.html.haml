@@ -1,0 +1,26 @@
+!!!
+%html.no-js{ lang: I18n.locale }
+  %head
+    %meta{ content: "text/html; charset=UTF-8", "http-equiv": "Content-Type" }
+    %meta{ content: "width=device-width,initial-scale=1", name: "viewport" }
+    %meta{ name: "robots", content: "noindex,nofollow" }
+
+    = stylesheet_link_tag "appliance-calculator"
+
+  %body
+    .wrapper
+      = render HeaderComponent.new
+      = render CitizensAdviceComponents::Navigation.new(links: navigation_links)
+      = render BreadcrumbsComponent.new
+
+      #cads-main-content
+        .cads-page-content
+          .cads-grid-container
+            .cads-grid-row
+              %main.cads-grid-col-md-12
+                = yield
+
+  = render FooterComponent.new(current_path: request.path,
+                                   feedback_survey_id: "J8PLH2H",
+                                   columns: public_website_footer_nav_links)
+
