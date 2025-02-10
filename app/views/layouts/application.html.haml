@@ -27,7 +27,7 @@
     .wrapper
       = render HeaderComponent.new
       = render CitizensAdviceComponents::Navigation.new(links: navigation_links)
-      = render BreadcrumbsComponent.new
+      = render BreadcrumbsComponent.new(current_page_title: "Compare energy suppliers' customer service")
 
       #cads-main-content
         .cads-page-content
