@@ -50,10 +50,6 @@ Then("I am shown a table with my chosen time based appliance") do
   expect(page).to have_gridcell "Duration: 1 hrs 30 mins"
 end
 
-And("I am shown a message showing my most recently added time based appliance") do
-  expect(page).to have_text "TEST - Fan heater added to list below"
-end
-
 And("I am shown a message showing my most recently added cyclical appliance") do
   expect(page).to have_text "TEST - Dishwasher (Eco cycle)"
 end
@@ -73,4 +69,26 @@ end
 Then("I am shown a table with my chosen cyclical appliance") do
   expect(page).to have_gridcell "TEST - Dishwasher (Eco cycle), 1 cycles per week"
   expect(page).to have_gridcell "Cycle(s): 1"
+end
+
+When("I choose an appliance with cyclical usage with variants") do
+  select "TEST - Tumble Dryer (condenser)", from: "Select an appliance"
+end
+
+Then("I am asked which variant I use") do
+  expect(page).to have_text "How full is the tumble dryer?"
+end
+
+When("I choose a variant") do
+  choose "Full load", fieldset: "How full is the tumble dryer?"
+end
+
+Then("I am shown a table with my chosen cyclical appliance with variants") do
+  expect(page).to have_gridcell "TEST - Tumble Dryer (condenser), Full load, 1 cycles per day"
+  expect(page).to have_gridcell "Cycle(s): 1"
+  expect(page).to have_gridcell "Full load"
+end
+
+And("I am shown a message saying {string} added below") do |msg|
+  expect(page).to have_text msg
 end
