@@ -3,10 +3,10 @@
   "private": "true",
   "dependencies": {
     "@citizensadvice/design-system": "^6.4.1",
-    "@datadog/browser-logs": "^6.1.0",
-    "esbuild": "^0.24.2",
+    "@datadog/browser-logs": "^6.2.1",
+    "esbuild": "^0.25.0",
     "eslint-plugin-import": "^2.31.0",
-    "sass": "^1.83.4"
+    "sass": "^1.84.0"
   },
   "scripts": {
     "build": "esbuild app/javascript/*.* --bundle --sourcemap --entry-names=[name]-[hash].digested --outdir=app/assets/builds --metafile=js-build-meta.json --minify",
