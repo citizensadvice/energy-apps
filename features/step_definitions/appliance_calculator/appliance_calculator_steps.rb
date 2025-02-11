@@ -92,3 +92,16 @@ end
 And("I am shown a message saying {string} added below") do |msg|
   expect(page).to have_text msg
 end
+
+When("I add another time based appliance") do
+  click_button "Add another appliance"
+  select "TEST - Broadband router", from: "Select an appliance"
+  click_button "Next"
+  fill_in "Hours", with: 0
+  fill_in "Minutes", with: 1
+  click_button "Next"
+end
+
+Then("I am shown which is the most expensive appliance I have added") do
+  expect(page).to have_text "Your most expensive appliance in this list is your TEST - Fan heater"
+end
