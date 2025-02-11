@@ -15,5 +15,6 @@ Feature: Adding a time based usage appliance
 
     When I enter a unit rate
     And I confirm the rate
-    Then I am shown a table with my chosen appliance
-    And I am shown a message showing my most recently added appliance
+    
+    Then I am shown a table with my chosen time based appliance
+    And I am shown a message showing my most recently added time based appliance

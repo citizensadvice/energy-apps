@@ -44,12 +44,33 @@ And("I confirm the rate") do
   click_button "Confirm rate and add appliance"
 end
 
-Then("I am shown a table with my chosen appliance") do
+Then("I am shown a table with my chosen time based appliance") do
   expect(page).to have_gridcell "TEST - Fan heater"
   expect(page).to have_gridcell "Quantity: 2"
   expect(page).to have_gridcell "Duration: 1 hrs 30 mins"
 end
 
-And("I am shown a message showing my most recently added appliance") do
+And("I am shown a message showing my most recently added time based appliance") do
   expect(page).to have_text "TEST - Fan heater added to list below"
+end
+
+And("I am shown a message showing my most recently added cyclical appliance") do
+  expect(page).to have_text "TEST - Dishwasher (Eco cycle)"
+end
+
+When("I choose an appliance with cyclical usage") do
+  select "TEST - Dishwasher (Eco cycle)", from: "Select an appliance"
+end
+
+Then("I am on the how many cycles do you run step") do
+  expect(page).to have_text "How many cycles do you run?"
+end
+
+When(/^I enter (\d+) cycles$/) do |arg|
+  fill_in "Cycles", with: arg
+end
+
+Then("I am shown a table with my chosen cyclical appliance") do
+  expect(page).to have_gridcell "TEST - Dishwasher (Eco cycle), 1 cycles per week"
+  expect(page).to have_gridcell "Cycle(s): 1"
 end
