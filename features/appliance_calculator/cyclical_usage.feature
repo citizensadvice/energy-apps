@@ -14,4 +14,4 @@ Feature: Adding a cyclical usage appliance
     And I confirm the rate
 
     Then I am shown a table with my chosen cyclical appliance
-    And I am shown a message showing my most recently added cyclical appliance
+    And I am shown a message saying "TEST - Dishwasher (Eco cycle)" added below
