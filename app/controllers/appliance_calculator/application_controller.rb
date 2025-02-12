@@ -5,6 +5,10 @@ module ApplianceCalculator
     layout :choose_layout
     preserve :"no-js"
 
+    def index
+      redirect_to appliance_calculator_daily_usage_creation_step_path("appliance")
+    end
+
     def clear
       session[:unit_rate] = nil
       session[:usages] = nil
@@ -13,7 +17,9 @@ module ApplianceCalculator
     end
 
     def choose_layout
-      if params["no-js"].present?
+      return "appliance_calculator" if params["no-js"].nil?
+
+      if params["no-js"] == "true"
         "appliance_calculator_no_js"
       else
         "appliance_calculator"
