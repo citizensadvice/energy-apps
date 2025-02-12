@@ -7,7 +7,7 @@
   If you want to compare appliances using a different rate, press ‘Clear list’ to restart the calculator.
 
 .form-actions
-  %form{ action: appliance_calculator_path, method: "GET"}
+  %form{ action: appliance_calculator_root_path, method: "GET"}
     = render CitizensAdviceComponents::Button.new(type: :submit) do
       Add another appliance
 

@@ -46,7 +46,7 @@ Rails.application.routes.draw do
     get "/status", to: "status#index"
 
     namespace :appliance_calculator, path: "appliance-calculator" do
-      get "/", to: redirect("/appliance-calculator/daily_usage_creation/steps/appliance")
+      root to: "application#index"
       get "/clear", to: "application#clear", as: "clear"
 
       namespace :daily_usage_creation do

@@ -30,7 +30,7 @@ RSpec.describe "Appliance calculator" do
       get appliance_calculator_daily_usage_creation_step_path("appliance")
     end
 
-    it "renders the no-js layout" do
+    it "renders the normal layout" do
       expect(response).to render_template("show", with_layout: "appliance_calculator")
     end
   end
