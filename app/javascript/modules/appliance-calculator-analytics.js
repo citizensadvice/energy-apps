@@ -16,7 +16,12 @@ const trackElement = (el) => {
 const trackClicks = () => {
     const trackedElements = document.querySelectorAll("[data-gtm-event='click']")
     if (trackedElements) {
-        trackedElements.forEach(el => el.addEventListener('click', () => { trackElement(el)}))
+        trackedElements.forEach(el => el.addEventListener('click', () => {
+            window.dataLayer.push({
+                event: el.getAttribute('data-gtm-event-name'),
+                value: el.getAttribute('data-gtm-value')
+            })
+        }))
     }
 }
 
