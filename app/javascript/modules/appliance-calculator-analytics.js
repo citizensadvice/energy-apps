@@ -1,25 +1,16 @@
 // Events are pushed into the datalayer here
 // Events and values are defined on components directly in the rendered HTML
 
-const trackElement = (el) => {
-    const event = el.getAttribute('data-gtm-event-name');
-    const value = el.getAttribute('data-gtm-value');
-
-    if (event && value) {
-        window.dataLayer.push({
-            [event]: value
-        });
-    }
-}
-
 
 const trackClicks = () => {
     const trackedElements = document.querySelectorAll("[data-gtm-event='click']")
     if (trackedElements) {
         trackedElements.forEach(el => el.addEventListener('click', () => {
+            const event = el.getAttribute('data-gtm-event-name');
+
             window.dataLayer.push({
-                event: el.getAttribute('data-gtm-event-name'),
-                value: el.getAttribute('data-gtm-value')
+                event,
+                [`${event}-value`]: el.getAttribute('data-gtm-value')
             })
         }))
     }
@@ -28,7 +19,15 @@ const trackClicks = () => {
 const trackRenders = () => {
     const trackedElements = document.querySelectorAll("[data-gtm-event='render']")
     if (trackedElements) {
-        trackedElements.forEach(el => trackElement(el));
+        trackedElements.forEach(el => {
+            const event = el.getAttribute('data-gtm-event-name');
+
+            window.dataLayer.push({
+                event,
+                [`${event}-value`]: el.getAttribute('data-gtm-value')
+            })
+
+        });
     }
 }
 
@@ -36,7 +35,8 @@ const trackErrors = () => {
     const errors = document.querySelectorAll('.js-error-summary-link');
     errors.forEach(error => {
         window.dataLayer.push({
-            "app-calc-form-error": error.innerText
+            event: "app-calc-form-error",
+            "app-calc-form-error-value": error.innerText
         })
     })
 }
