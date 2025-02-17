@@ -4,6 +4,7 @@ module DailyUsageCreation
   module Steps
     class TimeUsage < WizardSteps::Step
       include ActionView::Helpers::TagHelper
+      include Trackable
 
       attribute :hours, :integer
       attribute :minutes, :integer

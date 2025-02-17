@@ -2,6 +2,8 @@
 
 module ApplianceCalculator
   class ApplicationController < ApplicationController
+    include DataLayer
+
     layout :choose_layout
     preserve :"no-js"
 
