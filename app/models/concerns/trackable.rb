@@ -8,7 +8,7 @@ module Trackable
       {
         data: {
           "gtm-event": "click",
-          "gtm-event-name": "next-button-click",
+          "gtm-event-name": "app-calc-next-button-click",
           "gtm-value": id
         }
       }
@@ -18,7 +18,7 @@ module Trackable
       {
         data: {
           "gtm-event": "click",
-          "gtm-event-name": "previous-button-click",
+          "gtm-event-name": "app-calc-previous-button-click",
           "gtm-value": id
         }
       }
