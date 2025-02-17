@@ -18,7 +18,7 @@ module ApplianceCalculator
       {
         data: {
           "gtm-event": "render",
-          "gtm-event-name": "Most expensive appliance",
+          "gtm-event-name": "app-calc-most-expensive-appliance",
           "gtm-value": @usages.first["label"]
         }
       }

@@ -7,10 +7,12 @@ const trackClicks = () => {
     const trackedElements = document.querySelectorAll("[data-gtm-event='click']")
     if (trackedElements) {
         trackedElements.forEach(el => el.addEventListener('click', () => {
+            const event = el.getAttribute('data-gtm-event-name');
+            const value = el.getAttribute('data-gtm-value');
+
             window.dataLayer.push({
-                event: el.getAttribute('data-gtm-event-name'),
-                value: el.getAttribute('data-gtm-value')
-            })
+                [event]: value
+            });
         }))
     }
 }
@@ -18,12 +20,14 @@ const trackClicks = () => {
 const trackRenders = () => {
     const trackedElements = document.querySelectorAll("[data-gtm-event='render']")
     if (trackedElements) {
-        trackedElements.forEach(el =>
+        trackedElements.forEach(el => {
+            const event = el.getAttribute('data-gtm-event-name');
+            const value = el.getAttribute('data-gtm-value');
+
             window.dataLayer.push({
-                event: el.getAttribute('data-gtm-event-name'),
-                value: el.getAttribute('data-gtm-value')
-            })
-        );
+                [event]: value
+            });
+        })
     }
 }
 
@@ -31,8 +35,7 @@ const trackErrors = () => {
     const errors = document.querySelectorAll('.js-error-summary-link');
     errors.forEach(error => {
         window.dataLayer.push({
-            event: "Form error",
-            value: error.innerText
+            "app-calc-form-error": error.innerText
         })
     })
 }
