@@ -27,9 +27,20 @@ const trackRenders = () => {
     }
 }
 
+const trackErrors = () => {
+    const errors = document.querySelectorAll('.js-error-summary-link');
+    errors.forEach(error => {
+        window.dataLayer.push({
+            event: "Form error",
+            value: error.innerText
+        })
+    })
+}
+
 const initAnalytics = () => {
     trackClicks();
     trackRenders();
+    trackErrors();
 }
 
 export default initAnalytics
