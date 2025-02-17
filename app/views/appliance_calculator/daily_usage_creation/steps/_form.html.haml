@@ -3,7 +3,7 @@
   = render(current_step.key, form: form)
 
   - if wizard.can_proceed?
-    = render CitizensAdviceComponents::Button.new(type: :submit) do |c|
+    = render CitizensAdviceComponents::Button.new(type: :submit, attributes: current_step.next_button_attrs) do |c|
       = current_step.next_button_text
       - c.with_icon_right do
         = render CitizensAdviceComponents::Icons::ArrowRight.new
@@ -11,7 +11,7 @@
 
 - if wizard.previous_key
   = form_with model: current_step, url: step_path(wizard.previous_key), method: :get do
-    = render CitizensAdviceComponents::Button.new(type: :submit, variant: :secondary) do |c|
+    = render CitizensAdviceComponents::Button.new(type: :submit, variant: :secondary, attributes: current_step.prev_button_attrs) do |c|
       = "Previous"
       - c.with_icon_left do
         = render CitizensAdviceComponents::Icons::ArrowLeft.new

@@ -3,6 +3,8 @@
 module DailyUsageCreation
   module Steps
     class CyclicalUsage < WizardSteps::Step
+      include Trackable
+
       attribute :cycles
       attribute :frequency
       attribute :wattage

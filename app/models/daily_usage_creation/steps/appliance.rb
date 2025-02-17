@@ -3,6 +3,8 @@
 module DailyUsageCreation
   module Steps
     class Appliance < WizardSteps::Step
+      include Trackable
+
       attribute :appliance_id, :string
       attribute :quantity, :integer, default: 1
       attribute :saved_unit_rate, :float
