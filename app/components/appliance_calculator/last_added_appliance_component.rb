@@ -19,5 +19,15 @@ module ApplianceCalculator
         "aria-label": "Close last added appliance notice"
       }
     end
+
+    def notice_attrs
+      {
+        data: {
+          "gtm-event": "render",
+          "gtm-event-name": "Appliance added",
+          "gtm-value": @message
+        }
+      }
+    end
   end
 end

@@ -1,4 +1,4 @@
 .most-expensive-appliance
-  = render CitizensAdviceComponents::Callout.new(type: :example) do
+  = render CitizensAdviceComponents::Callout.new(type: :example, attributes: callout_attrs) do
     = tag.h3("Most expensive appliance")
     = tag.p(text)

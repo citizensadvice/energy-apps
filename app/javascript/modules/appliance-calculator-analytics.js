@@ -15,8 +15,21 @@ const trackClicks = () => {
     }
 }
 
-const initAnalytics = () => {
-    trackClicks();
+const trackRenders = () => {
+    const trackedElements = document.querySelectorAll("[data-gtm-event='render']")
+    if (trackedElements) {
+        trackedElements.forEach(el =>
+            window.dataLayer.push({
+                event: el.getAttribute('data-gtm-event-name'),
+                value: el.getAttribute('data-gtm-value')
+            })
+        );
+    }
 }
 
-export default initAnalytics;
+const initAnalytics = () => {
+    trackClicks();
+    trackRenders();
+}
+
+export default initAnalytics

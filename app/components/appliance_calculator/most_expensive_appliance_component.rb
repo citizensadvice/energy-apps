@@ -13,5 +13,15 @@ module ApplianceCalculator
     def text
       "Your most expensive appliance in this list is your #{@usages.first['label']}"
     end
+
+    def callout_attrs
+      {
+        data: {
+          "gtm-event": "render",
+          "gtm-event-name": "Most expensive appliance",
+          "gtm-value": @usages.first["label"]
+        }
+      }
+    end
   end
 end
