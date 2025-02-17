@@ -3,14 +3,18 @@
 = render ApplianceCalculator::MostExpensiveApplianceComponent.new(usages)
 = render ApplianceCalculator::UsagesTableComponent.new(usages: usages, unit_rate: saved_unit_rate)
 
+- add_another_attrs = { data: { "gtm-event": "click", "gtm-event-name": "Add another appliance", "gtm-value": "add-another-appliance-click"}}
+- clear_attrs = { data: { "gtm-event": "click", "gtm-event-name": "Clear list", "gtm-value": "clear-list-click"}}
+
+
 %p
   If you want to compare appliances using a different rate, press ‘Clear list’ to restart the calculator.
 
 .form-actions
   %form{ action: appliance_calculator_root_path, method: "GET"}
-    = render CitizensAdviceComponents::Button.new(type: :submit) do
+    = render CitizensAdviceComponents::Button.new(type: :submit, attributes: add_another_attrs) do
       Add another appliance
 
   %form{ action: appliance_calculator_clear_path, method: "GET" }
-    = render CitizensAdviceComponents::Button.new(variant: :secondary, type: :submit) do
+    = render CitizensAdviceComponents::Button.new(variant: :secondary, type: :submit, attributes: clear_attrs) do
       Clear list
