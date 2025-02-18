@@ -3,3 +3,6 @@
 = render "form", current_step: current_step, wizard: wizard
 
 = render ApplianceCalculator::UsagesTableComponent.new(usages: usages, unit_rate: saved_unit_rate)
+
+- if usages.present?
+  = render 'appliance_calculator/daily_usage_creation/cost_estimation'
