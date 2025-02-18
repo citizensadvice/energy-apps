@@ -1,6 +1,8 @@
-%h2 How much you appliances might be costing you
+%h2 How much your appliances might be costing you
 
 .usages-table
   = render CitizensAdviceComponents::Table.new(header: %w[Appliance Daily Weekly Monthly Details], rows: rows)
 
-%p Calculated using a rate of #{formatted_unit_rate} p/kWh.
+.cads-prose
+  %p Calculated using a rate of #{formatted_unit_rate} p/kWh.
+
