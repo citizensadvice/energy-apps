@@ -29,7 +29,11 @@ spec:
               "source":"ruby",
               "sourcecategory":"sourcecode",
               "service":"energy-apps",
-              "log_processing_rules": []
+              "log_processing_rules": [{
+                "type": "exclude_at_match",
+                "name": "exclude_status_heartbeat",
+                "pattern" : "\"path\":\"/status\""
+              }]
           }]
       labels:
         {{- include "energy-apps.selectorLabels" . | nindent 8 }}
