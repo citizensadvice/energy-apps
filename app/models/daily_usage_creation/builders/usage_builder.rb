@@ -66,7 +66,7 @@ module DailyUsageCreation
 
       def cyclical_details
         [
-          "Cycle(s): #{@store['cycles']}",
+          "Cycle(s): #{@store['cycles']} per #{singular_frequency}",
           selected_variant_text
         ].compact
       end
@@ -78,7 +78,7 @@ module DailyUsageCreation
       def time_based_details
         [
           "Quantity: #{@store['quantity']}",
-          "Duration: #{duration}"
+          "Duration: #{duration} per #{singular_frequency}"
         ]
       end
 
@@ -107,6 +107,15 @@ module DailyUsageCreation
           hours
         else
           hours / 7
+        end
+      end
+
+      def singular_frequency
+        case @store["frequency"]
+        when "daily"
+          "day"
+        else
+          "week"
         end
       end
 
