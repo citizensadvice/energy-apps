@@ -49,7 +49,7 @@ RSpec.describe(DailyUsageCreation::Builders::UsageBuilder) do
       it "passes the correct label, details, wattage and cycle quantity" do
         expected_params = {
           label: "TEST - Tumble Dryer (condenser), 10 cycles per week",
-          details: ["Cycle(s): 10"],
+          details: ["Cycle(s): 10 per week"],
           wattage: "1000", # wattage is taken from the appliance
           cycle_quantity: 1.4285714285714286 # 10 cycles per week / 7
         }
@@ -63,7 +63,7 @@ RSpec.describe(DailyUsageCreation::Builders::UsageBuilder) do
       it "passes the correct label, details, wattage and cycle quantity" do
         expected_params = {
           label: "TEST - Tumble Dryer (condenser), Partial load, 10 cycles per week",
-          details: ["Cycle(s): 10", "Partial load"],
+          details: ["Cycle(s): 10 per week", "Partial load"],
           wattage: "200", # wattage is taken from chosen variant
           cycle_quantity: 1.4285714285714286 # 10 cycles per week / 7
         }
@@ -118,7 +118,7 @@ RSpec.describe(DailyUsageCreation::Builders::UsageBuilder) do
     it "passes the correct label, details, wattage and hours" do
       expected_params = {
         label: "TEST - Light bulb",
-        details: ["Quantity: 3", "Duration: 10 hrs 30 mins"],
+        details: ["Quantity: 3", "Duration: 10 hrs 30 mins per week"],
         wattage: "500", # wattage is taken from the appliance
         hours_used: 1.6071428571428572 # 10 hours + 30 minutes + 45 minutes additional usage = 11.25 hours / 7
       }
@@ -131,7 +131,7 @@ RSpec.describe(DailyUsageCreation::Builders::UsageBuilder) do
       it "passes the correct label, details, wattage and hours" do
         expected_params = {
           label: "TEST - Light bulb",
-          details: ["Quantity: 3", "Duration: 10 hrs"],
+          details: ["Quantity: 3", "Duration: 10 hrs per week"],
           wattage: "500", # wattage is taken from the appliance
           hours_used: 1.5357142857142858 # 10 hours + 45 minutes additional usage / 7
         }
@@ -145,7 +145,7 @@ RSpec.describe(DailyUsageCreation::Builders::UsageBuilder) do
       it "passes the correct label, details, wattage and hours" do
         expected_params = {
           label: "TEST - Light bulb",
-          details: ["Quantity: 3", "Duration: 30 mins"],
+          details: ["Quantity: 3", "Duration: 30 mins per week"],
           wattage: "500", # wattage is taken from the appliance
           hours_used: 0.17857142857142858 # 30 minutes + 45 minutes additional usage / 7
         }
