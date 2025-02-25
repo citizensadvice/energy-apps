@@ -12,6 +12,12 @@ RSpec.describe DailyUsageCreation::Steps::TimeUsage do
       it { is_expected.to be false }
     end
 
+    context "when no value for hours but some values for minutes have been provided" do
+      let(:store) { { "hours" => nil, "minutes" => 10, "frequency" => "daily" } }
+
+      it { is_expected.to be true }
+    end
+
     context "when zero values for hours and minutes have been provided" do
       let(:store) { { "hours" => 0, "minutes" => 0, "frequency" => "daily" } }
 
