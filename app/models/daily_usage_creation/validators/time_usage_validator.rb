@@ -33,6 +33,8 @@ module DailyUsageCreation
       end
 
       def validate_max_daily_hours
+        return if record.hours.blank?
+
         if empty_minutes?
           record.errors.add(:base, "Enter 24 hours or fewer") if record.hours > 24
         elsif record.hours > 23
