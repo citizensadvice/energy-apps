@@ -8,7 +8,7 @@ module ApplianceCalculator
     preserve :"no-js"
 
     def index
-      redirect_to appliance_calculator_daily_usage_creation_step_path("appliance")
+      redirect_to appliance_calculator_daily_usage_creation_step_path("appliance", { "no-js": params["no-js"] })
     end
 
     def clear
