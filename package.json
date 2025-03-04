@@ -3,10 +3,10 @@
   "private": "true",
   "dependencies": {
     "@citizensadvice/design-system": "^6.4.1",
-    "@datadog/browser-logs": "^6.3.0",
+    "@datadog/browser-logs": "^6.4.0",
     "esbuild": "^0.25.0",
     "eslint-plugin-import": "^2.31.0",
-    "sass": "^1.85.0"
+    "sass": "^1.85.1"
   },
   "scripts": {
     "build": "esbuild app/javascript/*.* --bundle --sourcemap --entry-names=[name]-[hash].digested --outdir=app/assets/builds --metafile=js-build-meta.json --minify",
@@ -18,8 +18,8 @@
   "devDependencies": {
     "eslint": "^8.57.0",
     "eslint-config-airbnb-base": "^15.0.0",
-    "eslint-config-prettier": "^10.0.1",
-    "stylelint": "^16.14.1",
+    "eslint-config-prettier": "^10.0.2",
+    "stylelint": "^16.15.0",
     "stylelint-config-standard": "^37.0.0",
     "stylelint-config-standard-scss": "^14.0.0",
     "stylelint-selector-bem-pattern": "^4.0.1"
