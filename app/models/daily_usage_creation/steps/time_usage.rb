@@ -52,6 +52,10 @@ module DailyUsageCreation
       def next_button_text
         "Next"
       end
+
+      def quantity
+        @store[:quantity]
+      end
     end
   end
 end
