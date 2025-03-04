@@ -125,3 +125,12 @@ Then("The list of appliances only has the broadband router and not the fan heate
   expect(page).to have_gridcell "TEST - Broadband router"
   expect(page).not_to have_gridcell "TEST - Fan heater"
 end
+
+Then("I cannot return to the start of the form") do
+  # binding.pry
+  expect(page).to have_no_button "Add another appliance"
+end
+
+And("I am told I have added the maximum number of appliances") do
+  expect(page).to have_text "You have added the maximum number of appliances"
+end
