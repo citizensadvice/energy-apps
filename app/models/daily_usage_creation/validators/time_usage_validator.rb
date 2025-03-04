@@ -5,8 +5,6 @@ module DailyUsageCreation
     class TimeUsageValidator < ActiveModel::Validator
       attr_accessor :record
 
-      MAX_HOURS_IN_A_WEEK = 24 * 7
-
       def validate(record)
         @record = record
 
@@ -24,30 +22,40 @@ module DailyUsageCreation
       end
 
       def validate_max_hours
+        return if record.hours.blank?
+
         case record.frequency
         when "daily"
-          validate_max_daily_hours
+          validate_max_daily_hours if empty_minutes?
+          validate_max_daily_hours_with_minutes unless empty_minutes?
         else
-          validate_max_weekly_hours
+          validate_max_weekly_hours if empty_minutes?
+          validate_max_weekly_hours_with_minutes unless empty_minutes?
         end
       end
 
       def validate_max_daily_hours
-        return if record.hours.blank?
+        return unless record.hours > max_hours_in_a_day
 
-        if empty_minutes?
-          record.errors.add(:base, "Enter 24 hours or fewer") if record.hours > 24
-        elsif record.hours > 23
-          record.errors.add(:base, "Enter 23 hours or fewer")
-        end
+        record.errors.add(:base, "Enter #{max_hours_in_a_day} hours or fewer")
+      end
+
+      def validate_max_daily_hours_with_minutes
+        return unless record.hours > (max_hours_in_a_day - 1)
+
+        record.errors.add(:base, "Enter #{max_hours_in_a_day - 1} hours or fewer")
       end
 
       def validate_max_weekly_hours
-        if empty_minutes?
-          record.errors.add(:base, "Enter #{MAX_HOURS_IN_A_WEEK} hours or fewer") if record.hours > MAX_HOURS_IN_A_WEEK
-        elsif record.hours > (MAX_HOURS_IN_A_WEEK - 1)
-          record.errors.add(:base, "Enter #{MAX_HOURS_IN_A_WEEK - 1} hours or fewer")
-        end
+        return unless record.hours > max_hours_in_a_week
+
+        record.errors.add(:base, "Enter #{max_hours_in_a_week} hours or fewer")
+      end
+
+      def validate_max_weekly_hours_with_minutes
+        return unless record.hours > (max_hours_in_a_week - 1)
+
+        record.errors.add(:base, "Enter #{max_hours_in_a_week - 1} hours or fewer")
       end
 
       def empty_hours?
@@ -56,6 +64,14 @@ module DailyUsageCreation
 
       def empty_minutes?
         record.minutes.blank? || record.minutes.zero?
+      end
+
+      def max_hours_in_a_day
+        record.quantity * 24
+      end
+
+      def max_hours_in_a_week
+        record.quantity * 24 * 7
       end
     end
   end
