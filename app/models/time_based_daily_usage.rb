@@ -21,9 +21,9 @@ class TimeBasedDailyUsage
     {
       label: label,
       details: details,
-      kwh_per_day: kwh_per(:day),
-      kwh_per_week: kwh_per(:week),
-      kwh_per_month: kwh_per(:month)
+      kwh_per_day: kwh_per(:day).round(3),
+      kwh_per_week: kwh_per(:week).round(3),
+      kwh_per_month: kwh_per(:month).round(3)
     }
   end
 
