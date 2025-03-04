@@ -19,11 +19,6 @@ module Queries
         sys {
           id
         }
-        contentfulMetadata {
-          tags {
-            id
-          }
-        }
       }
     }
   }

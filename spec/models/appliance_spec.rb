@@ -16,13 +16,6 @@ RSpec.describe(Appliance) do
       end
 
       it { is_expected.to be_present }
-
-      it "only return appliances that have been tagged with 'test'" do
-        all_appliances.each do |appliance|
-          tags = appliance.data.contentful_metadata.tags.map(&:id)
-          expect(tags).to include "test"
-        end
-      end
     end
 
     context "when production suppliers are fetched" do
@@ -34,12 +27,7 @@ RSpec.describe(Appliance) do
         end
       end
 
-      it "only does not return any suppliers that have been tagged with 'test'" do
-        all_appliances.each do |appliance|
-          tags = appliance.data.contentful_metadata.tags.map(&:id)
-          expect(tags).not_to include "test"
-        end
-      end
+      it { is_expected.to be_present }
     end
   end
 
