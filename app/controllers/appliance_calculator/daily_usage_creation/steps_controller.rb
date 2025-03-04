@@ -10,7 +10,13 @@ module ApplianceCalculator
 
       after_action :set_headers
 
-      helper_method :saved_unit_rate, :usages
+      helper_method :saved_unit_rate, :usages, :usage_limit_reached?
+
+      def show
+        redirect_to step_path("completed") if usage_limit_reached?
+
+        super
+      end
 
       private
 
@@ -47,6 +53,12 @@ module ApplianceCalculator
         return if session[:usages].blank?
 
         session[:usages].sort_by { |usage| usage["kwh_per_month"] }.reverse
+      end
+
+      def usage_limit_reached?
+        return false if usages.blank?
+
+        usages.size >= 10
       end
     end
   end

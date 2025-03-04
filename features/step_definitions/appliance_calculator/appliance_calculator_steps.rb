@@ -127,7 +127,6 @@ Then("The list of appliances only has the broadband router and not the fan heate
 end
 
 Then("I cannot return to the start of the form") do
-  # binding.pry
   expect(page).to have_no_button "Add another appliance"
 end
 
