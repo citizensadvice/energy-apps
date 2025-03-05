@@ -18,6 +18,10 @@ module ApplianceCalculator
       redirect_to appliance_calculator_daily_usage_creation_step_path("appliance")
     end
 
+    def error
+      raise StandardError
+    end
+
     def choose_layout
       return "appliance_calculator" if params["no-js"].nil?
 

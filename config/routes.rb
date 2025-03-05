@@ -48,6 +48,7 @@ Rails.application.routes.draw do
     namespace :appliance_calculator, path: "appliance-calculator" do
       root to: "application#index"
       get "/clear", to: "application#clear", as: "clear"
+      get "/error", to: "application#error"
 
       namespace :daily_usage_creation do
         resources :steps, only: %i[show update] do
