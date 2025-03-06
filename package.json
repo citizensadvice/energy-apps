@@ -2,7 +2,7 @@
   "name": "app",
   "private": "true",
   "dependencies": {
-    "@citizensadvice/design-system": "^6.4.1",
+    "@citizensadvice/design-system": "^6.4.2",
     "@datadog/browser-logs": "^6.4.0",
     "esbuild": "^0.25.0",
     "eslint-plugin-import": "^2.31.0",

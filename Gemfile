@@ -36,7 +36,7 @@ gem "bootsnap", require: false
 
 gem "citizens_advice_components",
     github: "citizensadvice/design-system",
-    tag: "v6.4.1",
+    tag: "v6.4.2",
     glob: "engine/*.gemspec"
 
 gem "citizens_advice_form_builder",

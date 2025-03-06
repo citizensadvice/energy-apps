@@ -19,11 +19,11 @@ GIT
 
 GIT
   remote: https://github.com/citizensadvice/design-system.git
-  revision: 94382772863b866eccbb60479b8d5571f6c7a01d
-  tag: v6.4.1
+  revision: efe786cca5823edc4934031cec494d79c5b62082
+  tag: v6.4.2
   glob: engine/*.gemspec
   specs:
-    citizens_advice_components (6.4.1)
+    citizens_advice_components (6.4.2)
       actionpack (>= 7.0.0, < 9.0)
       railties (>= 7.0.0, < 9.0)
       view_component (>= 2.0.0, < 4.0)
