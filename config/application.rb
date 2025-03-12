@@ -43,13 +43,7 @@ module EnergyComparisonTable
     # add rspec test generator
     config.generators.test_framework = :rspec
 
-    # Review apps have dynamic subdomains
-    config.hosts << /.*\.qa\.citizensadvice\.org\.uk/
-
-    # production host
-    config.hosts << "energy-comparison-table.prod.content.citizensadvice.org.uk"
-    # new production host
-    config.hosts << "energy-apps.prod.content.citizensadvice.org.uk"
+    config.hosts << /.*\.citizensadvice\.org\.uk/
 
     # allow health check from private IP addresses
     config.hosts << /10\.\d+\.\d+\.\d+/
