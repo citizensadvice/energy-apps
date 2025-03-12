@@ -6,7 +6,8 @@ module Queries
     applianceCollection (
       where: {
         contentfulMetadata:{ tags: $tag_filter }
-      }
+      },
+      order: [ category_ASC, name_ASC],
     ) {
       items {
         name
