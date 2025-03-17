@@ -88,8 +88,7 @@ class SuppliersController < ApplicationController
       title: meta_title,
       description: meta_description,
       icon: [
-        { href: "/static/layout/favicon.ico" },
-        { href: "/static/images/apple-touch-icon.png", rel: "apple-touch-icon", type: "image/png" }
+        { href: "apple-touch-icon.png", rel: "apple-touch-icon", type: "image/png" }
       ]
     )
   end
