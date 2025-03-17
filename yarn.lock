@@ -53,17 +53,17 @@
   resolved "https://registry.yarnpkg.com/@csstools/selector-specificity/-/selector-specificity-5.0.0.tgz#037817b574262134cabd68fc4ec1a454f168407b"
   integrity sha512-PCqQV3c4CoVm3kdPhyeZ07VmBRdH2EpMFA/pd9OASpOEC3aXNGoqPDAZ80D0cLpMBxnmk0+yNhGsEx31hq7Gtw==
 
-"@datadog/browser-core@6.5.0":
-  version "6.5.0"
-  resolved "https://registry.yarnpkg.com/@datadog/browser-core/-/browser-core-6.5.0.tgz#b36492838290dea054e1c3b38869ee55b1334bee"
-  integrity sha512-zaechMx50HJjd/UOrLrIpXVi2qciShBWwiA0CbpPtI3aIdt0Z2+ts8PPy74yO5rqya2lvmDSJ0mNPNtWPXmHbg==
+"@datadog/browser-core@6.5.1":
+  version "6.5.1"
+  resolved "https://registry.yarnpkg.com/@datadog/browser-core/-/browser-core-6.5.1.tgz#e6c9660bb03f169d15708343ea3826f4366cefde"
+  integrity sha512-er244CQsfmTw7+e+YeIRmno+Q4pid7P/k7gchQNT6Ct7QTHeIdBooO/JuTN9a5+U551OXVdnKmVk3Qkde2LJNw==
 
-"@datadog/browser-logs@^6.5.0":
-  version "6.5.0"
-  resolved "https://registry.yarnpkg.com/@datadog/browser-logs/-/browser-logs-6.5.0.tgz#f8439fc7137d0a33a857bafa7e864509e1b07b2f"
-  integrity sha512-ShECicTDROdbp5ZN96NSB2L8pvBTtLEyf5b/kL8eR5nDSLY64XMrpP4nEYM1gcji2RC4p5o40T80dnqp2J2mdQ==
+"@datadog/browser-logs@^6.5.1":
+  version "6.5.1"
+  resolved "https://registry.yarnpkg.com/@datadog/browser-logs/-/browser-logs-6.5.1.tgz#d0807c15a8fd2d6a86646b077241783f2a738b6c"
+  integrity sha512-4s13N5u3yPfJjw4KxSLA8Ad2nIEsNNsIMrv2O0vkMlD40GSgXZ8zPgbBbF5TY3k/BukNT081FjdGTkXdolL2HA==
   dependencies:
-    "@datadog/browser-core" "6.5.0"
+    "@datadog/browser-core" "6.5.1"
 
 "@dual-bundle/import-meta-resolve@^4.1.0":
   version "4.1.0"
@@ -1277,7 +1277,7 @@ fastq@^1.6.0:
   dependencies:
     reusify "^1.0.4"
 
-file-entry-cache@^10.0.6:
+file-entry-cache@^10.0.7:
   version "10.0.7"
   resolved "https://registry.yarnpkg.com/file-entry-cache/-/file-entry-cache-10.0.7.tgz#e0ac34d4b8c44bea8a0a27ceb4dae982f2d32749"
   integrity sha512-txsf5fu3anp2ff3+gOJJzRImtrtm/oa9tYLN0iTuINZ++EyVR/nRrg2fKYwvG/pXDofcrvvb0scEbX3NyW/COw==
@@ -2611,10 +2611,10 @@ stylelint-selector-bem-pattern@^4.0.1:
     postcss "^8.4.24"
     postcss-bem-linter "^4.0.1"
 
-stylelint@^16.15.0:
-  version "16.15.0"
-  resolved "https://registry.yarnpkg.com/stylelint/-/stylelint-16.15.0.tgz#a561cd50ad468cc4898f5c57cc1f223287fdea59"
-  integrity sha512-OK6Rs7EPdcdmjqiDycadZY4fw3f5/TC1X6/tGjnF3OosbwCeNs7nG+79MCAtjEg7ckwqTJTsku08e0Rmaz5nUw==
+stylelint@^16.16.0:
+  version "16.16.0"
+  resolved "https://registry.yarnpkg.com/stylelint/-/stylelint-16.16.0.tgz#ebecf27becd277aaf752e75de324023a1e13e486"
+  integrity sha512-40X5UOb/0CEFnZVEHyN260HlSSUxPES+arrUphOumGWgXERHfwCD0kNBVILgQSij8iliYVwlc0V7M5bcLP9vPg==
   dependencies:
     "@csstools/css-parser-algorithms" "^3.0.4"
     "@csstools/css-tokenizer" "^3.0.3"
@@ -2629,7 +2629,7 @@ stylelint@^16.15.0:
     debug "^4.3.7"
     fast-glob "^3.3.3"
     fastest-levenshtein "^1.0.16"
-    file-entry-cache "^10.0.6"
+    file-entry-cache "^10.0.7"
     global-modules "^2.0.0"
     globby "^11.1.0"
     globjoin "^0.1.4"
