@@ -99,7 +99,7 @@ RSpec.describe(DailyUsageCreation::Builders::UsageBuilder) do
           "category" => "Large appliances",
           "wattage" => "500",
           "usageType" => "Time",
-          "additionalUsage" => "45"
+          "additionalKWh" => "45"
         }
       }
     end
@@ -120,7 +120,8 @@ RSpec.describe(DailyUsageCreation::Builders::UsageBuilder) do
         label: "TEST - Light bulb",
         details: ["Quantity: 3", "Duration: 10 hrs 30 mins per week"],
         wattage: "500", # wattage is taken from the appliance
-        hours_used: 1.6071428571428572 # 10 hours + 30 minutes + 45 minutes additional usage = 11.25 hours / 7
+        additional_kwh: "45", # additional kwh is taken from the appliance
+        hours_used: 1.5 # 10 hours + 30 minutes = 10.5 hours / 7
       }
       expect(TimeBasedDailyUsage).to have_received(:new).with(expected_params)
     end
@@ -133,7 +134,8 @@ RSpec.describe(DailyUsageCreation::Builders::UsageBuilder) do
           label: "TEST - Light bulb",
           details: ["Quantity: 3", "Duration: 10 hrs per week"],
           wattage: "500", # wattage is taken from the appliance
-          hours_used: 1.5357142857142858 # 10 hours + 45 minutes additional usage / 7
+          additional_kwh: "45", # additional kwh is taken from the appliance
+          hours_used: 1.4285714285714286 # 10 hours / 7
         }
         expect(TimeBasedDailyUsage).to have_received(:new).with(expected_params)
       end
@@ -147,7 +149,8 @@ RSpec.describe(DailyUsageCreation::Builders::UsageBuilder) do
           label: "TEST - Light bulb",
           details: ["Quantity: 3", "Duration: 30 mins per week"],
           wattage: "500", # wattage is taken from the appliance
-          hours_used: 0.17857142857142858 # 30 minutes + 45 minutes additional usage / 7
+          additional_kwh: "45", # additional kwh is taken from the appliance
+          hours_used: 0.07142857142857142 # 30 minutes / 7
         }
         expect(TimeBasedDailyUsage).to have_received(:new).with(expected_params)
       end
