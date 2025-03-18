@@ -36,6 +36,7 @@ module DailyUsageCreation
           label: label,
           details: time_based_details,
           wattage: @appliance.data["wattage"],
+          additional_kwh: @appliance.data["additionalKWh"],
           hours_used: hours_per_day
         )
       end
@@ -95,8 +96,6 @@ module DailyUsageCreation
         total_hours = @store["hours"].to_f
 
         total_hours += (@store["minutes"].to_f / 60) if @store["minutes"].present?
-
-        total_hours += (@appliance.data["additionalUsage"].to_f / 60) if @appliance.data["additionalUsage"].present?
 
         daily_hours(total_hours)
       end
