@@ -14,7 +14,7 @@ module Queries
         category
         wattage
         usageType
-        additionalUsage
+        additionalKWh
         variantQuestion
         variantOptions
         sys {
