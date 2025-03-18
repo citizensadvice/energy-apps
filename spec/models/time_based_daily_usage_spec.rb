@@ -30,28 +30,28 @@ RSpec.describe(TimeBasedDailyUsage) do
       end
     end
 
-    context "with additional usage" do
-      subject { build(:time_based_daily_usage, :with_additional_usage).kwh_per(timespan) }
+    context "with additional kWh" do
+      subject { build(:time_based_daily_usage, :with_additional_kwh).kwh_per(timespan) }
 
       context "when per day" do
         let(:timespan) { :day }
 
-        # (10000 watts / 1000 ) * ((90 + 10) minutes / 60) = 16.66666667kWh
-        it { is_expected.to eq 16.666666666666668 }
+        # (10000 watts / 1000 ) * (90 minutes / 60) + 10kWh = 25kWh
+        it { is_expected.to eq 25 }
       end
 
       context "when per week" do
         let(:timespan) { :week }
 
-        # (10000 watts / 1000 ) * ((90 + 10) minutes / 60) * 7  = 116.66666666666666kWh
-        it { is_expected.to eq 116.66666666666667 }
+        # ((10000 watts / 1000 ) * (90 minutes / 60) + 10kWh) * 7  = 175kWh
+        it { is_expected.to eq 175 }
       end
 
       context "when per month" do
         let(:timespan) { :month }
 
-        # (10000 watts / 1000 ) * ((90 + 10) minutes / 60) * 365 / 12 * 2 = 506.9444444444444kWh
-        it { is_expected.to eq 506.9444444444445 }
+        # ((10000 watts / 1000 ) * (90 minutes / 60) + 10kWh) * 365 / 12 = 760.4166666666667kWh
+        it { is_expected.to eq 760.4166666666667 }
       end
     end
 
