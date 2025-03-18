@@ -63,7 +63,7 @@ RSpec.describe DailyUsageCreation::Steps::Appliance do
     end
 
     context "when the step is submitted successfully with a cycle based usage appliance" do
-      let(:store) { { "quantity" => 1, "appliance_id" => "6EfvCwk0NdBevmtktMqDkx" } }
+      let(:store) { { "quantity" => 1, "appliance_id" => "5pL9EpewLPF4fZzP0BbtwY" } }
 
       it "marks the chosen appliance an non-cyclical" do
         step.save!
