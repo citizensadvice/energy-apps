@@ -7,7 +7,7 @@ http_interactions:
       encoding: UTF-8
       string: '{"query":"query Queries__Appliances($tag_filter: ContentfulMetadataTagsFilter)
         {\n  applianceCollection(where: {contentfulMetadata: {tags: $tag_filter}},
-        order: [category_ASC, name_ASC]) {\n    items {\n      name\n      category\n      wattage\n      usageType\n      additionalUsage\n      variantQuestion\n      variantOptions\n      sys
+        order: [category_ASC, name_ASC]) {\n    items {\n      name\n      category\n      wattage\n      usageType\n      additionalKWh\n      variantQuestion\n      variantOptions\n      sys
         {\n        id\n      }\n    }\n  }\n}","operationName":"Queries__Appliances","variables":{"top_three_ranks":[901,902,903],"tag_filter":{"id_contains_some":"test"}},"context":{}}'
     headers:
       User-Agent:
@@ -32,11 +32,11 @@ http_interactions:
       Connection:
       - keep-alive
       Content-Length:
-      - '2858'
+      - '3249'
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - '2438991392957427047'
+      - '5456703397849506811'
       Cache-Control:
       - max-age=0
       X-Contentful-Graphql-Query-Cost:
@@ -68,38 +68,43 @@ http_interactions:
       Accept-Ranges:
       - bytes
       Age:
-      - '1074'
+      - '9235'
       Date:
-      - Wed, 12 Mar 2025 17:10:56 GMT
+      - Tue, 18 Mar 2025 17:37:26 GMT
       X-Served-By:
-      - cache-ewr-kewr1740056-EWR, cache-lcy-eglc8600036-LCY
+      - cache-ewr-kewr1740052-EWR, cache-lhr-egll1980062-LHR
       X-Cache-Hits:
-      - 2, 0
+      - 0, 0
       X-Timer:
-      - S1741799457.844702,VS0,VE71
+      - S1742319447.817311,VS0,VE1
       X-Cache:
       - HIT
       X-Contentful-Request-Id:
-      - a02cda03-225f-4fe5-b8f1-0a7cd1ff2125
+      - 34331d46-5d7b-4ae2-a89b-a9ae2e579e6d
     body:
       encoding: UTF-8
       string: '{"data":{"applianceCollection":{"items":[{"sys":{"id":"4Wx5RQDMmNaKARNZ0bFYUQ"},"name":"TEST
-        - Electric blanket","category":"Heating","wattage":150,"usageType":"Time","additionalUsage":null,"variantQuestion":null,"variantOptions":null},{"sys":{"id":"2hf9PSZCdpYwQ40HsPmx8b"},"name":"TEST
-        - Fan heater","category":"Heating","wattage":2500,"usageType":"Time","additionalUsage":null,"variantQuestion":null,"variantOptions":{"tableData":[]}},{"sys":{"id":"4BQ4Lt7nPkCy7eGZftdOf8"},"name":"TEST
-        - Immersion heater","category":"Heating","wattage":3000,"usageType":"Time","additionalUsage":null,"variantQuestion":null,"variantOptions":null},{"sys":{"id":"5FYWv9ZbTiYsTDfHKWtWnx"},"name":"TEST
-        - Broadband router","category":"Home electronics","wattage":10,"usageType":"Time","additionalUsage":null,"variantQuestion":null,"variantOptions":null},{"sys":{"id":"1j4RSSWNQV9j7Eyuyibn6F"},"name":"TEST
-        - DVD or Blu-ray player","category":"Home electronics","wattage":40,"usageType":"Time","additionalUsage":null,"variantQuestion":null,"variantOptions":null},{"sys":{"id":"6u1DKA3dCSPveybK48IbR5"},"name":"TEST
-        - Games console","category":"Home electronics","wattage":120,"usageType":"Time","additionalUsage":null,"variantQuestion":null,"variantOptions":null},{"sys":{"id":"FwkA3GxDaFzkduc5Io4UV"},"name":"TEST
-        - Dishwasher (Eco cycle)","category":"Large appliances","wattage":272,"usageType":"Cycles","additionalUsage":null,"variantQuestion":null,"variantOptions":null},{"sys":{"id":"7YoSVhgmsE9jtjhLFtVkg"},"name":"TEST
-        - Oven (no fan) 200 °C preheated","category":"Large appliances","wattage":622,"usageType":"Time","additionalUsage":10,"variantQuestion":null,"variantOptions":null},{"sys":{"id":"6EfvCwk0NdBevmtktMqDkx"},"name":"TEST
-        - Tumble Dryer (condenser)","category":"Large appliances","wattage":0,"usageType":"Cycles","additionalUsage":null,"variantQuestion":"How
+        - Electric blanket","category":"Heating","wattage":150,"usageType":"Time","additionalKWh":null,"variantQuestion":null,"variantOptions":null},{"sys":{"id":"2hf9PSZCdpYwQ40HsPmx8b"},"name":"TEST
+        - Fan heater","category":"Heating","wattage":2500,"usageType":"Time","additionalKWh":null,"variantQuestion":null,"variantOptions":{"tableData":[]}},{"sys":{"id":"4BQ4Lt7nPkCy7eGZftdOf8"},"name":"TEST
+        - Immersion heater","category":"Heating","wattage":3000,"usageType":"Time","additionalKWh":null,"variantQuestion":null,"variantOptions":null},{"sys":{"id":"5FYWv9ZbTiYsTDfHKWtWnx"},"name":"TEST
+        - Broadband router","category":"Home electronics","wattage":10,"usageType":"Time","additionalKWh":null,"variantQuestion":null,"variantOptions":null},{"sys":{"id":"1j4RSSWNQV9j7Eyuyibn6F"},"name":"TEST
+        - DVD or Blu-ray player","category":"Home electronics","wattage":40,"usageType":"Time","additionalKWh":null,"variantQuestion":null,"variantOptions":null},{"sys":{"id":"6u1DKA3dCSPveybK48IbR5"},"name":"TEST
+        - Games console","category":"Home electronics","wattage":120,"usageType":"Time","additionalKWh":null,"variantQuestion":null,"variantOptions":null},{"sys":{"id":"5pL9EpewLPF4fZzP0BbtwY"},"name":"TEST
+        - Dishwasher (eco cycle)","category":"Large appliances","wattage":960,"usageType":"Cycles","additionalKWh":null,"variantQuestion":null,"variantOptions":null},{"sys":{"id":"7YoSVhgmsE9jtjhLFtVkg"},"name":"TEST
+        - Oven (no fan) 200 °C preheated","category":"Large appliances","wattage":942,"usageType":"Time","additionalKWh":0.472,"variantQuestion":null,"variantOptions":null},{"sys":{"id":"3CYoaBmhsIN7KllDqRa8kk"},"name":"TEST
+        - Tumble Dryer (condenser)","category":"Large appliances","wattage":0,"usageType":"Cycles","additionalKWh":null,"variantQuestion":"How
         full is the tumble dryer?","variantOptions":{"tableData":[["Option","Wattage"],["Full
-        load","1000"],["Partial load","200"]]}},{"sys":{"id":"7mmSMkn7tbxU9l5IXLr6GF"},"name":"TEST
-        - Tumble Dryer (condenser), full load","category":"Large appliances","wattage":1939,"usageType":"Cycles","additionalUsage":null,"variantQuestion":null,"variantOptions":null},{"sys":{"id":"2v4Tp3ojzr64FJs6lRvG4t"},"name":"TEST
-        - Light bulb - CFL (800 lumens)","category":"Lighting","wattage":14,"usageType":"Time","additionalUsage":null,"variantQuestion":null,"variantOptions":null},{"sys":{"id":"1JpSHKsFdotffkNfCwQV0b"},"name":"TEST
-        - Light bulb - Halogen (800 lumens)","category":"Lighting","wattage":42,"usageType":"Time","additionalUsage":null,"variantQuestion":null,"variantOptions":null},{"sys":{"id":"6GeHDjVGZJf1jCCC06uxXl"},"name":"TEST
-        - Electric car charger (wallbox)","category":"Outdoor appliances","wattage":7000,"usageType":"Time","additionalUsage":null,"variantQuestion":null,"variantOptions":null}]}}}'
-  recorded_at: Wed, 12 Mar 2025 17:10:56 GMT
+        load","4880"],["Partial load","2630"]]}},{"sys":{"id":"6zKtKPf29Ql5gnKvGL3SLi"},"name":"TEST
+        - Tumble dryer (heat pump)","category":"Large appliances","wattage":0,"usageType":"Cycles","additionalKWh":null,"variantQuestion":"How
+        full is the tumble dryer?","variantOptions":{"tableData":[["Column 1","Column
+        2"],["Full load","2030"],["Partial load","1140"]]}},{"sys":{"id":"5NgYcYl485QjZKB4JqAo1y"},"name":"TEST
+        - Washing machine (eco cycle)","category":"Large appliances","wattage":0,"usageType":"Cycles","additionalKWh":null,"variantQuestion":"How
+        full is the washing machine?","variantOptions":{"tableData":[["Column 1","Column
+        2"],["Full load","1280"],["Half load","680"]]}},{"sys":{"id":"2v4Tp3ojzr64FJs6lRvG4t"},"name":"TEST
+        - Light bulb - CFL (800 lumens)","category":"Lighting","wattage":14,"usageType":"Time","additionalKWh":null,"variantQuestion":null,"variantOptions":null},{"sys":{"id":"1JpSHKsFdotffkNfCwQV0b"},"name":"TEST
+        - Light bulb - Halogen (800 lumens)","category":"Lighting","wattage":42,"usageType":"Time","additionalKWh":null,"variantQuestion":null,"variantOptions":null},{"sys":{"id":"6GeHDjVGZJf1jCCC06uxXl"},"name":"TEST
+        - Electric car charger (wallbox)","category":"Outdoor appliances","wattage":7000,"usageType":"Time","additionalKWh":null,"variantQuestion":null,"variantOptions":null}]}}}'
+  recorded_at: Tue, 18 Mar 2025 17:37:26 GMT
 - request:
     method: post
     uri: https://graphql.contentful.com/content/v1/spaces/<CONTENTFUL_SPACE_ID>/environments/master
@@ -107,7 +112,7 @@ http_interactions:
       encoding: UTF-8
       string: '{"query":"query Queries__Appliances($tag_filter: ContentfulMetadataTagsFilter)
         {\n  applianceCollection(where: {contentfulMetadata: {tags: $tag_filter}},
-        order: [category_ASC, name_ASC]) {\n    items {\n      name\n      category\n      wattage\n      usageType\n      additionalUsage\n      variantQuestion\n      variantOptions\n      sys
+        order: [category_ASC, name_ASC]) {\n    items {\n      name\n      category\n      wattage\n      usageType\n      additionalKWh\n      variantQuestion\n      variantOptions\n      sys
         {\n        id\n      }\n    }\n  }\n}","operationName":"Queries__Appliances","variables":{"top_three_ranks":[901,902,903],"tag_filter":{"id_contains_some":"test"}},"context":{}}'
     headers:
       User-Agent:
@@ -132,11 +137,11 @@ http_interactions:
       Connection:
       - keep-alive
       Content-Length:
-      - '2858'
+      - '3249'
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - '2438991392957427047'
+      - '5456703397849506811'
       Cache-Control:
       - max-age=0
       X-Contentful-Graphql-Query-Cost:
@@ -168,36 +173,41 @@ http_interactions:
       Accept-Ranges:
       - bytes
       Date:
-      - Wed, 12 Mar 2025 17:10:56 GMT
+      - Tue, 18 Mar 2025 17:37:26 GMT
       Age:
-      - '1074'
+      - '9235'
       X-Served-By:
-      - cache-ewr-kewr1740056-EWR, cache-lcy-eglc8600036-LCY
+      - cache-ewr-kewr1740052-EWR, cache-lhr-egll1980062-LHR
       X-Cache-Hits:
-      - 2, 1
+      - 0, 1
       X-Timer:
-      - S1741799457.925085,VS0,VE1
+      - S1742319447.828091,VS0,VE1
       X-Cache:
       - HIT
       X-Contentful-Request-Id:
-      - e9ea26f1-dc4a-4626-83ce-14a729af7f5d
+      - a4661b11-dfd8-43cd-af63-4761210fe9bc
     body:
       encoding: UTF-8
       string: '{"data":{"applianceCollection":{"items":[{"sys":{"id":"4Wx5RQDMmNaKARNZ0bFYUQ"},"name":"TEST
-        - Electric blanket","category":"Heating","wattage":150,"usageType":"Time","additionalUsage":null,"variantQuestion":null,"variantOptions":null},{"sys":{"id":"2hf9PSZCdpYwQ40HsPmx8b"},"name":"TEST
-        - Fan heater","category":"Heating","wattage":2500,"usageType":"Time","additionalUsage":null,"variantQuestion":null,"variantOptions":{"tableData":[]}},{"sys":{"id":"4BQ4Lt7nPkCy7eGZftdOf8"},"name":"TEST
-        - Immersion heater","category":"Heating","wattage":3000,"usageType":"Time","additionalUsage":null,"variantQuestion":null,"variantOptions":null},{"sys":{"id":"5FYWv9ZbTiYsTDfHKWtWnx"},"name":"TEST
-        - Broadband router","category":"Home electronics","wattage":10,"usageType":"Time","additionalUsage":null,"variantQuestion":null,"variantOptions":null},{"sys":{"id":"1j4RSSWNQV9j7Eyuyibn6F"},"name":"TEST
-        - DVD or Blu-ray player","category":"Home electronics","wattage":40,"usageType":"Time","additionalUsage":null,"variantQuestion":null,"variantOptions":null},{"sys":{"id":"6u1DKA3dCSPveybK48IbR5"},"name":"TEST
-        - Games console","category":"Home electronics","wattage":120,"usageType":"Time","additionalUsage":null,"variantQuestion":null,"variantOptions":null},{"sys":{"id":"FwkA3GxDaFzkduc5Io4UV"},"name":"TEST
-        - Dishwasher (Eco cycle)","category":"Large appliances","wattage":272,"usageType":"Cycles","additionalUsage":null,"variantQuestion":null,"variantOptions":null},{"sys":{"id":"7YoSVhgmsE9jtjhLFtVkg"},"name":"TEST
-        - Oven (no fan) 200 °C preheated","category":"Large appliances","wattage":622,"usageType":"Time","additionalUsage":10,"variantQuestion":null,"variantOptions":null},{"sys":{"id":"6EfvCwk0NdBevmtktMqDkx"},"name":"TEST
-        - Tumble Dryer (condenser)","category":"Large appliances","wattage":0,"usageType":"Cycles","additionalUsage":null,"variantQuestion":"How
+        - Electric blanket","category":"Heating","wattage":150,"usageType":"Time","additionalKWh":null,"variantQuestion":null,"variantOptions":null},{"sys":{"id":"2hf9PSZCdpYwQ40HsPmx8b"},"name":"TEST
+        - Fan heater","category":"Heating","wattage":2500,"usageType":"Time","additionalKWh":null,"variantQuestion":null,"variantOptions":{"tableData":[]}},{"sys":{"id":"4BQ4Lt7nPkCy7eGZftdOf8"},"name":"TEST
+        - Immersion heater","category":"Heating","wattage":3000,"usageType":"Time","additionalKWh":null,"variantQuestion":null,"variantOptions":null},{"sys":{"id":"5FYWv9ZbTiYsTDfHKWtWnx"},"name":"TEST
+        - Broadband router","category":"Home electronics","wattage":10,"usageType":"Time","additionalKWh":null,"variantQuestion":null,"variantOptions":null},{"sys":{"id":"1j4RSSWNQV9j7Eyuyibn6F"},"name":"TEST
+        - DVD or Blu-ray player","category":"Home electronics","wattage":40,"usageType":"Time","additionalKWh":null,"variantQuestion":null,"variantOptions":null},{"sys":{"id":"6u1DKA3dCSPveybK48IbR5"},"name":"TEST
+        - Games console","category":"Home electronics","wattage":120,"usageType":"Time","additionalKWh":null,"variantQuestion":null,"variantOptions":null},{"sys":{"id":"5pL9EpewLPF4fZzP0BbtwY"},"name":"TEST
+        - Dishwasher (eco cycle)","category":"Large appliances","wattage":960,"usageType":"Cycles","additionalKWh":null,"variantQuestion":null,"variantOptions":null},{"sys":{"id":"7YoSVhgmsE9jtjhLFtVkg"},"name":"TEST
+        - Oven (no fan) 200 °C preheated","category":"Large appliances","wattage":942,"usageType":"Time","additionalKWh":0.472,"variantQuestion":null,"variantOptions":null},{"sys":{"id":"3CYoaBmhsIN7KllDqRa8kk"},"name":"TEST
+        - Tumble Dryer (condenser)","category":"Large appliances","wattage":0,"usageType":"Cycles","additionalKWh":null,"variantQuestion":"How
         full is the tumble dryer?","variantOptions":{"tableData":[["Option","Wattage"],["Full
-        load","1000"],["Partial load","200"]]}},{"sys":{"id":"7mmSMkn7tbxU9l5IXLr6GF"},"name":"TEST
-        - Tumble Dryer (condenser), full load","category":"Large appliances","wattage":1939,"usageType":"Cycles","additionalUsage":null,"variantQuestion":null,"variantOptions":null},{"sys":{"id":"2v4Tp3ojzr64FJs6lRvG4t"},"name":"TEST
-        - Light bulb - CFL (800 lumens)","category":"Lighting","wattage":14,"usageType":"Time","additionalUsage":null,"variantQuestion":null,"variantOptions":null},{"sys":{"id":"1JpSHKsFdotffkNfCwQV0b"},"name":"TEST
-        - Light bulb - Halogen (800 lumens)","category":"Lighting","wattage":42,"usageType":"Time","additionalUsage":null,"variantQuestion":null,"variantOptions":null},{"sys":{"id":"6GeHDjVGZJf1jCCC06uxXl"},"name":"TEST
-        - Electric car charger (wallbox)","category":"Outdoor appliances","wattage":7000,"usageType":"Time","additionalUsage":null,"variantQuestion":null,"variantOptions":null}]}}}'
-  recorded_at: Wed, 12 Mar 2025 17:10:56 GMT
+        load","4880"],["Partial load","2630"]]}},{"sys":{"id":"6zKtKPf29Ql5gnKvGL3SLi"},"name":"TEST
+        - Tumble dryer (heat pump)","category":"Large appliances","wattage":0,"usageType":"Cycles","additionalKWh":null,"variantQuestion":"How
+        full is the tumble dryer?","variantOptions":{"tableData":[["Column 1","Column
+        2"],["Full load","2030"],["Partial load","1140"]]}},{"sys":{"id":"5NgYcYl485QjZKB4JqAo1y"},"name":"TEST
+        - Washing machine (eco cycle)","category":"Large appliances","wattage":0,"usageType":"Cycles","additionalKWh":null,"variantQuestion":"How
+        full is the washing machine?","variantOptions":{"tableData":[["Column 1","Column
+        2"],["Full load","1280"],["Half load","680"]]}},{"sys":{"id":"2v4Tp3ojzr64FJs6lRvG4t"},"name":"TEST
+        - Light bulb - CFL (800 lumens)","category":"Lighting","wattage":14,"usageType":"Time","additionalKWh":null,"variantQuestion":null,"variantOptions":null},{"sys":{"id":"1JpSHKsFdotffkNfCwQV0b"},"name":"TEST
+        - Light bulb - Halogen (800 lumens)","category":"Lighting","wattage":42,"usageType":"Time","additionalKWh":null,"variantQuestion":null,"variantOptions":null},{"sys":{"id":"6GeHDjVGZJf1jCCC06uxXl"},"name":"TEST
+        - Electric car charger (wallbox)","category":"Outdoor appliances","wattage":7000,"usageType":"Time","additionalKWh":null,"variantQuestion":null,"variantOptions":null}]}}}'
+  recorded_at: Tue, 18 Mar 2025 17:37:26 GMT
 recorded_with: VCR 6.3.1

@@ -7,7 +7,7 @@ http_interactions:
       encoding: UTF-8
       string: '{"query":"query Queries__Appliances($tag_filter: ContentfulMetadataTagsFilter)
         {\n  applianceCollection(where: {contentfulMetadata: {tags: $tag_filter}},
-        order: [category_ASC, name_ASC]) {\n    items {\n      name\n      category\n      wattage\n      usageType\n      additionalUsage\n      variantQuestion\n      variantOptions\n      sys
+        order: [category_ASC, name_ASC]) {\n    items {\n      name\n      category\n      wattage\n      usageType\n      additionalKWh\n      variantQuestion\n      variantOptions\n      sys
         {\n        id\n      }\n    }\n  }\n}","operationName":"Queries__Appliances","variables":{"top_three_ranks":[1,2,3],"tag_filter":{"id_contains_none":"test"}},"context":{}}'
     headers:
       User-Agent:
@@ -32,11 +32,11 @@ http_interactions:
       Connection:
       - keep-alive
       Content-Length:
-      - '8495'
+      - '6465'
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - '18249953002352389367'
+      - '12419685896138565860'
       Cache-Control:
       - max-age=0
       X-Contentful-Graphql-Query-Cost:
@@ -68,68 +68,54 @@ http_interactions:
       Accept-Ranges:
       - bytes
       Age:
-      - '1099'
+      - '0'
       Date:
-      - Wed, 12 Mar 2025 17:06:28 GMT
+      - Tue, 18 Mar 2025 17:11:53 GMT
       X-Served-By:
-      - cache-ewr-kewr1740091-EWR, cache-lhr-egll1980030-LHR
+      - cache-ewr-kewr1740071-EWR, cache-lhr-egll1980029-LHR
       X-Cache-Hits:
       - 0, 0
       X-Timer:
-      - S1741799188.258837,VS0,VE1
+      - S1742317913.676863,VS0,VE392
       X-Cache:
-      - HIT
+      - MISS
       X-Contentful-Request-Id:
-      - fe6a7ea9-fb8d-4059-a6f6-c1c1bc1ec04c
+      - 82d5a516-587d-452d-972f-9fbf7c2886f4
     body:
       encoding: UTF-8
       string: '{"data":{"applianceCollection":{"items":[{"sys":{"id":"4qD9neqFYoTvDFDZYs0EIz"},"name":"Electric
-        blanket","category":"Heating","wattage":150,"usageType":"Time","additionalUsage":null,"variantQuestion":null,"variantOptions":null},{"sys":{"id":"1EKZxnrrKOcTO5wvf57ABn"},"name":"Fan
-        heater","category":"Heating","wattage":2500,"usageType":"Time","additionalUsage":null,"variantQuestion":null,"variantOptions":null},{"sys":{"id":"2wVegfYIlwXG2EwMWoT9RZ"},"name":"Heated
-        clothes airer","category":"Heating","wattage":250,"usageType":"Time","additionalUsage":null,"variantQuestion":null,"variantOptions":null},{"sys":{"id":"4sowKrXozAZIWNCsPxEXc5"},"name":"Immersion
-        heater","category":"Heating","wattage":3000,"usageType":"Time","additionalUsage":null,"variantQuestion":null,"variantOptions":null},{"sys":{"id":"yaZeKVyLNVhow4mrC726y"},"name":"Oil
-        filled radiator","category":"Heating","wattage":2500,"usageType":"Time","additionalUsage":null,"variantQuestion":null,"variantOptions":null},{"sys":{"id":"75i3fAQTYqewHiZK7D4JkI"},"name":"Panel
-        heater or electric fire (not central heating)","category":"Heating","wattage":2500,"usageType":"Time","additionalUsage":null,"variantQuestion":null,"variantOptions":null},{"sys":{"id":"50U8vEpIJFlI6lk1yanECJ"},"name":"Towel
-        rail","category":"Heating","wattage":450,"usageType":"Time","additionalUsage":null,"variantQuestion":null,"variantOptions":null},{"sys":{"id":"5h5O5LSdtDAOPklaUmApU6"},"name":"Broadband
-        router","category":"Home electronics","wattage":10,"usageType":"Time","additionalUsage":null,"variantQuestion":null,"variantOptions":null},{"sys":{"id":"1DfQKPMErKdNSYznHxSh7g"},"name":"DVD
-        or Blu-ray player","category":"Home electronics","wattage":40,"usageType":"Time","additionalUsage":null,"variantQuestion":null,"variantOptions":null},{"sys":{"id":"4qWAo7qUij4lBUvwZpwgJ6"},"name":"Games
-        console","category":"Home electronics","wattage":120,"usageType":"Time","additionalUsage":null,"variantQuestion":null,"variantOptions":null},{"sys":{"id":"rn4Xf4IdzRlAWOQw9Ys6R"},"name":"Laptop
-        on charge","category":"Home electronics","wattage":50,"usageType":"Time","additionalUsage":null,"variantQuestion":null,"variantOptions":null},{"sys":{"id":"5rkgPyMG7LvksvCbXNZsPK"},"name":"PC
-        or desktop computer","category":"Home electronics","wattage":140,"usageType":"Time","additionalUsage":null,"variantQuestion":null,"variantOptions":null},{"sys":{"id":"1eNxjPygTHqyvNDU019rj9"},"name":"Phone
-        or tablet charger","category":"Home electronics","wattage":10,"usageType":"Time","additionalUsage":null,"variantQuestion":null,"variantOptions":null},{"sys":{"id":"6IGUBkRtiwsqufjJMJAMD2"},"name":"TV","category":"Home
-        electronics","wattage":120,"usageType":"Time","additionalUsage":null,"variantQuestion":null,"variantOptions":null},{"sys":{"id":"7gaMrljBTVIaBqztFHYRvk"},"name":"TV
-        box - for example a Sky or Virgin box","category":"Home electronics","wattage":40,"usageType":"Time","additionalUsage":null,"variantQuestion":null,"variantOptions":null},{"sys":{"id":"ueyUgFDWJ6IHHxM7i3yLX"},"name":"Dehumidifier","category":"Large
-        appliances","wattage":500,"usageType":"Time","additionalUsage":null,"variantQuestion":null,"variantOptions":null},{"sys":{"id":"2ZAezHc7pjV0bWT3kXPH4S"},"name":"Dishwasher
-        (eco cycle)","category":"Large appliances","wattage":272,"usageType":"Cycles","additionalUsage":null,"variantQuestion":null,"variantOptions":null},{"sys":{"id":"2gemGsN5WTp67AnWftEUP6"},"name":"Dishwasher
-        (Eco cycle)","category":"Large appliances","wattage":272,"usageType":"Cycles","additionalUsage":null,"variantQuestion":null,"variantOptions":null},{"sys":{"id":"3acBlZu4pONJ09b5oLdmEy"},"name":"Extractor
-        fan","category":"Large appliances","wattage":20,"usageType":"Time","additionalUsage":null,"variantQuestion":null,"variantOptions":null},{"sys":{"id":"3PsoQypazXdkNL6Mih2cZ9"},"name":"Grill
-        (electric)","category":"Large appliances","wattage":1500,"usageType":"Time","additionalUsage":null,"variantQuestion":null,"variantOptions":null},{"sys":{"id":"5oHoYSX37HcWawpMANU1Lc"},"name":"Hob
-        (electric)","category":"Large appliances","wattage":1500,"usageType":"Time","additionalUsage":null,"variantQuestion":null,"variantOptions":null},{"sys":{"id":"6P54GiDRBlMnfm6awd4vyg"},"name":"Oven
-        (fan) 180°C preheated","category":"Large appliances","wattage":922,"usageType":"Time","additionalUsage":10,"variantQuestion":null,"variantOptions":null},{"sys":{"id":"BZBp33DZeG7tYSSD45h57"},"name":"Oven
-        (no fan) 200°C preheated","category":"Large appliances","wattage":622,"usageType":"Time","additionalUsage":10,"variantQuestion":null,"variantOptions":null},{"sys":{"id":"yFedRHpXqxGS1Ljm2UZgT"},"name":"Shower
-        (electric)","category":"Large appliances","wattage":9000,"usageType":"Time","additionalUsage":null,"variantQuestion":null,"variantOptions":null},{"sys":{"id":"3ejw5FRM0q7YSxw2e8Amrx"},"name":"Tumble
-        Dryer (condenser)","category":"Large appliances","wattage":0,"usageType":"Cycles","additionalUsage":null,"variantQuestion":"How
-        full is the tumble dryer?","variantOptions":{"tableData":[["Option","Wattage"],["Full
-        load","1939"],["Partial load","1834"]]}},{"sys":{"id":"4jheNLxvDNEYEETUd8ZMro"},"name":"Tumble
-        dryer (heat pump) ","category":"Large appliances","wattage":0,"usageType":"Cycles","additionalUsage":null,"variantQuestion":"How
-        full is the tumble dryer?","variantOptions":{"tableData":[["Column 1","Column
-        2"],["Full load","591"],["Partial load","538"]]}},{"sys":{"id":"1X76PFKUBE4ZbKDwdYRc78"},"name":"Washing
-        machine (eco cycle)","category":"Large appliances","wattage":0,"usageType":"Cycles","additionalUsage":null,"variantQuestion":"How
-        full is the washing machine?","variantOptions":{"tableData":[["Column 1","Column
-        2"],["Full load","348"],["Half load","240"]]}},{"sys":{"id":"2gtg0ZNtihWQimzgapyhTQ"},"name":"Light
-        bulb - CFL (800 lumens)","category":"Lighting","wattage":14,"usageType":"Time","additionalUsage":null,"variantQuestion":null,"variantOptions":null},{"sys":{"id":"2ESy0qxVyMcibw7rswEMP6"},"name":"Light
-        bulb - Halogen (800 lumens)","category":"Lighting","wattage":42,"usageType":"Time","additionalUsage":null,"variantQuestion":null,"variantOptions":null},{"sys":{"id":"2IyX8UEs9XzEZzj7ief5uM"},"name":"Light
-        bulb - Incandescent (800 lumens)","category":"Lighting","wattage":60,"usageType":"Time","additionalUsage":null,"variantQuestion":null,"variantOptions":null},{"sys":{"id":"1ScfLVNChB6A2WhpF8Et22"},"name":"Light
-        bulb - LED (800 lumens)","category":"Lighting","wattage":8,"usageType":"Time","additionalUsage":null,"variantQuestion":null,"variantOptions":null},{"sys":{"id":"1Xw32zsoKpEunb3GLiwMSJ"},"name":"Electric
-        car charger (wallbox)","category":"Outdoor appliances","wattage":7000,"usageType":"Time","additionalUsage":null,"variantQuestion":null,"variantOptions":null},{"sys":{"id":"3feVAdOb48oSepH44NJTrz"},"name":"Lawnmower
-        (electric)","category":"Outdoor appliances","wattage":1000,"usageType":"Time","additionalUsage":null,"variantQuestion":null,"variantOptions":null},{"sys":{"id":"19Nt37aB4eaHoq8noXClVW"},"name":"Air
-        fryer 180°C preheated","category":"Small appliances","wattage":690,"usageType":"Time","additionalUsage":null,"variantQuestion":null,"variantOptions":null},{"sys":{"id":"167aCJktoprgSyT3WeoUJV"},"name":"Hairdryer","category":"Small
-        appliances","wattage":2000,"usageType":"Time","additionalUsage":null,"variantQuestion":null,"variantOptions":null},{"sys":{"id":"4kfScKu7vbMJoasdXcnWBV"},"name":"Iron","category":"Small
-        appliances","wattage":1500,"usageType":"Time","additionalUsage":null,"variantQuestion":null,"variantOptions":null},{"sys":{"id":"1i4xna8eUrUmOUY4sg16Qw"},"name":"Kettle","category":"Small
-        appliances","wattage":3000,"usageType":"Time","additionalUsage":null,"variantQuestion":null,"variantOptions":null},{"sys":{"id":"7DvOJwm33O8NXx9tIK8eV6"},"name":"Microwave","category":"Small
-        appliances","wattage":1000,"usageType":"Time","additionalUsage":null,"variantQuestion":null,"variantOptions":null},{"sys":{"id":"6alQ1Hj5YEmU6xzWAyJWod"},"name":"Slow
-        cooker","category":"Small appliances","wattage":200,"usageType":"Time","additionalUsage":null,"variantQuestion":null,"variantOptions":null},{"sys":{"id":"54OrEuKwqBcSUGZTrzpEY5"},"name":"Toaster","category":"Small
-        appliances","wattage":1000,"usageType":"Time","additionalUsage":null,"variantQuestion":null,"variantOptions":null},{"sys":{"id":"3NaBDB97zEgKVQ6uemwU5s"},"name":"Vacuum
-        cleaner","category":"Small appliances","wattage":900,"usageType":"Time","additionalUsage":null,"variantQuestion":null,"variantOptions":null}]}}}'
-  recorded_at: Wed, 12 Mar 2025 17:06:28 GMT
+        blanket","category":"Heating","wattage":150,"usageType":"Time","additionalKWh":null,"variantQuestion":null,"variantOptions":null},{"sys":{"id":"1EKZxnrrKOcTO5wvf57ABn"},"name":"Fan
+        heater","category":"Heating","wattage":2500,"usageType":"Time","additionalKWh":null,"variantQuestion":null,"variantOptions":null},{"sys":{"id":"2wVegfYIlwXG2EwMWoT9RZ"},"name":"Heated
+        clothes airer","category":"Heating","wattage":250,"usageType":"Time","additionalKWh":null,"variantQuestion":null,"variantOptions":null},{"sys":{"id":"4sowKrXozAZIWNCsPxEXc5"},"name":"Immersion
+        heater","category":"Heating","wattage":3000,"usageType":"Time","additionalKWh":null,"variantQuestion":null,"variantOptions":null},{"sys":{"id":"yaZeKVyLNVhow4mrC726y"},"name":"Oil
+        filled radiator","category":"Heating","wattage":2500,"usageType":"Time","additionalKWh":null,"variantQuestion":null,"variantOptions":null},{"sys":{"id":"75i3fAQTYqewHiZK7D4JkI"},"name":"Panel
+        heater or electric fire (not central heating)","category":"Heating","wattage":2500,"usageType":"Time","additionalKWh":null,"variantQuestion":null,"variantOptions":null},{"sys":{"id":"50U8vEpIJFlI6lk1yanECJ"},"name":"Towel
+        rail","category":"Heating","wattage":450,"usageType":"Time","additionalKWh":null,"variantQuestion":null,"variantOptions":null},{"sys":{"id":"5h5O5LSdtDAOPklaUmApU6"},"name":"Broadband
+        router","category":"Home electronics","wattage":10,"usageType":"Time","additionalKWh":null,"variantQuestion":null,"variantOptions":null},{"sys":{"id":"1DfQKPMErKdNSYznHxSh7g"},"name":"DVD
+        or Blu-ray player","category":"Home electronics","wattage":40,"usageType":"Time","additionalKWh":null,"variantQuestion":null,"variantOptions":null},{"sys":{"id":"4qWAo7qUij4lBUvwZpwgJ6"},"name":"Games
+        console","category":"Home electronics","wattage":120,"usageType":"Time","additionalKWh":null,"variantQuestion":null,"variantOptions":null},{"sys":{"id":"rn4Xf4IdzRlAWOQw9Ys6R"},"name":"Laptop
+        on charge","category":"Home electronics","wattage":50,"usageType":"Time","additionalKWh":null,"variantQuestion":null,"variantOptions":null},{"sys":{"id":"5rkgPyMG7LvksvCbXNZsPK"},"name":"PC
+        or desktop computer","category":"Home electronics","wattage":140,"usageType":"Time","additionalKWh":null,"variantQuestion":null,"variantOptions":null},{"sys":{"id":"1eNxjPygTHqyvNDU019rj9"},"name":"Phone
+        or tablet charger","category":"Home electronics","wattage":10,"usageType":"Time","additionalKWh":null,"variantQuestion":null,"variantOptions":null},{"sys":{"id":"6IGUBkRtiwsqufjJMJAMD2"},"name":"TV","category":"Home
+        electronics","wattage":120,"usageType":"Time","additionalKWh":null,"variantQuestion":null,"variantOptions":null},{"sys":{"id":"7gaMrljBTVIaBqztFHYRvk"},"name":"TV
+        box - for example a Sky or Virgin box","category":"Home electronics","wattage":40,"usageType":"Time","additionalKWh":null,"variantQuestion":null,"variantOptions":null},{"sys":{"id":"ueyUgFDWJ6IHHxM7i3yLX"},"name":"Dehumidifier","category":"Large
+        appliances","wattage":500,"usageType":"Time","additionalKWh":null,"variantQuestion":null,"variantOptions":null},{"sys":{"id":"3acBlZu4pONJ09b5oLdmEy"},"name":"Extractor
+        fan","category":"Large appliances","wattage":20,"usageType":"Time","additionalKWh":null,"variantQuestion":null,"variantOptions":null},{"sys":{"id":"3PsoQypazXdkNL6Mih2cZ9"},"name":"Grill
+        (electric)","category":"Large appliances","wattage":1500,"usageType":"Time","additionalKWh":null,"variantQuestion":null,"variantOptions":null},{"sys":{"id":"5oHoYSX37HcWawpMANU1Lc"},"name":"Hob
+        (electric)","category":"Large appliances","wattage":1500,"usageType":"Time","additionalKWh":null,"variantQuestion":null,"variantOptions":null},{"sys":{"id":"yFedRHpXqxGS1Ljm2UZgT"},"name":"Shower
+        (electric)","category":"Large appliances","wattage":9000,"usageType":"Time","additionalKWh":null,"variantQuestion":null,"variantOptions":null},{"sys":{"id":"2gtg0ZNtihWQimzgapyhTQ"},"name":"Light
+        bulb - CFL (800 lumens)","category":"Lighting","wattage":14,"usageType":"Time","additionalKWh":null,"variantQuestion":null,"variantOptions":null},{"sys":{"id":"2ESy0qxVyMcibw7rswEMP6"},"name":"Light
+        bulb - Halogen (800 lumens)","category":"Lighting","wattage":42,"usageType":"Time","additionalKWh":null,"variantQuestion":null,"variantOptions":null},{"sys":{"id":"2IyX8UEs9XzEZzj7ief5uM"},"name":"Light
+        bulb - Incandescent (800 lumens)","category":"Lighting","wattage":60,"usageType":"Time","additionalKWh":null,"variantQuestion":null,"variantOptions":null},{"sys":{"id":"1ScfLVNChB6A2WhpF8Et22"},"name":"Light
+        bulb - LED (800 lumens)","category":"Lighting","wattage":8,"usageType":"Time","additionalKWh":null,"variantQuestion":null,"variantOptions":null},{"sys":{"id":"1Xw32zsoKpEunb3GLiwMSJ"},"name":"Electric
+        car charger (wallbox)","category":"Outdoor appliances","wattage":7000,"usageType":"Time","additionalKWh":null,"variantQuestion":null,"variantOptions":null},{"sys":{"id":"3feVAdOb48oSepH44NJTrz"},"name":"Lawnmower
+        (electric)","category":"Outdoor appliances","wattage":1000,"usageType":"Time","additionalKWh":null,"variantQuestion":null,"variantOptions":null},{"sys":{"id":"167aCJktoprgSyT3WeoUJV"},"name":"Hairdryer","category":"Small
+        appliances","wattage":2000,"usageType":"Time","additionalKWh":null,"variantQuestion":null,"variantOptions":null},{"sys":{"id":"4kfScKu7vbMJoasdXcnWBV"},"name":"Iron","category":"Small
+        appliances","wattage":1500,"usageType":"Time","additionalKWh":null,"variantQuestion":null,"variantOptions":null},{"sys":{"id":"1i4xna8eUrUmOUY4sg16Qw"},"name":"Kettle","category":"Small
+        appliances","wattage":3000,"usageType":"Time","additionalKWh":null,"variantQuestion":null,"variantOptions":null},{"sys":{"id":"7DvOJwm33O8NXx9tIK8eV6"},"name":"Microwave","category":"Small
+        appliances","wattage":1000,"usageType":"Time","additionalKWh":null,"variantQuestion":null,"variantOptions":null},{"sys":{"id":"6alQ1Hj5YEmU6xzWAyJWod"},"name":"Slow
+        cooker","category":"Small appliances","wattage":200,"usageType":"Time","additionalKWh":null,"variantQuestion":null,"variantOptions":null},{"sys":{"id":"54OrEuKwqBcSUGZTrzpEY5"},"name":"Toaster","category":"Small
+        appliances","wattage":1000,"usageType":"Time","additionalKWh":null,"variantQuestion":null,"variantOptions":null},{"sys":{"id":"3NaBDB97zEgKVQ6uemwU5s"},"name":"Vacuum
+        cleaner","category":"Small appliances","wattage":900,"usageType":"Time","additionalKWh":null,"variantQuestion":null,"variantOptions":null}]}}}'
+  recorded_at: Tue, 18 Mar 2025 17:11:53 GMT
 recorded_with: VCR 6.3.1
