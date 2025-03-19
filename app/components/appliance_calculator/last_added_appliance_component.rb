@@ -24,7 +24,7 @@ module ApplianceCalculator
       {
         data: {
           "gtm-event": "render",
-          "gtm-event-name": "app-calc-appliance-added",
+          "gtm-event-name": "app_calc_appliance_added",
           "gtm-value": @message
         }
       }
