@@ -35,7 +35,7 @@ const trackErrors = () => {
     const errors = document.querySelectorAll('.js-error-summary-link');
     errors.forEach(error => {
         window.dataLayer.push({
-            event: "app-calc-form-error",
+            event: "app_calc_form_error",
             "app-calc-form-error-value": error.innerText
         })
     })
