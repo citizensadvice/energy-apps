@@ -4,9 +4,6 @@
 = render ApplianceCalculator::UsagesTableComponent.new(usages: usages, unit_rate: saved_unit_rate)
 
 - add_another_attrs = { data: { "gtm-event": "click", "gtm-event-name": "app_calc_add_another_appliance", "gtm-value": "add-another-appliance-click"}}
-- clear_attrs = { data: { "gtm-event": "click", "gtm-event-name": "app_calc_clear_list", "gtm-value": "clear-list-click"}}
-
-
 
 .cads-prose
   %p
@@ -17,14 +14,11 @@
       You have added the maximum number of appliances.  If you want to compare more appliances, press ‘Clear list’ to restart the calculator.
 
 .form-actions
-
   - unless usage_limit_reached?
     %form{ action: appliance_calculator_root_path, method: "GET"}
       = render CitizensAdviceComponents::Button.new(type: :submit, attributes: add_another_attrs) do
         Add another appliance
 
-  %form{ action: appliance_calculator_clear_path, method: "GET" }
-    = render CitizensAdviceComponents::Button.new(variant: :secondary, type: :submit, attributes: clear_attrs) do
-      Clear list
+  = render ApplianceCalculator::ClearListComponent.new(usages)
 
 = render "appliance_calculator/daily_usage_creation/cost_estimation"
