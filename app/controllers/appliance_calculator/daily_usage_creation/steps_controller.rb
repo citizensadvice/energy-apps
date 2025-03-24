@@ -4,17 +4,23 @@ module ApplianceCalculator
   module DailyUsageCreation
     class StepsController < ApplicationController
       include WizardSteps
+
       self.wizard_class = ::DailyUsageCreation::Wizard
 
       default_form_builder ::CitizensAdviceFormBuilder::FormBuilder
+
+      class MissingApplianceError < StandardError; end
 
       after_action :set_headers
 
       helper_method :saved_unit_rate, :usages, :usage_limit_reached?
 
+      rescue_from MissingApplianceError, with: :handle_missing_appliance
+
       def show
         redirect_to step_path("completed") if usage_limit_reached?
 
+        validate_store
         super
       end
 
@@ -59,6 +65,17 @@ module ApplianceCalculator
         return false if usages.blank?
 
         usages.size >= 10
+      end
+
+      def validate_store
+        # nothing to validate on the first or completed step
+        return if %w[appliance completed].include?(current_step.key)
+
+        raise MissingApplianceError if session.dig("daily_usage_creation", "added_appliance").blank?
+      end
+
+      def handle_missing_appliance
+        redirect_to step_path("appliance")
       end
     end
   end
