@@ -133,3 +133,11 @@ end
 And("I am told I have added the maximum number of appliances") do
   expect(page).to have_text "You have added the maximum number of appliances"
 end
+
+Then("I can see the {string} button") do |button|
+  expect(page).to have_button(button)
+end
+
+Then("I cannot see the {string} button") do |button|
+  expect(page).to have_no_button(button)
+end
