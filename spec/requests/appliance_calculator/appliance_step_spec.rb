@@ -2,7 +2,7 @@
 
 require "rails_helper"
 
-RSpec.describe "Appliance calculator" do
+RSpec.describe "Appliance step" do
   around do |example|
     VCR.use_cassette("daily_usage_creation/steps/appliance", match_requests_on: [:body]) do
       example.run
@@ -19,7 +19,7 @@ RSpec.describe "Appliance calculator" do
     end
 
     it "preserves the no-js querystring parameter on subsequent requests" do
-      get appliance_calculator_daily_usage_creation_step_path("unit_rate")
+      get appliance_calculator_daily_usage_creation_step_path("appliance")
 
       expect(response).to render_template("show", with_layout: "appliance_calculator_no_js")
     end
