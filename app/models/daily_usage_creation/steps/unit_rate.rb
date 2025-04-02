@@ -5,7 +5,7 @@ module DailyUsageCreation
     class UnitRate < WizardSteps::Step
       include Trackable
 
-      DEFAULT_UNIT_RATE = 24.5
+      DEFAULT_UNIT_RATE = 27.03
 
       attribute :unit_rate, :decimal, default: DEFAULT_UNIT_RATE
 
