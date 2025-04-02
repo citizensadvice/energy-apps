@@ -37,7 +37,7 @@ Then("I am asked how much I pay for electricity") do
 end
 
 When("I enter a unit rate") do
-  fill_in "The national average rate is 24.5p/kWh.", with: 10
+  fill_in "The national average rate is #{Rails.configuration.x.default_unit_rate}p/kWh.", with: 10
 end
 
 And("I confirm the rate") do
