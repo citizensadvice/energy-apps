@@ -57,7 +57,7 @@ module FooterHelper
       {
         title: "More from us",
         links: [
-          { title: "More help", url: "/scotland/about-us/" },
+          { title: "More from us", url: "/scotland/about-us/" },
           { title: "Complaints", url: "https://www.cas.org.uk/about-us/feedback/complaints" },
           { title: "Campaigns", url: "https://www.cas.org.uk/our-campaigns" },
           { title: "Publications", url: "https://www.cas.org.uk/what-we-do/our-publications" },
@@ -68,7 +68,10 @@ module FooterHelper
       {
         title: "About this site",
         links: [
-          { title: "Terms and conditions", url: "/scotland/about-us/information/terms-and-conditions-scotland/" }
+          { title: "Accessibility statement", url: "/scotland/about-us/information/accessibility-statement-scotland/" },
+          { title: "Terms and conditions", url: "/scotland/about-us/information/terms-and-conditions-scotland/" },
+          { title: "Privacy", url: "https://www.cas.org.uk/data-protection-and-cookies" },
+          { title: "Cookies", url: "/scotland/about-us/information/privacy-and-cookies-scotland/" }
         ]
       }
     ]
