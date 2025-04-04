@@ -58,17 +58,17 @@ module FooterHelper
         title: "More from us",
         links: [
           { title: "More help", url: "/scotland/about-us/" },
-          { title: "Complaints", url: "https://www.cas.org.uk/complaints" },
-          { title: "Campaigns", url: "https://www.cas.org.uk/campaigns" },
-          { title: "Publications", url: "https://www.cas.org.uk/publications" },
-          { title: "Support us", url: "https://www.cas.org.uk/about-us/support-our-work" },
-          { title: "Volunteering", url: "https://www.cas.org.uk/about-us/volunteer-citizens-advice-bureau" }
+          { title: "Complaints", url: "https://www.cas.org.uk/about-us/feedback/complaints" },
+          { title: "Campaigns", url: "https://www.cas.org.uk/our-campaigns" },
+          { title: "Publications", url: "https://www.cas.org.uk/what-we-do/our-publications" },
+          { title: "Support us", url: "https://www.cas.org.uk/get-involved/support-us" },
+          { title: "Volunteering", url: "https://www.cas.org.uk/get-involved/work-us/volunteer-citizens-advice-bureau" }
         ]
       },
       {
         title: "About this site",
         links: [
-          { title: "Disclaimer and copyright", url: "/scotland/resources-and-tools/about-this-site/terms-and-conditions/" }
+          { title: "Terms and conditions", url: "/scotland/about-us/information/terms-and-conditions-scotland/" }
         ]
       }
     ]
