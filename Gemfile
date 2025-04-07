@@ -43,7 +43,7 @@ gem "citizens_advice_form_builder",
     github: "citizensadvice/rails-form-builder",
     tag: "v0.2.0"
 
-gem "view_component", "~> 3.21"
+gem "view_component", "~> 3.22"
 
 gem "ddtrace"
 gem "factory_bot_rails"
