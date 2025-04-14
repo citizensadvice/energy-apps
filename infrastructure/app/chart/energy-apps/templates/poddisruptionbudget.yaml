@@ -1,0 +1,22 @@
+{{- if .Values.podDisruptionBudget.enabled }}
+---
+apiVersion: policy/v1
+kind: PodDisruptionBudget
+metadata:
+  name: {{ include"energy-apps.fullname" . }}
+  labels:
+    app: {{ include "energy-apps.fullname" . }}
+    env: {{ .Values.metadata.environment }}
+    chart: {{ include "energy-apps.chart" . }}
+    release: {{ .Release.Name }}
+    heritage: {{ .Release.Service }}
+    component: app
+spec:
+  selector:
+    matchLabels:
+      app: {{ include "energy-apps.fullname" . }}
+      env: {{ .Values.metadata.environment }}
+      release: {{ .Release.Name }}
+      component: app
+  maxUnavailable: {{ .Values.podDisruptionBudget.maxUnavailable }}
+{{- end }}
