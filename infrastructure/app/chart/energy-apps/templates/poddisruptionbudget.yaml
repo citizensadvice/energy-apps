@@ -3,7 +3,7 @@
 apiVersion: policy/v1
 kind: PodDisruptionBudget
 metadata:
-  name: {{ include"energy-apps.fullname" . }}
+  name: {{ include "energy-apps.fullname" . }}
   labels:
     app: {{ include "energy-apps.fullname" . }}
     env: {{ .Values.metadata.environment }}
