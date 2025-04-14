@@ -81,3 +81,7 @@ affinity: {}
 datadog:
   labels:
     env: ""
+
+podDisruptionBudget:
+  enabled: true
+  maxUnavailable: 1
