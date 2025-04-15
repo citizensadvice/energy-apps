@@ -14,7 +14,7 @@ RSpec.describe ScoreComponent, type: :component do
 
   it { is_expected.to have_text "3 out of 5" }
   it { is_expected.to have_css ".stars" }
-  it { is_expected.to have_no_css ".stars--highlight" }
+  it { is_expected.not_to have_css ".stars--highlight" }
 
   context "when the score has a decimal place that is less than .5 but not shown" do
     let(:score) { 3.4 }
@@ -36,7 +36,7 @@ RSpec.describe ScoreComponent, type: :component do
     let(:score) { -3 }
 
     it { is_expected.to have_text "Not scored" }
-    it { is_expected.to have_no_css ".stars" }
+    it { is_expected.not_to have_css ".stars" }
   end
 
   context "when the score is shown as a decimal" do
@@ -58,6 +58,6 @@ RSpec.describe ScoreComponent, type: :component do
   context "when no score is provided" do
     let(:score) { nil }
 
-    it { is_expected.to have_no_text "out of" }
+    it { is_expected.not_to have_text "out of" }
   end
 end

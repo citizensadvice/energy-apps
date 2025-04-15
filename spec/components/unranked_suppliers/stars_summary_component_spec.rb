@@ -24,7 +24,7 @@ RSpec.describe UnrankedSuppliers::StarsSummaryComponent, type: :component do
         render_inline described_class.new(nil)
       end
 
-      it { is_expected.to have_no_css "body" }
+      it { is_expected.not_to have_css "body" }
     end
   end
 end
