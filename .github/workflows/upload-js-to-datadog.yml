@@ -9,7 +9,7 @@ on:
 jobs:
   dd-js-upload:
     if: ${{ github.event.workflow_run.conclusion == 'success' }}
-    runs-on: runs-on
+    runs-on: ubuntu-latest
     env:
       DATADOG_API_KEY: ${{ secrets.DATADOG_API_KEY }}
       DATADOG_SITE: datadoghq.eu
