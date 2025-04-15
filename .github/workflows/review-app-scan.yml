@@ -14,7 +14,7 @@ env:
 jobs:
   scan:
     name: Scan Review Environments
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-latest
     permissions:
       id-token: write
       contents: read
