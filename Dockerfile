@@ -33,8 +33,6 @@ WORKDIR /app
 # build assets
 RUN bin/rails assets:precompile
 
-
-
 # APP
 # The final image that is deployed into environments (does not contain any build tools added by DEPENDENCIES)
 FROM base AS app
@@ -44,7 +42,7 @@ COPY . /app/
 COPY --from=dependencies /usr/local/bundle/ /usr/local/bundle/
 COPY --from=dependencies /tmp/node_modules/ /app/node_modules/
 COPY --from=assets /app/public/ /app/public/
-
+COPY --from=assets /app/js-build-meta.json /app/js-build-meta.json
 
 # Add user
 RUN adduser -D -u 3000 app \
