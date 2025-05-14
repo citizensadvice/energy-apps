@@ -13,8 +13,6 @@ metadata:
 spec:
   selector:
     matchLabels:
-      app: {{ include "energy-apps.fullname" . }}
-      release: {{ .Release.Name }}
-      component: app
+      {{ include "energy-apps.labels" . | nindent 4 }}
   maxUnavailable: {{ .Values.podDisruptionBudget.maxUnavailable }}
 {{- end }}
