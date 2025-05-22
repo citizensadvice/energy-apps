@@ -1,4 +1,4 @@
-FROM ruby:3.3.6-alpine AS base
+FROM ruby:3.3.8-alpine3.21 AS base
 
 RUN apk add git --no-cache
 
@@ -8,7 +8,7 @@ RUN gem install bundler -v 2.5.23
 
 FROM base AS dependencies
 
-RUN apk update && apk add build-base yarn nodejs
+RUN apk update && apk add build-base yarn nodejs yaml-dev
 
 
 WORKDIR /tmp
