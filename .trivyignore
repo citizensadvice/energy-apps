@@ -1,0 +1,3 @@
+# Added 05/06/25:
+# Review once net-imap version has been bumped, and the security issue resolved, in the ruby:3.3.8-alpine3.21 Docker image
+CVE-2025-43857
