@@ -9,7 +9,6 @@ metadata:
     env: {{ .Values.metadata.environment }}
     release: {{ .Release.Name }}
     heritage: {{ .Release.Service }}
-    app.kubernetes.io/component: web
 spec:
   interval: 60s
   module: http_2xx
