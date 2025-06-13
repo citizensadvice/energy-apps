@@ -55,6 +55,11 @@ service:
   port: 3000
 
 ingress:
+  probe:
+    enabled: false
+    targets:
+      staticConfig:
+        static: []
   enabled: false
   hostname: energy-apps.minikube
   annotations:

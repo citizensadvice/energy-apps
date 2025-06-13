@@ -1,6 +1,12 @@
 service:
   type: NodePort
 ingress:
+  probe:
+    enabled: true
+    targets:
+      staticConfig:
+        static:
+          - https://energy-apps.qa.citizensadvice.org.uk
   enabled: true
   redirectHttpToHttps: true
   annotations:

@@ -1,0 +1,21 @@
+{{- if .Values.ingress.probe.enabled }}
+apiVersion: monitoring.coreos.com/v1
+kind: Probe
+metadata:
+  name: {{ template "energy-apps.fullname" . }}
+  labels:
+    app: {{ include "energy-apps.fullname" . }}
+    chart: {{ include "energy-apps.chart" . }}
+    env: {{ .Values.metadata.environment }}
+    release: {{ .Release.Name }}
+    heritage: {{ .Release.Service }}
+spec:
+  interval: 60s
+  module: http_2xx
+  prober:
+    path: /probe
+    url: prometheus-blackbox-exporter.kube-monitoring.svc.cluster.local:9115
+  targets:
+    staticConfig:
+      static: []
+{{- end }}
