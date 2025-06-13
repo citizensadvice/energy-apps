@@ -56,10 +56,8 @@ service:
 
 ingress:
   probe:
-    enabled: false
-    targets:
-      staticConfig:
-        static: []
+    enabled: true
+    targets: {}
   enabled: false
   hostname: energy-apps.minikube
   annotations:
