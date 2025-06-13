@@ -14,7 +14,5 @@ spec:
   prober:
     path: /probe
     url: prometheus-blackbox-exporter.kube-monitoring.svc.cluster.local:9115
-  targets:
-    staticConfig:
-      static: []
+  targets: {{ .Values.ingress.probe.targets | toYaml | nindent 4 }}
 {{- end }}
