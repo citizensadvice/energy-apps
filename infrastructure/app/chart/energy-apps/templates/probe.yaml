@@ -6,7 +6,6 @@ metadata:
   labels:
     app: {{ include "energy-apps.fullname" . }}
     chart: {{ include "energy-apps.chart" . }}
-    env: {{ .Values.metadata.environment }}
     release: {{ .Release.Name }}
     heritage: {{ .Release.Service }}
 spec:
