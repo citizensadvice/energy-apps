@@ -20,11 +20,3 @@ envVars:
   RAILS_ENV: production
   USE_TEST_SUPPLIERS: ${{ vars.USE_TEST_SUPPLIERS }}
   FF_SMALL_SUPPLIER_STARS: ${{ vars.FF_SMALL_SUPPLIER_STARS }}
-
-autoscaling:
-  enabled: true
-  minReplicas: 1
-  maxReplicas: 8
-
-podDisruptionBudget:
-  enabled: false

@@ -20,8 +20,3 @@ ingress:
 envVars:
   RAILS_ENV: production
   FF_SMALL_SUPPLIER_STARS: ${{ vars.FF_SMALL_SUPPLIER_STARS }}
-
-autoscaling:
-  enabled: true
-  minReplicas: 2
-  maxReplicas: 8
