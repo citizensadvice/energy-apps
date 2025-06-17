@@ -45,7 +45,7 @@ module ApplianceCalculator
       end
 
       def on_complete(results)
-        results => {usage:, rate:}
+        results => { usage:, rate: }
 
         session[:unit_rate] = rate
         session[:usages] ||= []
