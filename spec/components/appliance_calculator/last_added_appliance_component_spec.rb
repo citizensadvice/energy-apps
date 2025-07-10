@@ -19,6 +19,6 @@ RSpec.describe ApplianceCalculator::LastAddedApplianceComponent, type: :componen
   context "when there is no message" do
     let(:message) { nil }
 
-    it { is_expected.not_to have_css "body" }
+    it { is_expected.to have_no_css "body" }
   end
 end

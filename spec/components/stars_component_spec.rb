@@ -14,7 +14,7 @@ RSpec.describe StarsComponent, type: :component do
 
   it { is_expected.to have_css ".star--full", count: 3 }
   it { is_expected.to have_css ".star--empty", count: 2 }
-  it { is_expected.not_to have_css ".star--half" }
+  it { is_expected.to have_no_css ".star--half" }
 
   context "when the stars are highlighted" do
     let(:highlight_stars) { true }
@@ -34,7 +34,7 @@ RSpec.describe StarsComponent, type: :component do
       it { is_expected.to have_css ".stars--highlight" }
       it { is_expected.to have_css ".star--full", count: 2 }
       it { is_expected.to have_css ".star--empty", count: 3 }
-      it { is_expected.not_to have_css ".star--half" }
+      it { is_expected.to have_no_css ".star--half" }
     end
   end
 end

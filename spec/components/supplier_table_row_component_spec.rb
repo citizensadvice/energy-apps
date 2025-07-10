@@ -23,7 +23,7 @@ RSpec.describe SupplierTableRowComponent, type: :component do
     end
 
     it { is_expected.to have_css ".supplier-table__row--highlight" }
-    it { is_expected.not_to have_link "More details" }
+    it { is_expected.to have_no_link "More details" }
 
     context "when the supplier is not top 3" do
       let(:supplier) { build(:supplier, :low_ranking) }

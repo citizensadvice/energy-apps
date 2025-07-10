@@ -45,12 +45,12 @@ RSpec.describe ApplianceCalculator::MostExpensiveApplianceComponent, type: :comp
       ]
     end
 
-    it { is_expected.not_to have_css "body" }
+    it { is_expected.to have_no_css "body" }
   end
 
   context "when there are no usages" do
     let(:usages) { nil }
 
-    it { is_expected.not_to have_css "body" }
+    it { is_expected.to have_no_css "body" }
   end
 end

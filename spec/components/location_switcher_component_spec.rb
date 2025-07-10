@@ -17,7 +17,7 @@ RSpec.describe LocationSwitcherComponent, type: :component do
     it { is_expected.to have_text "This advice applies to England" }
     it { is_expected.to have_link "a", text: "See advice for Scotland" }
     it { is_expected.to have_link "a", text: "See advice for Wales" }
-    it { is_expected.not_to have_link "a", text: "See advice for England" }
+    it { is_expected.to have_no_link "a", text: "See advice for England" }
   end
 
   context "when current country is scotland" do
@@ -26,7 +26,7 @@ RSpec.describe LocationSwitcherComponent, type: :component do
     it { is_expected.to have_text "This advice applies to Scotland" }
     it { is_expected.to have_link "a", text: "See advice for England" }
     it { is_expected.to have_link "a", text: "See advice for Wales" }
-    it { is_expected.not_to have_link "a", text: "See advice for Scotland" }
+    it { is_expected.to have_no_link "a", text: "See advice for Scotland" }
   end
 
   context "when current country is wales" do
@@ -35,6 +35,6 @@ RSpec.describe LocationSwitcherComponent, type: :component do
     it { is_expected.to have_text "This advice applies to Wales" }
     it { is_expected.to have_link "a", text: "See advice for England" }
     it { is_expected.to have_link "a", text: "See advice for Scotland" }
-    it { is_expected.not_to have_link "a", text: "See advice for Wales" }
+    it { is_expected.to have_no_link "a", text: "See advice for Wales" }
   end
 end
