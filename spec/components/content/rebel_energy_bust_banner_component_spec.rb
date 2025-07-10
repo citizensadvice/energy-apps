@@ -31,7 +31,7 @@ RSpec.describe Content::RebelEnergyBustBannerComponent, type: :component do
     context "when the supplier is not rebel energy" do
       let(:supplier) { build(:supplier) }
 
-      it { is_expected.not_to have_link href: link_url }
+      it { is_expected.to have_no_link href: link_url }
     end
   end
 

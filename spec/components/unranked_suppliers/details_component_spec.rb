@@ -43,8 +43,8 @@ RSpec.describe UnrankedSuppliers::DetailsComponent, type: :component do
         render_inline described_class.new(supplier, quarter_date)
       end
 
-      it { is_expected.not_to have_text "Fuel mix" }
-      it { is_expected.not_to have_text "fuel mix content" }
+      it { is_expected.to have_no_text "Fuel mix" }
+      it { is_expected.to have_no_text "fuel mix content" }
     end
 
     context "when a supplier is whitelabelled" do
@@ -99,8 +99,8 @@ RSpec.describe UnrankedSuppliers::DetailsComponent, type: :component do
         render_inline described_class.new(supplier, quarter_date)
       end
 
-      it { is_expected.not_to have_text "Fuel mix" }
-      it { is_expected.not_to have_text "fuel mix content" }
+      it { is_expected.to have_no_text "Fuel mix" }
+      it { is_expected.to have_no_text "fuel mix content" }
     end
 
     context "when a supplier does not have some star ratings" do
@@ -110,7 +110,7 @@ RSpec.describe UnrankedSuppliers::DetailsComponent, type: :component do
         render_inline described_class.new(supplier, quarter_date)
       end
 
-      it { is_expected.not_to have_css ".stars-summary" }
+      it { is_expected.to have_no_css ".stars-summary" }
     end
 
     context "when a supplier is whitelabelled" do
@@ -121,7 +121,7 @@ RSpec.describe UnrankedSuppliers::DetailsComponent, type: :component do
       end
 
       it { is_expected.to have_text "White Label Energy Inc provides energy and customer service for An Energy Supplier Inc" }
-      it { is_expected.not_to have_text "Smaller suppliers' overall ratings are calculated differently." }
+      it { is_expected.to have_no_text "Smaller suppliers' overall ratings are calculated differently." }
     end
   end
 
@@ -132,6 +132,6 @@ RSpec.describe UnrankedSuppliers::DetailsComponent, type: :component do
       render_inline described_class.new(nil, quarter_date)
     end
 
-    it { is_expected.not_to have_css "body" }
+    it { is_expected.to have_no_css "body" }
   end
 end

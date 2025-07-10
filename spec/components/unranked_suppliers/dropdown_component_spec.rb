@@ -32,7 +32,7 @@ RSpec.describe UnrankedSuppliers::DropdownComponent, type: :component do
     it { is_expected.to have_css "option", count: 11 }
     it { is_expected.to have_text "Please select" }
     it { is_expected.to have_text alphabetized_suppliers }
-    it { is_expected.not_to have_css "option[selected]" }
+    it { is_expected.to have_no_css "option[selected]" }
   end
 
   context "when FF_SMALL_SUPPLIER_STARS is disabled" do
@@ -46,7 +46,7 @@ RSpec.describe UnrankedSuppliers::DropdownComponent, type: :component do
     it { is_expected.to have_css "option", count: 11 }
     it { is_expected.to have_text "Please select" }
     it { is_expected.to have_text alphabetized_suppliers }
-    it { is_expected.not_to have_css "option[selected]" }
+    it { is_expected.to have_no_css "option[selected]" }
   end
 
   context "when a chosen supplier slug is passed" do
@@ -59,7 +59,7 @@ RSpec.describe UnrankedSuppliers::DropdownComponent, type: :component do
   context "when there are no suppliers" do
     let(:suppliers) { nil }
 
-    it { is_expected.not_to have_text "Please select" }
+    it { is_expected.to have_no_text "Please select" }
   end
 
   private
