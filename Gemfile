@@ -3,7 +3,7 @@
 source "https://rubygems.org"
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby "3.3.6"
+ruby "3.3.8"
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem "rails", "~> 7.2.2.1"
@@ -43,7 +43,7 @@ gem "citizens_advice_form_builder",
     github: "citizensadvice/rails-form-builder",
     tag: "v0.2.0"
 
-gem "view_component", "~> 3.21"
+gem "view_component", "~> 3.23"
 
 gem "ddtrace"
 gem "factory_bot_rails"

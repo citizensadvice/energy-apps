@@ -37,7 +37,7 @@ Then("I am asked how much I pay for electricity") do
 end
 
 When("I enter a unit rate") do
-  fill_in "The national average rate is 24.5p/kWh.", with: 10
+  fill_in "The national average rate is #{Rails.configuration.x.default_unit_rate}p/kWh.", with: 10
 end
 
 And("I confirm the rate") do
@@ -114,7 +114,7 @@ Then "I am returned to the start of the form" do
 end
 
 Then("I am not asked the unit rate again") do
-  expect(page).to have_no_text "How much do you pay for electricity?"
+  expect(page).not_to have_text "How much do you pay for electricity?"
 end
 
 And("I clear the list of appliances") do
@@ -127,7 +127,7 @@ Then("The list of appliances only has the broadband router and not the fan heate
 end
 
 Then("I cannot return to the start of the form") do
-  expect(page).to have_no_button "Add another appliance"
+  expect(page).not_to have_button "Add another appliance"
 end
 
 And("I am told I have added the maximum number of appliances") do
@@ -139,5 +139,5 @@ Then("I can see the {string} button") do |button|
 end
 
 Then("I cannot see the {string} button") do |button|
-  expect(page).to have_no_button(button)
+  expect(page).not_to have_button(button)
 end

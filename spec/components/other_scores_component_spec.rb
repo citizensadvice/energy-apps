@@ -32,6 +32,6 @@ RSpec.describe OtherScoresComponent, type: :component do
   context "when there is no supplier" do
     let(:supplier) { nil }
 
-    it { is_expected.to have_no_css "body" }
+    it { is_expected.not_to have_css "body" }
   end
 end

@@ -21,7 +21,7 @@ RSpec.describe ImpactSurveyComponent, type: :component do
     end
 
     it "is expected to have no selector .cads-callout" do
-      expect(page).to have_no_css ".cads-callout"
+      expect(page).not_to have_css ".cads-callout"
     end
   end
 end

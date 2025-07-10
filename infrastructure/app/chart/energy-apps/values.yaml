@@ -55,6 +55,9 @@ service:
   port: 3000
 
 ingress:
+  probe:
+    enabled: true
+    targets: {}
   enabled: false
   hostname: energy-apps.minikube
   annotations:
@@ -66,9 +69,9 @@ resources:
     memory: 192Mi
 
 autoscaling:
-  enabled: false
-  minReplicas: 1
-  maxReplicas: 100
+  enabled: true
+  minReplicas: 2
+  maxReplicas: 8
   targetCPUUtilizationPercentage: 80
   # targetMemoryUtilizationPercentage: 80
 
@@ -81,3 +84,7 @@ affinity: {}
 datadog:
   labels:
     env: ""
+
+podDisruptionBudget:
+  enabled: true
+  maxUnavailable: 1

@@ -59,3 +59,10 @@ updates:
           # Pre-release libraries should be handled individually
           # to keep PRs easier to understand
           - "ruff"
+
+  - package-ecosystem: 'docker'
+    directory: '/'
+    schedule:
+      interval: 'weekly'
+    commit-message:
+      prefix: '[dependabot:docker] '

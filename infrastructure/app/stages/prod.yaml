@@ -1,6 +1,13 @@
 service:
   type: NodePort
 ingress:
+  probe:
+    enabled: true
+    targets:
+      staticConfig:
+        static:
+          - https://www.citizensadvice.org.uk/consumer/energy/energy-supply/save-energy-at-home/check-how-much-your-electrical-appliances-cost-to-use/
+          - https://www.citizensadvice.org.uk/consumer/your-energy/get-a-better-energy-deal/compare-domestic-energy-suppliers-customer-service/
   enabled: true
   redirectHttpToHttps: true
   annotations:
@@ -13,8 +20,3 @@ ingress:
 envVars:
   RAILS_ENV: production
   FF_SMALL_SUPPLIER_STARS: ${{ vars.FF_SMALL_SUPPLIER_STARS }}
-
-autoscaling:
-  enabled: true
-  minReplicas: 2
-  maxReplicas: 8

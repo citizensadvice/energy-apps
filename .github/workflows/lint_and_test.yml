@@ -5,7 +5,7 @@ on:
 
 jobs:
   lint:
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-latest
     steps:
       - name: "Checkout"
         uses: actions/checkout@v4
@@ -33,7 +33,7 @@ jobs:
         run: bundle exec haml-lint app/**/*.html.haml
 
   test:
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-latest
     needs: lint
     steps:
       - name: "Checkout"
@@ -59,7 +59,7 @@ jobs:
         run: bundle exec rspec
 
   audit:
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-latest
     needs: lint
     steps:
       - name: "Checkout"
@@ -80,7 +80,7 @@ jobs:
         run: bundle exec license_finder
 
   feature-test:
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-latest
     environment: dev
     env:
       RAILS_ENV: test
