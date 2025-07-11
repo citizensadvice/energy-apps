@@ -18,7 +18,7 @@ jobs:
       issues: read
     steps:
       - name: Build and push to ECR
-        uses: citizensadvice/build-and-private-ecr-push-action@v3
+        uses: citizensadvice/build-and-private-ecr-push-action@v1
         with:
           dockerfile_context: "."
           repository_name: energy-apps
