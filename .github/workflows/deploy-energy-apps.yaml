@@ -17,6 +17,7 @@ jobs:
       contents: read
       issues: read
     steps:
+      - uses: actions/checkout@v4
       - name: Build and push to ECR
         uses: citizensadvice/build-and-private-ecr-push-action@v3
         with:
