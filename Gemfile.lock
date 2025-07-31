@@ -181,16 +181,14 @@ GEM
       cucumber (>= 5, < 10)
       railties (>= 5.2, < 9)
     cucumber-tag-expressions (6.1.2)
-    datadog-ci (0.8.3)
+    datadog (2.19.0)
+      datadog-ruby_core_source (~> 3.4, >= 3.4.1)
+      libdatadog (~> 18.1.0.1.0)
+      libddwaf (~> 1.24.1.0.3)
+      logger
       msgpack
+    datadog-ruby_core_source (3.4.1)
     date (3.4.1)
-    ddtrace (1.23.3)
-      datadog-ci (~> 0.8.1)
-      debase-ruby_core_source (= 3.3.1)
-      libdatadog (~> 7.0.0.1.0)
-      libddwaf (~> 1.14.0.0.0)
-      msgpack
-    debase-ruby_core_source (3.3.1)
     debug (1.11.0)
       irb (~> 1.10)
       reline (>= 0.3.8)
@@ -261,16 +259,16 @@ GEM
       railties (>= 6.0.0)
     json (2.12.2)
     language_server-protocol (3.17.0.5)
-    libdatadog (7.0.0.1.0)
-    libdatadog (7.0.0.1.0-aarch64-linux)
-    libdatadog (7.0.0.1.0-x86_64-linux)
-    libddwaf (1.14.0.0.0-aarch64-linux)
+    libdatadog (18.1.0.1.0)
+    libdatadog (18.1.0.1.0-aarch64-linux)
+    libdatadog (18.1.0.1.0-x86_64-linux)
+    libddwaf (1.24.1.0.3-aarch64-linux)
       ffi (~> 1.0)
-    libddwaf (1.14.0.0.0-arm64-darwin)
+    libddwaf (1.24.1.0.3-arm64-darwin)
       ffi (~> 1.0)
-    libddwaf (1.14.0.0.0-x86_64-darwin)
+    libddwaf (1.24.1.0.3-x86_64-darwin)
       ffi (~> 1.0)
-    libddwaf (1.14.0.0.0-x86_64-linux)
+    libddwaf (1.24.1.0.3-x86_64-linux)
       ffi (~> 1.0)
     license_finder (7.2.1)
       bundler
@@ -546,7 +544,7 @@ DEPENDENCIES
   climate_control
   cssbundling-rails
   cucumber-rails
-  ddtrace
+  datadog
   debug
   dotenv-rails
   factory_bot_rails
@@ -580,7 +578,7 @@ DEPENDENCIES
   wizard_steps (~> 0.1.4)
 
 RUBY VERSION
-   ruby 3.3.8p144
+   ruby 3.4.5p51
 
 BUNDLED WITH
    2.4.20
