@@ -28,10 +28,10 @@
     chalk "^2.0.0"
     js-tokens "^4.0.0"
 
-"@citizensadvice/design-system@^6.4.2":
-  version "6.4.2"
-  resolved "https://registry.yarnpkg.com/@citizensadvice/design-system/-/design-system-6.4.2.tgz#0f31a577d734ce98f0d190dc5740324d1f8d749a"
-  integrity sha512-NSZALoFSp/XwAcTCHSlOUqrHnxoyPDxHD8fejdVRZInx+2njcrW5VCUZL9Sc8fmUjz3FBnyy8v+O2DaoWtnKLw==
+"@citizensadvice/design-system@^8.0.3":
+  version "8.1.0"
+  resolved "https://registry.yarnpkg.com/@citizensadvice/design-system/-/design-system-8.1.0.tgz#32ae00c163da914f656e955cc87e6ec96cb90135"
+  integrity sha512-DUJulHNdhSbOHdso6fSg6vjROcKuXf7OC0QSm/kZnC1dMA+cOkFszi6YIVbYlK8zFl4ufOQb/GA+EU2hrBJXmA==
 
 "@csstools/css-parser-algorithms@^3.0.5":
   version "3.0.5"

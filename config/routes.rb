@@ -70,5 +70,6 @@ Rails.application.routes.draw do
       # This needs to be the final entry in the routes as a catch-all for routing errors so they're not treated as fatal errors
       match "*path", to: "application#not_found", via: :all
     end
+    mount CitizensAdviceCookiePreferences::Engine, at: "/cookie-preferences"
   end
 end
