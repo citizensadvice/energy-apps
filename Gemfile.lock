@@ -20,6 +20,15 @@ GIT
       rubocop-rspec_rails (~> 2.31)
 
 GIT
+  remote: https://github.com/citizensadvice/cookie-preferences.git
+  revision: 96bd327aaa1de91c206e6f2b4435902b57d5cda5
+  specs:
+    citizens_advice_cookie_preferences (0.1.0)
+      citizens_advice_components (> 8.0.0)
+      rails (>= 7.1.0)
+      view_component (>= 2.0.0, < 4.0)
+
+GIT
   remote: https://github.com/citizensadvice/design-system.git
   revision: abea66c928ebe755372da567f5db8d339d3532ea
   tag: v8.0.3
@@ -47,14 +56,6 @@ GIT
       activerecord (>= 6.1.0, < 8.0)
       activesupport (>= 6.1.0, < 8.0)
       citizens_advice_components
-
-PATH
-  remote: ../cookie-preferences/engine
-  specs:
-    citizens_advice_cookie_preferences (0.1.0)
-      citizens_advice_components (> 8.0.0)
-      rails (>= 7.1.0)
-      view_component (>= 2.0.0, < 4.0)
 
 GEM
   remote: https://rubygems.org/

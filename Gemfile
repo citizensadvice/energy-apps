@@ -43,7 +43,7 @@ gem "citizens_advice_form_builder",
     github: "citizensadvice/rails-form-builder",
     tag: "v0.2.0"
 
-gem "citizens_advice_cookie_preferences", path: "../cookie-preferences/engine"
+gem "citizens_advice_cookie_preferences", github: "citizensadvice/cookie-preferences"
 
 gem "view_component", "~> 3.23"
 
