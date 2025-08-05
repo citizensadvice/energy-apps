@@ -6,6 +6,11 @@ service:
 ingress:
   enabled: true
   redirectHttpToHttps: true
+  probe:
+    enabled: false
+    targets:
+      staticConfig:
+        static: []
   annotations:
     kubernetes.io/ingress.class: alb
     alb.ingress.kubernetes.io/scheme: internet-facing
