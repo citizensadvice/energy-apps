@@ -24,6 +24,9 @@
     = render "shared/google_tag_manager_no_script"
     = render "shared/half_star_svg"
 
+    - unless cookies_preference_page?
+      = render CitizensAdviceCookiePreferences::CookieBanner.new
+
     .wrapper
       = render HeaderComponent.new
       = render CitizensAdviceComponents::Navigation.new(links: navigation_links)
@@ -48,3 +51,4 @@
                                    columns: public_website_footer_nav_links)
 
     = javascript_include_tag digested_js_file_name("application.js"), defer: true
+    = javascript_include_tag "citizens_advice_cookie_preferences/application"
