@@ -58,6 +58,8 @@ Rails.application.routes.draw do
       end
     end
 
+    mount CitizensAdviceCookiePreferences::Engine, at: "/cookie-preferences"
+
     constraints ->(req) { req.format == :html } do
       # Custom error handler pages, these work because
       # config.exceptions_app = routes is set in application.rb

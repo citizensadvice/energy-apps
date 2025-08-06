@@ -3,6 +3,7 @@
 class ApplicationController < ActionController::Base
   include SwiftypeMeta
   include DataLayer
+  include CitizensAdviceCookiePreferences::Helpers
 
   def internal_server_error
     render template: "errors/500", status: :internal_server_error
