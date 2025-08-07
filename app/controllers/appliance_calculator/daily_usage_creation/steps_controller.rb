@@ -7,7 +7,7 @@ module ApplianceCalculator
 
       self.wizard_class = ::DailyUsageCreation::Wizard
 
-      default_form_builder ::CitizensAdviceFormBuilder::FormBuilder
+      default_form_builder ::CitizensAdviceComponents::FormBuilder
 
       class MissingApplianceError < StandardError; end
 
