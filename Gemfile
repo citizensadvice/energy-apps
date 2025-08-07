@@ -34,16 +34,19 @@ gem "meta-tags", "~> 2.22"
 # Reduces boot times through caching; required in config/boot.rb
 gem "bootsnap", require: false
 
+# Use the Citizens Advice Design System
+# Pinned version, should match @citizensadvice/design-system in package.json
 gem "citizens_advice_components",
     github: "citizensadvice/design-system",
     tag: "v8.1.0",
     glob: "engine/*.gemspec"
 
-gem "citizens_advice_form_builder",
-    github: "citizensadvice/rails-form-builder",
-    tag: "v0.2.0"
-
+# The citizens_advice_components gem uses view component but we also use this to write
+# our app components so explicitly name it as an application dependency.
 gem "view_component", "~> 3.23"
+
+# Multi-step forms. Used alongside the design system form builder
+gem "wizard_steps", "~> 0.1.4"
 
 gem "datadog"
 gem "factory_bot_rails"
@@ -93,5 +96,3 @@ group :test do
   gem "selenium-webdriver"
   gem "webdrivers"
 end
-
-gem "wizard_steps", "~> 0.1.4"

@@ -35,19 +35,6 @@ GIT
       railties (>= 7.1.0, < 9.0)
       view_component (>= 2.0.0, < 5.0)
 
-GIT
-  remote: https://github.com/citizensadvice/rails-form-builder.git
-  revision: c55469691bd453f665a299d592e1ef263024e454
-  tag: v0.2.0
-  specs:
-    citizens_advice_form_builder (0.2.0)
-      actionpack (>= 6.1.0, < 8.0)
-      actionview (>= 6.1.0, < 8.0)
-      activemodel (>= 6.1.0, < 8.0)
-      activerecord (>= 6.1.0, < 8.0)
-      activesupport (>= 6.1.0, < 8.0)
-      citizens_advice_components
-
 GEM
   remote: https://rubygems.org/
   specs:
@@ -547,7 +534,6 @@ DEPENDENCIES
   capybara_accessible_selectors!
   citizens-advice-style!
   citizens_advice_components!
-  citizens_advice_form_builder!
   climate_control
   cssbundling-rails
   cucumber-rails
