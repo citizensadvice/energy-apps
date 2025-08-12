@@ -43,7 +43,7 @@ gem "citizens_advice_components",
 
 # The citizens_advice_components gem uses view component but we also use this to write
 # our app components so explicitly name it as an application dependency.
-gem "view_component", "~> 3.23"
+gem "view_component", "~> 4.0"
 
 # Multi-step forms. Used alongside the design system form builder
 gem "wizard_steps", "~> 0.1.4"
