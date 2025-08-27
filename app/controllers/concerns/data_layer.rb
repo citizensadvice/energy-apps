@@ -19,12 +19,18 @@ module DataLayer
   end
 
   def default_data_layer_properties
-    {
+    properties = {
       platform: "content-platform",
       siteType: "Public Website",
       # language confusingly represents the current country: England, Wales etc.
       # but needs to have this name to match up with Episerver page data.
       language: (helpers.current_country || "england").to_s.capitalize
     }
+
+    if Feature.enabled?("FF_NEW_COOKIE_MANAGEMENT") && allow_analytics_cookies?
+      properties.merge({ analyticsCookiesAccepted: "True" })
+    else
+      properties
+    end
   end
 end
