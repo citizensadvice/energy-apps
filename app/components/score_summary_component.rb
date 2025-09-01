@@ -6,6 +6,7 @@ class ScoreSummaryComponent < ViewComponent::Base
   delegate :scores_fragment, to: :helpers
 
   def initialize(supplier, quarter_date)
+    super()
     @supplier = supplier
     @quarter_date = quarter_date
   end

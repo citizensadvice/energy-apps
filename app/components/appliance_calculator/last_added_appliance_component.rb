@@ -5,6 +5,7 @@ module ApplianceCalculator
     attr_reader :message
 
     def initialize(message)
+      super()
       @message = message
     end
 

@@ -4,7 +4,7 @@ class LocationSwitcherComponent < ViewComponent::Base
   attr_reader :current_country
 
   def initialize(current_country:)
-    super
+    super()
 
     @current_country = current_country || "england"
     @available_country_urls = available_country_urls

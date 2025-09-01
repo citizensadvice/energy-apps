@@ -6,6 +6,7 @@ class OtherInfoComponent < ViewComponent::Base
   delegate :contact_details_fragment, to: :helpers
 
   def initialize(supplier)
+    super()
     @supplier = supplier
     @renderer = Renderers::RichTextRenderer.new
   end

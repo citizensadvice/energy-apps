@@ -3,6 +3,7 @@
 module ApplianceCalculator
   class UsagesTableComponent < ViewComponent::Base
     def initialize(usages:, unit_rate:)
+      super()
       @usages = usages
       @unit_rate = unit_rate
     end

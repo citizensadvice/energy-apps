@@ -6,6 +6,7 @@ module UnrankedSuppliers
     attr_reader :renderer, :supplier
 
     def initialize(supplier, quarter_date)
+      super()
       @supplier = supplier
       @renderer = Renderers::RichTextRenderer.new
       @quarter_date = quarter_date

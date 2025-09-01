@@ -4,6 +4,7 @@ class OtherScoresComponent < ViewComponent::Base
   attr_reader :supplier, :renderer
 
   def initialize(supplier)
+    super()
     @supplier = supplier
     @renderer = Renderers::RichTextRenderer.new
   end

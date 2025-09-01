@@ -5,6 +5,7 @@ class ImpactSurveyComponent < ViewComponent::Base
   attr_reader :impact_survey_id
 
   def initialize(impact_survey_id:)
+    super()
     @impact_survey_id = impact_survey_id
   end
 
