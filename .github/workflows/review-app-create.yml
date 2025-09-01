@@ -26,7 +26,7 @@ jobs:
     # are created and destroyed on every push for no reason.
     if: contains(github.event.pull_request.labels.*.name, 'Review app')
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
       - name: Build and push to ECR
         uses: citizensadvice/build-and-private-ecr-push-action@v3
         with:
@@ -50,7 +50,7 @@ jobs:
     needs: build
     steps:
       - name: Git Checkout energy comparison table
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
         with:
           path: energy-apps
 
