@@ -6,6 +6,7 @@ class StarsComponent < ViewComponent::Base
   attr_reader :score
 
   def initialize(score:, highlight_stars: false)
+    super()
     @highlight_stars = highlight_stars
     @score = score
   end

@@ -3,6 +3,7 @@
 module ApplianceCalculator
   class MostExpensiveApplianceComponent < ViewComponent::Base
     def initialize(usages)
+      super()
       @usages = usages
     end
 

@@ -4,7 +4,7 @@ class FooterComponent < ViewComponent::Base
   delegate :scotland?, :scotland_public_website_footer_nav_links, :public_website_footer_nav_links, to: :helpers
 
   def initialize(current_path:, feedback_survey_id:, columns:, feedback_title: nil)
-    super
+    super()
     @current_path = current_path
     @feedback_survey_id = feedback_survey_id
     @feedback_title = feedback_title

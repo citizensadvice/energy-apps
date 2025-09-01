@@ -3,6 +3,7 @@
 module ApplianceCalculator
   class ClearListComponent < ViewComponent::Base
     def initialize(usages)
+      super()
       @usages = usages
     end
 

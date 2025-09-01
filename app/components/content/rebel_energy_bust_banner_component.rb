@@ -3,6 +3,7 @@
 module Content
   class RebelEnergyBustBannerComponent < ViewComponent::Base
     def initialize(supplier:, current_country: nil)
+      super()
       @supplier = supplier
       @current_country = current_country
     end

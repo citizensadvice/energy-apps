@@ -6,6 +6,7 @@ module UnrankedSuppliers
     attr_reader :supplier
 
     def initialize(supplier)
+      super()
       @supplier = supplier
     end
 

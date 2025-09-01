@@ -3,6 +3,7 @@
 module UnrankedSuppliers
   class DropdownComponent < ViewComponent::Base
     def initialize(suppliers, chosen_supplier_slug: nil)
+      super()
       @suppliers = suppliers
       @chosen_supplier_slug = chosen_supplier_slug
     end

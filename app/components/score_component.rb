@@ -2,6 +2,7 @@
 
 class ScoreComponent < ViewComponent::Base
   def initialize(score:, show_decimal_score: false)
+    super()
     @score = score
     @show_decimal_score = show_decimal_score
   end

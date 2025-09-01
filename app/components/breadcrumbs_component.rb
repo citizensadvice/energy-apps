@@ -5,11 +5,12 @@ class BreadcrumbsComponent < ViewComponent::Base
   delegate :scotland?, to: :helpers
 
   def initialize(current_page_title:)
+    super()
     @current_page_title = current_page_title
   end
 
   def call
-    render CitizensAdviceComponents::Breadcrumbs.new(type: :no_collapse, links:)
+    render CitizensAdviceComponents::Breadcrumbs.new(links, type: :no_collapse)
   end
 
   def links

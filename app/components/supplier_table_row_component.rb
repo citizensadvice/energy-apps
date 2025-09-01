@@ -4,6 +4,7 @@ class SupplierTableRowComponent < ViewComponent::Base
   attr_reader :supplier
 
   def initialize(supplier, highlight: false, current_country: nil)
+    super()
     @supplier = supplier
     @highlight = highlight
     @current_country = current_country

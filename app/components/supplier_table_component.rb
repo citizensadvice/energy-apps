@@ -6,6 +6,7 @@ class SupplierTableComponent < ViewComponent::Base
   delegate :current_country, to: :helpers
 
   def initialize(suppliers, highlight_supplier_with_slug: nil)
+    super()
     @suppliers = suppliers
     @highlight_supplier_with_slug = highlight_supplier_with_slug
   end
