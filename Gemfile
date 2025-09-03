@@ -38,7 +38,7 @@ gem "bootsnap", require: false
 # Pinned version, should match @citizensadvice/design-system in package.json
 gem "citizens_advice_components",
     github: "citizensadvice/design-system",
-    tag: "v8.1.0",
+    tag: "v8.3.0",
     glob: "engine/*.gemspec"
 
 gem "citizens_advice_cookie_preferences",

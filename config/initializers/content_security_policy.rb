@@ -68,6 +68,9 @@ Rails.application.configure do
 
     # DataDog JS error logging
     merge_into[:connect_src, "https://browser-intake-datadoghq.eu"]
+
+    # Fundraising Regulator logo (we have to use the third party hosted one to demonstrate the validation)
+    merge_into[:img_src, "https://www.fundraisingregulator.org.uk"]
   end
   # rubocop:enable Metrics/BlockLength
 

@@ -17,6 +17,7 @@ class FooterComponent < ViewComponent::Base
                            title: @feedback_title,
                            new_tab: true)
       c.with_columns(@columns)
+      c.with_additional_logo { fundraising_regulator_logo }
     end
   end
 
@@ -26,5 +27,13 @@ class FooterComponent < ViewComponent::Base
     hash = { p: @current_path }
 
     URI::HTTPS.build(host: "www.research.net", path: "/r/#{@feedback_survey_id}", query: hash.to_query)
+  end
+
+  def fundraising_regulator_logo
+    image_tag fundraising_regulator_logo_url, alt: "Fundraising Regulator registered"
+  end
+
+  def fundraising_regulator_logo_url
+    "https://www.fundraisingregulator.org.uk/fr-badge/6d8352f2-d995-4eea-bb60-a28c2dc8d842/en/black"
   end
 end
