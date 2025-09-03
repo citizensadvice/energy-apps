@@ -20,6 +20,16 @@ GIT
       rubocop-rspec_rails (~> 2.31)
 
 GIT
+  remote: https://github.com/citizensadvice/cookie-preferences.git
+  revision: 287a515c578be03c6951fe3545e0ad2858224b2d
+  specs:
+    citizens_advice_cookie_preferences (0.1.0)
+      citizens_advice_components (> 8.0.0)
+      meta-tags
+      rails (>= 7.1.0)
+      view_component (>= 2.0.0, < 5.0)
+
+GIT
   remote: https://github.com/citizensadvice/design-system.git
   revision: c3cb623bf7eeac13c5573d7594032bc10f611021
   tag: v8.1.0
@@ -136,7 +146,7 @@ GEM
     climate_control (1.2.0)
     coderay (1.1.3)
     concurrent-ruby (1.3.5)
-    connection_pool (2.5.3)
+    connection_pool (2.5.4)
     crack (1.0.0)
       bigdecimal
       rexml
@@ -293,7 +303,7 @@ GEM
       uri
     net-http-persistent (4.0.6)
       connection_pool (~> 2.2, >= 2.2.4)
-    net-imap (0.5.9)
+    net-imap (0.5.10)
       date
       net-protocol
     net-pop (0.1.2)
@@ -534,6 +544,7 @@ DEPENDENCIES
   capybara_accessible_selectors!
   citizens-advice-style!
   citizens_advice_components!
+  citizens_advice_cookie_preferences!
   climate_control
   cssbundling-rails
   cucumber-rails
