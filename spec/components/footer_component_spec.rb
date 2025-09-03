@@ -41,4 +41,8 @@ RSpec.describe FooterComponent, type: :component do
   describe "footer columns" do
     it { is_expected.to have_css "nav ul", count: 2 }
   end
+
+  describe "Fundraising Regulator logo" do
+    it { is_expected.to have_css 'img[src^="https://www.fundraisingregulator.org.uk"]' }
+  end
 end
