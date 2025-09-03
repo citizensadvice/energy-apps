@@ -56,4 +56,4 @@ You can run the application along with asset compilation using the following dev
 ./bin/dev
 ```
 
-If all is working you should be able to access the application at `http://localhost:3000/`
+If all is working you should be able to access the application at `http://localhost:3300/`
