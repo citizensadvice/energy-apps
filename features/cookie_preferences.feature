@@ -1,3 +1,4 @@
+@javascript
 Feature: Cookie preferences
 
   Scenario: Visiting a page for the first time
