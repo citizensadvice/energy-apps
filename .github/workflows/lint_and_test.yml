@@ -87,6 +87,7 @@ jobs:
       CONTENTFUL_CDA_TOKEN: ${{ secrets.CONTENTFUL_CDA_TOKEN }}
       CONTENTFUL_SPACE_ID: ${{ secrets.CONTENTFUL_SPACE_ID }}
       CONTENTFUL_ENVIRONMENT_ID: ${{ secrets.CONTENTFUL_ENVIRONMENT_ID }}
+      FF_NEW_COOKIE_MANAGEMENT: true
     needs: lint
     steps:
       - name: "Checkout"
