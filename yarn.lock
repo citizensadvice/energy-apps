@@ -53,17 +53,17 @@
   resolved "https://registry.yarnpkg.com/@csstools/selector-specificity/-/selector-specificity-5.0.0.tgz#037817b574262134cabd68fc4ec1a454f168407b"
   integrity sha512-PCqQV3c4CoVm3kdPhyeZ07VmBRdH2EpMFA/pd9OASpOEC3aXNGoqPDAZ80D0cLpMBxnmk0+yNhGsEx31hq7Gtw==
 
-"@datadog/browser-core@6.18.1":
-  version "6.18.1"
-  resolved "https://registry.yarnpkg.com/@datadog/browser-core/-/browser-core-6.18.1.tgz#9d86ac2b0929d12abb55ec2a10fa2eee2fb5634f"
-  integrity sha512-1JzFXU6E1cs4n0+avg9JLtlXVwN4J1r8x6CwXcNdC/JXRB2AB3Q5sG03CGni7yHm0yG8KjGVOpKvSl5pCypVfg==
+"@datadog/browser-core@6.19.0":
+  version "6.19.0"
+  resolved "https://registry.yarnpkg.com/@datadog/browser-core/-/browser-core-6.19.0.tgz#a417d4a516d956dd87d69fcb3cebcf18c9bf6f2a"
+  integrity sha512-cyqmTXJlysZ3Tx/ZWm3dnDCUh3BT4ndtkkoBKqgEfqpM6DkUSnEFdVtsiF0gvcAkkqassaCq7OIzKo0vR24Qww==
 
-"@datadog/browser-logs@^6.18.1":
-  version "6.18.1"
-  resolved "https://registry.yarnpkg.com/@datadog/browser-logs/-/browser-logs-6.18.1.tgz#decc702c82d54843bf9a4c71b7ed5a0cc3c85058"
-  integrity sha512-vYaOWZBLRvmj/k6vPGcXkSh7F2ry+XYFMTnalsX3uboxG36j9fR70kcGH3D5PP9om4JIi80GvA+XD0RCi0O6Fg==
+"@datadog/browser-logs@^6.19.0":
+  version "6.19.0"
+  resolved "https://registry.yarnpkg.com/@datadog/browser-logs/-/browser-logs-6.19.0.tgz#e53a81f2d8bcadb0e0c5aa860f6eb85ed25df0ef"
+  integrity sha512-Kiz/5JDuJzisW3U8s+aBYwHJO/3XLzB/C6Tk8m31VzjrLhrKFkGPFUxSHvC0RSUoWsipmauf6qPGPLohaWfP8w==
   dependencies:
-    "@datadog/browser-core" "6.18.1"
+    "@datadog/browser-core" "6.19.0"
 
 "@dual-bundle/import-meta-resolve@^4.1.0":
   version "4.1.0"
@@ -604,13 +604,13 @@ braces@^3.0.3:
   dependencies:
     fill-range "^7.1.1"
 
-cacheable@^1.10.3:
-  version "1.10.3"
-  resolved "https://registry.yarnpkg.com/cacheable/-/cacheable-1.10.3.tgz#8dcb02081a10c4819a8d70e1251bcce0ee5afdd4"
-  integrity sha512-M6p10iJ/VT0wT7TLIGUnm958oVrU2cUK8pQAVU21Zu7h8rbk/PeRtRWrvHJBql97Bhzk3g1N6+2VKC+Rjxna9Q==
+cacheable@^1.10.4:
+  version "1.10.4"
+  resolved "https://registry.yarnpkg.com/cacheable/-/cacheable-1.10.4.tgz#874c7ac005e9127e1daa3b09dbb4fd01743a4e91"
+  integrity sha512-Gd7ccIUkZ9TE2odLQVS+PDjIvQCdJKUlLdJRVvZu0aipj07Qfx+XIej7hhDrKGGoIxV5m5fT/kOJNJPQhQneRg==
   dependencies:
-    hookified "^1.10.0"
-    keyv "^5.4.0"
+    hookified "^1.11.0"
+    keyv "^5.5.0"
 
 call-bind-apply-helpers@^1.0.0, call-bind-apply-helpers@^1.0.1, call-bind-apply-helpers@^1.0.2:
   version "1.0.2"
@@ -1450,12 +1450,12 @@ fastq@^1.6.0:
   dependencies:
     reusify "^1.0.4"
 
-file-entry-cache@^10.1.3:
-  version "10.1.3"
-  resolved "https://registry.yarnpkg.com/file-entry-cache/-/file-entry-cache-10.1.3.tgz#4b2eec07e37025434f9a99428a6923948da4dc12"
-  integrity sha512-D+w75Ub8T55yor7fPgN06rkCAUbAYw2vpxJmmjv/GDAcvCnv9g7IvHhIZoxzRZThrXPFI2maeY24pPbtyYU7Lg==
+file-entry-cache@^10.1.4:
+  version "10.1.4"
+  resolved "https://registry.yarnpkg.com/file-entry-cache/-/file-entry-cache-10.1.4.tgz#1e81441517dc33ba5fe14421d96dc5fe7e37e820"
+  integrity sha512-5XRUFc0WTtUbjfGzEwXc42tiGxQHBmtbUG1h9L2apu4SulCGN3Hqm//9D6FAolf8MYNL7f/YlJl9vy08pj5JuA==
   dependencies:
-    flat-cache "^6.1.12"
+    flat-cache "^6.1.13"
 
 file-entry-cache@^6.0.1:
   version "6.0.1"
@@ -1487,14 +1487,14 @@ flat-cache@^3.0.4:
     flatted "^3.1.0"
     rimraf "^3.0.2"
 
-flat-cache@^6.1.12:
-  version "6.1.12"
-  resolved "https://registry.yarnpkg.com/flat-cache/-/flat-cache-6.1.12.tgz#385c73844b82171da8d98995b756ba84e6caa452"
-  integrity sha512-U+HqqpZPPXP5d24bWuRzjGqVqUcw64k4nZAbruniDwdRg0H10tvN7H6ku1tjhA4rg5B9GS3siEvwO2qjJJ6f8Q==
+flat-cache@^6.1.13:
+  version "6.1.13"
+  resolved "https://registry.yarnpkg.com/flat-cache/-/flat-cache-6.1.13.tgz#7428e97be2aa918f371e880ebbf7f61ff48f33fa"
+  integrity sha512-gmtS2PaUjSPa4zjObEIn4WWliKyZzYljgxODBfxugpK6q6HU9ClXzgCJ+nlcPKY9Bt090ypTOLIFWkV0jbKFjw==
   dependencies:
-    cacheable "^1.10.3"
+    cacheable "^1.10.4"
     flatted "^3.3.3"
-    hookified "^1.10.0"
+    hookified "^1.11.0"
 
 flatted@^3.1.0:
   version "3.2.7"
@@ -1835,10 +1835,10 @@ hasown@^2.0.0, hasown@^2.0.1, hasown@^2.0.2:
   dependencies:
     function-bind "^1.1.2"
 
-hookified@^1.10.0:
-  version "1.11.0"
-  resolved "https://registry.yarnpkg.com/hookified/-/hookified-1.11.0.tgz#085a8f1e196ffe31905d5122b40a8e547c69e660"
-  integrity sha512-aDdIN3GyU5I6wextPplYdfmWCo+aLmjjVbntmX6HLD5RCi/xKsivYEBhnRD+d9224zFf008ZpLMPlWF0ZodYZw==
+hookified@^1.11.0:
+  version "1.12.0"
+  resolved "https://registry.yarnpkg.com/hookified/-/hookified-1.12.0.tgz#eb4097ed1459211eef47fe85a8b3382c5f633996"
+  integrity sha512-hMr1Y9TCLshScrBbV2QxJ9BROddxZ12MX9KsCtuGGy/3SmmN5H1PllKerrVlSotur9dlE8hmUKAOSa3WDzsZmQ==
 
 html-tags@^3.3.1:
   version "3.3.1"
@@ -2284,7 +2284,7 @@ json5@^1.0.2:
   dependencies:
     minimist "^1.2.0"
 
-keyv@^5.4.0:
+keyv@^5.5.0:
   version "5.5.0"
   resolved "https://registry.yarnpkg.com/keyv/-/keyv-5.5.0.tgz#0ad5037484a7e01b033df7018033b5cc9ca7884f"
   integrity sha512-QG7qR2tijh1ftOvClut4YKKg1iW6cx3GZsKoGyJPxHkGWK9oJhG9P3j5deP0QQOGDowBMVQFaP+Vm4NpGYvmIQ==
@@ -2848,10 +2848,10 @@ safe-regex-test@^1.1.0:
     es-errors "^1.3.0"
     is-regex "^1.2.1"
 
-sass@^1.91.0:
-  version "1.91.0"
-  resolved "https://registry.yarnpkg.com/sass/-/sass-1.91.0.tgz#7d4f7f624b35d43f78da1c339cab24426e28d7fa"
-  integrity sha512-aFOZHGf+ur+bp1bCHZ+u8otKGh77ZtmFyXDo4tlYvT7PWql41Kwd8wdkPqhhT+h2879IVblcHFglIMofsFd1EA==
+sass@^1.92.1:
+  version "1.92.1"
+  resolved "https://registry.yarnpkg.com/sass/-/sass-1.92.1.tgz#07fb1fec5647d7b712685d1090628bf52456fe86"
+  integrity sha512-ffmsdbwqb3XeyR8jJR6KelIXARM9bFQe8A6Q3W4Klmwy5Ckd5gz7jgUNHo4UOqutU5Sk1DtKLbpDP0nLCg1xqQ==
   dependencies:
     chokidar "^4.0.0"
     immutable "^5.0.2"
@@ -3175,10 +3175,10 @@ stylelint-selector-bem-pattern@^4.0.1:
     postcss "^8.4.24"
     postcss-bem-linter "^4.0.1"
 
-stylelint@^16.23.1:
-  version "16.23.1"
-  resolved "https://registry.yarnpkg.com/stylelint/-/stylelint-16.23.1.tgz#e5f5ee173adf989db0855b825e66f9ccdde3c78a"
-  integrity sha512-dNvDTsKV1U2YtiUDfe9d2gp902veFeo3ecCWdGlmLm2WFrAV0+L5LoOj/qHSBABQwMsZPJwfC4bf39mQm1S5zw==
+stylelint@^16.24.0:
+  version "16.24.0"
+  resolved "https://registry.yarnpkg.com/stylelint/-/stylelint-16.24.0.tgz#a436920636732b496a55665997f2804d1d63b5b6"
+  integrity sha512-7ksgz3zJaSbTUGr/ujMXvLVKdDhLbGl3R/3arNudH7z88+XZZGNLMTepsY28WlnvEFcuOmUe7fg40Q3lfhOfSQ==
   dependencies:
     "@csstools/css-parser-algorithms" "^3.0.5"
     "@csstools/css-tokenizer" "^3.0.4"
@@ -3193,7 +3193,7 @@ stylelint@^16.23.1:
     debug "^4.4.1"
     fast-glob "^3.3.3"
     fastest-levenshtein "^1.0.16"
-    file-entry-cache "^10.1.3"
+    file-entry-cache "^10.1.4"
     global-modules "^2.0.0"
     globby "^11.1.0"
     globjoin "^0.1.4"
