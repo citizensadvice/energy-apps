@@ -21,7 +21,7 @@ GIT
 
 GIT
   remote: https://github.com/citizensadvice/cookie-preferences.git
-  revision: b23fde1e3bce081d004ffad28214c7822a93ed8b
+  revision: c8b62e1ad77e7de764eb417811ce09c056b256c3
   specs:
     citizens_advice_cookie_preferences (0.1.0)
       citizens_advice_components (> 8.0.0)
