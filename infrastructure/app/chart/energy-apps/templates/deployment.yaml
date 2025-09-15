@@ -60,7 +60,7 @@ spec:
           {{- if .Values.envVars }}
           {{- range $name, $val := .Values.envVars }}
             - name: {{ $name }}
-              value: {{ $val }}
+              value: {{ $val | quote }}
           {{ end }}
           {{- end }}
             - name: DD_ENV
