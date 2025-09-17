@@ -21,7 +21,7 @@ GIT
 
 GIT
   remote: https://github.com/citizensadvice/cookie-preferences.git
-  revision: 43b0c5b63cf06a3f63e4cf0988d76a7d96344375
+  revision: f3b3de3643ab1b1ac91b8997babb66904aa5c32a
   specs:
     citizens_advice_cookie_preferences (0.1.0)
       citizens_advice_components (> 8.0.0)
@@ -290,7 +290,7 @@ GEM
       net-imap
       net-pop
       net-smtp
-    marcel (1.0.4)
+    marcel (1.1.0)
     matrix (0.4.3)
     memoist3 (1.0.0)
     meta-tags (2.22.1)
@@ -314,15 +314,15 @@ GEM
     net-smtp (0.5.1)
       net-protocol
     nio4r (2.7.4)
-    nokogiri (1.18.9-aarch64-linux-musl)
+    nokogiri (1.18.10-aarch64-linux-musl)
       racc (~> 1.4)
-    nokogiri (1.18.9-arm64-darwin)
+    nokogiri (1.18.10-arm64-darwin)
       racc (~> 1.4)
-    nokogiri (1.18.9-x86_64-darwin)
+    nokogiri (1.18.10-x86_64-darwin)
       racc (~> 1.4)
-    nokogiri (1.18.9-x86_64-linux-gnu)
+    nokogiri (1.18.10-x86_64-linux-gnu)
       racc (~> 1.4)
-    nokogiri (1.18.9-x86_64-linux-musl)
+    nokogiri (1.18.10-x86_64-linux-musl)
       racc (~> 1.4)
     parallel (1.27.0)
     parser (3.3.9.0)
