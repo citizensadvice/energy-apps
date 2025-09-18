@@ -23,7 +23,7 @@
   %body{ class: ("cas" if scotland?) }
     = render "shared/google_tag_manager_no_script"
     = render "shared/half_star_svg"
-    - if Feature.enabled?("FF_NEW_COOKIE_MANAGEMENT") && !cookies_preference_page?
+    - unless cookies_preference_page?
       = render CitizensAdviceCookiePreferences::CookieBanner.new
 
     .wrapper
@@ -50,6 +50,4 @@
                                    columns: public_website_footer_nav_links)
 
     = javascript_include_tag digested_js_file_name("application.js"), defer: true
-
-    - if Feature.enabled?("FF_NEW_COOKIE_MANAGEMENT")
-      = javascript_include_tag "citizens_advice_cookie_preferences/application", nonce: true
+    = javascript_include_tag "citizens_advice_cookie_preferences/application", nonce: true

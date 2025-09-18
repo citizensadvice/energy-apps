@@ -27,7 +27,7 @@ module DataLayer
       language: (helpers.current_country || "england").to_s.capitalize
     }
 
-    if Feature.enabled?("FF_NEW_COOKIE_MANAGEMENT") && allow_analytics_cookies?
+    if allow_analytics_cookies?
       properties.merge({ analyticsCookiesAccepted: "True" })
     else
       properties

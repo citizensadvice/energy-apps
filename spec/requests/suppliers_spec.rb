@@ -38,33 +38,16 @@ RSpec.describe "Suppliers" do
         end
       end
 
-      context "when FF_NEW_COOKIE_MANAGEMENT is enabled" do
+      context "when visiting the supplier index" do
         around do |example|
-          ClimateControl.modify(FF_NEW_COOKIE_MANAGEMENT: "true") do
-            VCR.use_cassette("supplier/suppliers-index", match_requests_on: [:body]) do
-              get CSR_APP_PATH # defined in routes.rb
-              example.run
-            end
+          VCR.use_cassette("supplier/suppliers-index", match_requests_on: [:body]) do
+            get CSR_APP_PATH # defined in routes.rb
+            example.run
           end
         end
 
         it "renders the cookie banner" do
           expect(response.body).to include "<div class=\"cookie-banner js-cookie-banner\""
-        end
-      end
-
-      context "when FF_NEW_COOKIE_MANAGEMENT is not enabled" do
-        around do |example|
-          ClimateControl.modify(FF_NEW_COOKIE_MANAGEMENT: "false") do
-            VCR.use_cassette("supplier/suppliers-index", match_requests_on: [:body]) do
-              get CSR_APP_PATH # defined in routes.rb
-              example.run
-            end
-          end
-        end
-
-        it "does not render the cookie banner" do
-          expect(response.body).not_to include "<div class=\"cookie-banner js-cookie-banner\""
         end
       end
 

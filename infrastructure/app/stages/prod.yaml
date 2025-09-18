@@ -20,4 +20,3 @@ ingress:
 envVars:
   RAILS_ENV: production
   FF_SMALL_SUPPLIER_STARS: ${{ vars.FF_SMALL_SUPPLIER_STARS }}
-  FF_NEW_COOKIE_MANAGEMENT: "true"
