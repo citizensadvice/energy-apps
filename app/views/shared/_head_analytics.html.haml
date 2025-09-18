@@ -8,7 +8,7 @@
   - if data_layer_properties.present?
     dataLayer.push(#{data_layer_properties.to_json.html_safe})
 
-- if !Feature.enabled?("FF_NEW_COOKIE_MANAGEMENT") || allow_analytics_cookies?
+- if allow_analytics_cookies?
   %script{ id: "script-google-tag-manager", nonce: content_security_policy_nonce }
     (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
     new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
