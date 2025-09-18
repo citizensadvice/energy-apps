@@ -25,32 +25,14 @@ RSpec.describe ApplianceCalculator::ApplicationController do
 
     it { is_expected.to include(platform: "content-platform", siteType: "Public Website") }
 
-    context "when FF_NEW_COOKIE_MANAGEMENT is enabled" do
-      around do |example|
-        ClimateControl.modify(FF_NEW_COOKIE_MANAGEMENT: "true") do
-          example.run
-        end
-      end
+    context "when a user has accepted analytics cookies" do
+      before { allow(controller).to receive(:allow_analytics_cookies?).and_return(true) }
 
-      context "when a user has accepted analytics cookies" do
-        before { allow(controller).to receive(:allow_analytics_cookies?).and_return(true) }
-
-        it { is_expected.to have_key(:analyticsCookiesAccepted) }
-      end
-
-      context "when a user has rejected analytics cookies" do
-        before { allow(controller).to receive(:allow_analytics_cookies?).and_return(false) }
-
-        it { is_expected.not_to have_key(:analyticsCookiesAccepted) }
-      end
+      it { is_expected.to have_key(:analyticsCookiesAccepted) }
     end
 
-    context "when FF_NEW_COOKIE_MANAGEMENT is not enabled" do
-      around do |example|
-        ClimateControl.modify(FF_NEW_COOKIE_MANAGEMENT: "false") do
-          example.run
-        end
-      end
+    context "when a user has rejected analytics cookies" do
+      before { allow(controller).to receive(:allow_analytics_cookies?).and_return(false) }
 
       it { is_expected.not_to have_key(:analyticsCookiesAccepted) }
     end
