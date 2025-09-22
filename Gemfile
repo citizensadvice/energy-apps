@@ -42,7 +42,8 @@ gem "citizens_advice_components",
     glob: "engine/*.gemspec"
 
 gem "citizens_advice_cookie_preferences",
-    github: "citizensadvice/cookie-preferences"
+    github: "citizensadvice/cookie-preferences",
+    tag: "v0.1.0"
 
 # The citizens_advice_components gem uses view component but we also use this to write
 # our app components so explicitly name it as an application dependency.
