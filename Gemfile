@@ -27,7 +27,7 @@ gem "cssbundling-rails"
 
 gem "tzinfo-data"
 
-gem "haml-rails", "~> 2.0"
+gem "haml-rails", "~> 3.0"
 
 gem "meta-tags", "~> 2.22"
 
