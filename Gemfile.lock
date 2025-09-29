@@ -238,7 +238,7 @@ GEM
       tilt
     haml-lint (0.999.999)
       haml_lint
-    haml-rails (2.1.0)
+    haml-rails (3.0.0)
       actionpack (>= 5.1)
       activesupport (>= 5.1)
       haml (>= 4.0.6)
@@ -482,9 +482,9 @@ GEM
       ffi (~> 1.1)
       memoist3 (~> 1.0.0)
     sysexits (1.2.0)
-    temple (0.10.3)
+    temple (0.10.4)
     thor (1.4.0)
-    tilt (2.6.0)
+    tilt (2.6.1)
     timeout (0.4.3)
     tomlrb (2.0.3)
     tzinfo (2.0.6)
@@ -559,7 +559,7 @@ DEPENDENCIES
   faraday-net_http_persistent
   graphql-client
   haml-lint
-  haml-rails (~> 2.0)
+  haml-rails (~> 3.0)
   hashie
   jsbundling-rails
   license_finder
