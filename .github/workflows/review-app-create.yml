@@ -113,7 +113,7 @@ jobs:
           direction: last
 
       - name: Add New Comment
-        uses: peter-evans/create-or-update-comment@v4
+        uses: peter-evans/create-or-update-comment@v5
         if: steps.find-comment.outputs.comment-id == 0 && contains(github.event.pull_request.labels.*.name, 'Review app')
         with:
           issue-number: ${{ github.event.pull_request.number }}
@@ -129,7 +129,7 @@ jobs:
             To destroy the review app remove the label `Review app`, close this PR or convert it to draft.
 
       - name: Update Comment
-        uses: peter-evans/create-or-update-comment@v4
+        uses: peter-evans/create-or-update-comment@v5
         if: steps.find-comment.outputs.comment-id && contains(github.event.pull_request.labels.*.name, 'Review app')
         with:
           issue-number: ${{ github.event.pull_request.number }}
