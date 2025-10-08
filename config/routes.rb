@@ -31,15 +31,15 @@ Rails.application.routes.draw do
   # All the 'web pages' should return HTML even if the client says they accept
   # any format
   defaults format: :html do
-    root to: "suppliers#index"
+    root to: "csr_table/suppliers#index"
 
     constraints CountryConstraint.new do
       scope "(:country)" do
         # full table page
-        get CSR_APP_PATH, to: "suppliers#index", as: "suppliers"
+        get CSR_APP_PATH, to: "csr_table/suppliers#index", as: "suppliers"
 
         # details page for a ranked supplier
-        get "#{CSR_APP_PATH}/:id/details", to: "suppliers#show", as: "supplier"
+        get "#{CSR_APP_PATH}/:id/details", to: "csr_table/suppliers#show", as: "supplier"
       end
     end
 
