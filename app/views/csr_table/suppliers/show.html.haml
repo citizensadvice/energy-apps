@@ -1,10 +1,10 @@
-= render Content::RebelEnergyBustBannerComponent.new(supplier: @supplier, current_country: @current_country)
+= render CsrTable::Content::RebelEnergyBustBannerComponent.new(supplier: @supplier, current_country: @current_country)
 
 .supplier-detail-page
   %h1.cads-page-title
     #{supplier.name} customer service
 
-  = render LocationSwitcherComponent.new(current_country:)
+  = render CsrTable::LocationSwitcherComponent.new(current_country:)
   = render CitizensAdviceComponents::OnThisPage.new do |c|
     - c.with_links(on_this_page_links(supplier.name, quarter_date.body))
 
@@ -14,24 +14,24 @@
     %p
       The ratings are calculated using information from different sources, including Citizens Advice, Energy Ombudsman and the suppliers.
 
-  = render ScoreSummaryComponent.new(supplier, quarter_date.body)
+  = render CsrTable::ScoreSummaryComponent.new(supplier, quarter_date.body)
 
   .cads-prose
     %p
       #{supplier.name} ranked #{supplier.rank.ordinalize} in the supplier comparison table.
 
-  = render SupplierTableComponent.new(supplier_with_top_three, highlight_supplier_with_slug: supplier.slug)
+  = render CsrTable::SupplierTableComponent.new(supplier_with_top_three, highlight_supplier_with_slug: supplier.slug)
 
   .cads-prose
     %p
       = link_to("Check the full table to compare more energy suppliers' customer service", suppliers_path(country: current_country))
 
-  = render OtherScoresComponent.new(supplier)
+  = render CsrTable::OtherScoresComponent.new(supplier)
 
   .cads-prose
     %p
       = link_to("Find out how the scores are worked out", country_url("/consumer/energy/energy-supply/get-a-better-energy-deal/compare-domestic-energy-suppliers-customer-service1/how-the-scores-are-worked-out/"))
 
-  = render FuelMixComponent.new(supplier)
+  = render CsrTable::FuelMixComponent.new(supplier)
 
-  = render OtherInfoComponent.new(supplier)
+  = render CsrTable::OtherInfoComponent.new(supplier)
