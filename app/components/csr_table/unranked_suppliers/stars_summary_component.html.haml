@@ -1,0 +1,20 @@
+.stars-summary
+  .cads-prose
+    %p
+      The overall rating of smaller suppliers can’t be compared to the larger suppliers in the main table. Smaller suppliers’ overall ratings are calculated differently.
+
+    %p You can compare the contact waiting time and customer commitments ratings with other suppliers.
+
+  %ul.stars-summary__list{ role: "list" }
+    %li.stars-summary__item
+      %p.stars-summary__text
+        Overall rating
+      = render CsrTable::ScoreComponent.new(score: supplier.overall_rating, show_decimal_score: true)
+    %li.stars-summary__item
+      %p.stars-summary__text
+        Contact waiting time
+      = render CsrTable::ScoreComponent.new(score: supplier.contact_rating)
+    %li.stars-summary__item
+      %p.stars-summary__text
+        Customer commitments
+      = render CsrTable::ScoreComponent.new(score: supplier.guarantee_rating)

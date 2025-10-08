@@ -1,0 +1,22 @@
+.score-summary
+  .cads-prose
+    %h2.score-summary__heading{ id: scores_fragment, tabindex: -1 }
+      #{supplier.name} scores for #{quarter_date}
+
+  %ul.score-summary__list{ role: "list" }
+    %li.score-summary__item
+      %p.score-summary__text
+        Overall rating
+      = render CsrTable::ScoreComponent.new(score: supplier.overall_rating, show_decimal_score: true)
+    %li.score-summary__item
+      %p.score-summary__text
+        Fewer complaints received
+      = render CsrTable::ScoreComponent.new(score: supplier.complaints_rating)
+    %li.score-summary__item
+      %p.score-summary__text
+        Contact waiting time
+      = render CsrTable::ScoreComponent.new(score: supplier.contact_rating)
+    %li.score-summary__item
+      %p.score-summary__text
+        Customer commitments
+      = render CsrTable::ScoreComponent.new(score: supplier.guarantee_rating)
