@@ -1,0 +1,15 @@
+.unranked-supplier__details.cads-prose
+  .unranked-supplier__title{ "data-testid": "unranked-supplier-details-#{supplier.name.parameterize}" }
+    = title
+  - if Feature.enabled? "FF_SMALL_SUPPLIER_STARS"
+    -if whitelabelled?
+      %p
+        = whitelabel_supplier_link
+    -else
+      = render CsrTable::UnrankedSuppliers::StarsSummaryComponent.new(supplier)
+
+  = render CsrTable::DescriptionListComponent.new do |c|
+    - c.with_title do
+      %h3
+        = supplier_name
+    - c.with_descriptions(descriptions)

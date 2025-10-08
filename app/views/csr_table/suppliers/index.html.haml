@@ -1,9 +1,9 @@
-= render Content::RebelEnergyBustBannerComponent.new(supplier: @supplier, current_country: current_country)
+= render CsrTable::Content::RebelEnergyBustBannerComponent.new(supplier: @supplier, current_country: current_country)
 
 %h1.cads-page-title
   Compare energy suppliers' customer service
 
-= render(LocationSwitcherComponent.new(current_country:))
+= render(CsrTable::LocationSwitcherComponent.new(current_country:))
 
 .cads-prose
   %p
@@ -17,7 +17,7 @@
   %p
     We will publish updated scores for the following 3 months in #{next_quarter_release.body}.
 
-= render SupplierTableComponent.new(ranked_suppliers)
+= render CsrTable::SupplierTableComponent.new(ranked_suppliers)
 
 .cads-prose
   %h2
@@ -39,11 +39,11 @@
       Select the supplier you want to check using the dropdown to see any customer service information we have.
 
 %form.unranked-suppliers__form{ method: "GET", action: "#h-unranked-supplier", id: "h-unranked-supplier" }
-  = render UnrankedSuppliers::DropdownComponent.new(unranked_suppliers, chosen_supplier_slug: unranked_supplier&.slug)
+  = render CsrTable::UnrankedSuppliers::DropdownComponent.new(unranked_suppliers, chosen_supplier_slug: unranked_supplier&.slug)
   = render CitizensAdviceComponents::Button.new(variant: :primary, attributes: { class: unranked_supplier_button_classes }, type: :submit) do
     Search
 
-= render UnrankedSuppliers::DetailsComponent.new(unranked_supplier, quarter_date)
+= render CsrTable::UnrankedSuppliers::DetailsComponent.new(unranked_supplier, quarter_date)
 
 .cads-prose
   %h2
