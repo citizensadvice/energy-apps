@@ -1,0 +1,56 @@
+= render CsrTable::Content::RebelEnergyBustBannerComponent.new(supplier: @supplier, current_country: current_country)
+
+%h1.cads-page-title
+  Compare energy suppliers' customer service
+
+= render(CsrTable::LocationSwitcherComponent.new(current_country:))
+
+.cads-prose
+  %p
+    If you’re thinking of switching, you should check how well different energy suppliers deal with customer service.
+  %p
+    We’ve compared the largest suppliers across 3 different categories and ranked their customer services. We’ve scored each supplier out of 5.
+    = link_to("Find out how the scores are worked out.", country_url("/consumer/energy/energy-supply/get-a-better-energy-deal/compare-domestic-energy-suppliers-customer-service1/how-the-scores-are-worked-out/"))
+  %h2
+    Scores for #{quarter_date.body}
+
+  %p
+    We will publish updated scores for the following 3 months in #{next_quarter_release.body}.
+
+= render CsrTable::SupplierTableComponent.new(ranked_suppliers)
+
+.cads-prose
+  %h2
+    Suppliers that aren’t included in the table
+  - if Feature.enabled? "FF_SMALL_SUPPLIER_STARS"
+    %p
+      We only include suppliers with more than 25,000 customer accounts in the table above. This is because we can't compare the overall ratings of larger and smaller suppliers.
+    %p
+      Suppliers with fewer than 25,000 customer accounts are listed in the dropdown below. To see the customer service information we have:
+
+    %ol
+      %li Select the supplier you want to check, using the dropdown
+      %li Press ‘Search’
+
+  - else
+    %p
+      We only give an overall customer service rating to larger suppliers. We include suppliers with over 25,000 customer accounts.
+    %p
+      Select the supplier you want to check using the dropdown to see any customer service information we have.
+
+%form.unranked-suppliers__form{ method: "GET", action: "#h-unranked-supplier", id: "h-unranked-supplier" }
+  = render CsrTable::UnrankedSuppliers::DropdownComponent.new(unranked_suppliers, chosen_supplier_slug: unranked_supplier&.slug)
+  = render CitizensAdviceComponents::Button.new(variant: :primary, attributes: { class: unranked_supplier_button_classes }, type: :submit) do
+    Search
+
+= render CsrTable::UnrankedSuppliers::DetailsComponent.new(unranked_supplier, quarter_date)
+
+.cads-prose
+  %h2
+    Find out about switching and tariffs
+  %p
+    There are a few other things you should think about before switching, like exit fees and whether you have the right kind of meter.
+    = link_to("Check what you need to know before you switch energy supplier.", country_url("/consumer/energy/energy-supply/get-a-better-energy-deal/switching-energy-supplier/"))
+  %p
+    It’s also important to understand the different tariffs on offer.
+    = link_to("Find out about the different types of energy tariff.", country_url("/consumer/energy/energy-supply/get-a-better-energy-deal/choosing-energy-tariff/"))

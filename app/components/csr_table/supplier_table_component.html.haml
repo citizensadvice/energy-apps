@@ -1,0 +1,37 @@
+.supplier-table--show-more
+  .cads-table-container
+    %table.cads-table.cads-table--captioned.supplier-table.js-supplier-table
+      %thead.supplier-table__head
+        %tr
+          %th{ scope: "col" }
+            .cads-table__content
+              Rank
+          %th{ scope: "col" }
+            .cads-table__content
+              Supplier
+          %th{ scope: "col" }
+            .cads-table__content
+              Overall rating
+          %th.supplier-table__complaints{ scope: "col" }
+            .cads-table__content
+              Fewer complaints received
+          %th.supplier-table__response{ scope: "col" }
+            .cads-table__content
+              Contact waiting time
+          %th.supplier-table__guarantee{ scope: "col" }
+            .cads-table__content
+              Customer commitments
+      %tbody.supplier-table__body
+        - suppliers.each do |supplier|
+          = render CsrTable::SupplierTableRowComponent.new(supplier, highlight: supplier.slug == highlight_supplier_with_slug, current_country:)
+
+  %p.supplier-table__count-text.js-supplier-table-count-text
+    = count_text
+
+  = render CitizensAdviceComponents::Button.new(variant: :secondary, attributes: { class: show_more_button_classes }) do |c|
+    Show more suppliers
+    - c.with_icon_right { render CitizensAdviceComponents::Icons::ArrowDown.new }
+
+  = render CitizensAdviceComponents::Button.new(variant: :secondary, attributes: { class: show_fewer_button_classes }) do |c|
+    Show fewer suppliers
+    - c.with_icon_right { render CitizensAdviceComponents::Icons::ArrowUp.new }
