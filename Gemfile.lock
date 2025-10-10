@@ -8,9 +8,9 @@ GIT
 
 GIT
   remote: https://github.com/citizensadvice/citizens-advice-style-ruby.git
-  revision: e5314cb7aef03ed98a318d986aa80202c6fa33c0
+  revision: 78026e85913ddc29d202d9558f1cfc393ab947fa
   specs:
-    citizens-advice-style (12.0.0)
+    citizens-advice-style (12.1.0)
       rubocop (~> 1.73)
       rubocop-capybara (~> 2.22)
       rubocop-factory_bot (~> 2.27)
@@ -452,17 +452,17 @@ GEM
     rubocop-factory_bot (2.27.1)
       lint_roller (~> 1.1)
       rubocop (~> 1.72, >= 1.72.1)
-    rubocop-performance (1.24.0)
+    rubocop-performance (1.26.0)
       lint_roller (~> 1.1)
-      rubocop (>= 1.72.1, < 2.0)
-      rubocop-ast (>= 1.38.0, < 2.0)
+      rubocop (>= 1.75.0, < 2.0)
+      rubocop-ast (>= 1.44.0, < 2.0)
     rubocop-rails (2.33.4)
       activesupport (>= 4.2.0)
       lint_roller (~> 1.1)
       rack (>= 1.1)
       rubocop (>= 1.75.0, < 2.0)
       rubocop-ast (>= 1.44.0, < 2.0)
-    rubocop-rspec (3.5.0)
+    rubocop-rspec (3.7.0)
       lint_roller (~> 1.1)
       rubocop (~> 1.72, >= 1.72.1)
     rubocop-rspec_rails (2.31.0)
