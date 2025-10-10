@@ -23,7 +23,7 @@ Finally, class `gtm-show-more-suppliers` allows us to track interactions with th
 No bespoke gtm events have been created for the CSR table.  
 
 ### Appliance Calculator
-The appliance calculator uses custom GTM events to track user engagement with the tool.
+The appliance calculator uses custom GTM events to track user engagement with the tool. When debugging in GTM you should use the URL of the iframe i.e. `/appliance-calculator` rather than the advice collection in which it is embedded.
 
 #### DataLayer Variables
 | Description                            | Event                               | Value                                            | Example Values                                           |
