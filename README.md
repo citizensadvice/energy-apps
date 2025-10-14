@@ -1,8 +1,11 @@
-# Energy Supplier Comparison Table
+# Energy Apps
 
-A small rails app that generates the energy supplier comparison table found in the Consumer section of Citizens Advice public site.
+This repo contains one app that provides functionality for two small digital energy products - the appliance calculator and the customer
+service ratings (CSR) table.
 
-This repo contains example data for automated testing. For the latest energy supplier customer service ratings, see the Citizens Advice website. [https://www.citizensadvice.org.uk/consumer/your-energy/get-a-better-energy-deal/compare-domestic-energy-suppliers-customer-service/](https://www.citizensadvice.org.uk/consumer/your-energy/get-a-better-energy-deal/compare-domestic-energy-suppliers-customer-service/)
+[ADR 8](./docs/adrs/0008-appliance-calculator-location.md) provides the context and reasoning co-locating the applicance calculator with the CST table, which should be revisited if the header and footer content and authentication functionality of public website are extracted into the design system or other library. 
+
+The docs below apply to this app.  There is additional, product specific documentation in [csr-table](./docs/csr-table) and [appliance-calculator](./docs/appliance-calculator).
 
 ## Getting started
 
@@ -23,3 +26,9 @@ See [static-assets-pipeline.md](./docs/static-asset-pipeline.md).
 ## GraphQL Queries
 
 See [working-with-queries.md](./docs/working-with-queries.md).
+
+## Test data
+
+This repo contains [example data for automated testing](./spec/cassettes/supplier) .  The scores and energy suppliers mentioned in the data are not real.
+
+For the latest energy supplier customer service ratings, see the Citizens Advice website. [https://www.citizensadvice.org.uk/consumer/your-energy/get-a-better-energy-deal/compare-domestic-energy-suppliers-customer-service/](https://www.citizensadvice.org.uk/consumer/your-energy/get-a-better-energy-deal/compare-domestic-energy-suppliers-customer-service/)
