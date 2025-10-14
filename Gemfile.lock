@@ -21,10 +21,10 @@ GIT
 
 GIT
   remote: https://github.com/citizensadvice/cookie-preferences.git
-  revision: 387fcecdc9bf3e5508442b5e14abf7e1f8be921b
-  tag: v0.1.0
+  revision: f653003e58435b811c30ab23bd12e70b5df9168a
+  tag: v0.2.0
   specs:
-    citizens_advice_cookie_preferences (0.1.0)
+    citizens_advice_cookie_preferences (0.2.0)
       citizens_advice_components (> 8.0.0)
       meta-tags
       rails (>= 7.1.0)

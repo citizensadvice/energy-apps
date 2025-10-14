@@ -43,7 +43,7 @@ gem "citizens_advice_components",
 
 gem "citizens_advice_cookie_preferences",
     github: "citizensadvice/cookie-preferences",
-    tag: "v0.1.0"
+    tag: "v0.2.0"
 
 # The citizens_advice_components gem uses view component but we also use this to write
 # our app components so explicitly name it as an application dependency.
