@@ -3,7 +3,7 @@
 This repo contains one app that provides functionality for two small digital energy products - the appliance calculator and the customer
 service ratings (CSR) table.
 
-[ADR 8](./docs/adrs/0008-appliance-calculator-location.md) provides the context and reasoning co-locating the applicance calculator with the CST table, which should be revisited if the header and footer content and authentication functionality of public website are extracted into the design system or other library. 
+[ADR 8](./docs/adrs/0008-appliance-calculator-location.md) provides the context and reasoning for co-locating the appliance calculator with the CSR table, which should be revisited if the header and footer content and authentication functionality of public website are extracted into the design system or other library. 
 
 The docs below apply to this app.  There is additional, product specific documentation in [csr-table](./docs/csr-table) and [appliance-calculator](./docs/appliance-calculator).
 
