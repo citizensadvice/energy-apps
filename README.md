@@ -29,6 +29,6 @@ See [working-with-queries.md](./docs/working-with-queries.md).
 
 ## Test data
 
-This repo contains [example data for automated testing](./spec/cassettes/supplier) .  The scores and energy suppliers mentioned in the data are not real.
+This repo contains [example data for automated testing](./spec/cassettes/supplier).  The scores and energy suppliers mentioned in the data are not real.
 
 For the latest energy supplier customer service ratings, see the Citizens Advice website. [https://www.citizensadvice.org.uk/consumer/your-energy/get-a-better-energy-deal/compare-domestic-energy-suppliers-customer-service/](https://www.citizensadvice.org.uk/consumer/your-energy/get-a-better-energy-deal/compare-domestic-energy-suppliers-customer-service/)

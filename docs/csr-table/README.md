@@ -14,7 +14,12 @@ Contentful via the [Contentful CSR Upload app](https://github.com/citizensadvice
 
 The data is updated quarterly, one quarter in arrears.  For example, the data for April to June is published in September/October.
 
-The Digital Energy team liases with the Energy Policy to co-ordinate the upload, which is normally done by a content designer.  If possible,
+The Digital Energy team liases with the Energy Policy to co-ordinate the upload, which is normally done by a content designer.  Sometimes the Energy Policy team get the data into a draft form a few weeks before the publishing date.  If possible, it's good to test this with the upload tool in the Content Playground environment, and flag any issues to the Digital Energy team.  These might include:
+- typos in supplier names that show up as a name change in the upload tool
+- missing data
+- missing suppliers
+- change from ranked to small suppliers or vice versa
+- badly formatted data
 
 ## Contentful Entries
 
