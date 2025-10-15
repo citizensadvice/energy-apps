@@ -42,12 +42,6 @@ FactoryBot.define do
     trait :low_ranking do
       rank { 999 }
     end
-
-    trait :rebel_energy do
-      id { "rebel-energy" }
-      name { "Rebel Energy" }
-      slug { "rebel-energy" }
-    end
   end
 
   factory :supplier, class: "Supplier" do
@@ -71,10 +65,6 @@ FactoryBot.define do
 
     trait(:low_ranking) do
       data factory: %i[supplier_data ranked low_ranking]
-    end
-
-    trait(:rebel_energy) do
-      data factory: %i[supplier_data ranked rebel_energy]
     end
   end
 end
