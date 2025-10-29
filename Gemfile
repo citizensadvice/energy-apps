@@ -11,7 +11,7 @@ gem "rails", "~> 8.0.3"
 gem "propshaft"
 
 # Use the Puma web server [https://github.com/puma/puma]
-gem "puma", "~> 7.0"
+gem "puma", "~> 7.1"
 
 # Bundle and transpile JavaScript [https://github.com/rails/jsbundling-rails]
 gem "jsbundling-rails"
@@ -47,7 +47,7 @@ gem "citizens_advice_cookie_preferences",
 
 # The citizens_advice_components gem uses view component but we also use this to write
 # our app components so explicitly name it as an application dependency.
-gem "view_component", "~> 4.0"
+gem "view_component", "~> 4.1"
 
 # Multi-step forms. Used alongside the design system form builder
 gem "wizard_steps", "~> 0.1.4"
