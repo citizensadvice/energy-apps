@@ -5,6 +5,7 @@ module CsrTable
     class SupplierNotFoundError < StandardError; end
 
     include SwiftypeMeta
+    include Cacheable
 
     rescue_from SupplierNotFoundError, with: :not_found
     rescue_from Contentful::GraphqlAdapter::QueryError, with: :internal_server_error
@@ -13,7 +14,6 @@ module CsrTable
     before_action :set_suppliers, :set_unranked_supplier, :set_next_quarter_release, only: :index
     before_action :set_quarter_date, only: %i[index show]
     before_action :set_page_meta_tags, :set_swiftype_meta_tags
-    after_action :cache_control_header
 
     attr_accessor :supplier, :unranked_supplier, :quarter_date, :next_quarter_release
 
@@ -125,15 +125,6 @@ module CsrTable
           GUID: "energy-csr-#{supplier.slug}"
         }
       end
-    end
-
-    def cache_control_header
-      expires_in(
-        5.minutes,
-        public: true,
-        "s-maxage": 5.minutes,
-        must_revalidate: true
-      )
     end
   end
 end

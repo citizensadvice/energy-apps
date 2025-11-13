@@ -36,6 +36,12 @@ RSpec.describe "Suppliers" do
         it "contains the correct canonical url" do
           expect(response.body).to include("<link href='https://www.citizensadvice.org.uk#{CSR_APP_PATH}' rel='canonical'>")
         end
+
+        it "returns headers to allow the CDN to cache it" do
+          expect(response.headers["Cache-Control"]).to eq(
+            "max-age=300, public, stale-while-revalidate=60, stale-if-error=86400, s-maxage=300"
+          )
+        end
       end
 
       context "when visiting the supplier index" do
