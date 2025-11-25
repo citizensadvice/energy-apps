@@ -17,7 +17,7 @@ jobs:
       contents: read
       issues: read
     steps:
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@v6
       - name: Build and push to ECR
         uses: citizensadvice/build-and-private-ecr-push-action@v3
         with:
@@ -44,7 +44,7 @@ jobs:
       name: ${{ matrix.stage }}
     steps:
       - name: Git Checkout energy apps
-        uses: actions/checkout@v5
+        uses: actions/checkout@v6
         with:
           path: energy-apps
       - name: Set environment variables from cdk context
