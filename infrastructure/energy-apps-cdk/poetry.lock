@@ -128,26 +128,22 @@ typeguard = ">=2.13.3,<4.3.0"
 
 [[package]]
 name = "ca-cdk-constructs"
-version = "0.17.0"
+version = "0.17.1"
 description = "Shared CDK constructs"
 optional = false
 python-versions = ">=3.10"
 groups = ["main"]
-files = []
-develop = false
+files = [
+    {file = "ca_cdk_constructs-0.17.1-py3-none-any.whl", hash = "sha256:60d0c64f17ba92c6d3d2677b6e2593ee139fe8eac2fed056ea0c09a42fef2edd"},
+    {file = "ca_cdk_constructs-0.17.1.tar.gz", hash = "sha256:69154aea751fbdcef4e2b022c79b3232ab744360cea0469587d26c6fef8a3427"},
+]
 
 [package.dependencies]
 aws-cdk-lambda-layer-kubectl-v34 = ">=2.0.0"
 aws-cdk-lib = ">=2.215"
-cdk_remote_stack = ">=2.1"
+cdk-remote-stack = ">=2.1"
 cdk8s = ">=2.70.15"
 constructs = ">=10.4"
-
-[package.source]
-type = "git"
-url = "https://github.com/citizensadvice/ca-cdk-constructs"
-reference = "v0.17.0"
-resolved_reference = "a6ccf27c9ed29f606e4438725a6844d7c93b6213"
 
 [[package]]
 name = "cattrs"
@@ -601,4 +597,4 @@ test = ["covdefaults (>=2.3)", "coverage (>=7.2.7)", "coverage-enable-subprocess
 [metadata]
 lock-version = "2.1"
 python-versions = ">=3.12, <3.13"
-content-hash = "8aa89708996b245281c1356e632fc9ef31e4079c1a2c0711910c0dbf8c176bbd"
+content-hash = "40e56d0927ddc89b24d209d6a551f4f4ecf45d79b1491df0c86b76f7242aab21"
