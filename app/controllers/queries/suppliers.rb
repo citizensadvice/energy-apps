@@ -18,6 +18,7 @@ module Queries
         slug,
         rank,
         complaintsRating,
+        complaintsRatingScore,
         complaintsNumber,
         contactEmail,
         contactRating,
