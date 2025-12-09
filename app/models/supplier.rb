@@ -6,7 +6,7 @@ class Supplier
   attr_accessor :data
 
   delegate :name, :whitelabel_supplier, :slug,
-           :rank, :complaints_rating, :complaints_number,
+           :rank, :complaints_rating, :complaints_rating_score, :complaints_number,
            :contact_email, :contact_rating, :contact_social_media,
            :contact_time, :contact_info, :other_contact_info, :billing_info,
            :guarantee_rating, :guarantee_list, :overall_rating, :data_available,
