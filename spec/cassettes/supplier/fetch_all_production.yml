@@ -8,14 +8,14 @@ http_interactions:
       string: '{"query":"query Queries__Suppliers($tag_filter: ContentfulMetadataTagsFilter)
         {\n  energySupplierCollection(order: rank_ASC, where: {contentfulMetadata:
         {tags: $tag_filter}}) {\n    total\n    items {\n      name\n      whitelabelSupplier
-        {\n        name\n      }\n      slug\n      rank\n      complaintsRating\n      complaintsNumber\n      contactEmail\n      contactRating\n      contactSocialMedia\n      contactTime\n      guaranteeRating\n      overallRating\n      dataAvailable\n      guaranteeList
+        {\n        name\n      }\n      slug\n      rank\n      complaintsRating\n      complaintsRatingScore\n      complaintsNumber\n      contactEmail\n      contactRating\n      contactSocialMedia\n      contactTime\n      guaranteeRating\n      overallRating\n      dataAvailable\n      guaranteeList
         {\n        json\n      }\n      contactInfo {\n        json\n      }\n      otherContactInfo
         {\n        json\n      }\n      billingInfo {\n        json\n      }\n      fuelMix
         {\n        json\n      }\n      openingHours {\n        json\n      }\n      contentfulMetadata
         {\n        tags {\n          id\n        }\n      }\n    }\n  }\n}","operationName":"Queries__Suppliers","variables":{"top_three_ranks":[1,2,3],"tag_filter":{"id_contains_none":"test"}},"context":{}}'
     headers:
       User-Agent:
-      - Faraday v2.7.12
+      - Faraday v2.14.0
       Authorization:
       - Bearer <CONTENTFUL_CDA_TOKEN>
       Content-Type:
@@ -36,19 +36,17 @@ http_interactions:
       Connection:
       - keep-alive
       Content-Length:
-      - '58960'
+      - '46789'
       Content-Type:
       - application/json; charset=utf-8
+      Etag:
+      - '17412946138357473310'
       Cache-Control:
       - max-age=0
-      Etag:
-      - '"7887339564113059851-gzip"'
       X-Contentful-Graphql-Query-Cost:
       - '300'
       X-Contentful-Route:
       - "/spaces/:spaceId/environments/:environmentId"
-      Strict-Transport-Security:
-      - max-age=15768000
       X-Content-Type-Options:
       - nosniff
       Server:
@@ -57,295 +55,279 @@ http_interactions:
       - us-east-1
       Contentful-Api:
       - gql
-      Contentful-Upstream:
-      - graph-api
-      Access-Control-Allow-Origin:
-      - "*"
-      Access-Control-Allow-Headers:
-      - Accept,Accept-Language,Authorization,Cache-Control,Content-Length,Content-Range,Content-Type,DNT,Destination,Expires,If-Match,If-Modified-Since,If-None-Match,Keep-Alive,Last-Modified,Origin,Pragma,Range,User-Agent,X-Http-Method-Override,X-Mx-ReqToken,X-Requested-With,X-Contentful-Version,X-Contentful-Content-Type,X-Contentful-Organization,X-Contentful-Skip-Transformation,X-Contentful-User-Agent,X-Contentful-Enable-Alpha-Feature,X-Contentful-Resource-Resolution
-      Access-Control-Expose-Headers:
-      - Etag
-      Access-Control-Max-Age:
-      - '86400'
-      Access-Control-Allow-Methods:
-      - GET,POST,HEAD,OPTIONS
       Via:
       - 1.1 varnish, 1.1 varnish
       Accept-Ranges:
       - bytes
-      Date:
-      - Tue, 19 Dec 2023 18:06:44 GMT
       Age:
-      - '0'
+      - '94'
+      Date:
+      - Tue, 09 Dec 2025 11:48:54 GMT
       X-Served-By:
-      - cache-ewr18165-EWR, cache-lcy-eglc8600026-LCY
+      - cache-ewr-kewr1740079-EWR, cache-lcy-eglc8600083-LCY
       X-Cache-Hits:
       - 0, 0
       X-Timer:
-      - S1703009204.842015,VS0,VE199
+      - S1765280934.037482,VS0,VE1
+      Access-Control-Allow-Headers:
+      - accept,accept-language,authorization,cache-control,content-length,content-range,content-type,dnt,destination,expires,if-match,if-modified-since,if-none-match,keep-alive,last-modified,origin,pragma,range,user-agent,x-http-method-override,x-mx-reqtoken,x-requested-with,x-contentful-content-type,x-contentful-enable-alpha-feature,x-contentful-organization,x-contentful-resource-resolution,x-contentful-skip-transformation,x-contentful-user-agent,x-contentful-version
+      Access-Control-Allow-Methods:
+      - GET,HEAD,OPTIONS,POST
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Max-Age:
+      - '86400'
+      Access-Control-Expose-Headers:
+      - etag
+      Strict-Transport-Security:
+      - max-age=15768000
       X-Cache:
-      - MISS
+      - HIT
       X-Contentful-Request-Id:
-      - 2ea5123c-795a-4259-a23a-a65d6d855d21
+      - 8440dcd5-1740-49aa-a76e-5140a0f32a0f
     body:
       encoding: UTF-8
-      string: '{"data":{"energySupplierCollection":{"total":22,"items":[{"guaranteeList":{"json":{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Switch
-        Guarantee, Vulnerability Commitment","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"document"}},"contactInfo":{"json":{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Telephone:
-        0330 094 5800\nEmail: ","nodeType":"text"},{"data":{"uri":"mailto:customer.service@shellenergy.co.uk"},"content":[{"data":{},"marks":[],"value":"customer.service@shellenergy.co.uk","nodeType":"text"}],"nodeType":"hyperlink"},{"data":{},"marks":[],"value":"\nWebsite:
-        ","nodeType":"text"},{"data":{"uri":"https://www.shellenergy.co.uk/"},"content":[{"data":{},"marks":[],"value":"www.shellenergy.co.uk","nodeType":"text"}],"nodeType":"hyperlink"},{"data":{},"marks":[],"value":"","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"document"}},"otherContactInfo":{"json":{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Web
-        Chat: Yes\nRing backs: Yes\nMobile hotline: No\nMinicom / Text: No","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"document"}},"billingInfo":{"json":{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Direct
-        debit: Yes\nCash or cheque: Yes\nPrepayment: Yes","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"document"}},"fuelMix":{"json":{"data":{},"content":[{"data":{},"content":[{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Fossil
-        fuel: 0%","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"list-item"},{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Nuclear:
-        0%","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"list-item"},{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Renewable:
-        100%","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"list-item"},{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Other:
-        0%","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"list-item"}],"nodeType":"unordered-list"},{"data":{},"content":[{"data":{},"marks":[],"value":"","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"document"}},"openingHours":{"json":{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Monday:
-        8am - 6.30pm\nTuesday: 8am - 6.30pm\nWednesday: 8am - 6.30pm\nThursday: 8am
-        - 6.30pm\nFriday: 8am - 6.30pm\nSaturday: 9am - 4pm\nSunday: Closed","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"document"}},"name":"Shell
-        Energy","whitelabelSupplier":null,"slug":"shell-energy","rank":1,"complaintsRating":3,"complaintsNumber":29.6,"contactEmail":91.2,"contactRating":4,"contactSocialMedia":"N/A","contactTime":"00:01:01","guaranteeRating":5,"overallRating":3.75,"dataAvailable":true,"contentfulMetadata":{"tags":[]}},{"guaranteeList":{"json":{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Switch
-        Guarantee, Vulnerability Commitment","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"document"}},"contactInfo":{"json":{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Telephone:
-        0800 103 2702\nEmail: ","nodeType":"text"},{"data":{"uri":"mailto:hello@outfoxthemarket.co.uk"},"content":[{"data":{},"marks":[],"value":"hello@outfoxthemarket.co.uk","nodeType":"text"}],"nodeType":"hyperlink"},{"data":{},"marks":[],"value":"\nWebsite:
-        ","nodeType":"text"},{"data":{"uri":"https://www.outfoxthemarket.co.uk"},"content":[{"data":{},"marks":[],"value":"www.outfoxthemarket.co.uk","nodeType":"text"}],"nodeType":"hyperlink"},{"data":{},"marks":[],"value":"","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"document"}},"otherContactInfo":{"json":{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Web
-        Chat: Yes\nRing backs: No\nMobile hotline: No\nMinicom / Text: No","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"document"}},"billingInfo":{"json":{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Direct
-        debit: Yes\nCash or cheque: No\nPrepayment: No","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"document"}},"fuelMix":{"json":{"data":{},"content":[{"data":{},"content":[{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Fossil
-        fuel: 0%","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"list-item"},{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Nuclear:
-        0%","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"list-item"},{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Renewable:
-        100%","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"list-item"},{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Other:
-        0%","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"list-item"}],"nodeType":"unordered-list"},{"data":{},"content":[{"data":{},"marks":[],"value":"","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"document"}},"openingHours":{"json":{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Monday:
-        8.30am - 5pm\nTuesday: 8.30am - 5pm\nWednesday: 8.30am - 5pm\nThursday: 8.30am
-        - 5pm,\nFriday: 8.30am - 5pm\nSaturday: 9am - 2pm\nSunday: Closed","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"document"}},"name":"Outfox
-        The Market","whitelabelSupplier":null,"slug":"outfox-the-market","rank":2,"complaintsRating":3,"complaintsNumber":21.2,"contactEmail":98.7,"contactRating":3.2,"contactSocialMedia":"N/A","contactTime":"00:03:36","guaranteeRating":5,"overallRating":3.31,"dataAvailable":true,"contentfulMetadata":{"tags":[]}},{"guaranteeList":{"json":{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Vulnerability
-        Commitment","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"document"}},"contactInfo":{"json":{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Telephone:
-        0800 0302302\nEmail: ","nodeType":"text"},{"data":{"uri":"mailto:home@ecotricity.co.uk"},"content":[{"data":{},"marks":[],"value":"home@ecotricity.co.uk","nodeType":"text"}],"nodeType":"hyperlink"},{"data":{},"marks":[],"value":"\nWebsite:
-        ","nodeType":"text"},{"data":{"uri":"https://www.ecotricity.co.uk/"},"content":[{"data":{},"marks":[],"value":"www.ecotricity.co.uk","nodeType":"text"}],"nodeType":"hyperlink"},{"data":{},"marks":[],"value":"\n","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"document"}},"otherContactInfo":{"json":{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Web
-        Chat: No\nRing backs: Yes\nMobile hotline: No\nMinicom / Text: No","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"document"}},"billingInfo":{"json":{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Direct
-        debit: Yes\nCash or cheque: Yes\nPrepayment: Yes","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"document"}},"fuelMix":{"json":{"data":{},"content":[{"data":{},"content":[{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Fossil
-        fuel: 0%","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"list-item"},{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Nuclear:
-        0%","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"list-item"},{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Renewable:
-        100%","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"list-item"},{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Other:
-        0%","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"list-item"}],"nodeType":"unordered-list"},{"data":{},"content":[{"data":{},"marks":[],"value":"","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"document"}},"openingHours":{"json":{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Monday:
-        9am - 7pm\nTuesday: 9am - 7pm\nWednesday: 9am - 7pm\nThursday: 9am - 7pm\nFriday:
-        9am - 7pm\nSaturday: 9am - 7pm\nSunday: Closed","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"document"}},"name":"Ecotricity","whitelabelSupplier":null,"slug":"ecotricity","rank":3,"complaintsRating":2,"complaintsNumber":34.4,"contactEmail":85,"contactRating":4,"contactSocialMedia":"N/A","contactTime":"00:01:01","guaranteeRating":3,"overallRating":3.2,"dataAvailable":true,"contentfulMetadata":{"tags":[]}},{"guaranteeList":{"json":{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Vulnerability
-        Commitment","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"document"}},"contactInfo":{"json":{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Telephone:
-        0333 103 9575\nEmail: ","nodeType":"text"},{"data":{"uri":"mailto:customer.services@e.org"},"content":[{"data":{},"marks":[],"value":"customer.services@e.org","nodeType":"text"}],"nodeType":"hyperlink"},{"data":{},"marks":[],"value":"\nWebsite:
-        ","nodeType":"text"},{"data":{"uri":"https://www.e.org/"},"content":[{"data":{},"marks":[],"value":"www.e.org","nodeType":"text"}],"nodeType":"hyperlink"},{"data":{},"marks":[],"value":"\n","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"document"}},"otherContactInfo":{"json":{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Web
-        Chat: No\nRing backs: No\nMobile hotline: No\nMinicom / Text: No","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"document"}},"billingInfo":{"json":{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Direct
-        debit: No\nCash or cheque: No\nPrepayment: Yes","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"document"}},"fuelMix":{"json":{"data":{},"content":[{"data":{},"content":[{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Fossil
-        fuel: 43%","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"list-item"},{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Nuclear:
-        9%","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"list-item"},{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Renewable:
-        45%","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"list-item"},{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Other:
-        4%","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"list-item"}],"nodeType":"unordered-list"},{"data":{},"content":[{"data":{},"marks":[],"value":"","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"document"}},"openingHours":{"json":{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Monday:
-        8am - 7pm\nTuesday: 8am - 7pm\nWednesday: 8am - 7pm\nThursday: 8am - 7pm\nFriday:
-        8am - 7pm\nSaturday: 9am - 5pm\nSunday: Closed","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"document"}},"name":"E
-        (Gas and Electricity)","whitelabelSupplier":null,"slug":"e-gas-and-electricity","rank":4,"complaintsRating":1,"complaintsNumber":68.1,"contactEmail":100,"contactRating":4.4,"contactSocialMedia":"N/A","contactTime":"00:01:04","guaranteeRating":3,"overallRating":3.07,"dataAvailable":true,"contentfulMetadata":{"tags":[]}},{"guaranteeList":{"json":{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Switch
-        Guarantee, Vulnerability Commitment","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"document"}},"contactInfo":{"json":{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Telephone:
-        0333 200 5100\nEmail: ","nodeType":"text"},{"data":{"uri":"mailto:customer_correspondence@edfenergy.com"},"content":[{"data":{},"marks":[],"value":"customer_correspondence@edfenergy.com","nodeType":"text"}],"nodeType":"hyperlink"},{"data":{},"marks":[],"value":"\nWebsite:
-        ","nodeType":"text"},{"data":{"uri":"https://www.edfenergy.com/"},"content":[{"data":{},"marks":[],"value":"www.edfenergy.com","nodeType":"text"}],"nodeType":"hyperlink"},{"data":{},"marks":[],"value":"","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"document"}},"otherContactInfo":{"json":{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Web
-        Chat: Yes\nRing backs: No\nMinicom / Text: 0800 0962929\nSign video: Yes","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"document"}},"billingInfo":{"json":{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Direct
-        debit: Yes\nCash or cheque: Yes\nPrepayment: Yes","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"document"}},"fuelMix":{"json":{"data":{},"content":[{"data":{},"content":[{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Fossil
-        fuel: 17%","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"list-item"},{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Nuclear:
-        63%","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"list-item"},{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Renewable:
-        19%","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"list-item"},{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Other:
-        1%","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"list-item"}],"nodeType":"unordered-list"},{"data":{},"content":[{"data":{},"marks":[],"value":"","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"document"}},"openingHours":{"json":{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Monday:
-        8am - 6pm\nTuesday: 8am - 6pm\nWednesday: 8am - 6pm\nThursday: 8am - 6pm\nFriday:
-        8am - 6pm\nSaturday: 9am - 2pm (PAYG only)\nSunday: Closed","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"document"}},"name":"EDF
-        Energy","whitelabelSupplier":null,"slug":"edf-energy","rank":5,"complaintsRating":1,"complaintsNumber":66.4,"contactEmail":96.9,"contactRating":3.8,"contactSocialMedia":"N/A","contactTime":"00:02:12","guaranteeRating":5,"overallRating":2.94,"dataAvailable":true,"contentfulMetadata":{"tags":[]}},{"guaranteeList":{"json":{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Switch
-        Guarantee, Vulnerability Commitment","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"document"}},"contactInfo":{"json":{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Telephone:
-        0800 027 0072\nEmail: ","nodeType":"text"},{"data":{"uri":"mailto:contactus@scottishpower.com"},"content":[{"data":{},"marks":[],"value":"contactus@scottishpower.com","nodeType":"text"}],"nodeType":"hyperlink"},{"data":{},"marks":[],"value":"\nWebsite:  ","nodeType":"text"},{"data":{"uri":"https://www.scottishpower.co.uk/"},"content":[{"data":{},"marks":[],"value":"www.scottishpower.co.uk","nodeType":"text"}],"nodeType":"hyperlink"},{"data":{},"marks":[],"value":"\n","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"document"}},"otherContactInfo":{"json":{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Web
-        Chat: Yes\nRing backs: Yes\nMobile hotline: 0800 027 0072\nMinicom / Text:
-        No","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"document"}},"billingInfo":{"json":{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Direct
-        debit: Yes\nCash or cheque: Yes\nPrepayment: Yes","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"document"}},"fuelMix":{"json":{"data":{},"content":[{"data":{},"content":[{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Fossil
-        fuel: 48%","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"list-item"},{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Nuclear:
-        4%","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"list-item"},{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Renewable:
-        43%","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"list-item"},{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Other:
-        5%","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"list-item"}],"nodeType":"unordered-list"},{"data":{},"content":[{"data":{},"marks":[],"value":"","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"document"}},"openingHours":{"json":{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Monday:
-        9am - 5pm and 5pm - 8pm for PAYG\nTuesday: 9am - 5pm and 5pm - 8pm for PAYG\nWednesday:
-        9am - 5pm and 5pm - 8pm for PAYG\nThursday: 9am - 5pm and 5pm - 8pm for PAYG\nFriday:
-        9am - 5pm and 5pm - 8pm for PAYG\nSaturday: 9am - 4pm for PAYG\nSunday: Closed","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"document"}},"name":"ScottishPower","whitelabelSupplier":null,"slug":"scottishpower","rank":6,"complaintsRating":1,"complaintsNumber":119.4,"contactEmail":98,"contactRating":3.8,"contactSocialMedia":"N/A","contactTime":"00:01:49","guaranteeRating":5,"overallRating":2.94,"dataAvailable":true,"contentfulMetadata":{"tags":[]}},{"guaranteeList":{"json":{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Switch
-        Guarantee, Vulnerability Commitment","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"document"}},"contactInfo":{"json":{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Telephone:
-        ","nodeType":"text"},{"data":{},"marks":[],"value":"0330 303 5063 (PAYM),
-        0330 175 9669 (PAYG)","nodeType":"text"},{"data":{},"marks":[],"value":"\nEmail:
-        ","nodeType":"text"},{"data":{"uri":"mailto:hello@ovoenergy.com"},"content":[{"data":{},"marks":[],"value":"hello@ovoenergy.com","nodeType":"text"}],"nodeType":"hyperlink"},{"data":{},"marks":[],"value":"\nWebsite:
-        ","nodeType":"text"},{"data":{"uri":"https://www.ovoenergy.com/"},"content":[{"data":{},"marks":[],"value":"www.ovoenergy.com","nodeType":"text"}],"nodeType":"hyperlink"},{"data":{},"marks":[],"value":"\n","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"document"}},"otherContactInfo":{"json":{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Web
-        Chat: Yes\nRing backs: Yes\nMobile hotline: 01173 326 945\nMinicom / Text:
-        No\nSign video: Yes","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"document"}},"billingInfo":{"json":{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Direct
-        debit: Yes\nCash or cheque: Yes\nPrepayment: Yes","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"document"}},"fuelMix":{"json":{"data":{},"content":[{"data":{},"content":[{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Fossil
-        fuel: 35%","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"list-item"},{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Nuclear:
-        0%","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"list-item"},{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Renewable:
-        65%","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"list-item"},{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Other:
-        0%","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"list-item"}],"nodeType":"unordered-list"},{"data":{},"content":[{"data":{},"marks":[],"value":"","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"document"}},"openingHours":{"json":{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Monday:
-        9am - 5pm (PAYM), 8am - 8pm (PAYG)\nTuesday: 9am - 5pm (PAYM), 8am - 8pm (PAYG)\nWednesday:
-        9am - 5pm (PAYM), 8am - 8pm (PAYG)\nThursday: 9am - 5pm (PAYM), 8am - 8pm
-        (PAYG)\nFriday: 9am - 5pm (PAYM), 8am - 8pm (PAYG)\nSaturday: 9am - 5pm (PAYG
-        only)\nSunday: 9am - 5pm (PAYG only)","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"document"}},"name":"Ovo
-        Energy","whitelabelSupplier":null,"slug":"ovo-energy","rank":7,"complaintsRating":1,"complaintsNumber":139.8,"contactEmail":87.1,"contactRating":3.4,"contactSocialMedia":"N/A","contactTime":"00:01:59","guaranteeRating":5,"overallRating":2.72,"dataAvailable":true,"contentfulMetadata":{"tags":[]}},{"guaranteeList":{"json":{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Switch
-        Guarantee, Vulnerability Commitment","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"document"}},"contactInfo":{"json":{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Telephone:
-        0808 164 1088\nEmail: ","nodeType":"text"},{"data":{"uri":"mailto:hello@octopus.energy"},"content":[{"data":{},"marks":[],"value":"hello@octopus.energy","nodeType":"text"}],"nodeType":"hyperlink"},{"data":{},"marks":[],"value":"\nWebsite:
-        ","nodeType":"text"},{"data":{"uri":"https://octopus.energy"},"content":[{"data":{},"marks":[],"value":"octopus.energy","nodeType":"text"}],"nodeType":"hyperlink"},{"data":{},"marks":[],"value":"\n","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"document"}},"otherContactInfo":{"json":{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Web
-        Chat: No\nRing backs: No\nMobile hotline: No\nMinicom / Text: No\nSign video:
+      string: '{"data":{"energySupplierCollection":{"total":21,"items":[{"whitelabelSupplier":null,"guaranteeList":{"json":{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"N/A","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"document"}},"contactInfo":{"json":{"nodeType":"document","data":{},"content":[{"nodeType":"paragraph","content":[{"nodeType":"text","marks":[],"value":"Telephone:
+        0192 048 6156\nFreephone: 0808 175 4975\nEmail: ","data":{}},{"nodeType":"hyperlink","content":[{"nodeType":"text","marks":[],"value":"hello@100green.com","data":{}}],"data":{"uri":"mailto:hello@100green.com"}},{"nodeType":"text","marks":[],"value":"\nWebsite:
+        100green.com\nWeb chat: No\nRing backs: No\nMobile hotline: No\nMinicom/text:
+        No\nSignVideo: No","data":{}}],"data":{}}]}},"otherContactInfo":{"json":{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Web
+        chat: Yes\nRing backs: Yes\nMobile hotline: No\nMinicom/text: No\nSignVideo:
         Yes","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"document"}},"billingInfo":{"json":{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Direct
-        debit: Yes\nCash or cheque: Yes\nPrepayment: Yes","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"document"}},"fuelMix":{"json":{"data":{},"content":[{"data":{},"content":[{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Fossil
-        fuel: 0%","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"list-item"},{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Nuclear:
-        0%","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"list-item"},{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Renewable:
-        100%","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"list-item"},{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Other:
-        0%","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"list-item"}],"nodeType":"unordered-list"},{"data":{},"content":[{"data":{},"marks":[],"value":"","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"document"}},"openingHours":{"json":{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Monday:
-        9am - 5pm\nTuesday: 9am - 5pm\nWednesday: 9am - 5pm\nThursday: 9am - 5pm\nFriday:
-        9am - 4pm\nSaturday: Closed\nSunday: Closed","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"document"}},"name":"Octopus
-        Energy","whitelabelSupplier":null,"slug":"octopus-energy","rank":8,"complaintsRating":2,"complaintsNumber":32.3,"contactEmail":66.1,"contactRating":2.4,"contactSocialMedia":"N/A","contactTime":"00:04:50","guaranteeRating":5,"overallRating":2.52,"dataAvailable":true,"contentfulMetadata":{"tags":[]}},{"guaranteeList":{"json":{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Switch
+        debit: Yes\nCash or cheque: Yes\nPrepayment: Yes","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"document"}},"fuelMix":{"json":{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Fossil
+        fuel: 0%\nNuclear: 0%\nRenewable: 100%\nOther: 0%","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"document"}},"openingHours":{"json":{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Monday:
+        8am-8pm\nTuesday: 8am-8pm\nWednesday: 8am-8pm\nThursday: 8am-8pm\nFriday:
+        8am-8pm\nSaturday: 9am–1pm\nSunday: 9am–1pm","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"document"}},"name":"100Green","slug":"100green","rank":1,"complaintsRating":5,"complaintsRatingScore":null,"complaintsNumber":3.7,"contactEmail":95.6,"contactRating":5,"contactSocialMedia":"N/A","contactTime":"00:00:17","guaranteeRating":0,"overallRating":4.5,"dataAvailable":true,"contentfulMetadata":{"tags":[]}},{"whitelabelSupplier":null,"guaranteeList":{"json":{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Switch
         Guarantee, Vulnerability Commitment","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"document"}},"contactInfo":{"json":{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Telephone:
         0808 164 1088\nEmail: ","nodeType":"text"},{"data":{"uri":"mailto:coop@octopus.energy"},"content":[{"data":{},"marks":[],"value":"coop@octopus.energy","nodeType":"text"}],"nodeType":"hyperlink"},{"data":{},"marks":[],"value":"\nWebsite:
-        ","nodeType":"text"},{"data":{"uri":"https://octopus.energy/co-op"},"content":[{"data":{},"marks":[],"value":"octopus.energy/co-op","nodeType":"text"}],"nodeType":"hyperlink"},{"data":{},"marks":[],"value":"\n","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"document"}},"otherContactInfo":{"json":{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Web
-        Chat: No\nRing backs: No\nMobile hotline: No\nMinicom / Text: No","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"document"}},"billingInfo":{"json":{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Direct
-        debit: Yes\nCash or cheque: Yes\nPrepayment: Yes","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"document"}},"fuelMix":{"json":{"data":{},"content":[{"data":{},"content":[{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Fossil
-        fuel: 0%","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"list-item"},{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Nuclear:
-        0%","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"list-item"},{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Renewable:
-        100%","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"list-item"},{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Other:
-        0%","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"list-item"}],"nodeType":"unordered-list"},{"data":{},"content":[{"data":{},"marks":[],"value":"","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"document"}},"openingHours":{"json":{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Monday:
-        9am - 5pm\nTuesday: 9am - 5pm\nWednesday: 9am - 5pm\nThursday: 9am - 5pm\nFriday:
-        9am - 4pm\nSaturday: Closed\nSunday: Closed","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"document"}},"name":"Co-operative
-        Energy","whitelabelSupplier":null,"slug":"co-operative-energy","rank":9,"complaintsRating":2,"complaintsNumber":32.3,"contactEmail":67.6,"contactRating":2.4,"contactSocialMedia":"N/A","contactTime":"00:04:59","guaranteeRating":5,"overallRating":2.52,"dataAvailable":true,"contentfulMetadata":{"tags":[]}},{"guaranteeList":{"json":{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Switch
-        Guarantee, Vulnerability Commitment","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"document"}},"contactInfo":{"json":{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Telephone:
-        0808 501 5200\nEmail: ","nodeType":"text"},{"data":{"uri":"mailto:hi@eonnext.com"},"content":[{"data":{},"marks":[],"value":"hi@eonnext.com","nodeType":"text"}],"nodeType":"hyperlink"},{"data":{},"marks":[],"value":"\nWebsite:
-        ","nodeType":"text"},{"data":{"uri":"https://www.eonnext.com"},"content":[{"data":{},"marks":[],"value":"www.eonnext.com","nodeType":"text"}],"nodeType":"hyperlink"},{"data":{},"marks":[],"value":"","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"document"}},"otherContactInfo":{"json":{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Web
-        Chat: Yes\nRing backs: Yes\nMobile hotline: No\nMinicom / Text: No\nSign video:
+        ","nodeType":"text"},{"data":{"uri":"https://octopus.energy/co-op"},"content":[{"data":{},"marks":[],"value":"octopus.energy/co-op","nodeType":"text"}],"nodeType":"hyperlink"},{"data":{},"marks":[],"value":"\nWeb
+        chat: No\nRing backs: No\nMobile hotline: No\nMinicom/text: No\nSignVideo:
+        Yes","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"document"}},"otherContactInfo":{"json":{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Web
+        chat: No\nRing backs: No\nMobile hotline: No\nMinicom/text: No\nSignVideo:
         Yes","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"document"}},"billingInfo":{"json":{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Direct
-        debit: Yes\nCash or cheque: Yes\nPrepayment: Yes","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"document"}},"fuelMix":{"json":{"data":{},"content":[{"data":{},"content":[{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Fossil
-        fuel: 0%","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"list-item"},{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Nuclear:
-        0%","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"list-item"},{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Renewable:
-        100%","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"list-item"},{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Other:
-        0%","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"list-item"}],"nodeType":"unordered-list"},{"data":{},"content":[{"data":{},"marks":[],"value":"","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"document"}},"openingHours":{"json":{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Monday:
-        9am - 5pm\nTuesday: 9am - 5pm\nWednesday: 9am - 5pm\nThursday: 9am - 5pm\nFriday:
-        9am - 5pm\nSaturday: Closed\nSunday: Closed","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"document"}},"name":"E.ON
-        Next","whitelabelSupplier":null,"slug":"e-on-next","rank":10,"complaintsRating":1,"complaintsNumber":62.7,"contactEmail":71.3,"contactRating":3,"contactSocialMedia":"01:30:00","contactTime":"00:02:58","guaranteeRating":5,"overallRating":2.5,"dataAvailable":true,"contentfulMetadata":{"tags":[]}},{"guaranteeList":{"json":{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Switch
+        debit: Yes\nCash or cheque: Yes\nPrepayment: Yes","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"document"}},"fuelMix":{"json":{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Fossil
+        fuel: 0%\nNuclear: 15%\nRenewable: 85%\nOther: 0%","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"document"}},"openingHours":{"json":{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Monday:
+        9am-5pm\nTuesday: 9am-5pm\nWednesday: 9am-5pm\nThursday: 9am-5pm\nFriday:
+        9am-4pm\nSaturday: Closed\nSunday: Closed","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"document"}},"name":"Co-op
+        Energy","slug":"co-operative-energy","rank":2,"complaintsRating":3,"complaintsRatingScore":null,"complaintsNumber":20.2,"contactEmail":91.4,"contactRating":4,"contactSocialMedia":"N/A","contactTime":"00:00:55","guaranteeRating":5,"overallRating":3.75,"dataAvailable":true,"contentfulMetadata":{"tags":[]}},{"whitelabelSupplier":null,"guaranteeList":{"json":{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Switch
+        Guarantee, Vulnerability Commitment","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"document"}},"contactInfo":{"json":{"nodeType":"document","data":{},"content":[{"nodeType":"paragraph","content":[{"nodeType":"text","marks":[],"value":"Telephone:
+        0808 164 1088\nEmail: ","data":{}},{"nodeType":"hyperlink","content":[{"nodeType":"text","marks":[],"value":"hello@octopus.energy","data":{}}],"data":{"uri":"mailto:hello@octopus.energy"}},{"nodeType":"text","marks":[],"value":"\nWebsite:
+        octopus.energy\nWeb chat: No\nRing backs: No\nMobile hotline: No\nMinicom/text:
+        No\nSignVideo: Yes","data":{}}],"data":{}}]}},"otherContactInfo":{"json":{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Web
+        chat: No\nRing backs: No\nMobile hotline: No\nMinicom/text: No\nSignVideo:
+        Yes","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"document"}},"billingInfo":{"json":{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Direct
+        debit: Yes\nCash or cheque: Yes\nPrepayment: Yes","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"document"}},"fuelMix":{"json":{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Fossil
+        fuel: 0%\nNuclear: 15%\nRenewable: 85%\nOther: 0%","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"document"}},"openingHours":{"json":{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Monday:
+        9am-5pm\nTuesday: 9am-5pm\nWednesday: 9am-5pm\nThursday: 9am-5pm\nFriday:
+        9am-4pm\nSaturday: Closed\nSunday: Closed","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"document"}},"name":"Octopus
+        Energy","slug":"octopus-energy","rank":3,"complaintsRating":3,"complaintsRatingScore":null,"complaintsNumber":20.2,"contactEmail":90.5,"contactRating":4,"contactSocialMedia":"N/A","contactTime":"00:00:57","guaranteeRating":5,"overallRating":3.75,"dataAvailable":true,"contentfulMetadata":{"tags":[]}},{"whitelabelSupplier":null,"guaranteeList":{"json":{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Switch
+        Guarantee, Vulnerability Commitment","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"document"}},"contactInfo":{"json":{"nodeType":"document","data":{},"content":[{"nodeType":"paragraph","content":[{"nodeType":"text","marks":[],"value":"Telephone:
+        0800 030 2302\nEmail: ","data":{}},{"nodeType":"hyperlink","content":[{"nodeType":"text","marks":[],"value":"home@ecotricity.co.uk","data":{}}],"data":{"uri":"mailto:home@ecotricity.co.uk"}},{"nodeType":"text","marks":[],"value":"\nWebsite:
+        ","data":{}},{"nodeType":"hyperlink","content":[{"nodeType":"text","marks":[],"value":"www.ecotricity.co.uk","data":{}}],"data":{"uri":"http://www.ecotricity.co.uk"}},{"nodeType":"text","marks":[],"value":"\nWeb
+        chat: No\nRing backs: Yes\nMobile hotline: No\nMinicom/text: No\nSignVideo:
+        No","data":{}}],"data":{}}]}},"otherContactInfo":{"json":{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Web
+        chat: No\nRing backs: Yes\nMobile hotline: No\nMinicom/text: No\nSignVideo:
+        No","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"document"}},"billingInfo":{"json":{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Direct
+        debit: Yes\nCash or cheque: Yes\nPrepayment: Yes","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"document"}},"fuelMix":{"json":{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Fossil
+        fuel: 0%\nNuclear: 0%\nRenewable: 100%\nOther: 0%","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"document"}},"openingHours":{"json":{"nodeType":"document","data":{},"content":[{"nodeType":"paragraph","content":[{"nodeType":"text","marks":[],"value":"Monday:
+        9am-7pm\nTuesday: 9am-7pm\nWednesday: 9am-7pm\nThursday: 9am-7pm\nFriday:
+        9am-7pm\nSaturday: 9am-5pm \nSunday: 9am-5pm","data":{}}],"data":{}}]}},"name":"Ecotricity","slug":"ecotricity","rank":4,"complaintsRating":3,"complaintsRatingScore":null,"complaintsNumber":22.5,"contactEmail":94.7,"contactRating":4,"contactSocialMedia":"N/A","contactTime":"00:01:07","guaranteeRating":5,"overallRating":3.75,"dataAvailable":true,"contentfulMetadata":{"tags":[]}},{"whitelabelSupplier":null,"guaranteeList":{"json":{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Vulnerability
+        Commitment","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"document"}},"contactInfo":{"json":{"nodeType":"document","data":{},"content":[{"nodeType":"paragraph","content":[{"nodeType":"text","marks":[],"value":"Telephone:
+        0333 103 9575\nEmail: ","data":{}},{"nodeType":"hyperlink","content":[{"nodeType":"text","marks":[],"value":"customer.service@e.org","data":{}}],"data":{"uri":"mailto:customer.service@e.org"}},{"nodeType":"text","marks":[],"value":"\nWebsite:
+        ","data":{}},{"nodeType":"hyperlink","content":[{"nodeType":"text","marks":[],"value":"www.e.org","data":{}}],"data":{"uri":"http://www.e.org"}},{"nodeType":"text","marks":[],"value":"\nWeb
+        chat: No\nRing backs: No\nMobile hotline: No\nMinicom/text: No\nSignVideo:
+        No","data":{}}],"data":{}}]}},"otherContactInfo":{"json":{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Web
+        chat: No\nRing backs: No\nMobile hotline: No\nMinicom/text: No\nSignVideo:
+        No","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"document"}},"billingInfo":{"json":{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Direct
+        debit: No\nCash or cheque: No\nPrepayment: Yes","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"document"}},"fuelMix":{"json":{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Fossil
+        fuel: 82%\nNuclear: 11%\nRenewable: 0%\nOther: 6%","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"document"}},"openingHours":{"json":{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Monday:
+        8am-7pm\nTuesday: 8am-7pm\nWednesday: 8am-7pm\nThursday: 8am-7pm\nFriday:
+        8am-7pm\nSaturday: 9am-5pm\nSunday: Closed","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"document"}},"name":"E
+        (Gas and Electricity)","slug":"e-gas-and-electricity","rank":5,"complaintsRating":2,"complaintsRatingScore":null,"complaintsNumber":51.6,"contactEmail":100,"contactRating":5,"contactSocialMedia":"N/A","contactTime":"00:00:26","guaranteeRating":3,"overallRating":3.75,"dataAvailable":true,"contentfulMetadata":{"tags":[]}},{"whitelabelSupplier":null,"guaranteeList":{"json":{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Switch
+        Guarantee, Vulnerability Commitment","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"document"}},"contactInfo":{"json":{"nodeType":"document","data":{},"content":[{"nodeType":"paragraph","content":[{"nodeType":"text","marks":[],"value":"Telephone:
+        0800 103 2702\nEmail: ","data":{}},{"nodeType":"hyperlink","content":[{"nodeType":"text","marks":[],"value":"hello@outfox.energy","data":{}}],"data":{"uri":"mailto:hello@outfox.energy"}},{"nodeType":"text","marks":[],"value":"\nWebsite:
+        ","data":{}},{"nodeType":"hyperlink","content":[{"nodeType":"text","marks":[],"value":"www.outfox.energy","data":{}}],"data":{"uri":"http://www.outfox.energy"}},{"nodeType":"text","marks":[],"value":"\nWeb
+        chat: Yes\nRing backs: No\nMobile hotline: No\nMinicom/text: No\nSignVideo:
+        No","data":{}}],"data":{}}]}},"otherContactInfo":{"json":{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Web
+        chat: Yes\nRing backs: No\nMobile hotline: No\nMinicom/text: No\nSignVideo:
+        No","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"document"}},"billingInfo":{"json":{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Direct
+        debit: Yes\nCash or cheque: No\nPrepayment: No","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"document"}},"fuelMix":{"json":{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Fossil
+        fuel: 43%\nNuclear: 14%\nRenewable: 41%\nOther: 3%","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"document"}},"openingHours":{"json":{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Monday:
+        8.30am-5pm\nTuesday: 8.30am-5pm\nWednesday: 8.30am-5pm\nThursday: 8.30am-5pm\nFriday:
+        8.30am-5pm\nSaturday: 9am-2pm\nSunday: Closed","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"document"}},"name":"Outfox
+        Energy","slug":"outfox-energy","rank":6,"complaintsRating":3,"complaintsRatingScore":null,"complaintsNumber":22.5,"contactEmail":99.3,"contactRating":3.8,"contactSocialMedia":"N/A","contactTime":"00:01:36","guaranteeRating":5,"overallRating":3.64,"dataAvailable":true,"contentfulMetadata":{"tags":[]}},{"whitelabelSupplier":null,"guaranteeList":{"json":{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Switch
+        Guarantee, Vulnerability Commitment","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"document"}},"contactInfo":{"json":{"nodeType":"document","data":{},"content":[{"nodeType":"paragraph","content":[{"nodeType":"text","marks":[],"value":"Telephone:
+        0800 027 0072\nEmail: ","data":{}},{"nodeType":"hyperlink","content":[{"nodeType":"text","marks":[],"value":"contactus@scottishpower.com","data":{}}],"data":{"uri":"mailto:contactus@scottishpower.com"}},{"nodeType":"text","marks":[],"value":"\nWebsite:  ","data":{}},{"nodeType":"hyperlink","content":[{"nodeType":"text","marks":[],"value":"www.scottishpower.co.uk","data":{}}],"data":{"uri":"http://www.scottishpower.co.uk"}},{"nodeType":"text","marks":[],"value":"\nWeb
+        chat: Yes\nRing backs: Yes\nMobile hotline: 0800 027 0072\nMinicom/text: No\nSignVideo:
+        No","data":{}}],"data":{}}]}},"otherContactInfo":{"json":{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Web
+        chat: Yes\nRing backs: Yes\nMobile hotline: 0800 027 0072\nMinicom/text: No\nSignVideo:
+        No","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"document"}},"billingInfo":{"json":{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Direct
+        debit: Yes\nCash or cheque: Yes\nPrepayment: Yes","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"document"}},"fuelMix":{"json":{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Fossil
+        fuel: 73%\nNuclear: 9%\nRenewable: 11%\nOther: 7%","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"document"}},"openingHours":{"json":{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Pay
+        monthly customers:\nMonday: 9am-5pm\nTuesday: 9am-5pm\nWednesday: 9am-5pm\nThursday:
+        9am-5pm\nFriday: 9am-5pm\nSaturday: Closed\nSunday: Closed","nodeType":"text"}],"nodeType":"paragraph"},{"data":{},"content":[{"data":{},"marks":[],"value":"Prepayment
+        customers:\nMonday: 9am-8pm\nTuesday: 9am-8pm\nWednesday: 9am-8pm\nThursday:
+        9am-8pm\nFriday: 9am-8pm\nSaturday: 9am-4pm\nSunday: Closed","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"document"}},"name":"ScottishPower","slug":"scottishpower","rank":7,"complaintsRating":2,"complaintsRatingScore":null,"complaintsNumber":49.2,"contactEmail":96.6,"contactRating":4.4,"contactSocialMedia":"N/A","contactTime":"00:01:01","guaranteeRating":5,"overallRating":3.62,"dataAvailable":true,"contentfulMetadata":{"tags":[]}},{"whitelabelSupplier":null,"guaranteeList":{"json":{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Switch
+        Guarantee, Vulnerability Commitment","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"document"}},"contactInfo":{"json":{"nodeType":"document","data":{},"content":[{"nodeType":"paragraph","content":[{"nodeType":"text","marks":[],"value":"Telephone
+        (pay monthly): 0330 303 5063\nTelephone (prepayment): 0330 175 9669\nEmail:
+        ","data":{}},{"nodeType":"hyperlink","content":[{"nodeType":"text","marks":[],"value":"hello@ovoenergy.com","data":{}}],"data":{"uri":"mailto:hello@ovoenergy.com"}},{"nodeType":"text","marks":[],"value":"\nWebsite:
+        ","data":{}},{"nodeType":"hyperlink","content":[{"nodeType":"text","marks":[],"value":"www.ovoenergy.com","data":{}}],"data":{"uri":"http://www.ovoenergy.com"}},{"nodeType":"text","marks":[],"value":"\nWeb
+        chat: Yes\nRing backs: Yes\nMobile hotline: 01173 326 945\nMinicom/text: No\nSignVideo:
+        Yes","data":{}}],"data":{}}]}},"otherContactInfo":{"json":{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Web
+        chat: Yes\nRing backs: Yes\nMobile hotline: 0117 332 6945\nMinicom/text: No\nSignVideo:
+        Yes","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"document"}},"billingInfo":{"json":{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Direct
+        debit: Yes\nCash or cheque: Yes\nPrepayment: Yes","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"document"}},"fuelMix":{"json":{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Fossil
+        fuel: 74%\nNuclear: 9%\nRenewable: 11%\nOther: 6%","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"document"}},"openingHours":{"json":{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Pay
+        monthly customers:\nMonday: 9am-5pm\nTuesday: 9am-5pm\nWednesday: 9am-5pm\nThursday:
+        9am-5pm\nFriday: 9am-5pm\nSaturday: Closed\nSunday: Closed","nodeType":"text"}],"nodeType":"paragraph"},{"data":{},"content":[{"data":{},"marks":[],"value":"Prepayment
+        customers:\nMonday: 8am-8pm\nTuesday: 8am-8pm\nWednesday: 8am-8pm\nThursday:
+        8am-8pm\nFriday: 8am-8pm\nSaturday: 9am-5pm\nSunday: 9am-5pm","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"document"}},"name":"Ovo
+        Energy","slug":"ovo-energy","rank":8,"complaintsRating":2,"complaintsRatingScore":null,"complaintsNumber":40.8,"contactEmail":97.4,"contactRating":4.4,"contactSocialMedia":"N/A","contactTime":"00:01:07","guaranteeRating":5,"overallRating":3.62,"dataAvailable":true,"contentfulMetadata":{"tags":[]}},{"whitelabelSupplier":null,"guaranteeList":{"json":{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Vulnerability
+        Commitment","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"document"}},"contactInfo":{"json":{"nodeType":"document","data":{},"content":[{"nodeType":"paragraph","content":[{"nodeType":"text","marks":[],"value":"Telephone:
+        0333 777 0777\nEmail: ","data":{}},{"nodeType":"hyperlink","content":[{"nodeType":"text","marks":[],"value":"memberservices@utilitywarehouse.co.uk","data":{}}],"data":{"uri":"mailto:memberservices@utilitywarehouse.co.uk"}},{"nodeType":"text","marks":[],"value":"\nWebsite:
+        ","data":{}},{"nodeType":"hyperlink","content":[{"nodeType":"text","marks":[],"value":"www.utilitywarehouse.co.uk","data":{}}],"data":{"uri":"http://www.utilitywarehouse.co.uk"}},{"nodeType":"text","marks":[],"value":"\nWeb
+        chat: No\nRing backs: No\nMobile hotline: No\nMinicom/text: 0333 003 5643\nSignVideo:
+        No","data":{}}],"data":{}}]}},"otherContactInfo":{"json":{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Web
+        chat: No\nRing backs: No\nMobile hotline: No\nMinicom/text: 0333 003 5643\nSignVideo:
+        No","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"document"}},"billingInfo":{"json":{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Direct
+        debit: Yes\nCash or cheque: Yes\nPrepayment: Yes","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"document"}},"fuelMix":{"json":{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Fossil
+        fuel: 83%\nNuclear: 11%\nRenewable: 0%\nOther: 7%","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"document"}},"openingHours":{"json":{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Monday:
+        8.30am-5pm\nTuesday: 8.30am-5pm\nWednesday: 8.30am-5pm\nThursday: 8.30am-5pm\nFriday:
+        8.30am-5pm\nSaturday: 9am-4.30pm\nSunday: Closed","nodeType":"text"}],"nodeType":"paragraph"},{"data":{},"content":[{"data":{},"marks":[],"value":"Bank
+        Holidays: 10am-4pm","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"document"}},"name":"Utility
+        Warehouse","slug":"utility-warehouse","rank":9,"complaintsRating":3,"complaintsRatingScore":null,"complaintsNumber":29.8,"contactEmail":93.8,"contactRating":4,"contactSocialMedia":"N/A","contactTime":"00:01:21","guaranteeRating":3,"overallRating":3.55,"dataAvailable":true,"contentfulMetadata":{"tags":[]}},{"whitelabelSupplier":null,"guaranteeList":{"json":{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Vulnerability
+        Commitment","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"document"}},"contactInfo":{"json":{"nodeType":"document","data":{},"content":[{"nodeType":"paragraph","content":[{"nodeType":"text","marks":[],"value":"Telephone:
+        0800 254 0000\nEmail: ","data":{}},{"nodeType":"hyperlink","content":[{"nodeType":"text","marks":[],"value":"enquiries@goodenergy.co.uk","data":{}}],"data":{"uri":"mailto:enquiries@goodenergy.co.uk"}},{"nodeType":"text","marks":[],"value":"\nWebsite:
+        ","data":{}},{"nodeType":"hyperlink","content":[{"nodeType":"text","marks":[],"value":"www.goodenergy.co.uk","data":{}}],"data":{"uri":"http://www.goodenergy.co.uk"}},{"nodeType":"text","marks":[],"value":"\nWeb
+        chat: No\nRing backs: No\nMobile hotline: No\nMinicom/text: No\nSignVideo:
+        No","data":{}}],"data":{}}]}},"otherContactInfo":{"json":{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Web
+        chat: No\nRing backs: No\nMobile hotline: No\nMinicom/text: No\nSignVideo:
+        No","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"document"}},"billingInfo":{"json":{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Direct
+        debit: Yes\nCash or cheque: Yes\nPrepayment: Yes","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"document"}},"fuelMix":{"json":{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Fossil
+        fuel: 0%\nNuclear: 0%\nRenewable: 100%\nOther: 0%","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"document"}},"openingHours":{"json":{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Monday:
+        9am-5pm\nTuesday: 9am-5pm\nWednesday: 9am-5pm\nThursday: 9am-5pm\nFriday:
+        9am-5pm\nSaturday: Closed\nSunday: Closed","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"document"}},"name":"Good
+        Energy","slug":"good-energy","rank":10,"complaintsRating":3,"complaintsRatingScore":null,"complaintsNumber":19.2,"contactEmail":83.2,"contactRating":3.4,"contactSocialMedia":"N/A","contactTime":"00:02:02","guaranteeRating":3,"overallRating":3.22,"dataAvailable":true,"contentfulMetadata":{"tags":[]}},{"whitelabelSupplier":null,"guaranteeList":{"json":{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Switch
+        Guarantee, Vulnerability Commitment","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"document"}},"contactInfo":{"json":{"nodeType":"document","data":{},"content":[{"nodeType":"paragraph","content":[{"nodeType":"text","marks":[],"value":"Telephone:
+        0808 501 5200\nEmail: ","data":{}},{"nodeType":"hyperlink","content":[{"nodeType":"text","marks":[],"value":"hi@eonnext.com","data":{}}],"data":{"uri":"mailto:hi@eonnext.com"}},{"nodeType":"text","marks":[],"value":"\nWebsite:
+        ","data":{}},{"nodeType":"hyperlink","content":[{"nodeType":"text","marks":[],"value":"www.eonnext.com","data":{}}],"data":{"uri":"http://www.eonnext.com"}},{"nodeType":"text","marks":[],"value":"\nWeb
+        chat: No\nRing backs: No\nMobile hotline: No\nMinicom/text: Yes\nSignVideo:
+        Yes","data":{}}],"data":{}}]}},"otherContactInfo":{"json":{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Web
+        chat: No\nRing backs: No\nMobile hotline: No\nMinicom/text: No\nSignVideo:
+        Yes","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"document"}},"billingInfo":{"json":{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Direct
+        debit: Yes\nCash or cheque: Yes\nPrepayment: Yes","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"document"}},"fuelMix":{"json":{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Fossil
+        fuel: 12%\nNuclear: 2%\nRenewable: 86%\nOther: 1%","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"document"}},"openingHours":{"json":{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Monday:
+        9am-5pm\nTuesday: 9am-5pm\nWednesday: 9am-5pm\nThursday: 9am-5pm\nFriday:
+        9am-4pm\nSaturday: Closed\nSunday: Closed","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"document"}},"name":"E.ON
+        Next","slug":"e-on-next","rank":11,"complaintsRating":2,"complaintsRatingScore":null,"complaintsNumber":31.5,"contactEmail":82.1,"contactRating":3.4,"contactSocialMedia":"N/A","contactTime":"00:01:34","guaranteeRating":5,"overallRating":3.07,"dataAvailable":true,"contentfulMetadata":{"tags":[]}},{"whitelabelSupplier":null,"guaranteeList":{"json":{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Switch
+        Guarantee, Vulnerability Commitment","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"document"}},"contactInfo":{"json":{"nodeType":"document","data":{},"content":[{"nodeType":"paragraph","content":[{"nodeType":"text","marks":[],"value":"Telephone:
+        0330 808 3880\nEmail: ","data":{}},{"nodeType":"hyperlink","content":[{"nodeType":"text","marks":[],"value":"customerservices@britishgas.co.uk","data":{}}],"data":{"uri":"mailto:customerservices@britishgas.co.uk"}},{"nodeType":"text","marks":[],"value":"\nWebsite:
+        ","data":{}},{"nodeType":"hyperlink","content":[{"nodeType":"text","marks":[],"value":"www.britishgas.co.uk","data":{}}],"data":{"uri":"http://www.britishgas.co.uk"}},{"nodeType":"text","marks":[],"value":"\nWeb
+        chat: Yes\nRing backs: Yes\nMobile hotline: No\nMinicom/text: No\nSignVideo:
+        Yes","data":{}}],"data":{}}]}},"otherContactInfo":{"json":{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Web
+        chat: Yes\nRing backs: Yes\nMobile hotline: No\nMinicom/text: No\nSignVideo:
+        Yes","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"document"}},"billingInfo":{"json":{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Direct
+        debit: Yes\nCash or cheque: Yes\nPrepayment: Yes","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"document"}},"fuelMix":{"json":{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Fossil
+        fuel: 21%\nNuclear: 57%","nodeType":"text"},{"data":{},"marks":[],"value":"Renewables:
+        20%\nOther: 2%","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"document"}},"openingHours":{"json":{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Monday:
+        8am-6pm\nTuesday: 8am-6pm\nWednesday: 8am-6pm\nThursday: 8am-6pm\nFriday:
+        8am-6pm\nSaturday: 9am-2pm\nSunday: Closed ","nodeType":"text"}],"nodeType":"paragraph"},{"data":{},"content":[{"data":{},"marks":[],"value":"Extended
+        hours for web chat:","nodeType":"text"}],"nodeType":"paragraph"},{"data":{},"content":[{"data":{},"marks":[],"value":"Monday:
+        8am-8pm\nTuesday: 8am-8pm\nWednesday: 8am-8pm\nThursday: 8am-8pm\nFriday:
+        8am-8pm\nSaturday 9am-5pm\nSunday: Closed","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"document"}},"name":"British
+        Gas","slug":"british-gas","rank":12,"complaintsRating":1,"complaintsRatingScore":null,"complaintsNumber":68.6,"contactEmail":95.5,"contactRating":3.8,"contactSocialMedia":"N/A","contactTime":"00:02:20","guaranteeRating":5,"overallRating":2.94,"dataAvailable":true,"contentfulMetadata":{"tags":[]}},{"whitelabelSupplier":null,"guaranteeList":{"json":{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Switch
         Guarantee, Vulnerability Commitment","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"document"}},"contactInfo":{"json":{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Telephone:
-        0330 102 7517\nEmail: No\nWebsite: ","nodeType":"text"},{"data":{"uri":"https://www.boostpower.co.uk/"},"content":[{"data":{},"marks":[],"value":"www.boostpower.co.uk","nodeType":"text"}],"nodeType":"hyperlink"},{"data":{},"marks":[],"value":"\n","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"document"}},"otherContactInfo":{"json":{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Web
-        Chat: No\nRing backs: Yes\nMobile hotline: No\nMinicom / Text: No","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"document"}},"billingInfo":{"json":{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Direct
-        debit: No\nCash or cheque: No\nPrepayment: Yes","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"document"}},"fuelMix":{"json":{"data":{},"content":[{"data":{},"content":[{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Fossil
-        fuel: 0%","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"list-item"},{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Nuclear:
-        61%","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"list-item"},{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Renewable:
-        39%","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"list-item"},{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Other:
-        0%","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"list-item"}],"nodeType":"unordered-list"},{"data":{},"content":[{"data":{},"marks":[],"value":"","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"document"}},"openingHours":{"json":{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Monday:
-        8am - 6pm\nTuesday: 8am - 6pm\nWednesday: 8am - 6pm\nThursday: 8am - 6pm\nFriday:
-        8am - 6pm\nSaturday: 9am - 1pm\nSunday: Closed","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"document"}},"name":"Boost
-        Power","whitelabelSupplier":null,"slug":"boost-power","rank":11,"complaintsRating":1,"complaintsNumber":139.8,"contactEmail":93.7,"contactRating":2.8,"contactSocialMedia":"N/A","contactTime":"00:03:54","guaranteeRating":5,"overallRating":2.39,"dataAvailable":true,"contentfulMetadata":{"tags":[]}},{"guaranteeList":{"json":{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Vulnerability
-        Commitment","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"document"}},"contactInfo":{"json":{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Telephone:
-        0800 254 0000\nEmail: ","nodeType":"text"},{"data":{"uri":"mailto:enquiries@goodenergy.co.uk"},"content":[{"data":{},"marks":[],"value":"enquiries@goodenergy.co.uk","nodeType":"text"}],"nodeType":"hyperlink"},{"data":{},"marks":[],"value":"\nWebsite:
-        ","nodeType":"text"},{"data":{"uri":"https://www.goodenergy.co.uk/"},"content":[{"data":{},"marks":[],"value":"www.goodenergy.co.uk","nodeType":"text"}],"nodeType":"hyperlink"},{"data":{},"marks":[],"value":"\n","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"document"}},"otherContactInfo":{"json":{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Web
-        Chat: No\nRing backs: No\nMobile hotline: No\nMinicom / Text: No","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"document"}},"billingInfo":{"json":{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Direct
-        debit: Yes\nCash or cheque: Yes\nPrepayment: Yes","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"document"}},"fuelMix":{"json":{"data":{},"content":[{"data":{},"content":[{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Fossil
-        fuel: 0%","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"list-item"},{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Nuclear:
-        0%","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"list-item"},{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Renewable:
-        100%","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"list-item"},{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Other:
-        0%","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"list-item"}],"nodeType":"unordered-list"},{"data":{},"content":[{"data":{},"marks":[],"value":"","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"document"}},"openingHours":{"json":{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Monday:
-        9am - 5pm\nTuesday: 9am - 5pm\nWednesday: 9am - 5pm\nThursday: 9am - 5pm\nFriday:
-        9am - 5pm\nSaturday: Closed\nSunday: Closed","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"document"}},"name":"Good
-        Energy","whitelabelSupplier":null,"slug":"good-energy","rank":12,"complaintsRating":2,"complaintsNumber":48.8,"contactEmail":69.4,"contactRating":2.4,"contactSocialMedia":"N/A","contactTime":"00:04:06","guaranteeRating":3,"overallRating":2.32,"dataAvailable":true,"contentfulMetadata":{"tags":[]}},{"guaranteeList":{"json":{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Vulnerability
-        Commitment","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"document"}},"contactInfo":{"json":{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Telephone:
-        0333 7770 777\nEmail: ","nodeType":"text"},{"data":{"uri":"mailto:memberservices@utilitywarehouse.co.uk"},"content":[{"data":{},"marks":[],"value":"memberservices@utilitywarehouse.co.uk","nodeType":"text"}],"nodeType":"hyperlink"},{"data":{},"marks":[],"value":"\nWebsite:
-        ","nodeType":"text"},{"data":{"uri":"https://uw.co.uk/"},"content":[{"data":{},"marks":[],"value":"www.utilitywarehouse.co.uk","nodeType":"text"}],"nodeType":"hyperlink"},{"data":{},"marks":[],"value":"\n","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"document"}},"otherContactInfo":{"json":{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Web
-        Chat: No\nRing backs: No\nMobile hotline: No\nMinicom / Text: 0333 003 5643","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"document"}},"billingInfo":{"json":{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Direct
-        debit: Yes\nCash or cheque: Yes\nPrepayment: Yes","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"document"}},"fuelMix":{"json":{"data":{},"content":[{"data":{},"content":[{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Fossil
-        fuel: 90%","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"list-item"},{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Nuclear:
-        1%","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"list-item"},{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Renewable:
-        7%","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"list-item"},{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Other:
-        0%","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"list-item"}],"nodeType":"unordered-list"},{"data":{},"content":[{"data":{},"marks":[],"value":"","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"document"}},"openingHours":{"json":{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Monday:
-        9am - 5.30pm\nTuesday: 9am - 5.30pm\nWednesday: 9am - 5.30pm\nThursday: 9am
-        - 5.30pm\nFriday: 9am - 5.30pm\nSaturday: 9am - 4.30pm\nSunday: Closed","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"document"}},"name":"Utility
-        Warehouse","whitelabelSupplier":null,"slug":"utility-warehouse","rank":13,"complaintsRating":1,"complaintsNumber":59,"contactEmail":92.8,"contactRating":2.8,"contactSocialMedia":"N/A","contactTime":"00:04:23","guaranteeRating":3,"overallRating":2.19,"dataAvailable":true,"contentfulMetadata":{"tags":[]}},{"guaranteeList":{"json":{"nodeType":"document","data":{},"content":[{"nodeType":"paragraph","data":{},"content":[{"nodeType":"text","value":"Switch
-        Guarantee, Vulnerability Commitment","marks":[],"data":{}}]}]}},"contactInfo":{"json":{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Telephone:
-        0333 202 9802\nEmail: ","nodeType":"text"},{"data":{"uri":"mailto:customerservices@britishgas.co.uk"},"content":[{"data":{},"marks":[],"value":"customerservices@britishgas.co.uk","nodeType":"text"}],"nodeType":"hyperlink"},{"data":{},"marks":[],"value":"\nWebsite:
-        ","nodeType":"text"},{"data":{"uri":"https://www.britishgas.co.uk/"},"content":[{"data":{},"marks":[],"value":"www.britishgas.co.uk","nodeType":"text"}],"nodeType":"hyperlink"},{"data":{},"marks":[],"value":"\n","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"document"}},"otherContactInfo":{"json":{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Web
-        Chat: Yes\nRing backs: Yes\nMobile hotline: No\nSign video: Yes","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"document"}},"billingInfo":{"json":{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Direct
-        debit: Yes\nCash or cheque: Yes\nPrepayment: Yes","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"document"}},"fuelMix":{"json":{"data":{},"content":[{"data":{},"content":[{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Fossil
-        fuel: 19%","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"list-item"},{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Nuclear:
-        26%","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"list-item"},{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Renewable:
-        54%","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"list-item"},{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Other:
-        1%","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"list-item"}],"nodeType":"unordered-list"},{"data":{},"content":[{"data":{},"marks":[],"value":"","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"document"}},"openingHours":{"json":{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Monday:
-        9am - 5pm\nTuesday: 9am - 5pm\nWednesday: 9am - 5pm\nThursday: 9am - 5pm\nFriday:
-        9am - 5pm\nSaturday: Closed\nSunday: Closed","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"document"}},"name":"British
-        Gas","whitelabelSupplier":null,"slug":"british-gas","rank":14,"complaintsRating":1,"complaintsNumber":92.8,"contactEmail":61.2,"contactRating":1.8,"contactSocialMedia":"N/A","contactTime":"00:05:29","guaranteeRating":5,"overallRating":1.84,"dataAvailable":true,"contentfulMetadata":{"tags":[]}},{"guaranteeList":{"json":{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Switch
-        Guarantee, Vulnerability Commitment","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"document"}},"contactInfo":{"json":{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Telephone:
-        0330 111 5050\nEmail: ","nodeType":"text"},{"data":{"uri":"mailto:help@so.energy"},"content":[{"data":{},"marks":[],"value":"help@so.energy","nodeType":"text"}],"nodeType":"hyperlink"},{"data":{},"marks":[],"value":"\nWebsite:
-        ","nodeType":"text"},{"data":{"uri":"https://www.so.energy/"},"content":[{"data":{},"marks":[],"value":"www.so.energy","nodeType":"text"}],"nodeType":"hyperlink"},{"data":{},"marks":[],"value":"","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"document"}},"otherContactInfo":{"json":{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Web
-        Chat: No\nRing backs: No\nMobile hotline: No\nMinicom / Text: No","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"document"}},"billingInfo":{"json":{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Direct
-        debit: Yes\nCash or cheque: No\nPrepayment: No","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"document"}},"fuelMix":{"json":{"data":{},"content":[{"data":{},"content":[{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Fossil
-        fuel: 0%","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"list-item"},{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Nuclear:
-        0%","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"list-item"},{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Renewable:
-        100%","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"list-item"},{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Other:
-        0%","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"list-item"}],"nodeType":"unordered-list"},{"data":{},"content":[{"data":{},"marks":[],"value":"","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"document"}},"openingHours":{"json":{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Monday:
-        9am - 5pm\nTuesday: 9am - 5pm\nWednesday: 9am - 5pm\nThursday: 9am - 5pm\nFriday:
-        9am - 5pm\nSaturday: Closed\nSunday: Closed","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"document"}},"name":"So
-        Energy","whitelabelSupplier":null,"slug":"so-energy","rank":15,"complaintsRating":1,"complaintsNumber":103.4,"contactEmail":36.3,"contactRating":1.6,"contactSocialMedia":"N/A","contactTime":"00:04:12","guaranteeRating":5,"overallRating":1.73,"dataAvailable":true,"contentfulMetadata":{"tags":[]}},{"guaranteeList":null,"contactInfo":{"json":{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Telephone:
-        03303 337 442\nEmail: ","nodeType":"text"},{"data":{"uri":"mailto:customerservices@utilita.co.uk"},"content":[{"data":{},"marks":[],"value":"customerservices@utilita.co.uk","nodeType":"text"}],"nodeType":"hyperlink"},{"data":{},"marks":[],"value":"\nWebsite:
-        ","nodeType":"text"},{"data":{"uri":"https://www.utilita.co.uk/"},"content":[{"data":{},"marks":[],"value":"www.utilita.co.uk","nodeType":"text"}],"nodeType":"hyperlink"},{"data":{},"marks":[],"value":"\n","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"document"}},"otherContactInfo":{"json":{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Web
-        Chat: Yes\nRing backs: Yes\nMobile hotline: No\nMinicom / Text: No","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"document"}},"billingInfo":{"json":{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Direct
-        debit: Yes\nCash or cheque: Yes\nPrepayment: Yes","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"document"}},"fuelMix":{"json":{"data":{},"content":[{"data":{},"content":[{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Fossil
-        fuel: 75%","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"list-item"},{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Nuclear:
-        19%","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"list-item"},{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Renewable:
-        3%","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"list-item"},{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Other:
-        4%","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"list-item"}],"nodeType":"unordered-list"},{"data":{},"content":[{"data":{},"marks":[],"value":"","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"document"}},"openingHours":{"json":{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Monday:
-        8am - 8pm\nTuesday: 8am - 8pm\nWednesday: 8am - 8pm\nThursday: 8am - 8pm\nFriday:
-        8am - 8pm\nSaturday: 8am - 5pm\nSunday: 8am - 5pm","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"document"}},"name":"Utilita","whitelabelSupplier":null,"slug":"utilita","rank":16,"complaintsRating":1,"complaintsNumber":147.3,"contactEmail":88,"contactRating":2.2,"contactSocialMedia":"N/A","contactTime":"00:06:16","guaranteeRating":0,"overallRating":1.56,"dataAvailable":true,"contentfulMetadata":{"tags":[]}},{"guaranteeList":null,"contactInfo":{"json":{"nodeType":"document","data":{},"content":[{"nodeType":"paragraph","data":{},"content":[{"nodeType":"text","value":"Telephone:
-        0330 123 9540\nEmail: ","marks":[],"data":{}},{"nodeType":"hyperlink","data":{"uri":"maito:customer.care@tomato.energy"},"content":[{"nodeType":"text","value":"customer.care@tomato.energy","marks":[],"data":{}}]},{"nodeType":"text","value":"\nWebsite:
-        ","marks":[],"data":{}},{"nodeType":"hyperlink","data":{"uri":"https://www.tomato.energy/"},"content":[{"nodeType":"text","value":"www.tomato.energy","marks":[],"data":{}}]},{"nodeType":"text","value":"","marks":[],"data":{}}]}]}},"otherContactInfo":{"json":{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Web
-        Chat: No\nRing backs: Yes\nMobile hotline:  No\nMinicom / Text: No","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"document"}},"billingInfo":{"json":{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Direct
-        debit: Yes\nCash or cheque: No\nPrepayment: No","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"document"}},"fuelMix":null,"openingHours":null,"name":"Tomato
-        Energy","whitelabelSupplier":null,"slug":"tomato-energy","rank":null,"complaintsRating":null,"complaintsNumber":null,"contactEmail":null,"contactRating":null,"contactSocialMedia":null,"contactTime":null,"guaranteeRating":null,"overallRating":null,"dataAvailable":false,"contentfulMetadata":{"tags":[]}},{"guaranteeList":null,"contactInfo":{"json":{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Telephone:
-        01920 486 156 ","nodeType":"text"},{"data":{},"marks":[],"value":"or freephone:
-        0808 175 4975","nodeType":"text"},{"data":{},"marks":[],"value":"\nEmail:
-        ","nodeType":"text"},{"data":{"uri":"mailto:help@100green.com"},"content":[{"data":{},"marks":[],"value":"help@100green.com","nodeType":"text"}],"nodeType":"hyperlink"},{"data":{},"marks":[],"value":"\nWebsite:
-        ","nodeType":"text"},{"data":{"uri":"https://www.100green.com/"},"content":[{"data":{},"marks":[],"value":"100green.com","nodeType":"text"}],"nodeType":"hyperlink"},{"data":{},"marks":[],"value":"\n","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"document"}},"otherContactInfo":{"json":{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Web
-        Chat: No\nRing backs: No\nMobile hotline: No\nMinicom / Text: No","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"document"}},"billingInfo":{"json":{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Direct
-        debit: Yes\nCash or cheque: Yes\nPrepayment: Yes","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"document"}},"fuelMix":{"json":{"data":{},"content":[{"data":{},"content":[{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Fossil
-        fuel: 0%","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"list-item"},{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Nuclear:
-        0%","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"list-item"},{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Renewable:
-        100%","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"list-item"},{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Other:
-        0%","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"list-item"}],"nodeType":"unordered-list"},{"data":{},"content":[{"data":{},"marks":[],"value":"","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"document"}},"openingHours":{"json":{"nodeType":"document","data":{},"content":[{"nodeType":"paragraph","data":{},"content":[{"nodeType":"text","value":"Monday:
-        8am - 8pm\nTuesday: 8am - 8pm\nWednesday: 8am - 8pm\nThursday: 8am - 8pm\nFriday:
-        8am - 8pm\nSaturday: 9am - 1pm\nSunday: 9am - 1pm","marks":[],"data":{}}]}]}},"name":"100Green","whitelabelSupplier":null,"slug":"100green","rank":null,"complaintsRating":null,"complaintsNumber":null,"contactEmail":null,"contactRating":null,"contactSocialMedia":null,"contactTime":null,"guaranteeRating":null,"overallRating":null,"dataAvailable":false,"contentfulMetadata":{"tags":[]}},{"guaranteeList":null,"contactInfo":{"json":{"nodeType":"document","data":{},"content":[{"nodeType":"paragraph","data":{},"content":[{"nodeType":"text","value":"Telephone:
-        0808 164 1088\nEmail: ","marks":[],"data":{}},{"nodeType":"hyperlink","data":{"uri":"mailto:hello@octopus.energy"},"content":[{"nodeType":"text","value":"hello@octopus.energy","marks":[],"data":{}}]},{"nodeType":"text","value":"\nWebsite:
-        ","marks":[],"data":{}},{"nodeType":"hyperlink","data":{"uri":"https://www.octopus.energy/roar-power/"},"content":[{"nodeType":"text","value":"www.octopus.energy/roar-power/","marks":[],"data":{}}]},{"nodeType":"text","value":"","marks":[],"data":{}}]}]}},"otherContactInfo":{"json":{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Web
-        Chat: No\nRing backs: No\nMobile hotline: No\nMinicom / Text: No","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"document"}},"billingInfo":{"json":{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Direct
-        debit: Yes\nCash or cheque: No\nPrepayment: Yes","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"document"}},"fuelMix":{"json":{"data":{},"content":[{"data":{},"content":[{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Fossil
-        fuel: 0%","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"list-item"},{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Nuclear:
-        0%","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"list-item"},{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Renewable:
-        100%","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"list-item"},{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Other:
-        0%","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"list-item"}],"nodeType":"unordered-list"},{"data":{},"content":[{"data":{},"marks":[],"value":"","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"document"}},"openingHours":{"json":{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Monday:
-        9am - 5pm\nTuesday: 9am - 5pm\nWednesday: 9am - 5pm\nThursday: 9am - 5pm\nFriday:
-        9am - 5pm\nSaturday: Closed\nSunday: Closed","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"document"}},"name":"Roar
-        Power","slug":"roar-power","rank":null,"complaintsRating":null,"complaintsNumber":null,"contactEmail":null,"contactRating":null,"contactSocialMedia":null,"contactTime":null,"guaranteeRating":null,"overallRating":null,"dataAvailable":false,"contentfulMetadata":{"tags":[]},"whitelabelSupplier":{"name":"Octopus
-        Energy"}},{"guaranteeList":null,"contactInfo":{"json":{"nodeType":"document","data":{},"content":[{"nodeType":"paragraph","data":{},"content":[{"nodeType":"text","value":"Telephone:
-        0800 160 1240\nEmail: No\nWebsite: ","marks":[],"data":{}},{"nodeType":"hyperlink","data":{"uri":"https://www.qwestenergy.co.uk"},"content":[{"nodeType":"text","value":"qwestenergy.co.uk","marks":[],"data":{}}]},{"nodeType":"text","value":"\n","marks":[],"data":{}}]}]}},"otherContactInfo":{"json":{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Web
-        Chat: No\nRing backs: Yes\nMobile hotline: No\nMinicom / Text: No","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"document"}},"billingInfo":{"json":{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Direct
-        debit: Yes\nCash or cheque: No\nPrepayment: Yes","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"document"}},"fuelMix":{"json":{"data":{},"content":[{"data":{},"content":[{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Fossil
-        fuel: 0%","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"list-item"},{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Nuclear:
-        0%","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"list-item"},{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Renewable:
-        100%","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"list-item"},{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Other:
-        0%","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"list-item"}],"nodeType":"unordered-list"},{"data":{},"content":[{"data":{},"marks":[],"value":"","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"document"}},"openingHours":{"json":{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Monday:
-        8am - 8pm\nTuesday: 8am - 8pm\nWednesday: 8am - 8pm\nThursday: 8am - 8pm\nFriday:
-        8am - 8pm\nSaturday: 9am - 5pm\nSunday: Closed","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"document"}},"name":"Qwest
-        Energy","slug":"qwest-energy","rank":null,"complaintsRating":null,"complaintsNumber":null,"contactEmail":null,"contactRating":null,"contactSocialMedia":null,"contactTime":null,"guaranteeRating":null,"overallRating":null,"dataAvailable":false,"contentfulMetadata":{"tags":[]},"whitelabelSupplier":{"name":"Octopus
-        Energy"}},{"guaranteeList":null,"contactInfo":{"json":{"nodeType":"document","data":{},"content":[{"nodeType":"paragraph","data":{},"content":[{"nodeType":"text","value":"Telephone:
-        0203 637 8137\nEmail: ","marks":[],"data":{}},{"nodeType":"hyperlink","data":{"uri":"mailto:info@truenergy.co.uk"},"content":[{"nodeType":"text","value":"info@truenergy.co.uk","marks":[],"data":{}}]},{"nodeType":"text","value":"\nWebsite:
-        ","marks":[],"data":{}},{"nodeType":"hyperlink","data":{"uri":"https://www.truenergy.co.uk/"},"content":[{"nodeType":"text","value":"www.truenergy.co.uk","marks":[],"data":{}}]},{"nodeType":"text","value":"","marks":[],"data":{}}]}]}},"otherContactInfo":{"json":{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Web
-        Chat: No\nRing backs: No\nMobile hotline: No\nMinicom / Text: No","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"document"}},"billingInfo":{"json":{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Direct
-        debit: Yes\nCash or cheque: No\nPrepayment: Yes","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"document"}},"fuelMix":{"json":{"data":{},"content":[{"data":{},"content":[{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Fossil
-        fuel: 0%","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"list-item"},{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Nuclear:
-        0%","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"list-item"},{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Renewable:
-        100%","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"list-item"},{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Other:
-        0%","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"list-item"}],"nodeType":"unordered-list"},{"data":{},"content":[{"data":{},"marks":[],"value":"","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"document"}},"openingHours":{"json":{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Monday:
-        9am - 5pm\nTuesday: 9am - 5pm\nWednesday: 9am - 5pm\nThursday: 9am - 5pm\nFriday:
-        9am - 5pm\nSaturday: Closed\nSunday: Closed","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"document"}},"name":"TruEnergy","whitelabelSupplier":null,"slug":"truenergy","rank":null,"complaintsRating":null,"complaintsNumber":null,"contactEmail":null,"contactRating":null,"contactSocialMedia":null,"contactTime":null,"guaranteeRating":null,"overallRating":null,"dataAvailable":false,"contentfulMetadata":{"tags":[]}},{"guaranteeList":null,"contactInfo":{"json":{"nodeType":"document","data":{},"content":[{"nodeType":"paragraph","data":{},"content":[{"nodeType":"text","value":"Telephone:
-        0808 168 8145\nEmail: ","marks":[],"data":{}},{"nodeType":"hyperlink","data":{"uri":"mailto:hello@mylondonpower.com"},"content":[{"nodeType":"text","value":"hello@mylondonpower.com","marks":[],"data":{}}]},{"nodeType":"text","value":"\nWebsite:
-        ","marks":[],"data":{}},{"nodeType":"hyperlink","data":{"uri":"https://www.mylondonpower.com/"},"content":[{"nodeType":"text","value":"mylondonpower.com","marks":[],"data":{}}]},{"nodeType":"text","value":"\n","marks":[],"data":{}}]}]}},"otherContactInfo":{"json":{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Web
-        Chat: No\nRing backs: Yes\nMobile hotline: No\nMinicom / Text: No","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"document"}},"billingInfo":{"json":{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Direct
-        debit: Yes\nCash or cheque: Yes\nPrepayment: Yes","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"document"}},"fuelMix":{"json":{"data":{},"content":[{"data":{},"content":[{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Fossil
-        fuel: 0%","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"list-item"},{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Nuclear:
-        0%","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"list-item"},{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Renewable:
-        100%","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"list-item"},{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Other:
-        0%","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"list-item"}],"nodeType":"unordered-list"},{"data":{},"content":[{"data":{},"marks":[],"value":"","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"document"}},"openingHours":{"json":{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Monday:
-        9am - 5pm\nTuesday: 9am - 5pm\nWednesday: 9am - 5pm\nThursday: 9am - 5pm\nFriday:
-        9am - 5pm\nSaturday: Closed\nSunday: Closed","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"document"}},"name":"London
-        Power","slug":"london-power","rank":null,"complaintsRating":null,"complaintsNumber":null,"contactEmail":null,"contactRating":null,"contactSocialMedia":null,"contactTime":null,"guaranteeRating":null,"overallRating":null,"dataAvailable":false,"contentfulMetadata":{"tags":[]},"whitelabelSupplier":{"name":"Octopus
+        ","nodeType":"text"},{"data":{},"marks":[],"value":"0333 006 9950","nodeType":"text"},{"data":{},"marks":[],"value":"\nEmail:
+        ","nodeType":"text"},{"data":{"uri":"mailto:hello@edfenergy.com"},"content":[{"data":{},"marks":[],"value":"hello@edfenergy.com","nodeType":"text"}],"nodeType":"hyperlink"},{"data":{},"marks":[],"value":"\nWebsite:
+        ","nodeType":"text"},{"data":{"uri":"http://www.edfenergy.com"},"content":[{"data":{},"marks":[],"value":"www.edfenergy.com","nodeType":"text"}],"nodeType":"hyperlink"},{"data":{},"marks":[],"value":"\nWeb
+        chat: No\nRing backs: No\nMobile hotline: No\nMinicom/text: 0800 096 2929\nSignVideo:
+        Yes","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"document"}},"otherContactInfo":{"json":{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Web
+        chat: No\nRing backs: No\nMobile hotline: No\nMinicom/text: 0800 096 2929\nSignVideo:
+        Yes","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"document"}},"billingInfo":{"json":{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Direct
+        debit: Yes\nCash or cheque: Yes\nPrepayment: Yes","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"document"}},"fuelMix":{"json":{"nodeType":"document","data":{},"content":[{"nodeType":"paragraph","data":{},"content":[{"nodeType":"text","value":"Fossil
+        fuel: 25%\nNuclear: 55%\nRenewable: 18%\nOther: 2%","marks":[],"data":{}}]}]}},"openingHours":{"json":{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Pay
+        monthly customers:\nMonday: 8am-6pm\nTuesday: 8am-6pm\nWednesday: 8am-6pm\nThursday:
+        8am-6pm\nFriday: 8am-4pm\nSaturday: Closed\nSunday: Closed","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"document"}},"name":"EDF
+        Energy","slug":"edf-energy","rank":13,"complaintsRating":2,"complaintsRatingScore":null,"complaintsNumber":33.5,"contactEmail":80.5,"contactRating":2.8,"contactSocialMedia":"N/A","contactTime":"00:04:27","guaranteeRating":5,"overallRating":2.74,"dataAvailable":true,"contentfulMetadata":{"tags":[]}},{"whitelabelSupplier":null,"guaranteeList":{"json":{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Switch
+        Guarantee, Vulnerability Commitment","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"document"}},"contactInfo":{"json":{"nodeType":"document","data":{},"content":[{"nodeType":"paragraph","content":[{"nodeType":"text","marks":[],"value":"Telephone:
+        0330 111 5050\nEmail: ","data":{}},{"nodeType":"hyperlink","content":[{"nodeType":"text","marks":[],"value":"help@so.energy","data":{}}],"data":{"uri":"mailto:help@so.energy"}},{"nodeType":"text","marks":[],"value":"\nWebsite:
+        ","data":{}},{"nodeType":"hyperlink","content":[{"nodeType":"text","marks":[],"value":"www.so.energy","data":{}}],"data":{"uri":"http://www.so.energy"}},{"nodeType":"text","marks":[],"value":"\nWeb
+        chat: Yes\nRing backs: No\nMobile hotline: No\nMinicom/text: No\nSignVideo:
+        No","data":{}}],"data":{}}]}},"otherContactInfo":{"json":{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Web
+        chat: Yes\nRing backs: No\nMobile hotline: No\nMinicom/text: No\nSignVideo:
+        No","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"document"}},"billingInfo":{"json":{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Direct
+        debit: Yes\nCash or cheque: No\nPrepayment: No","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"document"}},"fuelMix":{"json":{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Fossil
+        fuel: 27%\nNuclear: 4%\nRenewable: 67%\nOther: 2%","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"document"}},"openingHours":{"json":{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Monday:
+        8.30am-5.30pm\nTuesday: 8.30am-5.30pm\nWednesday: 8.30am-5.30pm\nThursday:
+        8.30am-5.30pm\nFriday: 8.30am-5.30pm\nSaturday: Closed\nSunday: Closed","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"document"}},"name":"So
+        Energy","slug":"so-energy","rank":14,"complaintsRating":1,"complaintsRatingScore":null,"complaintsNumber":70.4,"contactEmail":49,"contactRating":2.6,"contactSocialMedia":"N/A","contactTime":"00:02:41","guaranteeRating":5,"overallRating":2.28,"dataAvailable":true,"contentfulMetadata":{"tags":[]}},{"whitelabelSupplier":null,"guaranteeList":{"json":{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"N/A","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"document"}},"contactInfo":{"json":{"nodeType":"document","data":{},"content":[{"nodeType":"paragraph","content":[{"nodeType":"text","marks":[],"value":"Telephone:
+        0203 637 8137\nEmail: ","data":{}},{"nodeType":"hyperlink","content":[{"nodeType":"text","marks":[],"value":"info@truenergy.co.uk","data":{}}],"data":{"uri":"mailto:info@truenergy.co.uk"}},{"nodeType":"text","marks":[],"value":"\nWebsite:
+        ","data":{}},{"nodeType":"hyperlink","content":[{"nodeType":"text","marks":[],"value":"www.truenergy.co.uk","data":{}}],"data":{"uri":"http://www.truenergy.co.uk"}},{"nodeType":"text","marks":[],"value":"\nWeb
+        chat: No\nRing backs: No\nMobile hotline: No\nMinicom/text: No\nSignVideo:
+        No","data":{}}],"data":{}}]}},"otherContactInfo":{"json":{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Web
+        chat: No\nRing backs: No\nMobile hotline: No\nMinicom/text: No\nSignVideo:
+        No","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"document"}},"billingInfo":{"json":{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Direct
+        debit: Yes\nCash or cheque: No\nPrepayment: Yes","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"document"}},"fuelMix":{"json":{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Fossil
+        fuel: 76%\nNuclear: 10%\nRenewable: 8%\nOther: 6%","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"document"}},"openingHours":{"json":{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Monday:
+        9am-5pm\nTuesday: 9am-5pm\nWednesday: 9am-5pm\nThursday: 9am-5pm\nFriday:
+        9am-5pm\nSaturday: Closed\nSunday: Closed","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"document"}},"name":"Tru
+        Energy","slug":"tru-energy","rank":15,"complaintsRating":3,"complaintsRatingScore":null,"complaintsNumber":27.5,"contactEmail":73.7,"contactRating":1.8,"contactSocialMedia":"N/A","contactTime":"00:18:41","guaranteeRating":0,"overallRating":2.04,"dataAvailable":true,"contentfulMetadata":{"tags":[]}},{"whitelabelSupplier":null,"guaranteeList":{"json":{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Vulnerability
+        Commitment","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"document"}},"contactInfo":{"json":{"nodeType":"document","data":{},"content":[{"nodeType":"paragraph","content":[{"nodeType":"text","marks":[],"value":"Telephone:
+        0330 333 7442\nEmail: ","data":{}},{"nodeType":"hyperlink","content":[{"nodeType":"text","marks":[],"value":"customerservices@utilita.co.uk","data":{}}],"data":{"uri":"mailto:customerservices@utilita.co.uk"}},{"nodeType":"text","marks":[],"value":"\nWebsite:
+        ","data":{}},{"nodeType":"hyperlink","content":[{"nodeType":"text","marks":[],"value":"www.utilita.co.uk","data":{}}],"data":{"uri":"http://www.utilita.co.uk"}},{"nodeType":"text","marks":[],"value":"\nWeb
+        chat: Yes\nRing backs: Yes\nMobile hotline: No\nMinicom/text: No\nSignVideo:
+        No","data":{}}],"data":{}}]}},"otherContactInfo":{"json":{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Web
+        chat: Yes\nRing backs: Yes\nMobile hotline: No\nMinicom/text: No\nSignVideo:
+        No","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"document"}},"billingInfo":{"json":{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Direct
+        debit: Yes\nCash or cheque: Yes\nPrepayment: Yes","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"document"}},"fuelMix":{"json":{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Fossil
+        fuel: 83%\nNuclear: 11%\nRenewable: 0%\nOther: 7%","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"document"}},"openingHours":{"json":{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Monday:
+        8am-8pm\nTuesday: 8am-8pm\nWednesday: 8am-8pm\nThursday: 8am-8pm\nFriday:
+        8am-8pm\nSaturday: 8am-5pm\nSunday: 8am-5pm","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"document"}},"name":"Utilita","slug":"utilita","rank":16,"complaintsRating":1,"complaintsRatingScore":null,"complaintsNumber":83,"contactEmail":75.3,"contactRating":2.4,"contactSocialMedia":"N/A","contactTime":"00:03:51","guaranteeRating":3,"overallRating":1.97,"dataAvailable":true,"contentfulMetadata":{"tags":[]}},{"whitelabelSupplier":null,"guaranteeList":{"json":{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"N/A","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"document"}},"contactInfo":{"json":{"nodeType":"document","data":{},"content":[{"nodeType":"paragraph","content":[{"nodeType":"text","marks":[],"value":"Telephone:
+        0125 664 4064\nEmail: ","data":{}},{"nodeType":"hyperlink","content":[{"nodeType":"text","marks":[],"value":"customer.care@tomato.energy","data":{}}],"data":{"uri":"mailto:customer.care@tomato.energy"}},{"nodeType":"text","marks":[],"value":"\nWebsite:
+        ","data":{}},{"nodeType":"hyperlink","content":[{"nodeType":"text","marks":[],"value":"www.tomato.energy","data":{}}],"data":{"uri":"http://www.tomato.energy"}},{"nodeType":"text","marks":[],"value":"\nWeb
+        chat: No\nRing backs: No\nMobile hotline: No\nMinicom/text: No\nSignVideo:
+        No","data":{}}],"data":{}}]}},"otherContactInfo":{"json":{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Web
+        chat: No\nRing backs: No\nMobile hotline: No\nMinicom/text: No\nSignVideo:
+        No","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"document"}},"billingInfo":{"json":{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Direct
+        debit: Yes\nCash or cheque: No\nPrepayment: No","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"document"}},"fuelMix":{"json":{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Fossil
+        fuel: 83%\nNuclear: 11%\nRenewable: 0%\nOther: 7%","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"document"}},"openingHours":{"json":{"nodeType":"document","data":{},"content":[{"nodeType":"paragraph","content":[{"nodeType":"text","marks":[],"value":"Monday:
+        9am–5.30pm\nTuesday: 9am–5.30pm\nWednesday: 9am–5.30pm\nThursday: 9am–5.30pm\nFriday:
+        9am–5.30pm\nSaturday: Closed\nSunday: Closed","data":{}}],"data":{}}]}},"name":"Tomato
+        Energy","slug":"tomato-energy","rank":null,"complaintsRating":null,"complaintsRatingScore":null,"complaintsNumber":null,"contactEmail":91.1,"contactRating":4,"contactSocialMedia":"N/A","contactTime":"00:00:44","guaranteeRating":0,"overallRating":3.6,"dataAvailable":false,"contentfulMetadata":{"tags":[]}},{"whitelabelSupplier":null,"guaranteeList":{"json":{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"N/A","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"document"}},"contactInfo":{"json":{"nodeType":"document","data":{},"content":[{"nodeType":"paragraph","content":[{"nodeType":"text","marks":[],"value":"Telephone:
+        0333 0165 542\nEmail: ","data":{}},{"nodeType":"hyperlink","content":[{"nodeType":"text","marks":[],"value":"help@tulo.energy","data":{}}],"data":{"uri":"mailto:help@tulo.energy"}},{"nodeType":"text","marks":[],"value":"\nWebsite:
+        ","data":{}},{"nodeType":"hyperlink","content":[{"nodeType":"text","marks":[],"value":"https://tulo.energy","data":{}}],"data":{"uri":"https://tulo.energy"}},{"nodeType":"text","marks":[],"value":"\nWeb
+        chat: No\nRing backs: No\nMobile hotline: No\nMinicom/text: No\nSignVideo:
+        No","data":{}}],"data":{}}]}},"otherContactInfo":{"json":{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Web
+        chat: No\nRing backs: No\nMobile hotline: No\nMinicom/text: No\nSignVideo:
+        No","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"document"}},"billingInfo":{"json":{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Direct
+        debit: Yes\nCash or cheque: No\nPrepayment: No","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"document"}},"fuelMix":{"json":{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Fossil
+        fuel: 83%\nNuclear: 11%\nRenewable: 0%\nOther: 7%","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"document"}},"openingHours":{"json":{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Monday:
+        9am–5pm\nTuesday: 9am–5pm\nWednesday: 9am–5pm\nThursday: 9am–5pm\nFriday:
+        9am–5pm\nSaturday: Closed\nSunday: Closed","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"document"}},"name":"Tulo
+        Energy","slug":"tulo-energy","rank":null,"complaintsRating":null,"complaintsRatingScore":null,"complaintsNumber":null,"contactEmail":100,"contactRating":4.4,"contactSocialMedia":"N/A","contactTime":"00:00:43","guaranteeRating":0,"overallRating":3.96,"dataAvailable":false,"contentfulMetadata":{"tags":[]}},{"whitelabelSupplier":null,"guaranteeList":{"json":{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"N/A","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"document"}},"contactInfo":{"json":{"nodeType":"document","data":{},"content":[{"nodeType":"paragraph","content":[{"nodeType":"text","marks":[],"value":"Telephone:
+        0800 092 7407\nEmail: ","data":{}},{"nodeType":"hyperlink","content":[{"nodeType":"text","marks":[],"value":"hello@homeenergy.co.uk","data":{}}],"data":{"uri":"mailto:hello@homeenergy.co.uk"}},{"nodeType":"text","marks":[],"value":"\nWebsite:
+        ","data":{}},{"nodeType":"hyperlink","content":[{"nodeType":"text","marks":[],"value":"https://www.homeenergy.co.uk/contact/","data":{}}],"data":{"uri":"https://www.homeenergy.co.uk/contact/"}},{"nodeType":"text","marks":[],"value":"\nWeb
+        chat: No\nRing backs: No\nMobile hotline: No\nMinicom/text: No\nSignVideo:
+        No","data":{}}],"data":{}}]}},"otherContactInfo":{"json":{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Web
+        chat: No\nRing backs: No\nMobile hotline: No\nMinicom/text: No\nSignVideo:
+        No","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"document"}},"billingInfo":{"json":{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Direct
+        debit: Yes\nCash or cheque: No\nPrepayment: No","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"document"}},"fuelMix":{"json":{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Fossil
+        fuel: 43%\nNuclear: 14%\nRenewable: 41%\nOther: 3%","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"document"}},"openingHours":{"json":{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Monday:
+        9am-4.30pm\nTuesday: 9am-4.30pm\nWednesday: 9am-4.30pm\nThursday: 9am-4.30pm\nFriday:
+        9am-4.30pm\nSaturday: Closed\nSunday: Closed","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"document"}},"name":"Home
+        Energy","slug":"home-energy","rank":null,"complaintsRating":null,"complaintsRatingScore":null,"complaintsNumber":null,"contactEmail":99.7,"contactRating":4.4,"contactSocialMedia":"N/A","contactTime":"00:00:36","guaranteeRating":0,"overallRating":3.96,"dataAvailable":false,"contentfulMetadata":{"tags":[]}},{"whitelabelSupplier":null,"guaranteeList":{"json":{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Switch
+        Guarantee","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"document"}},"contactInfo":{"json":{"data":{},"content":[],"nodeType":"document"}},"otherContactInfo":null,"billingInfo":{"json":{"data":{},"content":[],"nodeType":"document"}},"fuelMix":{"json":{"data":{},"content":[],"nodeType":"document"}},"openingHours":{"json":{"data":{},"content":[],"nodeType":"document"}},"name":"Fuse
+        Energy","slug":"fuse-energy","rank":null,"complaintsRating":null,"complaintsRatingScore":null,"complaintsNumber":null,"contactEmail":100,"contactRating":5,"contactSocialMedia":"N/A","contactTime":"00:00:06","guaranteeRating":3,"overallRating":4.8,"dataAvailable":false,"contentfulMetadata":{"tags":[]}},{"guaranteeList":{"json":{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"N/A","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"document"}},"contactInfo":{"json":{"nodeType":"document","data":{},"content":[{"nodeType":"paragraph","content":[{"nodeType":"text","marks":[],"value":"Telephone:
+        0808 168 8145\nEmail: ","data":{}},{"nodeType":"hyperlink","content":[{"nodeType":"text","marks":[],"value":"hello@mylondonpower.com","data":{}}],"data":{"uri":"mailto:hello@mylondonpower.com"}},{"nodeType":"text","marks":[],"value":"\nWebsite:
+        ","data":{}},{"nodeType":"hyperlink","content":[{"nodeType":"text","marks":[],"value":"www.mylondonpower.com","data":{}}],"data":{"uri":"http://www.mylondonpower.com"}},{"nodeType":"text","marks":[],"value":"\nWeb
+        Chat: No\nRing backs: Yes\nMobile hotline: No\nMinicom/text: No\nSignVideo:
+        No","data":{}}],"data":{}}]}},"otherContactInfo":{"json":{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Web
+        Chat: No\nRing backs: Yes\nMobile hotline: No\nMinicom/text: No\nSignVideo:
+        No","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"document"}},"billingInfo":{"json":{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Direct
+        debit: Yes\nCash or cheque: Yes\nPrepayment: Yes","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"document"}},"fuelMix":{"json":{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Fossil
+        fuel: 0%\nNuclear: 0%\nRenewable: 100%\nOther: 0%","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"document"}},"openingHours":{"json":{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Monday:
+        9am-5pm\nTuesday: 9am-5pm\nWednesday: 9am-5pm\nThursday: 9am-5pm\nFriday:
+        9am-5pm\nSaturday: Closed\nSunday: Closed","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"document"}},"name":"London
+        Power","slug":"london-power","rank":null,"complaintsRating":null,"complaintsRatingScore":null,"complaintsNumber":null,"contactEmail":null,"contactRating":null,"contactSocialMedia":"","contactTime":"","guaranteeRating":null,"overallRating":null,"dataAvailable":false,"contentfulMetadata":{"tags":[]},"whitelabelSupplier":{"name":"Octopus
         Energy"}}]}}}'
-  recorded_at: Tue, 19 Dec 2023 18:06:44 GMT
-recorded_with: VCR 6.2.0
+  recorded_at: Tue, 09 Dec 2025 11:48:54 GMT
+recorded_with: VCR 6.3.1
