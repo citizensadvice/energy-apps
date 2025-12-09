@@ -11,7 +11,10 @@
     %li.score-summary__item
       %p.score-summary__text
         Fewer complaints received
-      = render CsrTable::ScoreComponent.new(score: supplier.complaints_rating)
+      - if Feature.enabled?("FF_NEW_CSR_DATA")
+        = render CsrTable::ScoreComponent.new(score: supplier.complaints_rating_score)
+      - else
+        = render CsrTable::ScoreComponent.new(score: supplier.complaints_rating)
     %li.score-summary__item
       %p.score-summary__text
         Contact waiting time
