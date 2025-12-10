@@ -85,7 +85,7 @@ RSpec.describe(Supplier) do
       its(:complaints_rating) { is_expected.to eq 4.3 }
     end
 
-    context "when FF_CSR_NEW_DATA is disabled" do
+    context "when FF_CSR_NEW_DATA is not enabled" do
       around do |example|
         ClimateControl.modify(FF_NEW_CSR_DATA: "false") do
           example.run
@@ -106,6 +106,7 @@ RSpec.describe(Supplier) do
     its(:guarantee_rating) { is_expected.to eq 3 }
     its(:overall_rating) { is_expected.to eq 4.8 }
     its(:id) { is_expected.to eq "an-energy-supplier-inc" }
+    its(:bill_accuracy_and_metering_rating) { is_expected.to eq 4.8 }
 
     it { is_expected.to be_top_three }
     it { is_expected.to be_persisted }
