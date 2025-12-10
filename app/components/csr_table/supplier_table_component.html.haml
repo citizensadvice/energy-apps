@@ -18,6 +18,10 @@
           %th.supplier-table__response{ scope: "col" }
             .cads-table__content
               Contact waiting time
+          -if Feature.enabled?("FF_NEW_CSR_DATA")
+            %th.supplier-table__billing{ scope: "col" }
+              .cads-table__content
+                Billing and metering
           %th.supplier-table__guarantee{ scope: "col" }
             .cads-table__content
               Customer commitments
