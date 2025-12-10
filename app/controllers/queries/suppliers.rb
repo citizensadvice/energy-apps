@@ -27,6 +27,7 @@ module Queries
         guaranteeRating,
         overallRating,
         dataAvailable,
+        billAccuracyAndMeteringRating,
         guaranteeList {
           json
         },
