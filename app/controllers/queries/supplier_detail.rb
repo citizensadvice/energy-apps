@@ -32,6 +32,16 @@ module Queries
         overallRating,
         dataAvailable,
         billAccuracyAndMeteringRating,
+        contactWebchatSync,
+        contactWebchatAsync,
+        contactWhatsappSync,
+        contactWhatsappAsync,
+        contactInAppSync,
+        contactInAppAsync,
+        contactSmsSync,
+        contactSmsAsync,
+        contactPortalSync,
+        contactPortalAsync,
         guaranteeList {
           json
         },

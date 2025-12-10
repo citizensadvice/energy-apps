@@ -18,9 +18,9 @@ module CsrTable
       [
         guarantee_list,
         complaints_number,
-        contact_time,
-        contact_social_media,
-        contact_email
+        bills_accuracy_smart,
+        bills_accuracy_traditional,
+        smart_operating
       ]
     end
 
@@ -38,24 +38,24 @@ module CsrTable
       }
     end
 
-    def contact_time
+    def bills_accuracy_smart
       {
-        term: content_tag(:p, "Average call centre wait time (hours, minutes and seconds)"),
-        description: content_tag(:p, supplier.contact_time)
+        term: content_tag(:p, "Bills accuracy (smart)"),
+        description: content_tag(:p, "93.7%")
       }
     end
 
-    def contact_social_media
+    def bills_accuracy_traditional
       {
-        term: content_tag(:p, "Average response time to social media messages (hours, minutes and seconds)"),
-        description: content_tag(:p, supplier.contact_social_media)
+        term: content_tag(:p, "Bills accuracy (traditional)"),
+        description: content_tag(:p, "83.1%")
       }
     end
 
-    def contact_email
+    def smart_operating
       {
-        term: content_tag(:p, "Emails responded to within 2 days"),
-        description: content_tag(:p, "#{supplier.contact_email}%")
+        term: content_tag(:p, "Smart operating"),
+        description: content_tag(:p, "98.5%")
       }
     end
 

@@ -24,6 +24,8 @@
     %p
       = link_to("Check the full table to compare more energy suppliers' customer service", suppliers_path(country: current_country))
 
+  = render CsrTable::CommunicationScoresComponent.new(supplier)
+
   = render CsrTable::OtherScoresComponent.new(supplier)
 
   .cads-prose
