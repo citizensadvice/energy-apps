@@ -106,6 +106,7 @@ RSpec.describe(Supplier) do
     its(:guarantee_rating) { is_expected.to eq 3 }
     its(:overall_rating) { is_expected.to eq 4.8 }
     its(:id) { is_expected.to eq "an-energy-supplier-inc" }
+    its(:bill_accuracy_and_metering_rating) { is_expected.to eq 4.8 }
 
     it { is_expected.to be_top_three }
     it { is_expected.to be_persisted }
