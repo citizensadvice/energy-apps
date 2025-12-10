@@ -5,11 +5,11 @@ class Supplier
 
   attr_accessor :data
 
-  delegate :name, :whitelabel_supplier, :slug,
-           :rank, :complaints_rating, :complaints_number,
-           :contact_email, :contact_rating, :contact_social_media,
-           :contact_time, :contact_info, :other_contact_info, :billing_info,
-           :guarantee_rating, :guarantee_list, :overall_rating, :data_available,
+  delegate :name, :whitelabel_supplier, :slug, :rank,
+           :complaints_number, :contact_email, :contact_rating,
+           :contact_social_media, :contact_time, :contact_info,
+           :other_contact_info, :billing_info, :guarantee_rating,
+           :guarantee_list, :overall_rating, :data_available,
            :fuel_mix, :opening_hours, to: :data
 
   def self.fetch_all
@@ -45,5 +45,9 @@ class Supplier
     return false if rank.blank?
 
     rank.positive? && rank < 4
+  end
+
+  def complaints_rating
+    Feature.enabled?("FF_NEW_CSR_DATA") ? data.complaints_rating_score : data.complaints_rating
   end
 end

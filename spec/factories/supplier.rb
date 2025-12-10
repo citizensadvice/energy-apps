@@ -20,7 +20,8 @@ FactoryBot.define do
     trait :ranked do
       data_available { true }
       rank { 1 }
-      complaints_rating { 4.3 }
+      complaints_rating { 4 }
+      complaints_rating_score { 4.3 }
       complaints_number { 172 }
       contact_time { "00:03:27" }
       contact_email { 89 }

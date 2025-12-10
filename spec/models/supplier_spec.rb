@@ -75,10 +75,29 @@ RSpec.describe(Supplier) do
   describe "a ranked supplier" do
     subject { build(:supplier, :ranked) }
 
+    context "when FF_CSR_NEW_DATA is enabled" do
+      around do |example|
+        ClimateControl.modify(FF_NEW_CSR_DATA: "true") do
+          example.run
+        end
+      end
+
+      its(:complaints_rating) { is_expected.to eq 4.3 }
+    end
+
+    context "when FF_CSR_NEW_DATA is disabled" do
+      around do |example|
+        ClimateControl.modify(FF_NEW_CSR_DATA: "false") do
+          example.run
+        end
+      end
+
+      its(:complaints_rating) { is_expected.to eq 4 }
+    end
+
     its(:name) { is_expected.to eq "An Energy Supplier Inc" }
     its(:slug) { is_expected.to eq "an-energy-supplier-inc" }
     its(:rank) { is_expected.to eq 1 }
-    its(:complaints_rating) { is_expected.to eq 4.3 }
     its(:complaints_number) { is_expected.to eq 172 }
     its(:contact_email) { is_expected.to eq 89 }
     its(:contact_rating) { is_expected.to eq 2.3 }
