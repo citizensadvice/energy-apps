@@ -10,10 +10,7 @@
       = render_overall_score
   %td.supplier-table__complaints
     .cads-table__content
-      - if Feature.enabled?("FF_NEW_CSR_DATA")
-        = render CsrTable::ScoreComponent.new(score: supplier.complaints_rating_score)
-      -else
-        = render CsrTable::ScoreComponent.new(score: supplier.complaints_rating)
+      = render CsrTable::ScoreComponent.new(score: supplier.complaints_rating)
   %td.supplier-table__response
     .cads-table__content
       = render CsrTable::ScoreComponent.new(score: supplier.contact_rating)

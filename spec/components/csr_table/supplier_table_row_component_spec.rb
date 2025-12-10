@@ -11,33 +11,11 @@ RSpec.describe CsrTable::SupplierTableRowComponent, type: :component do
     render_inline described_class.new(supplier)
   end
 
-  context "when FF_NEW_CSR_DATA is enabled" do
-    around do |example|
-      ClimateControl.modify(FF_NEW_CSR_DATA: "true") do
-        example.run
-      end
-    end
-
-    it { is_expected.to have_text "1" }
-    it { is_expected.to have_text "An Energy Supplier Inc" }
-    it { is_expected.to have_css ".stars", count: 4 }
-    it { is_expected.to have_css ".stars--highlight", count: 1 }
-    it { is_expected.to have_link "More details", href: "#{CSR_APP_PATH}an-energy-supplier-inc/details" }
-  end
-
-  context "when FF_NEW_CSR_DATA is disabled" do
-    around do |example|
-      ClimateControl.modify(FF_NEW_CSR_DATA: "false") do
-        example.run
-      end
-    end
-
-    it { is_expected.to have_text "1" }
-    it { is_expected.to have_text "An Energy Supplier Inc" }
-    it { is_expected.to have_css ".stars", count: 4 }
-    it { is_expected.to have_css ".stars--highlight", count: 1 }
-    it { is_expected.to have_link "More details", href: "#{CSR_APP_PATH}an-energy-supplier-inc/details" }
-  end
+  it { is_expected.to have_text "1" }
+  it { is_expected.to have_text "An Energy Supplier Inc" }
+  it { is_expected.to have_css ".stars", count: 4 }
+  it { is_expected.to have_css ".stars--highlight", count: 1 }
+  it { is_expected.to have_link "More details", href: "#{CSR_APP_PATH}an-energy-supplier-inc/details" }
 
   context "when the row is highlighted" do
     before do
