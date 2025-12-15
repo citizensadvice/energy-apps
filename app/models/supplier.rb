@@ -10,7 +10,9 @@ class Supplier
            :contact_social_media, :contact_time, :contact_info,
            :other_contact_info, :billing_info, :guarantee_rating,
            :guarantee_list, :overall_rating, :data_available, :fuel_mix,
-           :opening_hours, :bill_accuracy_and_metering_rating, to: :data
+           :opening_hours, :bill_accuracy_and_metering_rating,
+           :bills_accuracy_smart, :bills_accuracy_traditional,
+           :smart_operating, to: :data
 
   def self.fetch_all
     response = Contentful::Graphql::Client.query(Queries::Suppliers)
