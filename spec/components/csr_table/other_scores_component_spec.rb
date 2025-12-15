@@ -29,6 +29,26 @@ RSpec.describe CsrTable::OtherScoresComponent, type: :component do
   it { is_expected.to have_text "Customer commitments" }
   it { is_expected.to have_text "Vulnerability Commitment" }
 
+  context "when FF_NEW_CSR_DATA is enabled" do
+    around do |example|
+      ClimateControl.modify(FF_NEW_CSR_DATA: "true") do
+        example.run
+      end
+    end
+
+    # bills accuracy (traditional)
+    it { is_expected.to have_text "Bills accuracy (traditional meter)" }
+    it { is_expected.to have_text "98.8%" }
+
+    # bills accuracy (smart)
+    it { is_expected.to have_text "Bills accuracy (smart meter)" }
+    it { is_expected.to have_text "97.2%" }
+
+    # Smart Operating
+    it { is_expected.to have_text "Smart operating" }
+    it { is_expected.to have_text "89.4%" }
+  end
+
   context "when there is no supplier" do
     let(:supplier) { nil }
 
