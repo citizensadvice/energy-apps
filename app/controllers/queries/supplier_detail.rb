@@ -31,6 +31,10 @@ module Queries
         guaranteeRating,
         overallRating,
         dataAvailable,
+        billAccuracyAndMeteringRating,
+        billsAccuracyTraditional,
+        billsAccuracySmart,
+        smartOperating,
         guaranteeList {
           json
         },

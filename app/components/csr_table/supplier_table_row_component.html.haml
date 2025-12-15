@@ -14,6 +14,10 @@
   %td.supplier-table__response
     .cads-table__content
       = render CsrTable::ScoreComponent.new(score: supplier.contact_rating)
+  - if Feature.enabled? "FF_NEW_CSR_DATA"
+    %td.supplier-table__billing
+      .cads-table__content
+        = render CsrTable::ScoreComponent.new(score: supplier.bill_accuracy_and_metering_rating)
   %td.supplier-table__guarantee
     .cads-table__content
       = render CsrTable::ScoreComponent.new(score: supplier.guarantee_rating)
