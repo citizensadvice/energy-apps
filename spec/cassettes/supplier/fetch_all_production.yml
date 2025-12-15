@@ -59,16 +59,16 @@ http_interactions:
       - 1.1 varnish, 1.1 varnish
       Accept-Ranges:
       - bytes
-      Date:
-      - Wed, 10 Dec 2025 11:50:15 GMT
       Age:
-      - '9389'
+      - '0'
+      Date:
+      - Mon, 15 Dec 2025 09:31:16 GMT
       X-Served-By:
-      - cache-ewr-kewr1740074-EWR, cache-lcy-eglc8600028-LCY
+      - cache-ewr-kewr1740074-EWR, cache-lcy-eglc8600089-LCY
       X-Cache-Hits:
-      - 0, 1
+      - 0, 0
       X-Timer:
-      - S1765367415.253734,VS0,VE1
+      - S1765791077.605797,VS0,VE147
       Access-Control-Allow-Headers:
       - accept,accept-language,authorization,cache-control,content-length,content-range,content-type,dnt,destination,expires,if-match,if-modified-since,if-none-match,keep-alive,last-modified,origin,pragma,range,user-agent,x-http-method-override,x-mx-reqtoken,x-requested-with,x-contentful-content-type,x-contentful-enable-alpha-feature,x-contentful-organization,x-contentful-resource-resolution,x-contentful-skip-transformation,x-contentful-user-agent,x-contentful-version
       Access-Control-Allow-Methods:
@@ -82,9 +82,9 @@ http_interactions:
       Strict-Transport-Security:
       - max-age=15768000
       X-Cache:
-      - HIT
+      - MISS
       X-Contentful-Request-Id:
-      - 250bc8ed-3635-4c55-986e-9723c0589afd
+      - '02487af4-1302-42e8-a623-e94f78719d76'
     body:
       encoding: UTF-8
       string: '{"data":{"energySupplierCollection":{"total":21,"items":[{"whitelabelSupplier":null,"guaranteeList":{"json":{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"N/A","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"document"}},"contactInfo":{"json":{"nodeType":"document","data":{},"content":[{"nodeType":"paragraph","content":[{"nodeType":"text","marks":[],"value":"Telephone:
@@ -329,5 +329,5 @@ http_interactions:
         9am–5.30pm\nTuesday: 9am–5.30pm\nWednesday: 9am–5.30pm\nThursday: 9am–5.30pm\nFriday:
         9am–5.30pm\nSaturday: Closed\nSunday: Closed","data":{}}],"data":{}}]}},"name":"Tomato
         Energy","slug":"tomato-energy","rank":null,"complaintsRating":null,"complaintsRatingScore":null,"complaintsNumber":null,"contactEmail":91.1,"contactRating":4,"contactSocialMedia":"N/A","contactTime":"00:00:44","guaranteeRating":0,"overallRating":3.6,"dataAvailable":false,"billAccuracyAndMeteringRating":null,"contentfulMetadata":{"tags":[]}}]}}}'
-  recorded_at: Wed, 10 Dec 2025 11:50:15 GMT
+  recorded_at: Mon, 15 Dec 2025 09:31:14 GMT
 recorded_with: VCR 6.3.1
