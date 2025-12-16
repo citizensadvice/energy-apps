@@ -79,7 +79,7 @@ jobs:
         with:
           slack_bot_token: ${{ secrets.SLACK_BOT_TOKEN }}
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          channel_id: "C01L5RJPT18" #content-platform_prod
-          title: ":x: :shield: Trivy scan failure"
+          channel_id: "C08LQKF02TA" #content-platform_security
+          title: ":x: :shield: Trivy scan failure for Energy Apps"
           message: |
             Trivy scan job failed.
