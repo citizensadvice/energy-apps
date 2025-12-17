@@ -17,10 +17,7 @@ module CsrTable
     def descriptions
       [
         guarantee_list,
-        complaints_number,
-        contact_time,
-        contact_social_media,
-        contact_email
+        complaints_number
       ]
     end
 
@@ -38,29 +35,8 @@ module CsrTable
       }
     end
 
-    def contact_time
-      {
-        term: content_tag(:p, "Average call centre wait time (hours, minutes and seconds)"),
-        description: content_tag(:p, supplier.contact_time)
-      }
-    end
-
-    def contact_social_media
-      {
-        term: content_tag(:p, "Average response time to social media messages (hours, minutes and seconds)"),
-        description: content_tag(:p, supplier.contact_social_media)
-      }
-    end
-
-    def contact_email
-      {
-        term: content_tag(:p, "Emails responded to within 2 days"),
-        description: content_tag(:p, "#{supplier.contact_email}%")
-      }
-    end
-
     def guarantee_list_render
-      renderer.render_without_breaks(supplier.guarantee_list)
+      supplier.guarantee_list ? renderer.render_without_breaks(supplier.guarantee_list) : "None"
     end
   end
 end
