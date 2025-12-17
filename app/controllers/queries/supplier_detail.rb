@@ -42,6 +42,9 @@ module Queries
         contactSmsAsync,
         contactPortalSync,
         contactPortalAsync,
+        billsAccuracySmart,
+        billsAccuracyTraditional,
+        smartOperating,
         guaranteeList {
           json
         },

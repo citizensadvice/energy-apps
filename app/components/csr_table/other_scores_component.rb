@@ -17,10 +17,7 @@ module CsrTable
     def descriptions
       [
         guarantee_list,
-        complaints_number,
-        bills_accuracy_smart,
-        bills_accuracy_traditional,
-        smart_operating
+        complaints_number
       ]
     end
 
@@ -35,27 +32,6 @@ module CsrTable
       {
         term: content_tag(:p, "Complaints to Citizens Advice, Advice Direct Scotland and the Energy Ombudsman"),
         description: content_tag(:p, "#{supplier.complaints_number} per 10,000 customers")
-      }
-    end
-
-    def bills_accuracy_smart
-      {
-        term: content_tag(:p, "Bills accuracy (smart)"),
-        description: content_tag(:p, "93.7%")
-      }
-    end
-
-    def bills_accuracy_traditional
-      {
-        term: content_tag(:p, "Bills accuracy (traditional)"),
-        description: content_tag(:p, "83.1%")
-      }
-    end
-
-    def smart_operating
-      {
-        term: content_tag(:p, "Smart operating"),
-        description: content_tag(:p, "98.5%")
       }
     end
 
