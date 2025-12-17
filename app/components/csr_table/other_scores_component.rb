@@ -36,7 +36,7 @@ module CsrTable
     end
 
     def guarantee_list_render
-      renderer.render_without_breaks(supplier.guarantee_list)
+      supplier.guarantee_list ? renderer.render_without_breaks(supplier.guarantee_list) : "None"
     end
   end
 end
