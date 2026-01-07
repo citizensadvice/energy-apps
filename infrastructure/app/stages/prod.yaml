@@ -10,6 +10,7 @@ ingress:
           - https://www.citizensadvice.org.uk/consumer/your-energy/get-a-better-energy-deal/compare-domestic-energy-suppliers-customer-service/
   enabled: true
   redirectHttpToHttps: true
+  restrictToCdn: true
   annotations:
     kubernetes.io/ingress.class: alb
     alb.ingress.kubernetes.io/scheme: internet-facing

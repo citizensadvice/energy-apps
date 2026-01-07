@@ -6,6 +6,7 @@ service:
 ingress:
   enabled: true
   redirectHttpToHttps: true
+  restrictToCdn: false
   probe:
     enabled: false
     targets:

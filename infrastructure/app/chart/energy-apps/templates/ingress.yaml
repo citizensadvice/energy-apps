@@ -9,6 +9,9 @@ metadata:
     {{- include "energy-apps.labels" . | nindent 4 }}
   {{- with .Values.ingress.annotations }}
   annotations:
+{{- if .Values.ingress.restrictToCdn }}
+    alb.ingress.kubernetes.io/security-group-prefix-lists: pl-4fa04526
+{{- end }}
     {{- toYaml . | nindent 4 }}
   {{- end }}
 spec:
