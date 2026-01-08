@@ -9,6 +9,7 @@ ingress:
           - https://energy-apps.qa.citizensadvice.org.uk
   enabled: true
   redirectHttpToHttps: true
+  restrictToCdn: true
   annotations:
     kubernetes.io/ingress.class: alb
     alb.ingress.kubernetes.io/scheme: internet-facing
