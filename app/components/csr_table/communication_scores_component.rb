@@ -40,10 +40,20 @@ module CsrTable
       descriptions
     end
 
+    def format_sync_output(time)
+      parts = time.split(":").map(&:to_i)
+      output = ""
+      output += "#{parts[0]}hrs" if parts[0] > 0
+      output += " #{parts[1]}m" if parts[1] > 0
+      output += " #{parts[2]}s" if parts[2] > 0
+      output
+    end
+
+
     def webchat_sync
       {
-        term: content_tag(:p, "Webchat sync (hours, minutes and seconds)"),
-        description: content_tag(:p, supplier.contact_webchat_sync)
+        term: content_tag(:p, "Webchat (sync)"),
+        description: content_tag(:p, format_sync_output(supplier.contact_webchat_sync))
       }
     end
 
@@ -56,8 +66,8 @@ module CsrTable
 
     def whatsapp_sync
       {
-        term: content_tag(:p, "Whatsapp sync (hours, minutes and seconds)"),
-        description: content_tag(:p, supplier.contact_whatsapp_sync)
+        term: content_tag(:p, "Whatsapp (sync)"),
+        description: content_tag(:p, format_sync_output(supplier.contact_whatsapp_sync))
       }
     end
 
@@ -70,8 +80,8 @@ module CsrTable
 
     def sms_sync
       {
-        term: content_tag(:p, "SMS sync (hours, minutes and seconds)"),
-        description: content_tag(:p, supplier.contact_sms_sync)
+        term: content_tag(:p, "SMS (sync)"),
+        description: content_tag(:p, format_sync_output(supplier.contact_sms_sync))
       }
     end
 
@@ -84,8 +94,8 @@ module CsrTable
 
     def in_app_sync
       {
-        term: content_tag(:p, "In App sync (hours, minutes and seconds)"),
-        description: content_tag(:p, supplier.contact_in_app_sync)
+        term: content_tag(:p, "In App (sync)"),
+        description: content_tag(:p, format_sync_output(supplier.contact_in_app_sync))
       }
     end
 
@@ -98,8 +108,8 @@ module CsrTable
 
     def portal_sync
       {
-        term: content_tag(:p, "Portal sync (hours, minutes and seconds)"),
-        description: content_tag(:p, supplier.contact_portal_sync)
+        term: content_tag(:p, "Portal (sync)"),
+        description: content_tag(:p, format_sync_output(supplier.contact_portal_sync))
       }
     end
 
@@ -112,8 +122,8 @@ module CsrTable
 
     def contact_time
       {
-        term: content_tag(:p, "Average call centre wait time (hours, minutes and seconds)"),
-        description: content_tag(:p, supplier.contact_time)
+        term: content_tag(:p, "Average call centre wait time"),
+        description: content_tag(:p, format_sync_output(supplier.contact_time))
       }
     end
 

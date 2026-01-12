@@ -1,7 +1,8 @@
 .cads-grid-row
   .cads-grid-col-md-9
     .other-scores
-      %h2 Communication scores
+      %h2 Communication
+      %p How long does this supplier take to get back to you?
       .communication-scores__descriptions
         = render CsrTable::DescriptionListComponent.new do |c|
           - c.with_descriptions(descriptions)
