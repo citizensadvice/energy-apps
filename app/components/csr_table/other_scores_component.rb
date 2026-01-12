@@ -30,8 +30,8 @@ module CsrTable
 
     def complaints_number
       {
-        term: content_tag(:p, "Complaints to Citizens Advice, Advice Direct Scotland and the Energy Ombudsman"),
-        description: content_tag(:p, "#{supplier.complaints_number} per 10,000 customers")
+        term: content_tag(:p, "Complaints"),
+        description: content_tag(:p, "#{supplier.complaints_number} complaints per 10,000 customers")
       }
     end
 

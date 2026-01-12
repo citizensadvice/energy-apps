@@ -24,14 +24,14 @@ module CsrTable
 
     def bills_accuracy_smart
       {
-        term: content_tag(:p, "Bills accuracy (smart)"),
+        term: content_tag(:p, "Bills Accuracy (smart meters) "),
         description: content_tag(:p, "#{supplier.bills_accuracy_smart}%")
       }
     end
 
     def bills_accuracy_traditional
       {
-        term: content_tag(:p, "Bills accuracy (traditional)"),
+        term: content_tag(:p, "Bills Accuracy (traditional meters)"),
         description: content_tag(:p, "#{supplier.bills_accuracy_traditional}%")
       }
     end
