@@ -11,6 +11,7 @@ FactoryBot.define do
     contact_rating { 2.3 }
     guarantee_rating { 3 }
     overall_rating { 4.8 }
+    bill_accuracy_and_metering_rating { 4.8 }
     contact_info { { json: JSON.parse(File.read("spec/fixtures/contact_info.json")) } }
     billing_info { { json: JSON.parse(File.read("spec/fixtures/billing_info.json")) } }
     opening_hours { { json: JSON.parse(File.read("spec/fixtures/opening_hours.json")) } }
@@ -26,6 +27,9 @@ FactoryBot.define do
       contact_time { "00:03:27" }
       contact_email { 89 }
       contact_social_media { "01:15:00" }
+      bills_accuracy_traditional { 98.8 }
+      bills_accuracy_smart { 97.2 }
+      smart_operating { 89.4 }
     end
 
     trait :missing_fuel_mix do

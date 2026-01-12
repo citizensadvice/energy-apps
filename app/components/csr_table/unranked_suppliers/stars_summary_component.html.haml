@@ -14,6 +14,11 @@
       %p.stars-summary__text
         Contact waiting time
       = render CsrTable::ScoreComponent.new(score: supplier.contact_rating)
+    -if Feature.enabled?("FF_NEW_CSR_DATA")
+      %li.stars-summary__item
+        %p.stars-summary__text
+          Billing and metering
+        = render CsrTable::ScoreComponent.new(score: supplier.bill_accuracy_and_metering_rating)
     %li.stars-summary__item
       %p.stars-summary__text
         Customer commitments

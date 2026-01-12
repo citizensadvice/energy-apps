@@ -15,12 +15,22 @@ module CsrTable
     end
 
     def descriptions
-      [
+      descriptions = [
         guarantee_list,
         complaints_number,
         contact_time,
         contact_social_media,
         contact_email
+      ]
+
+      Feature.enabled?("FF_NEW_CSR_DATA") ? descriptions + enhanced_descriptions : descriptions
+    end
+
+    def enhanced_descriptions
+      [
+        bills_accuracy_traditional,
+        bills_accuracy_smart,
+        smart_operating
       ]
     end
 
@@ -61,6 +71,27 @@ module CsrTable
 
     def guarantee_list_render
       renderer.render_without_breaks(supplier.guarantee_list)
+    end
+
+    def bills_accuracy_traditional
+      {
+        term: content_tag(:p, "Bills accuracy (traditional meter)"),
+        description: content_tag(:p, "#{supplier.bills_accuracy_traditional}%")
+      }
+    end
+
+    def bills_accuracy_smart
+      {
+        term: content_tag(:p, "Bills accuracy (smart meter)"),
+        description: content_tag(:p, "#{supplier.bills_accuracy_smart}%")
+      }
+    end
+
+    def smart_operating
+      {
+        term: content_tag(:p, "Smart operating"),
+        description: content_tag(:p, "#{supplier.smart_operating}%")
+      }
     end
   end
 end
