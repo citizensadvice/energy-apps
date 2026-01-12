@@ -11,6 +11,7 @@ FactoryBot.define do
     contact_rating { 2.3 }
     guarantee_rating { 3 }
     overall_rating { 4.8 }
+    bill_accuracy_and_metering_rating { 4.8 }
     contact_info { { json: JSON.parse(File.read("spec/fixtures/contact_info.json")) } }
     billing_info { { json: JSON.parse(File.read("spec/fixtures/billing_info.json")) } }
     opening_hours { { json: JSON.parse(File.read("spec/fixtures/opening_hours.json")) } }
