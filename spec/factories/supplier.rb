@@ -27,6 +27,7 @@ FactoryBot.define do
       contact_time { "00:03:27" }
       contact_email { 89 }
       contact_social_media { "01:15:00" }
+      bill_accuracy_and_metering_rating { 4.8 }
     end
 
     trait :missing_fuel_mix do
