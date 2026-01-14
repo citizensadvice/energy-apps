@@ -7,7 +7,7 @@ ingress:
       staticConfig:
         static:
           - https://cdn.develop.content.citizensadvice.org.uk/consumer/energy/energy-supply/save-energy-at-home/check-how-much-your-electrical-appliances-cost-to-use/
-          - https://cdn.develop.content.citizensadvice.org.uk/consumer/your-energy/get-a-better-energy-deal/compare-domestic-energy-suppliers-customer-service/
+          - https://cdn.develop.content.citizensadvice.org.uk/consumer/energy/energy-supply/get-a-better-energy-deal/compare-domestic-energy-suppliers-customer-service/
   enabled: true
   restrictToCdn: true
   annotations:
@@ -21,3 +21,4 @@ envVars:
   USE_TEST_SUPPLIERS: ${{ vars.USE_TEST_SUPPLIERS }}
   FF_SMALL_SUPPLIER_STARS: ${{ vars.FF_SMALL_SUPPLIER_STARS }}
   FF_NEW_CSR_DATA: ${{ vars.FF_NEW_CSR_DATA }}
+  FF_NEW_CSR_URL: ${{ vars.FF_NEW_CSR_URL }}
