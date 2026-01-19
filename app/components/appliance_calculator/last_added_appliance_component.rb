@@ -16,7 +16,7 @@ module ApplianceCalculator
     def dismiss_button_attrs
       {
         type: "button",
-        class: %w[last-added-appliance__dismiss js-last-added-appliance-dismiss cads-button cads-modal__close-button cads-icon_close],
+        class: %w[last-added-appliance__dismiss js-last-added-appliance-dismiss cads-button cads-modal__close-button],
         "aria-label": "Close last added appliance notice"
       }
     end

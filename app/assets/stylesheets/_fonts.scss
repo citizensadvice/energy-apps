@@ -25,13 +25,3 @@
 
   font-display: swap;
 }
-
-@font-face {
-  font-family: cads;
-  src: url("cads.eot") format("embedded-opentype"),
-    url("cads.woff") format("woff"), url("cads.ttf") format("truetype"),
-    url("cads.svg") format("svg");
-  font-weight: normal;
-  font-style: normal;
-  font-display: block;
-}
