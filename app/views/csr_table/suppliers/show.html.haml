@@ -36,10 +36,6 @@
   = render CsrTable::CommunicationScoresComponent.new(supplier)
   = render CsrTable::OtherScoresComponent.new(supplier)
 
-  .cads-prose
-    %p
-      = link_to("Find out how the scores are worked out", country_url("/consumer/energy/energy-supply/get-a-better-energy-deal/compare-domestic-energy-suppliers-customer-service1/how-the-scores-are-worked-out/"))
-
   = render CsrTable::FuelMixComponent.new(supplier)
 
   = render CsrTable::OtherInfoComponent.new(supplier)
