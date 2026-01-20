@@ -52,70 +52,70 @@ module CsrTable
 
     def webchat_sync
       {
-        term: content_tag(:p, "Webchat (sync)"),
+        term: content_tag(:p, "Average Webchat response time"),
         description: content_tag(:p, format_sync_output(supplier.contact_webchat_sync))
       }
     end
 
     def webchat_async
       {
-        term: content_tag(:p, "Webchat (async)"),
+        term: content_tag(:p, "Webchat messages responded to within 2 days"),
         description: content_tag(:p, "#{supplier.contact_webchat_async}%")
       }
     end
 
     def whatsapp_sync
       {
-        term: content_tag(:p, "Whatsapp (sync)"),
+        term: content_tag(:p, "Average Whatsapp response time"),
         description: content_tag(:p, format_sync_output(supplier.contact_whatsapp_sync))
       }
     end
 
     def whatsapp_async
       {
-        term: content_tag(:p, "Whatsapp (async)"),
+        term: content_tag(:p, "Whatsapp messages responded to within 2 days"),
         description: content_tag(:p, "#{supplier.contact_whatsapp_async}%")
       }
     end
 
     def sms_sync
       {
-        term: content_tag(:p, "SMS (sync)"),
+        term: content_tag(:p, "Average SMS response time"),
         description: content_tag(:p, format_sync_output(supplier.contact_sms_sync))
       }
     end
 
     def sms_async
       {
-        term: content_tag(:p, "SMS (async)"),
+        term: content_tag(:p, "SMS messages responded to within 2 days"),
         description: content_tag(:p, "#{supplier.contact_sms_async}%")
       }
     end
 
     def in_app_sync
       {
-        term: content_tag(:p, "In App (sync)"),
+        term: content_tag(:p, "Average response time using the supplier's app"),
         description: content_tag(:p, format_sync_output(supplier.contact_in_app_sync))
       }
     end
 
     def in_app_async
       {
-        term: content_tag(:p, "In App (async)"),
+        term: content_tag(:p, "Messages responded to within 2 days within the supplier's app"),
         description: content_tag(:p, "#{supplier.contact_in_app_async}%")
       }
     end
 
     def portal_sync
       {
-        term: content_tag(:p, "Portal (sync)"),
+        term: content_tag(:p, "Average response time using a customer account portal"),
         description: content_tag(:p, format_sync_output(supplier.contact_portal_sync))
       }
     end
 
     def portal_async
       {
-        term: content_tag(:p, "Portal (async)"),
+        term: content_tag(:p, "Messages responded to within 2 days using a customer account portal"),
         description: content_tag(:p, "#{supplier.contact_portal_async}%")
       }
     end

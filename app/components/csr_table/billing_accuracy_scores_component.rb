@@ -38,7 +38,7 @@ module CsrTable
 
     def smart_operating
       {
-        term: content_tag(:p, "Smart operating"),
+        term: content_tag(:p, "Smart meters working correctly"),
         description: content_tag(:p, "#{supplier.smart_operating}%")
       }
     end
