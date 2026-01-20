@@ -43,9 +43,9 @@ module CsrTable
     def format_sync_output(time)
       parts = time.split(":").map(&:to_i)
       output = ""
-      output += "#{parts[0]}hrs" if parts[0] > 0
-      output += " #{parts[1]}m" if parts[1] > 0
-      output += " #{parts[2]}s" if parts[2] > 0
+      output += "#{parts[0]} hours" if parts[0] > 0
+      output += " #{parts[1]} minutes " if parts[1] > 0
+      output += " #{parts[2]} seconds" if parts[2] > 0
       output
     end
 

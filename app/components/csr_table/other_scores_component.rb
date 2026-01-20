@@ -16,8 +16,7 @@ module CsrTable
 
     def descriptions
       [
-        guarantee_list,
-        complaints_number
+        guarantee_list
       ]
     end
 
@@ -25,13 +24,6 @@ module CsrTable
       {
         term: content_tag(:p, "Customer commitments"),
         description: guarantee_list_render
-      }
-    end
-
-    def complaints_number
-      {
-        term: content_tag(:p, "Complaints"),
-        description: content_tag(:p, "#{supplier.complaints_number} complaints per 10,000 customers")
       }
     end
 

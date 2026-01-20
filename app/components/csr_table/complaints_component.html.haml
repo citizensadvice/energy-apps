@@ -1,0 +1,9 @@
+.cads-grid-row
+  .cads-grid-col-md-9
+    .other-scores
+      %h2 Complaints received
+      .cads-prose
+        %p If a supplier gets a low number of complaints, we give them a higher star rating.
+      .other-scores__descriptions
+        = render CsrTable::DescriptionListComponent.new do |c|
+          - c.with_descriptions(descriptions)
