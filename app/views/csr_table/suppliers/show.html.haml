@@ -33,6 +33,7 @@
       %p
         = link_to("Find out how the scores are worked out", country_url("/consumer/energy/energy-supply/get-a-better-energy-deal/compare-domestic-energy-suppliers-customer-service1/how-the-scores-are-worked-out/"))
     = render CsrTable::ComplaintsScoresComponent.new(supplier)
+    = render CsrTable::BillingAndMeteringScoresComponent.new(supplier)
 
   - else
     = render CsrTable::OtherScoresComponent.new(supplier)
