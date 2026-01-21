@@ -32,6 +32,41 @@ FactoryBot.define do
       contact_social_media { "01:15:00" }
     end
 
+    trait :sync_contact do
+      contact_time { "00:03:27" }
+      contact_email { 89 }
+      contact_webchat_sync { "00:03:00" }
+      contact_whatsapp_sync { "01:23:10" }
+      contact_sms_sync { "04:47:00" }
+      contact_in_app_sync { "00:39:16" }
+      contact_portal_sync { "01:01:01" }
+    end
+
+    trait :async_contact do
+      contact_time { "00:03:27" }
+      contact_email { 89 }
+      contact_webchat_async { 45.7 }
+      contact_whatsapp_async { 89.3 }
+      contact_sms_async { 99.9 }
+      contact_in_app_async { 74.2 }
+      contact_portal_async { 82.9 }
+    end
+
+    trait :no_sync_or_async_contact do
+      contact_time { "00:03:27" }
+      contact_email { 89 }
+      contact_webchat_sync { nil }
+      contact_whatsapp_sync { nil }
+      contact_sms_sync { nil }
+      contact_in_app_sync { nil }
+      contact_portal_sync { nil }
+      contact_webchat_async { nil }
+      contact_whatsapp_async { nil }
+      contact_sms_async { nil }
+      contact_in_app_async { nil }
+      contact_portal_async { nil }
+    end
+
     trait :missing_fuel_mix do
       fuel_mix { nil }
     end
@@ -54,6 +89,18 @@ FactoryBot.define do
 
     trait(:ranked) do
       data factory: %i[supplier_data ranked]
+    end
+
+    trait(:sync_contact) do
+      data factory: %i[supplier_data sync_contact]
+    end
+
+    trait(:async_contact) do
+      data factory: %i[supplier_data async_contact]
+    end
+
+    trait(:no_sync_or_async_contact) do
+      data factory: %i[supplier_data no_sync_or_async_contact]
     end
 
     trait(:whitelabelled) do
