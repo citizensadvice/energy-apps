@@ -24,11 +24,20 @@
     %p
       = link_to("Check the full table to compare more energy suppliers' customer service", suppliers_path(country: current_country))
 
-  = render CsrTable::OtherScoresComponent.new(supplier)
+  - if Feature.enabled?("FF_NEW_CSR_DATA")
+    .cads-prose
+      %h2
+        More information
+      %p
+        We give energy suppliers a score out of 5 for each category, based on various data. You can look at this data in more detail below.
+      %p
+        = link_to("Find out how the scores are worked out", country_url("/consumer/energy/energy-supply/get-a-better-energy-deal/compare-domestic-energy-suppliers-customer-service1/how-the-scores-are-worked-out/"))
+  - else
+    = render CsrTable::OtherScoresComponent.new(supplier)
 
-  .cads-prose
-    %p
-      = link_to("Find out how the scores are worked out", country_url("/consumer/energy/energy-supply/get-a-better-energy-deal/compare-domestic-energy-suppliers-customer-service1/how-the-scores-are-worked-out/"))
+    .cads-prose
+      %p
+        = link_to("Find out how the scores are worked out", country_url("/consumer/energy/energy-supply/get-a-better-energy-deal/compare-domestic-energy-suppliers-customer-service1/how-the-scores-are-worked-out/"))
 
   = render CsrTable::FuelMixComponent.new(supplier)
 
