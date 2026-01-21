@@ -12,7 +12,11 @@ class Supplier
            :guarantee_list, :overall_rating, :data_available, :fuel_mix,
            :opening_hours, :bill_accuracy_and_metering_rating,
            :bills_accuracy_smart, :bills_accuracy_traditional,
-           :smart_operating, to: :data
+           :smart_operating, :contact_webchat_sync, :contact_webchat_async,
+           :contact_whatsapp_sync, :contact_whatsapp_async,
+           :contact_in_app_sync, :contact_in_app_async,
+           :contact_sms_sync, :contact_sms_async, :contact_portal_sync,
+           :contact_portal_async, to: :data
 
   def self.fetch_all
     response = Contentful::Graphql::Client.query(Queries::Suppliers)
