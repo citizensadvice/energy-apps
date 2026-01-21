@@ -1,10 +1,9 @@
 .cads-grid-row
   .cads-grid-col-md-9
-    .billing-scores
+    .section-scores
       %h2 Billing and metering
       .cads-prose
         %p
           We measure billing accuracy by looking at how many bills are based on a meter reading, rather than an estimate.
-      .billing-scores__descriptions
-        = render CsrTable::DescriptionListComponent.new do |c|
-          - c.with_descriptions(descriptions)
+      = render CsrTable::DescriptionListComponent.new do |c|
+        - c.with_descriptions(descriptions)
