@@ -12,6 +12,9 @@ FactoryBot.define do
     guarantee_rating { 3 }
     overall_rating { 4.8 }
     bill_accuracy_and_metering_rating { 4.8 }
+    bills_accuracy_smart { 98.3 }
+    bills_accuracy_traditional { 82.9 }
+    smart_operating { 91.7 }
     contact_info { { json: JSON.parse(File.read("spec/fixtures/contact_info.json")) } }
     billing_info { { json: JSON.parse(File.read("spec/fixtures/billing_info.json")) } }
     opening_hours { { json: JSON.parse(File.read("spec/fixtures/opening_hours.json")) } }
