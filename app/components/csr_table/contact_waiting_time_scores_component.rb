@@ -14,6 +14,10 @@ module CsrTable
       supplier.present?
     end
 
+    # Not all suppliers will provide data for each of the customer contact channels;
+    # and if a supplier provides synchronous data then they won't provide
+    # asynchronous data, and vice versa. We therefore need to determine which fields
+    # to render based on whether there is a value present or not
     def descriptions
       @descriptions = [
         contact_time,
@@ -25,11 +29,6 @@ module CsrTable
     end
 
     # rubocop:disable Metrics/AbcSize
-
-    # Not all suppliers will provide data for each of the customer contact channels;
-    # and if a supplier provides synchronous data then they won't provide
-    # asynchronous data, and vice versa. We therefore need to determine which fields
-    # to render based on whether there is a value present or not
     def check_for_sync_data
       @descriptions << webchat_sync if supplier.contact_webchat_sync
       @descriptions << whatsapp_sync if supplier.contact_whatsapp_sync
@@ -62,7 +61,12 @@ module CsrTable
     end
 
     def format_sync_output(time_str)
-      time_str
+      intervals = time_str.split(":").map(&:to_i)
+      waiting_time_in_seconds = (intervals[0] * 60 * 60) + (intervals[1] * 60) + intervals[2]
+      human_readable_time = ActiveSupport::Duration.build(waiting_time_in_seconds).inspect
+
+      # Render the average waiting time in this format: 1 hour 56 minutes 23 seconds
+      human_readable_time.gsub("and ", "").delete(",")
     end
 
     def webchat_sync
