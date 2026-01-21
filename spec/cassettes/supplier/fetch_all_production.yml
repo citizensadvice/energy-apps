@@ -59,16 +59,16 @@ http_interactions:
       - 1.1 varnish, 1.1 varnish
       Accept-Ranges:
       - bytes
-      Date:
-      - Wed, 21 Jan 2026 08:55:19 GMT
       Age:
-      - '29'
+      - '0'
+      Date:
+      - Wed, 21 Jan 2026 16:27:34 GMT
       X-Served-By:
-      - cache-ewr-kewr1740074-EWR, cache-lcy-eglc8600042-LCY
+      - cache-ewr-kewr1740074-EWR, cache-lcy-eglc8600041-LCY
       X-Cache-Hits:
-      - 0, 1
+      - 0, 0
       X-Timer:
-      - S1768985719.270432,VS0,VE1
+      - S1769012855.840148,VS0,VE147
       Access-Control-Allow-Headers:
       - accept,accept-language,authorization,cache-control,content-length,content-range,content-type,dnt,destination,expires,if-match,if-modified-since,if-none-match,keep-alive,last-modified,origin,pragma,range,user-agent,x-http-method-override,x-mx-reqtoken,x-requested-with,x-contentful-content-type,x-contentful-enable-alpha-feature,x-contentful-organization,x-contentful-resource-resolution,x-contentful-skip-transformation,x-contentful-user-agent,x-contentful-version
       Access-Control-Allow-Methods:
@@ -82,9 +82,9 @@ http_interactions:
       Strict-Transport-Security:
       - max-age=15768000
       X-Cache:
-      - HIT
+      - MISS
       X-Contentful-Request-Id:
-      - 0ab65f22-0d47-456f-9bc8-8dd2fa976b05
+      - de21ba14-3b91-4a74-9ca8-3497ea7b3dd4
     body:
       encoding: UTF-8
       string: '{"data":{"energySupplierCollection":{"total":20,"items":[{"whitelabelSupplier":null,"guaranteeList":{"json":{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Switch
@@ -316,5 +316,5 @@ http_interactions:
         9am-5pm\nSaturday: Closed\nSunday: Closed","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"document"}},"name":"London
         Power","slug":"london-power","rank":null,"complaintsRating":null,"complaintsRatingScore":null,"complaintsNumber":null,"contactEmail":null,"contactRating":null,"contactSocialMedia":"","contactTime":"","guaranteeRating":null,"overallRating":null,"dataAvailable":false,"billAccuracyAndMeteringRating":null,"contentfulMetadata":{"tags":[]},"whitelabelSupplier":{"name":"Octopus
         Energy"}}]}}}'
-  recorded_at: Wed, 21 Jan 2026 08:55:19 GMT
+  recorded_at: Wed, 21 Jan 2026 16:27:34 GMT
 recorded_with: VCR 6.4.0

@@ -40,7 +40,7 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - '8458794085977998570'
+      - '13355050089363026068'
       Cache-Control:
       - max-age=0
       X-Contentful-Graphql-Query-Cost:
@@ -60,15 +60,15 @@ http_interactions:
       Accept-Ranges:
       - bytes
       Date:
-      - Wed, 21 Jan 2026 08:55:19 GMT
+      - Wed, 21 Jan 2026 16:27:34 GMT
       Age:
-      - '31'
+      - '1020'
       X-Served-By:
-      - cache-ewr-kewr1740070-EWR, cache-lcy-eglc8600041-LCY
+      - cache-ewr-kewr1740070-EWR, cache-lcy-eglc8600086-LCY
       X-Cache-Hits:
-      - 0, 1
+      - 0, 2
       X-Timer:
-      - S1768985720.890616,VS0,VE1
+      - S1769012855.637701,VS0,VE0
       Access-Control-Allow-Headers:
       - accept,accept-language,authorization,cache-control,content-length,content-range,content-type,dnt,destination,expires,if-match,if-modified-since,if-none-match,keep-alive,last-modified,origin,pragma,range,user-agent,x-http-method-override,x-mx-reqtoken,x-requested-with,x-contentful-content-type,x-contentful-enable-alpha-feature,x-contentful-organization,x-contentful-resource-resolution,x-contentful-skip-transformation,x-contentful-user-agent,x-contentful-version
       Access-Control-Allow-Methods:
@@ -84,7 +84,7 @@ http_interactions:
       X-Cache:
       - HIT
       X-Contentful-Request-Id:
-      - 89a45ec8-9fbf-446d-9de5-82bbdfc506b0
+      - 56efb737-a367-40c2-9c11-54b2c36a39f5
     body:
       encoding: UTF-8
       string: '{"data":{"energySupplierCollection":{"total":10,"items":[{"whitelabelSupplier":null,"guaranteeList":{"json":{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Switch
@@ -96,9 +96,9 @@ http_interactions:
         fuel: 0%","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"list-item"},{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Nuclear:
         0%","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"list-item"},{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Renewable:
         100%","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"list-item"},{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Other:
-        0%","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"list-item"}],"nodeType":"unordered-list"},{"data":{},"content":[{"data":{},"marks":[],"value":"","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"document"}},"openingHours":{"json":{"nodeType":"document","data":{},"content":[{"nodeType":"paragraph","data":{},"content":[{"nodeType":"text","value":"Monday:
+        0%","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"list-item"}],"nodeType":"unordered-list"},{"data":{},"content":[{"data":{},"marks":[],"value":"","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"document"}},"openingHours":{"json":{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Monday:
         9am - 5pm\nTuesday: 9am - 5pm\nWednesday: 9am - 5pm\nThursday: 9am - 5pm\nFriday:
-        9am - 4pm\nSaturday: Closed\nSunday: Closed","marks":[],"data":{}}]}]}},"name":"Lil
+        9am - 4pm\nSaturday: Closed\nSunday: Closed","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"document"}},"name":"Lil
         Tiny Energy Inc","slug":"lil-tiny-energy-inc","rank":901,"complaintsRating":1,"complaintsRatingScore":1.5,"complaintsNumber":77,"contactEmail":51.4,"contactRating":3.3,"contactSocialMedia":"00:01:48","contactTime":"00:02:32","guaranteeRating":3,"overallRating":4.8,"dataAvailable":true,"billAccuracyAndMeteringRating":1,"contentfulMetadata":{"tags":[{"id":"test"}]}},{"whitelabelSupplier":null,"guaranteeList":{"json":{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Switch
         Guarantee, Vulnerability Commitment","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"document"}},"contactInfo":{"json":{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Telephone:
         0808 164 1088\nEmail: hello@octopus.energy\nWebsite: octopus.energy","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"document"}},"otherContactInfo":{"json":{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Web
@@ -128,8 +128,8 @@ http_interactions:
         billing info\nsome more","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"document"}},"fuelMix":{"json":{"data":{},"content":[{"data":{},"content":[{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"green:
         100%\n","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"list-item"}],"nodeType":"unordered-list"},{"data":{},"content":[{"data":{},"marks":[],"value":"","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"document"}},"openingHours":{"json":{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"some
         opening hours\nsome more","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"document"}},"name":"Another
-        energy supplier","slug":"another-energy-supplier","rank":904,"complaintsRating":3,"complaintsRatingScore":3.3,"complaintsNumber":53,"contactEmail":80,"contactRating":3.8,"contactSocialMedia":"3:23:00","contactTime":"00:08:25","guaranteeRating":3,"overallRating":3.8,"dataAvailable":true,"billAccuracyAndMeteringRating":3,"whitelabelSupplier":{"name":"Big
-        Energy Inc"},"contentfulMetadata":{"tags":[{"id":"test"}]}},{"whitelabelSupplier":null,"guaranteeList":{"json":{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Switch
+        energy supplier","slug":"another-energy-supplier","rank":904,"complaintsRating":3,"complaintsRatingScore":3.3,"complaintsNumber":53,"contactEmail":80,"contactRating":3.8,"contactSocialMedia":"3:23:00","contactTime":"00:08:25","guaranteeRating":3,"overallRating":3.8,"dataAvailable":true,"billAccuracyAndMeteringRating":3,"contentfulMetadata":{"tags":[{"id":"test"}]},"whitelabelSupplier":{"name":"Big
+        Energy Inc"}},{"whitelabelSupplier":null,"guaranteeList":{"json":{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Switch
         Guarantee, Vulnerability Commitment","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"document"}},"contactInfo":{"json":{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Telephone:
         0808 164 1088\nEmail: hello@octopus.energy\nWebsite: octopus.energy","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"document"}},"otherContactInfo":null,"billingInfo":{"json":{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Direct
         debit: Yes\nCash or cheque: No\nPrepayment: Yes","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"document"}},"fuelMix":{"json":{"data":{},"content":[{"data":{},"content":[{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Fossil
@@ -160,8 +160,8 @@ http_interactions:
         100%","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"list-item"},{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"fossil
         fuels: 0%","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"list-item"}],"nodeType":"unordered-list"},{"data":{},"content":[{"data":{},"marks":[],"value":"","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"document"}},"openingHours":{"json":{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"some
         opening hours\nsome more","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"document"}},"name":"Energy
-        Supplier","slug":"energy-supplier","rank":907,"complaintsRating":3,"complaintsRatingScore":3.4,"complaintsNumber":52,"contactEmail":80,"contactRating":3.8,"contactSocialMedia":"01:23:17","contactTime":"00:08:00","guaranteeRating":0,"overallRating":1.7,"dataAvailable":true,"billAccuracyAndMeteringRating":2,"whitelabelSupplier":{"name":"Big
-        Energy Inc"},"contentfulMetadata":{"tags":[{"id":"test"}]}},{"guaranteeList":{"json":{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"The\nGuarantee\nList","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"document"}},"contactInfo":{"json":{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Telephone:
+        Supplier","slug":"energy-supplier","rank":907,"complaintsRating":3,"complaintsRatingScore":3.4,"complaintsNumber":52,"contactEmail":80,"contactRating":3.8,"contactSocialMedia":"01:23:17","contactTime":"00:08:00","guaranteeRating":0,"overallRating":1.7,"dataAvailable":true,"billAccuracyAndMeteringRating":2,"contentfulMetadata":{"tags":[{"id":"test"}]},"whitelabelSupplier":{"name":"Big
+        Energy Inc"}},{"guaranteeList":{"json":{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"The\nGuarantee\nList","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"document"}},"contactInfo":{"json":{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Telephone:
         0330 1239540\nEmail: No\nWebsite: logicor-energy.co.uk","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"document"}},"otherContactInfo":{"json":{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Web
         Chat: No\nRing backs: Yes\nMobile hotline:  No\nMinicom / Text: No","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"document"}},"billingInfo":{"json":{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Direct
         debit: Yes\nCash or cheque: No\nPrepayment: No","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"document"}},"fuelMix":{"json":{"nodeType":"document","data":{},"content":[{"nodeType":"unordered-list","data":{},"content":[{"nodeType":"list-item","data":{},"content":[{"nodeType":"paragraph","data":{},"content":[{"nodeType":"text","value":"Fossil
@@ -171,8 +171,8 @@ http_interactions:
         5%","marks":[],"data":{}}]}]}]},{"nodeType":"paragraph","data":{},"content":[{"nodeType":"text","value":"","marks":[],"data":{}}]}]}},"openingHours":{"json":{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Monday:
         8am - 8pm,\nTuesday: 8am - 8pm,\nWednesday: 8am - 8pm,\nThursday: 8am - 8pm,\nFriday:
         8am - 8pm,\nSaturday: 8am - 6pm,\nSunday: Closed,","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"document"}},"name":"Kenergy
-        Inc","slug":"kenergy-inc","rank":null,"complaintsRating":null,"complaintsRatingScore":null,"complaintsNumber":null,"contactEmail":null,"contactRating":null,"contactSocialMedia":null,"contactTime":null,"guaranteeRating":null,"overallRating":null,"dataAvailable":false,"billAccuracyAndMeteringRating":null,"whitelabelSupplier":{"name":"Big
-        Energy Inc"},"contentfulMetadata":{"tags":[{"id":"test"}]}},{"whitelabelSupplier":null,"guaranteeList":{"json":{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"The\nGuarantee\nList","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"document"}},"contactInfo":{"json":{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Telephone:
+        Inc","slug":"kenergy-inc","rank":null,"complaintsRating":null,"complaintsRatingScore":null,"complaintsNumber":null,"contactEmail":null,"contactRating":null,"contactSocialMedia":null,"contactTime":null,"guaranteeRating":null,"overallRating":null,"dataAvailable":false,"billAccuracyAndMeteringRating":null,"contentfulMetadata":{"tags":[{"id":"test"}]},"whitelabelSupplier":{"name":"Big
+        Energy Inc"}},{"whitelabelSupplier":null,"guaranteeList":{"json":{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"The\nGuarantee\nList","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"document"}},"contactInfo":{"json":{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Telephone:
         0330 1239540\nEmail: No\nWebsite: logicor-energy.co.uk","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"document"}},"otherContactInfo":null,"billingInfo":{"json":{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Direct
         debit: Yes\nCash or cheque: No\nPrepayment: No","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"document"}},"fuelMix":{"json":{"data":{},"content":[{"data":{},"content":[{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Fossil
         fuel: 64%","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"list-item"},{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Nuclear:
@@ -192,5 +192,5 @@ http_interactions:
         4%","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"list-item"}],"nodeType":"unordered-list"},{"data":{},"content":[{"data":{},"marks":[],"value":"","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"document"}},"openingHours":{"json":{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"sometimes
         open","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"document"}},"name":"Beach
         Kenergy","slug":"beach-kenergy","rank":null,"complaintsRating":3,"complaintsRatingScore":null,"complaintsNumber":null,"contactEmail":null,"contactRating":1,"contactSocialMedia":null,"contactTime":null,"guaranteeRating":3,"overallRating":3.5,"dataAvailable":false,"billAccuracyAndMeteringRating":4,"contentfulMetadata":{"tags":[{"id":"test"}]}}]}}}'
-  recorded_at: Wed, 21 Jan 2026 08:55:19 GMT
+  recorded_at: Wed, 21 Jan 2026 16:27:34 GMT
 recorded_with: VCR 6.4.0
