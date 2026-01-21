@@ -9,7 +9,7 @@ http_interactions:
         ContentfulMetadataTagsFilter, $slug: String) {\n  energySupplierCollection(order:
         rank_ASC, where: {contentfulMetadata: {tags: $tag_filter}, OR: [{slug: $slug},
         {rank_in: $top_three_ranks}]}) {\n    total\n    items {\n      name\n      whitelabelSupplier
-        {\n        name\n      }\n      slug\n      rank\n      complaintsRating\n      complaintsRatingScore\n      complaintsNumber\n      contactEmail\n      contactRating\n      contactSocialMedia\n      contactTime\n      guaranteeRating\n      overallRating\n      dataAvailable\n      billAccuracyAndMeteringRating\n      guaranteeList
+        {\n        name\n      }\n      slug\n      rank\n      complaintsRating\n      complaintsRatingScore\n      complaintsNumber\n      contactEmail\n      contactRating\n      contactSocialMedia\n      contactTime\n      guaranteeRating\n      overallRating\n      dataAvailable\n      billAccuracyAndMeteringRating\n      billsAccuracySmart\n      billsAccuracyTraditional\n      smartOperating\n      guaranteeList
         {\n        json\n      }\n      contactInfo {\n        json\n      }\n      otherContactInfo
         {\n        json\n      }\n      billingInfo {\n        json\n      }\n      fuelMix
         {\n        json\n      }\n      openingHours {\n        json\n      }\n    }\n  }\n}","operationName":"Queries__SupplierDetail","variables":{"slug":"invalid-supplier","top_three_ranks":[901,902,903],"tag_filter":{"id_contains_some":"test"}},"context":{}}'
@@ -36,11 +36,11 @@ http_interactions:
       Connection:
       - keep-alive
       Content-Length:
-      - '7396'
+      - '7580'
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - '18097500079168141894'
+      - '1832878892005738253'
       Cache-Control:
       - max-age=0
       X-Contentful-Graphql-Query-Cost:
@@ -60,15 +60,15 @@ http_interactions:
       Accept-Ranges:
       - bytes
       Date:
-      - Wed, 10 Dec 2025 11:50:16 GMT
+      - Wed, 21 Jan 2026 08:55:19 GMT
       Age:
-      - '25'
+      - '30'
       X-Served-By:
-      - cache-ewr-kewr1740030-EWR, cache-lcy-eglc8600046-LCY
+      - cache-ewr-kewr1740051-EWR, cache-lcy-eglc8600056-LCY
       X-Cache-Hits:
       - 0, 1
       X-Timer:
-      - S1765367416.091315,VS0,VE1
+      - S1768985719.469398,VS0,VE1
       Access-Control-Allow-Headers:
       - accept,accept-language,authorization,cache-control,content-length,content-range,content-type,dnt,destination,expires,if-match,if-modified-since,if-none-match,keep-alive,last-modified,origin,pragma,range,user-agent,x-http-method-override,x-mx-reqtoken,x-requested-with,x-contentful-content-type,x-contentful-enable-alpha-feature,x-contentful-organization,x-contentful-resource-resolution,x-contentful-skip-transformation,x-contentful-user-agent,x-contentful-version
       Access-Control-Allow-Methods:
@@ -84,45 +84,45 @@ http_interactions:
       X-Cache:
       - HIT
       X-Contentful-Request-Id:
-      - 965dca98-d331-4605-96f0-404a8444846d
+      - 6fcf4e0f-01c6-4003-ad85-661dfd25c596
     body:
       encoding: UTF-8
       string: '{"data":{"energySupplierCollection":{"total":3,"items":[{"whitelabelSupplier":null,"guaranteeList":{"json":{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Switch
         Guarantee","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"document"}},"contactInfo":{"json":{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Telephone:
-        0808 164 1088,\nEmail: hello@octopus.energy,\nWebsite: octopus.energy,","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"document"}},"otherContactInfo":{"json":{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Web
-        Chat: No,\nRing backs: No,\nMobile hotline: No,\nMinicom / Text: No,\nSignVideo:
+        0808 164 1088\nEmail: hello@octopus.energy\nWebsite: octopus.energy","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"document"}},"otherContactInfo":{"json":{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Web
+        Chat: No\nRing backs: No\nMobile hotline: No\nMinicom / Text: No\nSignVideo:
         Yes","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"document"}},"billingInfo":{"json":{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Direct
-        debit: Yes,\nCash or cheque: Yes,\nPrepayment: Yes,","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"document"}},"fuelMix":{"json":{"data":{},"content":[{"data":{},"content":[{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Fossil
+        debit: Yes\nCash or cheque: Yes\nPrepayment: Yes","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"document"}},"fuelMix":{"json":{"data":{},"content":[{"data":{},"content":[{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Fossil
         fuel: 0%","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"list-item"},{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Nuclear:
         0%","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"list-item"},{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Renewable:
         100%","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"list-item"},{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Other:
-        0%","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"list-item"}],"nodeType":"unordered-list"},{"data":{},"content":[{"data":{},"marks":[],"value":"","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"document"}},"openingHours":{"json":{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Monday:
-        9am - 5pm,\nTuesday: 9am - 5pm,\nWednesday: 9am - 5pm,\nThursday: 9am - 5pm,\nFriday:
-        9am - 4pm,\nSaturday: Closed, \nSunday: Closed,","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"document"}},"name":"Lil
-        Tiny Energy Inc","slug":"lil-tiny-energy-inc","rank":901,"complaintsRating":1,"complaintsRatingScore":1.5,"complaintsNumber":77,"contactEmail":51.4,"contactRating":3.3,"contactSocialMedia":"00:01:48","contactTime":"00:02:32","guaranteeRating":3,"overallRating":4.8,"dataAvailable":true,"billAccuracyAndMeteringRating":null},{"whitelabelSupplier":null,"guaranteeList":{"json":{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Switch
+        0%","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"list-item"}],"nodeType":"unordered-list"},{"data":{},"content":[{"data":{},"marks":[],"value":"","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"document"}},"openingHours":{"json":{"nodeType":"document","data":{},"content":[{"nodeType":"paragraph","data":{},"content":[{"nodeType":"text","value":"Monday:
+        9am - 5pm\nTuesday: 9am - 5pm\nWednesday: 9am - 5pm\nThursday: 9am - 5pm\nFriday:
+        9am - 4pm\nSaturday: Closed\nSunday: Closed","marks":[],"data":{}}]}]}},"name":"Lil
+        Tiny Energy Inc","slug":"lil-tiny-energy-inc","rank":901,"complaintsRating":1,"complaintsRatingScore":1.5,"complaintsNumber":77,"contactEmail":51.4,"contactRating":3.3,"contactSocialMedia":"00:01:48","contactTime":"00:02:32","guaranteeRating":3,"overallRating":4.8,"dataAvailable":true,"billAccuracyAndMeteringRating":1,"billsAccuracySmart":92.8,"billsAccuracyTraditional":89.7,"smartOperating":95.8},{"whitelabelSupplier":null,"guaranteeList":{"json":{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Switch
         Guarantee, Vulnerability Commitment","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"document"}},"contactInfo":{"json":{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Telephone:
         0808 164 1088\nEmail: hello@octopus.energy\nWebsite: octopus.energy","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"document"}},"otherContactInfo":{"json":{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Web
         Chat: No\nRing backs: No\nMobile hotline: No\nMinicom / Text: No","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"document"}},"billingInfo":{"json":{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Direct
-        debit: No,\nCash or cheque: Yes,\nPrepayment: Yes,","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"document"}},"fuelMix":{"json":{"data":{},"content":[{"data":{},"content":[{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Fossil
+        debit: No\nCash or cheque: Yes\nPrepayment: Yes","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"document"}},"fuelMix":{"json":{"data":{},"content":[{"data":{},"content":[{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Fossil
         fuel: 0%","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"list-item"},{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Nuclear:
         0%","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"list-item"},{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Renewable:
         100%","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"list-item"},{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Other:
-        0%","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"list-item"}],"nodeType":"unordered-list"},{"data":{},"content":[{"data":{},"marks":[],"value":"","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"document"}},"openingHours":{"json":{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Monday:
-        9am - 5pm,\nTuesday: 9am - 5pm,\nWednesday: 9am - 5pm,\nThursday: 9am - 5pm,\nFriday:
-        9am - 4pm,\nSaturday: Closed, \nSunday: Closed,","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"document"}},"name":"Big
-        Energy Inc","slug":"big-energy-inc","rank":902,"complaintsRating":3,"complaintsRatingScore":3.2,"complaintsNumber":25.8,"contactEmail":57.4,"contactRating":3.2,"contactSocialMedia":"00:01:48","contactTime":"00:02:45","guaranteeRating":5,"overallRating":3.9,"dataAvailable":true,"billAccuracyAndMeteringRating":null},{"whitelabelSupplier":null,"guaranteeList":{"json":{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Switch
+        0%","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"list-item"}],"nodeType":"unordered-list"},{"data":{},"content":[{"data":{},"marks":[],"value":"","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"document"}},"openingHours":{"json":{"nodeType":"document","data":{},"content":[{"nodeType":"paragraph","data":{},"content":[{"nodeType":"text","value":"Monday:
+        9am - 5pm\nTuesday: 9am - 5pm\nWednesday: 9am - 5pm\nThursday: 9am - 5pm\nFriday:
+        9am - 4pm\nSaturday: Closed\nSunday: Closed","marks":[],"data":{}}]}]}},"name":"Big
+        Energy Inc","slug":"big-energy-inc","rank":902,"complaintsRating":3,"complaintsRatingScore":3.2,"complaintsNumber":25.8,"contactEmail":57.4,"contactRating":3.2,"contactSocialMedia":"00:01:48","contactTime":"00:02:45","guaranteeRating":5,"overallRating":3.9,"dataAvailable":true,"billAccuracyAndMeteringRating":3,"billsAccuracySmart":86.8,"billsAccuracyTraditional":91.2,"smartOperating":94.3},{"whitelabelSupplier":null,"guaranteeList":{"json":{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Switch
         Guarantee, Vulnerability Commitment","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"document"}},"contactInfo":{"json":{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Telephone:
-        0808 164 1088,\nEmail: hello@octopus.energy,\nWebsite: octopus.energy,","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"document"}},"otherContactInfo":{"json":{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Web
-        Chat: No,\nRing backs: No,\nMobile hotline: No,\nMinicom / Text: No,","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"document"}},"billingInfo":{"json":{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Direct
-        debit: Yes,\nCash or cheque: Yes,\nPrepayment: Yes,","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"document"}},"fuelMix":{"json":{"data":{},"content":[{"data":{},"content":[{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Fossil
+        0808 164 1088\nEmail: hello@octopus.energy\nWebsite: octopus.energy","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"document"}},"otherContactInfo":{"json":{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Web
+        Chat: No\nRing backs: No\nMobile hotline: No\nMinicom / Text: No","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"document"}},"billingInfo":{"json":{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Direct
+        debit: Yes\nCash or cheque: Yes\nPrepayment: Yes","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"document"}},"fuelMix":{"json":{"data":{},"content":[{"data":{},"content":[{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Fossil
         fuel: 0%","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"list-item"},{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Nuclear:
         0%","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"list-item"},{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Renewable:
         100%","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"list-item"},{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Other:
-        0%","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"list-item"}],"nodeType":"unordered-list"},{"data":{},"content":[{"data":{},"marks":[],"value":"","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"document"}},"openingHours":{"json":{"data":{},"content":[{"data":{},"content":[{"data":{},"marks":[],"value":"Monday:
-        9am - 5pm,\nTuesday: 9am - 5pm,\nWednesday: 9am - 5pm,\nThursday: 9am - 5pm,\nFriday:
-        9am - 4pm,\nSaturday: Closed, \nSunday: Closed,","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"document"}},"name":"Medium
-        Energy Inc","slug":"medium-energy-inc","rank":903,"complaintsRating":2,"complaintsRatingScore":2.3,"complaintsNumber":29.8,"contactEmail":51.4,"contactRating":3.2,"contactSocialMedia":"01:48:00","contactTime":"00:02:45","guaranteeRating":5,"overallRating":3.1,"dataAvailable":true,"billAccuracyAndMeteringRating":null}]}}}'
-  recorded_at: Wed, 10 Dec 2025 11:50:16 GMT
+        0%","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"list-item"}],"nodeType":"unordered-list"},{"data":{},"content":[{"data":{},"marks":[],"value":"","nodeType":"text"}],"nodeType":"paragraph"}],"nodeType":"document"}},"openingHours":{"json":{"nodeType":"document","data":{},"content":[{"nodeType":"paragraph","data":{},"content":[{"nodeType":"text","value":"Monday:
+        9am - 5pm\nTuesday: 9am - 5pm\nWednesday: 9am - 5pm\nThursday: 9am - 5pm\nFriday:
+        9am - 4pm\nSaturday: Closed\nSunday: Closed","marks":[],"data":{}}]}]}},"name":"Medium
+        Energy Inc","slug":"medium-energy-inc","rank":903,"complaintsRating":2,"complaintsRatingScore":2.3,"complaintsNumber":29.8,"contactEmail":51.4,"contactRating":3.2,"contactSocialMedia":"01:48:00","contactTime":"00:02:45","guaranteeRating":5,"overallRating":3.1,"dataAvailable":true,"billAccuracyAndMeteringRating":2,"billsAccuracySmart":91.6,"billsAccuracyTraditional":98.2,"smartOperating":93.8}]}}}'
+  recorded_at: Wed, 21 Jan 2026 08:55:19 GMT
 - request:
     method: post
     uri: https://graphql.contentful.com/content/v1/spaces/<CONTENTFUL_SPACE_ID>/environments/master
@@ -155,11 +155,11 @@ http_interactions:
       Connection:
       - keep-alive
       Content-Length:
-      - '177'
+      - '181'
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - '14230429598117683875'
+      - '1918862396551197398'
       Cache-Control:
       - max-age=0
       X-Contentful-Graphql-Query-Cost:
@@ -178,16 +178,16 @@ http_interactions:
       - 1.1 varnish, 1.1 varnish
       Accept-Ranges:
       - bytes
-      Date:
-      - Wed, 10 Dec 2025 11:50:16 GMT
       Age:
-      - '86484'
+      - '0'
+      Date:
+      - Wed, 21 Jan 2026 08:55:19 GMT
       X-Served-By:
-      - cache-ewr-kewr1740057-EWR, cache-lcy-eglc8600046-LCY
+      - cache-ewr-kewr1740057-EWR, cache-lcy-eglc8600056-LCY
       X-Cache-Hits:
-      - 0, 1
+      - 0, 0
       X-Timer:
-      - S1765367416.097407,VS0,VE1
+      - S1768985719.477599,VS0,VE132
       Access-Control-Allow-Headers:
       - accept,accept-language,authorization,cache-control,content-length,content-range,content-type,dnt,destination,expires,if-match,if-modified-since,if-none-match,keep-alive,last-modified,origin,pragma,range,user-agent,x-http-method-override,x-mx-reqtoken,x-requested-with,x-contentful-content-type,x-contentful-enable-alpha-feature,x-contentful-organization,x-contentful-resource-resolution,x-contentful-skip-transformation,x-contentful-user-agent,x-contentful-version
       Access-Control-Allow-Methods:
@@ -201,12 +201,12 @@ http_interactions:
       Strict-Transport-Security:
       - max-age=15768000
       X-Cache:
-      - HIT
+      - MISS
       X-Contentful-Request-Id:
-      - c02ff1bc-cd8f-4ffb-9426-d12e778a3ad9
+      - 0ca169f3-cb3c-4ae2-8536-c5da12f42445
     body:
       encoding: UTF-8
       string: '{"data":{"contentPatternStringCollection":{"items":[{"sys":{"id":"3OdGRuiq5a99kVxYpQQklF"},"contentPatternStringName":"Energy
-        CSR quarter dates","body":"April to June 2025"}]}}}'
-  recorded_at: Wed, 10 Dec 2025 11:50:16 GMT
-recorded_with: VCR 6.3.1
+        CSR quarter dates","body":"July to September 2025"}]}}}'
+  recorded_at: Wed, 21 Jan 2026 08:55:19 GMT
+recorded_with: VCR 6.4.0
