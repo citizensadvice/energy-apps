@@ -35,6 +35,7 @@
     = render CsrTable::ComplaintsScoresComponent.new(supplier)
     = render CsrTable::BillingAndMeteringScoresComponent.new(supplier)
     = render CsrTable::ContactWaitingTimeScoresComponent.new(supplier)
+    = render CsrTable::CustomerCommitmentsComponent.new(supplier)
 
   - else
     = render CsrTable::OtherScoresComponent.new(supplier)
