@@ -19,7 +19,6 @@ FactoryBot.define do
     billing_info { { json: JSON.parse(File.read("spec/fixtures/billing_info.json")) } }
     opening_hours { { json: JSON.parse(File.read("spec/fixtures/opening_hours.json")) } }
     fuel_mix { { json: JSON.parse(File.read("spec/fixtures/fuel_mix.json")) } }
-    guarantee_list { { json: JSON.parse(File.read("spec/fixtures/guarantee_list.json")) } }
 
     trait :ranked do
       data_available { true }
@@ -30,6 +29,15 @@ FactoryBot.define do
       contact_time { "00:03:27" }
       contact_email { 89 }
       contact_social_media { "01:15:00" }
+      guarantee_list { { json: JSON.parse(File.read("spec/fixtures/guarantee_list.json")) } }
+    end
+
+    trait :both_guarantee_schemes do
+      guarantee_list { { json: JSON.parse(File.read("spec/fixtures/guarantee_list_both.json")) } }
+    end
+
+    trait :no_guarantee_schemes do
+      guarantee_list { nil }
     end
 
     trait :sync_contact do
@@ -89,6 +97,14 @@ FactoryBot.define do
 
     trait(:ranked) do
       data factory: %i[supplier_data ranked]
+    end
+
+    trait(:no_guarantee_schemes) do
+      data factory: %i[supplier_data no_guarantee_schemes]
+    end
+
+    trait(:both_guarantee_schemes) do
+      data factory: %i[supplier_data both_guarantee_schemes]
     end
 
     trait(:sync_contact) do
