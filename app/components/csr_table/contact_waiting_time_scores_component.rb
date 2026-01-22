@@ -19,32 +19,34 @@ module CsrTable
     # asynchronous data, and vice versa. We therefore need to determine which fields
     # to render based on whether there is a value present or not
     def descriptions
-      @descriptions = [
+      descriptions = [
         contact_time,
-        contact_email
+        contact_email,
+        sync_data,
+        async_data
       ]
-      check_for_sync_data
-      check_for_async_data
-      @descriptions
+      descriptions.flatten.compact
     end
 
-    # rubocop:disable Metrics/AbcSize
-    def check_for_sync_data
-      @descriptions << webchat_sync if supplier.contact_webchat_sync
-      @descriptions << whatsapp_sync if supplier.contact_whatsapp_sync
-      @descriptions << sms_sync if supplier.contact_sms_sync
-      @descriptions << in_app_sync if supplier.contact_in_app_sync
-      @descriptions << portal_sync if supplier.contact_portal_sync
+    def sync_data
+      [
+        webchat_sync,
+        whatsapp_sync,
+        sms_sync,
+        in_app_sync,
+        portal_sync
+      ]
     end
 
-    def check_for_async_data
-      @descriptions << webchat_async if supplier.contact_webchat_async
-      @descriptions << whatsapp_async if supplier.contact_whatsapp_async
-      @descriptions << sms_async if supplier.contact_sms_async
-      @descriptions << in_app_async if supplier.contact_in_app_async
-      @descriptions << portal_async if supplier.contact_portal_async
+    def async_data
+      [
+        webchat_async,
+        whatsapp_async,
+        sms_async,
+        in_app_async,
+        portal_async
+      ]
     end
-    # rubocop:enable Metrics/AbcSize
 
     def contact_time
       {
@@ -70,6 +72,8 @@ module CsrTable
     end
 
     def webchat_sync
+      return unless supplier.contact_webchat_sync
+
       {
         term: content_tag(:p, "Average Webchat response time"),
         description: content_tag(:p, format_sync_output(supplier.contact_webchat_sync))
@@ -77,6 +81,8 @@ module CsrTable
     end
 
     def webchat_async
+      return unless supplier.contact_webchat_async
+
       {
         term: content_tag(:p, "Webchat messages responded to within 2 days"),
         description: content_tag(:p, "#{supplier.contact_webchat_async}%")
@@ -84,6 +90,8 @@ module CsrTable
     end
 
     def whatsapp_sync
+      return unless supplier.contact_whatsapp_sync
+
       {
         term: content_tag(:p, "Average Whatsapp response time"),
         description: content_tag(:p, format_sync_output(supplier.contact_whatsapp_sync))
@@ -91,6 +99,8 @@ module CsrTable
     end
 
     def whatsapp_async
+      return unless supplier.contact_whatsapp_async
+
       {
         term: content_tag(:p, "Whatsapp messages responded to within 2 days"),
         description: content_tag(:p, "#{supplier.contact_whatsapp_async}%")
@@ -98,6 +108,8 @@ module CsrTable
     end
 
     def sms_sync
+      return unless supplier.contact_sms_sync
+
       {
         term: content_tag(:p, "Average SMS response time"),
         description: content_tag(:p, format_sync_output(supplier.contact_sms_sync))
@@ -105,6 +117,8 @@ module CsrTable
     end
 
     def sms_async
+      return unless supplier.contact_sms_async
+
       {
         term: content_tag(:p, "SMS messages responded to within 2 days"),
         description: content_tag(:p, "#{supplier.contact_sms_async}%")
@@ -112,6 +126,8 @@ module CsrTable
     end
 
     def in_app_sync
+      return unless supplier.contact_in_app_sync
+
       {
         term: content_tag(:p, "Average response time using the supplier's app"),
         description: content_tag(:p, format_sync_output(supplier.contact_in_app_sync))
@@ -119,6 +135,8 @@ module CsrTable
     end
 
     def in_app_async
+      return unless supplier.contact_in_app_async
+
       {
         term: content_tag(:p, "Messages responded to within 2 days using the supplier's app"),
         description: content_tag(:p, "#{supplier.contact_in_app_async}%")
@@ -126,6 +144,8 @@ module CsrTable
     end
 
     def portal_sync
+      return unless supplier.contact_portal_sync
+
       {
         term: content_tag(:p, "Average response time using a customer account portal"),
         description: content_tag(:p, format_sync_output(supplier.contact_portal_sync))
@@ -133,6 +153,8 @@ module CsrTable
     end
 
     def portal_async
+      return unless supplier.contact_portal_async
+
       {
         term: content_tag(:p, "Messages responded to within 2 days using a customer account portal"),
         description: content_tag(:p, "#{supplier.contact_portal_async}%")
