@@ -72,7 +72,7 @@ module CsrTable
     end
 
     def webchat_sync
-      return unless supplier.contact_webchat_sync
+      return if supplier.contact_webchat_sync.blank?
 
       {
         term: content_tag(:p, "Average Webchat response time"),
@@ -81,7 +81,7 @@ module CsrTable
     end
 
     def webchat_async
-      return unless supplier.contact_webchat_async
+      return if supplier.contact_webchat_async.blank?
 
       {
         term: content_tag(:p, "Webchat messages responded to within 2 days"),
@@ -90,7 +90,7 @@ module CsrTable
     end
 
     def whatsapp_sync
-      return unless supplier.contact_whatsapp_sync
+      return if supplier.contact_whatsapp_sync.blank?
 
       {
         term: content_tag(:p, "Average Whatsapp response time"),
@@ -99,7 +99,7 @@ module CsrTable
     end
 
     def whatsapp_async
-      return unless supplier.contact_whatsapp_async
+      return if supplier.contact_whatsapp_async.blank?
 
       {
         term: content_tag(:p, "Whatsapp messages responded to within 2 days"),
@@ -108,7 +108,7 @@ module CsrTable
     end
 
     def sms_sync
-      return unless supplier.contact_sms_sync
+      return if supplier.contact_sms_sync.blank?
 
       {
         term: content_tag(:p, "Average SMS response time"),
@@ -117,7 +117,7 @@ module CsrTable
     end
 
     def sms_async
-      return unless supplier.contact_sms_async
+      return if supplier.contact_sms_async.blank?
 
       {
         term: content_tag(:p, "SMS messages responded to within 2 days"),
@@ -126,7 +126,7 @@ module CsrTable
     end
 
     def in_app_sync
-      return unless supplier.contact_in_app_sync
+      return if supplier.contact_in_app_sync.blank?
 
       {
         term: content_tag(:p, "Average response time using the supplier's app"),
@@ -135,7 +135,7 @@ module CsrTable
     end
 
     def in_app_async
-      return unless supplier.contact_in_app_async
+      return if supplier.contact_in_app_async.blank?
 
       {
         term: content_tag(:p, "Messages responded to within 2 days using the supplier's app"),
@@ -144,7 +144,7 @@ module CsrTable
     end
 
     def portal_sync
-      return unless supplier.contact_portal_sync
+      return if supplier.contact_portal_sync.blank?
 
       {
         term: content_tag(:p, "Average response time using a customer account portal"),
@@ -153,7 +153,7 @@ module CsrTable
     end
 
     def portal_async
-      return unless supplier.contact_portal_async
+      return if supplier.contact_portal_async.blank?
 
       {
         term: content_tag(:p, "Messages responded to within 2 days using a customer account portal"),
