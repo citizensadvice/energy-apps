@@ -14,11 +14,20 @@ RSpec.describe CsrTable::BillingAndMeteringScoresComponent, type: :component do
   it { is_expected.to have_text "Billing and metering" }
 
   it { is_expected.to have_text "Bills accuracy (smart meters)" }
-  it { is_expected.to have_text "98.3%" }
   it { is_expected.to have_text "Bills accuracy (traditional meters)" }
-  it { is_expected.to have_text "82.9%" }
   it { is_expected.to have_text "Smart meters working correctly" }
-  it { is_expected.to have_text "91.7%" }
+
+  context "when there is billing data" do
+    it { is_expected.to have_text "98.3%" }
+    it { is_expected.to have_text "82.9%" }
+    it { is_expected.to have_text "91.7%" }
+  end
+
+  context "when there is no billing data" do
+    let(:supplier) { build(:supplier, :no_billing_data) }
+
+    it { is_expected.to have_text "N/A", count: 3 }
+  end
 
   context "when there is no supplier" do
     let(:supplier) { nil }
