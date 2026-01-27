@@ -64,13 +64,13 @@ FactoryBot.define do
       contact_time { "00:03:27" }
       contact_email { 89 }
       contact_webchat_sync { nil }
-      contact_whatsapp_sync { nil }
-      contact_sms_sync { nil }
+      contact_whatsapp_sync { "" }
+      contact_sms_sync { "" }
       contact_in_app_sync { nil }
       contact_portal_sync { nil }
       contact_webchat_async { nil }
-      contact_whatsapp_async { nil }
-      contact_sms_async { nil }
+      contact_whatsapp_async { "" }
+      contact_sms_async { "" }
       contact_in_app_async { nil }
       contact_portal_async { nil }
     end
