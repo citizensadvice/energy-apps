@@ -25,22 +25,26 @@ module CsrTable
     def bills_accuracy_smart
       {
         term: content_tag(:p, "Bills accuracy (smart meters) "),
-        description: content_tag(:p, "#{supplier.bills_accuracy_smart}%")
+        description: content_tag(:p, description_content(supplier.bills_accuracy_smart))
       }
     end
 
     def bills_accuracy_traditional
       {
         term: content_tag(:p, "Bills accuracy (traditional meters)"),
-        description: content_tag(:p, "#{supplier.bills_accuracy_traditional}%")
+        description: content_tag(:p, description_content(supplier.bills_accuracy_traditional))
       }
     end
 
     def smart_operating
       {
         term: content_tag(:p, "Smart meters working correctly"),
-        description: content_tag(:p, "#{supplier.smart_operating}%")
+        description: content_tag(:p, description_content(supplier.smart_operating))
       }
+    end
+
+    def description_content(supplier_field)
+      supplier_field.present? ? "#{supplier_field}%" : "N/A"
     end
   end
 end
