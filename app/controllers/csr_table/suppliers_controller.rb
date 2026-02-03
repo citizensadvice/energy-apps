@@ -23,7 +23,7 @@ module CsrTable
     QUARTER_DATE_CONTENT_ID = "3OdGRuiq5a99kVxYpQQklF"
     NEXT_QUARTER_RELEASE_CONTENT_ID = "230w36VUwaerIjibJYFoSG"
 
-    def index; end
+    def index; end 
 
     def show
       raise SupplierNotFoundError, "Cannot find supplier with id #{params[:id]}" unless @supplier
