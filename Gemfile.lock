@@ -186,7 +186,7 @@ GEM
       cucumber (>= 7, < 11)
       railties (>= 6.1, < 9)
     cucumber-tag-expressions (6.1.2)
-    datadog (2.26.0)
+    datadog (2.27.0)
       cgi
       datadog-ruby_core_source (~> 3.5, >= 3.5.1)
       libdatadog (~> 25.0.0.1.0)
@@ -355,7 +355,7 @@ GEM
       date
       stringio
     public_suffix (6.0.2)
-    puma (7.1.0)
+    puma (7.2.0)
       nio4r (~> 2.0)
     racc (1.8.1)
     rack (3.2.4)
@@ -577,7 +577,7 @@ DEPENDENCIES
   preserve
   propshaft
   pry-remote
-  puma (~> 7.1)
+  puma (~> 7.2)
   rails (~> 8.0.4)
   rails-controller-testing
   rails_semantic_logger
