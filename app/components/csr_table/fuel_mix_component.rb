@@ -19,7 +19,7 @@ module CsrTable
     def descriptions
       [
         {
-          term: content_tag(:h3, "Fuel Mix"),
+          term: content_tag(:h3, "Fuel mix"),
           intro: fuel_mix_intro,
           description: fuel_mix
         }
