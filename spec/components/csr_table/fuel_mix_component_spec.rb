@@ -11,6 +11,6 @@ RSpec.describe CsrTable::FuelMixComponent, type: :component do
     render_inline described_class.new(supplier)
   end
 
-  it { is_expected.to have_text "Fuel Mix" }
+  it { is_expected.to have_text "Fuel mix" }
   it { is_expected.to have_text "fuel mix content" }
 end
