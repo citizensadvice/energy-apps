@@ -238,8 +238,8 @@ RSpec.describe "Suppliers" do
           end
         end
 
-        it "renders the More Information heading" do
-          expect(response.body).to include("<h2>\nMore information\n</h2>")
+        it "renders the Scores breakdown heading" do
+          expect(response.body).to include("<h2>\nScores breakdown\n</h2>")
         end
 
         # rubocop:disable Layout/LineLength
