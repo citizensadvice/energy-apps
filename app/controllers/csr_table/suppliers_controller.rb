@@ -5,7 +5,7 @@ module CsrTable
     class SupplierNotFoundError < StandardError; end
 
     include SwiftypeMeta
-    include Cacheable
+    include Cacheable 
 
     rescue_from SupplierNotFoundError, with: :not_found
     rescue_from Contentful::GraphqlAdapter::QueryError, with: :internal_server_error
