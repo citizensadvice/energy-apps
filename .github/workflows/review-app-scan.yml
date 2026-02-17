@@ -22,7 +22,7 @@ jobs:
       matrix: ${{ steps.scan.outputs.matrix }}
     steps:
       - name: Configure AWS Credentials
-        uses: aws-actions/configure-aws-credentials@v5
+        uses: aws-actions/configure-aws-credentials@v6
         with:
           role-to-assume: "arn:aws:iam::979633842206:role/EnergyAppsDeployment"
           role-session-name: energy-apps-actions-workflow
