@@ -7,13 +7,14 @@ FactoryBot.define do
     wattage { 10_000 }
     hours_used { 1.5 }
     additional_kwh { nil }
+    preheat_kwh { 0 }
 
-    trait :with_additional_kwh do
-      additional_kwh { 10 }
+    trait :with_preheat_kwh do
+      preheat_kwh { 10 }
     end
 
     initialize_with do
-      new(label:, details:, wattage:, additional_kwh:, hours_used:)
+      new(label:, details:, wattage:, additional_kwh:, hours_used:, preheat_kwh:)
     end
   end
 end
