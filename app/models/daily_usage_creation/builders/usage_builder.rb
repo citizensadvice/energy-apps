@@ -37,8 +37,15 @@ module DailyUsageCreation
           details: time_based_details,
           wattage: @appliance.data["wattage"],
           additional_kwh: @appliance.data["additionalKWh"],
+          preheat_kwh: preheat_kwh,
           hours_used: hours_per_day
         )
+      end
+
+      def preheat_kwh
+        return 0 unless @store["preheat_frequency"]
+
+        @store["preheat_frequency"] * @appliance.data["additionalKWh"]
       end
 
       def label
@@ -77,10 +84,14 @@ module DailyUsageCreation
       end
 
       def time_based_details
-        [
+        details = [
           "Quantity: #{@store['quantity']}",
           "Duration: #{duration} per #{singular_frequency}"
         ]
+        if @store["preheat_frequency"].present?
+          details << "Preheat: Includes the cost of preheating the appliance #{@store['preheat_frequency']} times per day"
+        end
+        details
       end
 
       def cycle_quantity

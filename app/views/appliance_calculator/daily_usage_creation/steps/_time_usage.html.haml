@@ -20,6 +20,9 @@
         .frequency-inputs__item
           = form.cads_collection_select :frequency, label: "Frequency", required: true, collection: current_step.frequency_options, text_method: :text, value_method: :value
 
+- if current_step.label.downcase.include?("oven") || current_step.label.downcase.include?("fryer")
+  = form.cads_text_field :preheat_frequency, label: "How many times a day do you use this appliance?", width: :two_chars, required: true, options: { additional_attributes: { "inputmode": "numeric" } }
+
 %h2 If you pay more than one rate for your electricity
 
 %p
