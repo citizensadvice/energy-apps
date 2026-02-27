@@ -121,6 +121,7 @@ RSpec.describe(DailyUsageCreation::Builders::UsageBuilder) do
         details: ["Quantity: 3", "Duration: 10 hrs 30 mins per week"],
         wattage: "500", # wattage is taken from the appliance
         additional_kwh: "45", # additional kwh is taken from the appliance
+        preheat_kwh: 0,
         hours_used: 1.5 # 10 hours + 30 minutes = 10.5 hours / 7
       }
       expect(TimeBasedDailyUsage).to have_received(:new).with(expected_params)
@@ -135,6 +136,7 @@ RSpec.describe(DailyUsageCreation::Builders::UsageBuilder) do
           details: ["Quantity: 3", "Duration: 10 hrs per week"],
           wattage: "500", # wattage is taken from the appliance
           additional_kwh: "45", # additional kwh is taken from the appliance
+          preheat_kwh: 0,
           hours_used: 1.4285714285714286 # 10 hours / 7
         }
         expect(TimeBasedDailyUsage).to have_received(:new).with(expected_params)
@@ -150,6 +152,7 @@ RSpec.describe(DailyUsageCreation::Builders::UsageBuilder) do
           details: ["Quantity: 3", "Duration: 30 mins per week"],
           wattage: "500", # wattage is taken from the appliance
           additional_kwh: "45", # additional kwh is taken from the appliance
+          preheat_kwh: 0,
           hours_used: 0.07142857142857142 # 30 minutes / 7
         }
         expect(TimeBasedDailyUsage).to have_received(:new).with(expected_params)
