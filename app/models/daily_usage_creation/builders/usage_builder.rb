@@ -45,7 +45,7 @@ module DailyUsageCreation
       def preheat_kwh
         return 0 unless @store["preheat_frequency"]
 
-        @store["preheat_frequency"] * @appliance.data["additionalKWh"]
+        @store["frequency"] == "weekly" ?  (@store["preheat_frequency"] * @appliance.data["additionalKWh"]) / 7 : @store["preheat_frequency"] * @appliance.data["additionalKWh"]
       end
 
       def label
@@ -88,7 +88,9 @@ module DailyUsageCreation
           "Quantity: #{@store['quantity']}",
           "Duration: #{duration} per #{singular_frequency}"
         ]
-        if @store["preheat_frequency"].present?
+        if @store["preheat_frequency"].present? && @store["frequency"] == "weekly"
+          details << "Preheat: Includes the cost of preheating the appliance #{@store['preheat_frequency']} times per week"
+        elsif @store["preheat_frequency"].present? && @store["frequency"] == "daily"
           details << "Preheat: Includes the cost of preheating the appliance #{@store['preheat_frequency']} times per day"
         end
         details

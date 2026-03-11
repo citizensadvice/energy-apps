@@ -9,9 +9,11 @@ module DailyUsageCreation
       attribute :hours, :integer
       attribute :minutes, :integer
       attribute :preheat_frequency, :integer
+      attribute :daily_preheat_frequency, :integer
+      attribute :weekly_preheat_frequency, :integer
       attribute :frequency, :string
 
-      validates :preheat_frequency, numericality: { other_than: 0, message: "Add the number of times a day you use this appliance" },
+      validates :preheat_frequency, numericality: { other_than: 0, message: "Add the number of times a day/week you use this appliance" },
                                     if: :preheat_appliance?
       validates :frequency, presence: { message: "Select a frequency from the list" }
 
