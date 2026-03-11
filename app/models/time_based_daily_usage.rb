@@ -10,13 +10,16 @@ class TimeBasedDailyUsage
 
   attr_reader :label, :details
 
-  def initialize(label:, details:, wattage:, additional_kwh:, hours_used:)
+  # rubocop:disable Metrics/ParameterLists
+  def initialize(label:, details:, wattage:, additional_kwh:, hours_used:, preheat_kwh:)
     @label = label
     @details = details
     @wattage = wattage.to_f
     @additional_kwh = additional_kwh.to_f
     @hours_used = hours_used.to_f
+    @preheat_kwh = preheat_kwh.to_f
   end
+  # rubocop:enable Metrics/ParameterLists
 
   def to_h
     {
@@ -31,11 +34,11 @@ class TimeBasedDailyUsage
   def kwh_per(timespan)
     case timespan
     when :day
-      (kilowatts * @hours_used) + @additional_kwh
+      (kilowatts * @hours_used) + @preheat_kwh
     when :week
-      ((kilowatts * @hours_used) + @additional_kwh) * 7
+      ((kilowatts * @hours_used) + @preheat_kwh) * 7
     when :month
-      ((kilowatts * @hours_used) + @additional_kwh) * days_in_a_month
+      ((kilowatts * @hours_used) + @preheat_kwh) * days_in_a_month
     else
       raise UnrecognisedTimespanError.new(msg: "Unrecognised timespan #{timespan} given to TimeBasedDailyUsage")
     end

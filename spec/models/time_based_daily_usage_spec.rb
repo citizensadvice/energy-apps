@@ -30,8 +30,8 @@ RSpec.describe(TimeBasedDailyUsage) do
       end
     end
 
-    context "with additional kWh" do
-      subject { build(:time_based_daily_usage, :with_additional_kwh).kwh_per(timespan) }
+    context "with preheat kWh" do
+      subject { build(:time_based_daily_usage, :with_preheat_kwh).kwh_per(timespan) }
 
       context "when per day" do
         let(:timespan) { :day }

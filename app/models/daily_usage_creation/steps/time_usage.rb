@@ -8,11 +8,20 @@ module DailyUsageCreation
 
       attribute :hours, :integer
       attribute :minutes, :integer
+      attribute :preheat_frequency, :integer
+      attribute :daily_preheat_frequency, :integer
+      attribute :weekly_preheat_frequency, :integer
       attribute :frequency, :string
 
+      validates :preheat_frequency, numericality: { other_than: 0, message: "Add the number of times a day/week you use this appliance" },
+                                    if: :preheat_appliance?
       validates :frequency, presence: { message: "Select a frequency from the list" }
 
       validates_with Validators::TimeUsageValidator
+
+      def preheat_appliance?
+        added_appliance_name.downcase.include?("oven") || added_appliance_name.downcase.include?("fryer")
+      end
 
       def label
         "How long do you use #{added_appliance_name}(s) for?"
