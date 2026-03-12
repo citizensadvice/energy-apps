@@ -130,7 +130,7 @@ GEM
     bindex (0.8.1)
     bootsnap (1.23.0)
       msgpack (~> 1.2)
-    brakeman (8.0.2)
+    brakeman (8.0.4)
       racc
     builder (3.3.0)
     bundler-audit (0.9.3)
@@ -508,7 +508,7 @@ GEM
     uri (1.1.1)
     useragent (0.16.11)
     vcr (6.4.0)
-    view_component (4.4.0)
+    view_component (4.5.0)
       actionview (>= 7.1.0)
       activesupport (>= 7.1.0)
       concurrent-ruby (~> 1)
@@ -589,7 +589,7 @@ DEPENDENCIES
   selenium-webdriver
   tzinfo-data
   vcr
-  view_component (~> 4.4)
+  view_component (~> 4.5)
   web-console
   webdrivers
   webmock
