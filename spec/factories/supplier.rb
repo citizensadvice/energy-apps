@@ -20,12 +20,10 @@ FactoryBot.define do
     trait :ranked do
       data_available { true }
       rank { 1 }
-      complaints_rating { 4 }
       complaints_rating_score { 4.3 }
       complaints_number { 172 }
       contact_time { "00:03:27" }
       contact_email { 89 }
-      contact_social_media { "01:15:00" }
       guarantee_list { { json: JSON.parse(File.read("spec/fixtures/guarantee_list.json")) } }
       bills_accuracy_smart { 98.3 }
       bills_accuracy_traditional { 82.9 }
