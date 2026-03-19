@@ -13,7 +13,11 @@ RSpec.describe CsrTable::ComplaintsScoresComponent, type: :component do
 
   it { is_expected.to have_text "Fewer complaints received" }
 
-  it { is_expected.to have_text "Complaints to Citizens Advice, Advice Direct Scotland and the Energy Ombudsman" }
+  it {
+    expect(page).to have_text "Complaints to Citizens Advice Consumer Service, the Extra Help Unit, " \
+                              "Advice Direct Scotland, and the Energy Ombudsman"
+  }
+
   it { is_expected.to have_text "172 per 10,000 customers" }
 
   context "when there is no supplier" do

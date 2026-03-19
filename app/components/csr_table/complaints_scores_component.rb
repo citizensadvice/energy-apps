@@ -17,7 +17,9 @@ module CsrTable
     def descriptions
       [
         {
-          term: content_tag(:p, "Complaints to Citizens Advice, Advice Direct Scotland and the Energy Ombudsman"),
+          term: content_tag(:p,
+                            "Complaints to Citizens Advice Consumer Service, the Extra Help Unit, " \
+                            "Advice Direct Scotland, and the Energy Ombudsman"),
           description: content_tag(:p, "#{supplier.complaints_number} per 10,000 customers")
         }
       ]
