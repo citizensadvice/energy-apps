@@ -2,12 +2,13 @@
 
 module CsrTable
   class ScoreComponent < ViewComponent::Base
-    def initialize(score:, show_decimal_score: false, decimal_places: 1, highlight_stars: false)
+    def initialize(score:, show_decimal_score: false, decimal_places: 1, highlight_stars: false, half_stars: false)
       super()
       @score = score
       @show_decimal_score = show_decimal_score
       @decimal_places = decimal_places
       @highlight_stars = highlight_stars
+      @half_stars = half_stars
     end
 
     def render?
@@ -22,6 +23,10 @@ module CsrTable
 
     def show_decimal_score?
       @show_decimal_score
+    end
+
+    def half_stars?
+      @half_stars
     end
 
     def highlight_stars?
