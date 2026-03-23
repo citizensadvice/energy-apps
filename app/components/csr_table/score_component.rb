@@ -2,10 +2,11 @@
 
 module CsrTable
   class ScoreComponent < ViewComponent::Base
-    def initialize(score:, show_decimal_score: false)
+    def initialize(score:, show_decimal_score: false, decimal_places: 1)
       super()
       @score = score
       @show_decimal_score = show_decimal_score
+      @decimal_places = decimal_places
     end
 
     def render?
@@ -36,13 +37,11 @@ module CsrTable
     end
 
     def score_out_of_five
-      return "#{score_number} out of 5" unless show_decimal_score?
-
       "#{score_number} out of 5"
     end
 
     def score_number
-      show_decimal_score? ? @score.round(1) : @score.round
+      show_decimal_score? ? format("%.#{@decimal_places}f", @score) : @score.round
     end
   end
 end

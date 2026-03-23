@@ -7,7 +7,7 @@
     %li.score-summary__item
       %p.score-summary__text
         Overall rating
-      = render CsrTable::ScoreComponent.new(score: supplier.overall_rating, show_decimal_score: true)
+      = render CsrTable::ScoreComponent.new(score: supplier.overall_rating, show_decimal_score: true, decimal_places: 2)
     %li.score-summary__item
       %p.score-summary__text
         Fewer complaints received
