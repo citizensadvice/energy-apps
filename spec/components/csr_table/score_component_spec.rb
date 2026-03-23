@@ -8,11 +8,13 @@ RSpec.describe CsrTable::ScoreComponent, type: :component do
   let(:score) { 3 }
   let(:show_decimal_score) { nil }
   let(:decimal_places) { 1 }
+  let(:highlight_stars) { false }
 
   before do
     render_inline described_class.new(score: score.presence,
                                       show_decimal_score: show_decimal_score.presence,
-                                      decimal_places: decimal_places.presence)
+                                      decimal_places: decimal_places.presence,
+                                      highlight_stars: highlight_stars)
   end
 
   it { is_expected.to have_text "3 out of 5" }
@@ -42,13 +44,19 @@ RSpec.describe CsrTable::ScoreComponent, type: :component do
     it { is_expected.to have_no_css ".stars" }
   end
 
+  context "when the score highlights the stars" do
+    let(:highlight_stars) { true }
+
+    it { is_expected.to have_css ".stars" }
+    it { is_expected.to have_css ".stars--highlight" }
+  end
+
   context "when the score is shown as a decimal" do
     let(:score) { 1.2 }
     let(:show_decimal_score) { true }
 
     context "when the decimal_places is set to 1" do
       it { is_expected.to have_text "1.2 out of 5" }
-      it { is_expected.to have_css ".stars--highlight" }
     end
 
     context "when decimal_places is set to 2" do
@@ -56,14 +64,12 @@ RSpec.describe CsrTable::ScoreComponent, type: :component do
 
       context "when there is a single decimal digit" do
         it { is_expected.to have_text "1.20 out of 5" }
-        it { is_expected.to have_css ".stars--highlight" }
       end
 
       context "when there are two decimal digits" do
         let(:score) { 1.23 }
 
         it { is_expected.to have_text "1.23 out of 5" }
-        it { is_expected.to have_css ".stars--highlight" }
       end
     end
   end
