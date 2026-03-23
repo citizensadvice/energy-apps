@@ -216,27 +216,6 @@ RSpec.describe "Suppliers" do
         it "responds successfully to the supplier details route" do
           expect(response).to have_http_status :successful
         end
-      end
-
-      context "with an invalid supplier" do
-        it "generates a 404" do
-          VCR.use_cassette("supplier/details-page-not-found", match_requests_on: [:body]) do
-            get "#{CSR_APP_PATH}/invalid-supplier/details"
-
-            expect(response).to have_http_status :not_found
-          end
-        end
-      end
-
-      context "when FF_NEW_CSR_DATA is enabled" do
-        around do |example|
-          ClimateControl.modify({ FF_NEW_CSR_DATA: "true" }) do
-            VCR.use_cassette("supplier/big-energy-inc-details-page", match_requests_on: [:body]) do
-              get "#{CSR_APP_PATH}big-energy-inc/details"
-            end
-            example.run
-          end
-        end
 
         it "renders the Scores breakdown heading" do
           expect(response.body).to include("<h2>\nScores breakdown\n</h2>")
@@ -249,25 +228,14 @@ RSpec.describe "Suppliers" do
         # rubocop:enable Layout/LineLength
       end
 
-      context "when FF_NEW_CSR_DATA is not enabled" do
-        around do |example|
-          ClimateControl.modify({ FF_NEW_CSR_DATA: "false" }) do
-            VCR.use_cassette("supplier/big-energy-inc-details-page", match_requests_on: [:body]) do
-              get "#{CSR_APP_PATH}big-energy-inc/details"
-            end
-            example.run
+      context "with an invalid supplier" do
+        it "generates a 404" do
+          VCR.use_cassette("supplier/details-page-not-found", match_requests_on: [:body]) do
+            get "#{CSR_APP_PATH}/invalid-supplier/details"
+
+            expect(response).to have_http_status :not_found
           end
         end
-
-        it "does not render the More Information heading" do
-          expect(response.body).not_to include("<h2>\nMore information\n</h2>")
-        end
-
-        # rubocop:disable Layout/LineLength
-        it "does not render the More information summary" do
-          expect(response.body).not_to include("<p>\nWe give energy suppliers a score out of 5 for each category, based on various data. You can look at this data in more detail below.\n</p>")
-        end
-        # rubocop:enable Layout/LineLength
       end
     end
 

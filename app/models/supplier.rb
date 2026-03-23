@@ -7,9 +7,9 @@ class Supplier
 
   delegate :name, :whitelabel_supplier, :slug, :rank,
            :complaints_number, :contact_email, :contact_rating,
-           :contact_social_media, :contact_time, :contact_info,
-           :other_contact_info, :billing_info, :guarantee_rating,
-           :guarantee_list, :overall_rating, :data_available, :fuel_mix,
+           :contact_time, :contact_info, :other_contact_info,
+           :billing_info, :guarantee_rating, :guarantee_list,
+           :overall_rating, :data_available, :fuel_mix,
            :opening_hours, :bill_accuracy_and_metering_rating,
            :bills_accuracy_smart, :bills_accuracy_traditional,
            :smart_operating, :contact_webchat_sync, :contact_webchat_async,
@@ -54,6 +54,6 @@ class Supplier
   end
 
   def complaints_rating
-    Feature.enabled?("FF_NEW_CSR_DATA") ? data.complaints_rating_score : data.complaints_rating
+    data.complaints_rating_score
   end
 end
