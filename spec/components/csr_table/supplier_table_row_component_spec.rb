@@ -10,6 +10,10 @@ RSpec.describe CsrTable::SupplierTableRowComponent, type: :component do
   before do
     render_inline described_class.new(supplier)
   end
+  #
+  # it "do" do
+  #   binding.pry
+  # end
 
   it { is_expected.to have_css ".stars", count: 5 }
   it { is_expected.to have_text "1" }
