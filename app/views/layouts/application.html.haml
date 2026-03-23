@@ -23,6 +23,7 @@
   %body{ class: ("cas" if scotland?) }
     = render "shared/google_tag_manager_no_script"
     = render "shared/half_star_svg"
+    = render "shared/highlighted_half_star_svg"
     - unless cookies_preference_page?
       = render CitizensAdviceCookiePreferences::CookieBanner.new
 
