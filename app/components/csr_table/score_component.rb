@@ -2,10 +2,13 @@
 
 module CsrTable
   class ScoreComponent < ViewComponent::Base
-    def initialize(score:, show_decimal_score: false)
+    def initialize(score:, show_decimal_score: false, decimal_places: 1, highlight_stars: false, half_stars: false)
       super()
       @score = score
       @show_decimal_score = show_decimal_score
+      @decimal_places = decimal_places
+      @highlight_stars = highlight_stars
+      @half_stars = half_stars
     end
 
     def render?
@@ -22,9 +25,12 @@ module CsrTable
       @show_decimal_score
     end
 
+    def half_stars?
+      @half_stars
+    end
+
     def highlight_stars?
-      # We only highlight the stars when a decimal score is displayed
-      show_decimal_score?
+      @highlight_stars
     end
 
     def scored?
@@ -36,13 +42,11 @@ module CsrTable
     end
 
     def score_out_of_five
-      return "#{score_number} out of 5" unless show_decimal_score?
-
       "#{score_number} out of 5"
     end
 
     def score_number
-      show_decimal_score? ? @score.round(1) : @score.round
+      show_decimal_score? ? format("%.#{@decimal_places}f", @score) : @score.round
     end
   end
 end

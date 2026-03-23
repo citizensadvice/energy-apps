@@ -10,13 +10,13 @@
       = render_overall_score
   %td.supplier-table__complaints
     .cads-table__content
-      = render CsrTable::ScoreComponent.new(score: supplier.complaints_rating)
+      = render CsrTable::ScoreComponent.new(score: supplier.complaints_rating, show_decimal_score: true, half_stars: true)
   %td.supplier-table__response
     .cads-table__content
-      = render CsrTable::ScoreComponent.new(score: supplier.contact_rating)
+      = render CsrTable::ScoreComponent.new(score: supplier.contact_rating, show_decimal_score: true, half_stars: true)
   %td.supplier-table__billing
     .cads-table__content
-      = render CsrTable::ScoreComponent.new(score: supplier.bill_accuracy_and_metering_rating)
+      = render CsrTable::ScoreComponent.new(score: supplier.bill_accuracy_and_metering_rating, show_decimal_score: true, half_stars: true)
   %td.supplier-table__guarantee
     .cads-table__content
       = render CsrTable::ScoreComponent.new(score: supplier.guarantee_rating)

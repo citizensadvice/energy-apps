@@ -7,19 +7,19 @@
     %li.score-summary__item
       %p.score-summary__text
         Overall rating
-      = render CsrTable::ScoreComponent.new(score: supplier.overall_rating, show_decimal_score: true)
+      = render CsrTable::ScoreComponent.new(score: supplier.overall_rating, show_decimal_score: true, decimal_places: 2, highlight_stars: true, half_stars: true)
     %li.score-summary__item
       %p.score-summary__text
         Fewer complaints received
-      = render CsrTable::ScoreComponent.new(score: supplier.complaints_rating)
+      = render CsrTable::ScoreComponent.new(score: supplier.complaints_rating, show_decimal_score: true, half_stars: true)
     %li.score-summary__item
       %p.score-summary__text
         Contact waiting time
-      = render CsrTable::ScoreComponent.new(score: supplier.contact_rating)
+      = render CsrTable::ScoreComponent.new(score: supplier.contact_rating, show_decimal_score: true, half_stars: true)
     %li.score-summary__item
       %p.score-summary__text
         Billing and metering
-      = render CsrTable::ScoreComponent.new(score: supplier.bill_accuracy_and_metering_rating)
+      = render CsrTable::ScoreComponent.new(score: supplier.bill_accuracy_and_metering_rating, show_decimal_score: true, half_stars: true)
     %li.score-summary__item
       %p.score-summary__text
         Customer commitments

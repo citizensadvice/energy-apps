@@ -28,10 +28,12 @@ module CsrTable
 
     def render_overall_score
       if highlight?
-        render CsrTable::ScoreComponent.new(score: supplier.overall_rating, show_decimal_score: true)
+        render CsrTable::ScoreComponent.new(score: supplier.overall_rating, show_decimal_score: true, decimal_places: 2,
+                                            highlight_stars: true, half_stars: true)
       else
         render CsrTable::ScoreComponent.new(score: supplier.overall_rating,
-                                            show_decimal_score: true).with_content(more_details_link)
+                                            show_decimal_score: true, decimal_places: 2,
+                                            highlight_stars: true, half_stars: true).with_content(more_details_link)
       end
     end
 
