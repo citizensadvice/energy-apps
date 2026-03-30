@@ -27,7 +27,7 @@ jobs:
     if: github.event.label.name == 'Review app' || inputs.pr_number
     steps:
       - name: Configure AWS Credentials
-        uses: aws-actions/configure-aws-credentials@v6
+        uses: aws-actions/configure-aws-credentials@8df5847569e6427dd6c4fb1cf565c83acfa8afa7
         with:
           role-to-assume: "arn:aws:iam::979633842206:role/EnergyAppsDeployment"
           role-session-name: energy-app-actions-workflow
@@ -47,13 +47,13 @@ jobs:
 
       - name: Remove Review app label
         if: contains(github.event.pull_request.labels.*.name, 'Review app') || inputs.pr_number
-        uses: actions-ecosystem/action-remove-labels@v1.3.0
+        uses: actions-ecosystem/action-remove-labels@2ce5d41b4b6aa8503e285553f75ed56e0a40bae0
         with:
           labels: "Review app"
           number: ${{ github.event.issue.number || github.event.pull_request.number || inputs.pr_number }}
 
       - name: Find Comment
-        uses: peter-evans/find-comment@v4
+        uses: peter-evans/find-comment@b30e6a3c0ed37e7c023ccd3f1db5c6c0b0c23aad
         id: find-comment
         with:
           issue-number: ${{ env.PR_NUMBER }}
@@ -62,7 +62,7 @@ jobs:
           direction: last
 
       - name: Update Comment
-        uses: peter-evans/create-or-update-comment@v5
+        uses: peter-evans/create-or-update-comment@e8674b075228eee787fea43ef493e45ece1004c9
         if: steps.find-comment.outputs.comment-id
         with:
           issue-number: ${{ env.PR_NUMBER }}

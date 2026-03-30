@@ -15,14 +15,14 @@ jobs:
       id-token: write
       contents: read
     steps:
-      - uses: actions/checkout@v6
+      - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd
 
-      - uses: actions/setup-python@v6
+      - uses: actions/setup-python@a309ff8b426b58ec0e2a45f0f869d46889d02405
         with:
           python-version: '3.13'
 
       - name: Configure AWS Credentials
-        uses: aws-actions/configure-aws-credentials@v6
+        uses: aws-actions/configure-aws-credentials@8df5847569e6427dd6c4fb1cf565c83acfa8afa7
         with:
           role-to-assume: arn:aws:iam::979633842206:role/EnergyAppsDeployment
           role-session-name: energy-apps-trivy-scan
@@ -30,12 +30,12 @@ jobs:
 
       - name: ECR login
         id: ecr-login
-        uses: aws-actions/amazon-ecr-login@v2
+        uses: aws-actions/amazon-ecr-login@183a1442edf41672e66566b7fc560e297a290896
         with:
           registry-type: private
 
       - name: Run Trivy vulnerability scanner
-        uses: aquasecurity/trivy-action@master
+        uses: aquasecurity/trivy-action@57a97c7e7821a5776cebc9bb87c984fa69cba8f1
         id: trivy-scan
         env:
           TRIVY_JAVA_DB_REPOSITORY: public.ecr.aws/aquasecurity/trivy-java-db
@@ -49,7 +49,7 @@ jobs:
 
       - name: Upload scan results
         id: upload-artifact
-        uses: actions/upload-artifact@v7
+        uses: actions/upload-artifact@bbbca2ddaa5d8feaa63e36b76fdaad77386f024f
         with:
           name: trivy-scan-results
           path: trivy-results.json
@@ -75,7 +75,7 @@ jobs:
     if: failure()
     steps:
       - name: Notify Slack
-        uses: citizensadvice/message-slack-action@v2
+        uses: citizensadvice/message-slack-action@306ad8b4768287c24be25ebc9c0dd9d2af55a20a
         with:
           slack_bot_token: ${{ secrets.SLACK_BOT_TOKEN }}
           github_token: ${{ secrets.GITHUB_TOKEN }}
