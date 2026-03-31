@@ -17,9 +17,9 @@ jobs:
       contents: read
       issues: read
     steps:
-      - uses: actions/checkout@v6
+      - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd
       - name: Build and push to ECR
-        uses: citizensadvice/build-and-private-ecr-push-action@v3
+        uses: citizensadvice/build-and-private-ecr-push-action@353b5a92d28241f7bef7c1c88dc18759797b0da0
         with:
           dockerfile_context: "."
           repository_name: energy-apps
@@ -44,7 +44,7 @@ jobs:
       name: ${{ matrix.stage }}
     steps:
       - name: Git Checkout energy apps
-        uses: actions/checkout@v6
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd
         with:
           path: energy-apps
       - name: Set environment variables from cdk context
@@ -54,7 +54,7 @@ jobs:
               echo "$s" >> $GITHUB_ENV
           done
       - name: Configure AWS Credentials
-        uses: aws-actions/configure-aws-credentials@v6
+        uses: aws-actions/configure-aws-credentials@8df5847569e6427dd6c4fb1cf565c83acfa8afa7
         with:
           role-to-assume: "arn:aws:iam::${{env.AWS_ACCOUNT}}:role/EnergyAppsDeployment"
           role-session-name: ${{matrix.stage}}-energy-apps-actions-workflow
