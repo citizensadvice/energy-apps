@@ -6,7 +6,7 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 ruby "3.4.9"
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
-gem "rails", "~> 8.0.4"
+gem "rails", "~> 8.0.5"
 
 gem "propshaft"
 
@@ -47,7 +47,7 @@ gem "citizens_advice_cookie_preferences",
 
 # The citizens_advice_components gem uses view component but we also use this to write
 # our app components so explicitly name it as an application dependency.
-gem "view_component", "~> 4.5"
+gem "view_component", "~> 4.6"
 
 # Multi-step forms. Used alongside the design system form builder
 gem "wizard_steps", "~> 0.1.4"
