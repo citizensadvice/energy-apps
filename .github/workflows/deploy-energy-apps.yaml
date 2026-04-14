@@ -54,7 +54,7 @@ jobs:
               echo "$s" >> $GITHUB_ENV
           done
       - name: Configure AWS Credentials
-        uses: aws-actions/configure-aws-credentials@8df5847569e6427dd6c4fb1cf565c83acfa8afa7
+        uses: aws-actions/configure-aws-credentials@ec61189d14ec14c8efccab744f656cffd0e33f37
         with:
           role-to-assume: "arn:aws:iam::${{env.AWS_ACCOUNT}}:role/EnergyAppsDeployment"
           role-session-name: ${{matrix.stage}}-energy-apps-actions-workflow

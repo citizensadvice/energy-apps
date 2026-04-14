@@ -22,7 +22,7 @@ jobs:
           python-version: '3.13'
 
       - name: Configure AWS Credentials
-        uses: aws-actions/configure-aws-credentials@8df5847569e6427dd6c4fb1cf565c83acfa8afa7
+        uses: aws-actions/configure-aws-credentials@ec61189d14ec14c8efccab744f656cffd0e33f37
         with:
           role-to-assume: arn:aws:iam::979633842206:role/EnergyAppsDeployment
           role-session-name: energy-apps-trivy-scan
@@ -30,7 +30,7 @@ jobs:
 
       - name: ECR login
         id: ecr-login
-        uses: aws-actions/amazon-ecr-login@183a1442edf41672e66566b7fc560e297a290896
+        uses: aws-actions/amazon-ecr-login@f2e9fc6c2b355c1890b65e6f6f0e2ac3e6e22f78
         with:
           registry-type: private
 
