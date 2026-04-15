@@ -8,7 +8,7 @@ GIT
 
 GIT
   remote: https://github.com/citizensadvice/citizens-advice-style-ruby.git
-  revision: ce925efc4eae610752f31b3744f57011f51b49a7
+  revision: cd2b4078913d3730a45cd8fede3a3b7b16689ebe
   specs:
     citizens-advice-style (12.1.0)
       rubocop (~> 1.73)
@@ -305,7 +305,7 @@ GEM
       actionpack (>= 6.0.0)
     method_source (1.1.0)
     mini_mime (1.1.5)
-    minitest (6.0.3)
+    minitest (6.0.4)
       drb (~> 2.0)
       prism (~> 1.5)
     msgpack (1.8.0)
