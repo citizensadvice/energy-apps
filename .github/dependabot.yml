@@ -19,6 +19,8 @@ updates:
         update-types:
           - "minor"
           - "patch"
+    target-branch: 'main'
+    rebase-strategy: "disabled"
 
   - package-ecosystem: npm
     directory: '/'
@@ -35,6 +37,8 @@ updates:
         update-types:
           - "minor"
           - "patch"
+    target-branch: 'main'
+    rebase-strategy: "disabled"
 
   - package-ecosystem: 'github-actions'
     directory: '/'
@@ -49,6 +53,8 @@ updates:
         update-types:
           - "minor"
           - "patch"
+    target-branch: 'main'
+    rebase-strategy: "disabled"
 
   - package-ecosystem: 'pip'
     directory: '/infrastructure/cdk'
@@ -67,6 +73,8 @@ updates:
           # Pre-release libraries should be handled individually
           # to keep PRs easier to understand
           - "ruff"
+    target-branch: 'main'
+    rebase-strategy: "disabled"
 
   - package-ecosystem: 'docker'
     directory: '/'
