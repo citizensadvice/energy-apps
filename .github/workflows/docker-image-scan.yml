@@ -75,7 +75,7 @@ jobs:
     if: failure()
     steps:
       - name: Notify Slack
-        uses: citizensadvice/message-slack-action@306ad8b4768287c24be25ebc9c0dd9d2af55a20a
+        uses: citizensadvice/message-slack-action@080d90bef86e16b0f1d9b07406fad8a9f541fc27
         with:
           slack_bot_token: ${{ secrets.SLACK_BOT_TOKEN }}
           github_token: ${{ secrets.GITHUB_TOKEN }}
