@@ -11,7 +11,7 @@ jobs:
         uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd
 
       - name: "Setup ruby"
-        uses: ruby/setup-ruby@4c56a21280b36d862b5fc31348f463d60bdc55d5
+        uses: ruby/setup-ruby@7372622e62b60b3cb750dcd2b9e32c247ffec26a
         with:
           bundler-cache: true
 
@@ -40,7 +40,7 @@ jobs:
         uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd
 
       - name: "Setup ruby"
-        uses: ruby/setup-ruby@4c56a21280b36d862b5fc31348f463d60bdc55d5
+        uses: ruby/setup-ruby@7372622e62b60b3cb750dcd2b9e32c247ffec26a
         with:
           bundler-cache: true
 
@@ -66,7 +66,7 @@ jobs:
         uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd
 
       - name: "Setup ruby"
-        uses: ruby/setup-ruby@4c56a21280b36d862b5fc31348f463d60bdc55d5
+        uses: ruby/setup-ruby@7372622e62b60b3cb750dcd2b9e32c247ffec26a
         with:
           bundler-cache: true
 
@@ -94,7 +94,7 @@ jobs:
         uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd
 
       - name: "Setup ruby"
-        uses: ruby/setup-ruby@4c56a21280b36d862b5fc31348f463d60bdc55d5
+        uses: ruby/setup-ruby@7372622e62b60b3cb750dcd2b9e32c247ffec26a
         with:
           bundler-cache: true
 
@@ -113,7 +113,7 @@ jobs:
         run: bundle exec cucumber
 
       # Archive test logs
-      - uses: actions/upload-artifact@bbbca2ddaa5d8feaa63e36b76fdaad77386f024f
+      - uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
         if: failure()
         with:
           name: test-logs
