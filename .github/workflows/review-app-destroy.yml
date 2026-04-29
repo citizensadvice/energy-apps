@@ -42,7 +42,7 @@ jobs:
       - name: Destroy Review App
         run: |
           if [[ $(helm status -n ${{ env.NAMESPACE }} ${{ env.NAMESPACE }}) ]] ; then
-            kubectl delete subnamespaceanchor ${{ env.NAMESPACE }} -n dev-energy-apps
+            kubectl delete configmap ${{ env.NAMESPACE }}-namespace-anchor -n dev-energy-apps
           fi
 
       - name: Remove Review app label
