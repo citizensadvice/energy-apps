@@ -67,12 +67,15 @@ jobs:
       - name: Create Sub-namespace
         run: |
           kubectl apply -f - << EOF
-          apiVersion: hnc.x-k8s.io/v1alpha2
-          kind: SubnamespaceAnchor
+          apiVersion: v1
+          kind: ConfigMap
           metadata:
-            name: ${{ env.NAMESPACE }}
+            name: '${{ env.NAMESPACE }}-namespace-anchor'
             namespace: "dev-energy-apps"
-          EOF
+            annotations:
+              citizensadvice.org.uk/subnamespace-anchor: "true"
+              citizensadvice.org.uk/subnamespace-name: ${{ env.NAMESPACE }}
+          data: {}
 
       - name: Escape Characters
         id: escape_chars
