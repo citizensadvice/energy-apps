@@ -3,7 +3,7 @@
   "private": "true",
   "dependencies": {
     "@citizensadvice/design-system": "8.3.0",
-    "@datadog/browser-logs": "^6.32.0",
+    "@datadog/browser-logs": "^6.33.0",
     "esbuild": "^0.28",
     "eslint-plugin-import": "^2.32.0",
     "sass": "^1.99.0"
