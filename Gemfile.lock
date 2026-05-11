@@ -126,7 +126,7 @@ GEM
     ast (2.4.3)
     base64 (0.3.0)
     benchmark (0.5.0)
-    bigdecimal (4.1.1)
+    bigdecimal (4.1.2)
     bindex (0.8.1)
     bootsnap (1.23.0)
       msgpack (~> 1.2)
@@ -305,7 +305,7 @@ GEM
       actionpack (>= 6.0.0)
     method_source (1.1.0)
     mini_mime (1.1.5)
-    minitest (6.0.4)
+    minitest (6.0.6)
       drb (~> 2.0)
       prism (~> 1.5)
     msgpack (1.8.0)
@@ -509,7 +509,7 @@ GEM
     uri (1.1.1)
     useragent (0.16.11)
     vcr (6.4.0)
-    view_component (4.6.0)
+    view_component (4.9.0)
       actionview (>= 7.1.0)
       activesupport (>= 7.1.0)
       concurrent-ruby (~> 1)
@@ -590,7 +590,7 @@ DEPENDENCIES
   selenium-webdriver
   tzinfo-data
   vcr
-  view_component (~> 4.6)
+  view_component (~> 4.9)
   web-console
   webdrivers
   webmock
