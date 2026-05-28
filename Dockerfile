@@ -1,4 +1,4 @@
-FROM ruby:3.4.9-alpine3.23 AS base
+FROM ruby:4.0.5-alpine3.23 AS base
 
 RUN apk add git --no-cache
 
