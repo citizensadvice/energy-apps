@@ -27,7 +27,7 @@ jobs:
     if: github.event.label.name == 'Review app' || inputs.pr_number
     steps:
       - name: Configure AWS Credentials
-        uses: aws-actions/configure-aws-credentials@ec61189d14ec14c8efccab744f656cffd0e33f37
+        uses: aws-actions/configure-aws-credentials@e7f100cf4c008499ea8adda475de1042d6975c7b
         with:
           role-to-assume: "arn:aws:iam::979633842206:role/EnergyAppsDeployment"
           role-session-name: energy-app-actions-workflow
