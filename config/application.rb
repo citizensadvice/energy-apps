@@ -77,6 +77,6 @@ module EnergyComparisonTable
 
     config.session_store :disabled
 
-    config.x.default_unit_rate = 24.67
+    config.x.default_unit_rate = 26.11
   end
 end
