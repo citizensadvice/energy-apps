@@ -98,5 +98,4 @@ group :test do
   gem "climate_control"
   gem "cucumber-rails", require: false
   gem "selenium-webdriver"
-  gem "webdrivers"
 end
