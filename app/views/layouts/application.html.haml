@@ -11,7 +11,9 @@
     = display_meta_tags(default_meta_tags)
     - if swiftype_meta.present?
       - swiftype_meta.each do |item|
+        -# haml-lint:disable ClassAttributeWithStaticValue
         %meta.swiftype{ name: item[:name], data: { type: item[:type] }, content: item[:content] }
+        -# haml-lint:enable ClassAttributeWithStaticValue
 
     %script{ id: "script-no-js", nonce: content_security_policy_nonce }
       document.querySelector('html').classList.remove('no-js');
