@@ -4,3 +4,7 @@ linters:
 
   ClassesBeforeIds:
     EnforcedStyle: "id"
+
+  RuboCop:
+    ignored_cops:
+      - Style/IfUnlessModifier
