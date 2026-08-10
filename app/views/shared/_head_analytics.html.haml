@@ -6,7 +6,9 @@
 %script{ id: "script-data-layer", nonce: content_security_policy_nonce }
   window.dataLayer = window.dataLayer || [];
   - if data_layer_properties.present?
+    -# rubocop:disable Rails/OutputSafety
     dataLayer.push(#{data_layer_properties.to_json.html_safe})
+    -# rubocop:enable Rails/OutputSafety
 
 - if allow_analytics_cookies?
   %script{ id: "script-google-tag-manager", nonce: content_security_policy_nonce }

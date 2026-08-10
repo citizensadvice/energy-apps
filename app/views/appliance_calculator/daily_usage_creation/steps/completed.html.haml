@@ -3,7 +3,7 @@
 = render ApplianceCalculator::MostExpensiveApplianceComponent.new(usages)
 = render ApplianceCalculator::UsagesTableComponent.new(usages: usages, unit_rate: saved_unit_rate)
 
-- add_another_attrs = { data: { "gtm-event": "click", "gtm-event-name": "app_calc_add_another_appliance", "gtm-value": "add-another-appliance-click"}}
+- add_another_attrs = { data: { "gtm-event": "click", "gtm-event-name": "app_calc_add_another_appliance", "gtm-value": "add-another-appliance-click" } }
 
 .cads-prose
   %p
@@ -15,7 +15,7 @@
 
 .form-actions
   - unless usage_limit_reached?
-    %form{ action: appliance_calculator_root_path, method: "GET"}
+    %form{ action: appliance_calculator_root_path, method: "GET" }
       = render CitizensAdviceComponents::Button.new(type: :submit, attributes: add_another_attrs) do
         Add another appliance
 

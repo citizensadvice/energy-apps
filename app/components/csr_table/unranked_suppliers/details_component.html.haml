@@ -2,10 +2,10 @@
   .unranked-supplier__title{ "data-testid": "unranked-supplier-details-#{supplier.name.parameterize}" }
     = title
   - if Feature.enabled? "FF_SMALL_SUPPLIER_STARS"
-    -if whitelabelled?
+    - if whitelabelled?
       %p
         = whitelabel_supplier_link
-    -else
+    - else
       = render CsrTable::UnrankedSuppliers::StarsSummaryComponent.new(supplier)
 
   = render CsrTable::DescriptionListComponent.new do |c|
