@@ -18,7 +18,7 @@ RSpec.describe "Suppliers" do
         end
 
         it "renders the swiftype search type advice metatag" do
-          expect(response.body).to include("<meta class='swiftype' content='advice' data-type='string' name='search_type_filter'>")
+          expect(response.body).to include("<meta class=\"swiftype\" content=\"advice\" data-type=\"string\" name=\"search_type_filter\">")
         end
 
         it "renders the correct page title" do
@@ -26,15 +26,18 @@ RSpec.describe "Suppliers" do
         end
 
         it "renders the swiftype search type everything metatag" do
-          expect(response.body).to include("<meta class='swiftype' content='everything' data-type='string' name='search_type_filter'>")
+          expect(response.body).to include(
+            "<meta class=\"swiftype\" content=\"everything\" " \
+            "data-type=\"string\" name=\"search_type_filter\">"
+          )
         end
 
         it "renders the swiftype audience england metatag" do
-          expect(response.body).to include("<meta class='swiftype' content='england' data-type='string' name='audience_filter'>")
+          expect(response.body).to include("<meta class=\"swiftype\" content=\"england\" data-type=\"string\" name=\"audience_filter\">")
         end
 
         it "contains the correct canonical url" do
-          expect(response.body).to include("<link href='https://www.citizensadvice.org.uk#{CSR_APP_PATH}' rel='canonical'>")
+          expect(response.body).to include("<link href=\"https://www.citizensadvice.org.uk#{CSR_APP_PATH}\" rel=\"canonical\">")
         end
 
         it "returns headers to allow the CDN to cache it" do
@@ -80,11 +83,11 @@ RSpec.describe "Suppliers" do
         end
 
         it "renders the swiftype audience scotland metatag" do
-          expect(response.body).to include("<meta class='swiftype' content='scotland' data-type='string' name='audience_filter'>")
+          expect(response.body).to include("<meta class=\"swiftype\" content=\"scotland\" data-type=\"string\" name=\"audience_filter\">")
         end
 
         it "contains the correct canonical url" do
-          expect(response.body).to include("<link href='https://www.citizensadvice.org.uk/scotland#{CSR_APP_PATH}' rel='canonical'>")
+          expect(response.body).to include("<link href=\"https://www.citizensadvice.org.uk/scotland#{CSR_APP_PATH}\" rel=\"canonical\">")
         end
       end
 
@@ -111,11 +114,11 @@ RSpec.describe "Suppliers" do
         end
 
         it "renders the swiftype audience wales metatag" do
-          expect(response.body).to include("<meta class='swiftype' content='wales' data-type='string' name='audience_filter'>")
+          expect(response.body).to include("<meta class=\"swiftype\" content=\"wales\" data-type=\"string\" name=\"audience_filter\">")
         end
 
         it "contains the correct canonical url" do
-          expect(response.body).to include("<link href='https://www.citizensadvice.org.uk/wales#{CSR_APP_PATH}' rel='canonical'>")
+          expect(response.body).to include("<link href=\"https://www.citizensadvice.org.uk/wales#{CSR_APP_PATH}\" rel=\"canonical\">")
         end
       end
 
@@ -196,19 +199,22 @@ RSpec.describe "Suppliers" do
         end
 
         it "renders the swiftype search type everything metatag" do
-          expect(response.body).to include("<meta class='swiftype' content='everything' data-type='string' name='search_type_filter'>")
+          expect(response.body).to include(
+            "<meta class=\"swiftype\" content=\"everything\" " \
+            "data-type=\"string\" name=\"search_type_filter\">"
+          )
         end
 
         it "renders the swiftype search type advice metatag" do
-          expect(response.body).to include("<meta class='swiftype' content='advice' data-type='string' name='search_type_filter'>")
+          expect(response.body).to include("<meta class=\"swiftype\" content=\"advice\" data-type=\"string\" name=\"search_type_filter\">")
         end
 
         it "renders the swiftype audience england metatag" do
-          expect(response.body).to include("<meta class='swiftype' content='england' data-type='string' name='audience_filter'>")
+          expect(response.body).to include("<meta class=\"swiftype\" content=\"england\" data-type=\"string\" name=\"audience_filter\">")
         end
 
         it "contains the correct canonical url" do
-          canonical_url = "<link href='https://www.citizensadvice.org.uk#{CSR_APP_PATH}big-energy-inc/details/' rel='canonical'>"
+          canonical_url = "<link href=\"https://www.citizensadvice.org.uk#{CSR_APP_PATH}big-energy-inc/details/\" rel=\"canonical\">"
 
           expect(response.body).to include(canonical_url)
         end
@@ -249,11 +255,12 @@ RSpec.describe "Suppliers" do
         end
 
         it "renders the swiftype audience scotland metatag" do
-          expect(response.body).to include("<meta class='swiftype' content='scotland' data-type='string' name='audience_filter'>")
+          expect(response.body).to include("<meta class=\"swiftype\" content=\"scotland\" data-type=\"string\" name=\"audience_filter\">")
         end
 
         it "contains the correct canonical url" do
-          canonical_url = "<link href='https://www.citizensadvice.org.uk/scotland#{CSR_APP_PATH}big-energy-inc/details/' rel='canonical'>"
+          canonical_url = "<link href=\"https://www.citizensadvice.org.uk/scotland#{CSR_APP_PATH}big-energy-inc/details/\" " \
+                          "rel=\"canonical\">"
           expect(response.body).to include(canonical_url)
         end
 
@@ -283,11 +290,11 @@ RSpec.describe "Suppliers" do
         end
 
         it "renders the swiftype audience wales metatag" do
-          expect(response.body).to include("<meta class='swiftype' content='wales' data-type='string' name='audience_filter'>")
+          expect(response.body).to include("<meta class=\"swiftype\" content=\"wales\" data-type=\"string\" name=\"audience_filter\">")
         end
 
         it "contains the correct canonical url" do
-          canonical_url = "<link href='https://www.citizensadvice.org.uk/wales#{CSR_APP_PATH}big-energy-inc/details/' rel='canonical'>"
+          canonical_url = "<link href=\"https://www.citizensadvice.org.uk/wales#{CSR_APP_PATH}big-energy-inc/details/\" rel=\"canonical\">"
           expect(response.body).to include(canonical_url)
         end
 

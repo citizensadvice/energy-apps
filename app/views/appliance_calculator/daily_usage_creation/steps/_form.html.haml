@@ -1,5 +1,4 @@
 = form_with model: current_step, url: step_path, method: :patch, class: "cads-prose-direct-descendants" do |form|
-
   = render(current_step.key, form: form)
 
   - if wizard.can_proceed?
@@ -8,11 +7,10 @@
       - c.with_icon_right do
         = render CitizensAdviceComponents::Icons::ArrowRight.new
 
-
 - if wizard.previous_key
   = form_with model: current_step, url: step_path(wizard.previous_key), method: :get do
     = render CitizensAdviceComponents::Button.new(type: :submit, variant: :secondary, attributes: current_step.prev_button_attrs) do |c|
-      = "Previous"
+      Previous
       - c.with_icon_left do
         = render CitizensAdviceComponents::Icons::ArrowLeft.new
 
