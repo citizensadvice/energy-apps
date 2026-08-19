@@ -27,13 +27,10 @@ module DataLayer
       language: (helpers.current_country || "england").to_s.capitalize
     }
 
-    properties[:surveyCookiesAccepted] = "true" if allow_survey_cookies?
-
-    # If the user has accepted cookies the dlv is set to explicit
     if allow_analytics_cookies?
-      properties[:analyticsCookiesAccepted] = cookies[:cookie_preference_set].present? ? "explicit" : "default"
+      properties.merge({ analyticsCookiesAccepted: "True" })
+    else
+      properties
     end
-
-    properties
   end
 end
