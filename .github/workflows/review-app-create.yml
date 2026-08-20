@@ -28,7 +28,7 @@ jobs:
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
       - name: Build and push to ECR
-        uses: citizensadvice/build-and-private-ecr-push-action@ac3a0c4db0275ee5976e3cd41a9ab124a2f880ce
+        uses: citizensadvice/build-and-private-ecr-push-action@06156804416b88e56d11c46621a135f757182a1f
         with:
           dockerfile_context: "."
           repository_name: energy-apps
