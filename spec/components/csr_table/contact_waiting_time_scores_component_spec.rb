@@ -52,9 +52,9 @@ RSpec.describe CsrTable::ContactWaitingTimeScoresComponent, type: :component do
   context "when the supplier has no asynchronous or synchronous customer contact channels" do
     let(:supplier) { build(:supplier, :no_sync_or_async_contact) }
 
-    it { is_expected.to have_text "Emails responded to within 2 days" }
     it { is_expected.to have_text "Average call centre wait time" }
 
+    it { is_expected.to have_no_text "Emails responded to within 2 days" }
     it { is_expected.to have_no_text "Average Webchat response time" }
     it { is_expected.to have_no_text "Average Whatsapp response time" }
     it { is_expected.to have_no_text "Average SMS response time" }

@@ -66,7 +66,7 @@ FactoryBot.define do
 
     trait :no_sync_or_async_contact do
       contact_time { "00:03:27" }
-      contact_email { 89 }
+      contact_email { nil }
       contact_webchat_sync { nil }
       contact_whatsapp_sync { "" }
       contact_sms_sync { "" }
