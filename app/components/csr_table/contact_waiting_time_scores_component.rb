@@ -56,6 +56,8 @@ module CsrTable
     end
 
     def contact_email
+      return if supplier.contact_email.blank?
+
       {
         term: content_tag(:p, "Emails responded to within 2 days"),
         description: content_tag(:p, "#{supplier.contact_email}%")
