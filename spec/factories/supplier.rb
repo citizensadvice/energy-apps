@@ -79,6 +79,21 @@ FactoryBot.define do
       contact_portal_async { nil }
     end
 
+    trait :no_contact do
+      contact_time { nil }
+      contact_email { nil }
+      contact_webchat_sync { nil }
+      contact_whatsapp_sync { "" }
+      contact_sms_sync { "" }
+      contact_in_app_sync { nil }
+      contact_portal_sync { nil }
+      contact_webchat_async { nil }
+      contact_whatsapp_async { "" }
+      contact_sms_async { "" }
+      contact_in_app_async { nil }
+      contact_portal_async { nil }
+    end
+
     trait :missing_fuel_mix do
       fuel_mix { nil }
     end
@@ -125,6 +140,10 @@ FactoryBot.define do
 
     trait(:no_sync_or_async_contact) do
       data factory: %i[supplier_data no_sync_or_async_contact]
+    end
+
+    trait(:no_contact) do
+      data factory: %i[supplier_data no_contact]
     end
 
     trait(:whitelabelled) do

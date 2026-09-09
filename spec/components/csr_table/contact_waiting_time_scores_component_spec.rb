@@ -67,6 +67,12 @@ RSpec.describe CsrTable::ContactWaitingTimeScoresComponent, type: :component do
     it { is_expected.to have_no_text "Messages responded to within 2 days using a customer account portal" }
   end
 
+  context "when supplier has no contact channels" do
+    let(:supplier) { build(:supplier, :no_contact) }
+
+    it { is_expected.to have_no_css "body" }
+  end
+
   context "when there is no supplier" do
     let(:supplier) { nil }
 

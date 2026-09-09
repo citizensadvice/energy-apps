@@ -11,7 +11,7 @@ module CsrTable
     end
 
     def render?
-      supplier.present?
+      supplier.present? && descriptions.present?
     end
 
     # Not all suppliers will provide data for each of the customer contact channels;
