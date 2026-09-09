@@ -49,6 +49,8 @@ module CsrTable
     end
 
     def contact_time
+      return if supplier.contact_time.blank?
+
       {
         term: content_tag(:p, "Average call centre wait time"),
         description: content_tag(:p, format_sync_output(supplier.contact_time))
