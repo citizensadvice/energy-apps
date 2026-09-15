@@ -6,18 +6,16 @@ module Renderers
       return if node.blank?
 
       # We can trust content from Contentful
-      # rubocop:disable Rails/OutputSafety
+      # rubocop:disable-next Rails/OutputSafety
       render(node.json).gsub("\n", "<br/>").html_safe
-      # rubocop:enable Rails/OutputSafety
     end
 
     def render_without_breaks(node)
       return if node.blank?
 
       # We can trust content from Contentful
-      # rubocop:disable Rails/OutputSafety
+      # rubocop:disable-next Rails/OutputSafety
       render(node.json).html_safe
-      # rubocop:enable Rails/OutputSafety
     end
   end
 end
