@@ -40,6 +40,26 @@ module EnergyComparisonTable
 
     config.exceptions_app = routes
 
+    # semantic-logger
+    config.rails_semantic_logger.semantic   = true
+    config.rails_semantic_logger.started    = false
+    config.rails_semantic_logger.processing = false
+    config.rails_semantic_logger.rendered   = false
+
+    config.colorize_logging = $stdout.tty?
+
+    unless Rails.env.test?
+      config.rails_semantic_logger.add_file_appender = false
+
+      config.rails_semantic_logger.appenders do |appenders|
+        appenders.add(
+          io: $stdout,
+          level: config.log_level,
+          formatter: $stdout.tty? ? :color : :json
+        )
+      end
+    end
+
     # View component previews
     config.view_component.previews.route = "/components/previews"
     config.view_component.previews.default_layout = "component_preview"
