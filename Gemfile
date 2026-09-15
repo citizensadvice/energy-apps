@@ -61,6 +61,9 @@ gem "preserve"
 gem "rails_semantic_logger"
 gem "rich_text_renderer"
 
+#  Pin to v2 as v3 currently breaks Rails apps
+gem "json", "~> 2.8"
+
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem "bundler-audit"
