@@ -227,11 +227,10 @@ RSpec.describe "Suppliers" do
           expect(response.body).to include("<h2>\nScores breakdown\n</h2>")
         end
 
-        # rubocop:disable Layout/LineLength
+        # rubocop:disable-next Layout/LineLength
         it "renders the More information summary" do
           expect(response.body).to include("<p>\nWe give energy suppliers a score out of 5 for each category, based on various data. You can look at this data in more detail below.\n</p>")
         end
-        # rubocop:enable Layout/LineLength
       end
 
       context "with an invalid supplier" do
